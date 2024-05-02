@@ -41,3 +41,6 @@ class="값"(선택사항)
 </body>
 
 <body>내용</body>
+
+<img src="Made by Evan/figma-icon.svg" width="100" alt="">
+width="100" alt="" 이미지 크기
