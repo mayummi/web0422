@@ -44,3 +44,8 @@ class="값"(선택사항)
 
 <img src="Made by Evan/figma-icon.svg" width="100" alt="">
 width="100" alt="" 이미지 크기
+
+www.naver.com -> domain(도메인)
+192.168.2.19 -> IPv4 -> IPv6
+https -> 프로토콜
+프로토콜://도메인 -> URL(웹 주소)
