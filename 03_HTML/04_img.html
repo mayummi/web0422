@@ -12,13 +12,32 @@
     <!-- img 요소는 display:inline-block; -->
     <!-- 이미지는 가로로 배치된다. -->
 
-<h2>경로(폴더/파일명) 이미지 경로</h2>
+<h2>상대 경로(폴더/파일명) 이미지 경로</h2>
+    <!-- 기호: ./(현재위치), ../(상위위치), /(루트, root 또는 폴더/폴더/파일) -->
     <!-- html문서와 이미지가 같은 폴더에 있으면 파일명만 쓴다. -->
+    <!-- HTNL를 기준으로 이미지가 같은 폴더(파일명)에 있다. -->
     <img src="figma.png" alt="">
     <!-- html문서는 (04_img.html)는 03_html폴더에 들어있고, 이미지(figma.png)는 assets폴더에 들어있다. -->
-    
+    <!-- HTML문서를 기준으로 이미지가 상위 폴더(../파일명)에 있다. -->
     <img src="../assets/facebook.png" alt="">
+    <!-- HTML문서를 기준으로 이미지가 하위 폴더(폴더명/파일명)에 있다. -->
     <img src="evan/instagram.png" alt="">
-    <img src="../twitter.png" alt="">
+    <img src="evan/Made by Evan/twitter.png" alt="">
+    <h3>./를 이용한 방법</h3>
+    <img src="./figma.png" alt="">
+    <img src="./../assets/facebook.png" alt="">
+    <img src="./evan/instagram.png" alt="">
+    <img src="./evan/Made by Evan/twitter.png" alt="">
+    <h3>root(/)를 이용하는 방법- 실무사용</h3>
+    <p>HTML문서 위치에 상관없이 적용된다.</p>
+    <p>서버에서만 확인 가능하다.(라이브서버도 가상서버)</p>
+    <img src="/03_HTML/figma.png" alt="">
+    <img src="/assets/facebook.png" alt="">
+    <img src="/03_HTML/evan/instagram.png" alt="">
+    <img src="/03_HTML/evan/Made by Evan/twitter.png" alt="">
+
+    <h2>절대 경로</h2>
+    <p>http://~, https://s</p>
+    <img src="https://blogcodestates.com/wp-content/uploads/2023/04/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0_UXUI%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84_%ED%94%BC%EA%B7%B8%EB%A7%88%EC%82%AC%EC%9A%A9%EB%B2%95_%ED%94%BC%EA%B7%B8%EB%A7%88%EB%A1%9C%EA%B3%A0.png?fit=1906%2C1081&ssl=1" width="200" alt="">
 </body>
-</html>
+</html>  
