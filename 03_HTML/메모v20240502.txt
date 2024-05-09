@@ -49,3 +49,5 @@ www.naver.com -> domain(도메인)  id.github.io/web0422
 192.168.2.19 -> IPv4 -> IPv6
 https -> 프로토콜
 프로토콜://도메인 -> URL(웹 주소)
+
+https://mayummi.github.io/web0422/03_HTML/05_a.html
