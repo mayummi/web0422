@@ -59,3 +59,55 @@ https://mayummi.github.io/web0422/03_HTML/05_a.html
 <p>
 <img>
 <a>
+
+비표준: table
+표준: flotating-flexible-grid
+
+
+인라인 요소는 인라인 요소를 내용으로 지정o
+<a href=네이버
+   h1>제목<h1>
+/a>
+
+</a>
+인라인 요소는 블록레벨요소를 내용으로 지정X
+
+블록 레벨 요소를 내용으로 지정할 수 없다. 예외<a>
+
+
+o
+<div>
+    <a href="/figma/">red more...</a>
+    <p>Red more...</p>
+</div>
+
+x
+<p>
+    <a href="/figma/">red more...</a>
+    <div>Red more.</div>
+</p>
+
+<a href="/figma/">
+<p>red more.</p></a>
+
+p.32 표
+1.블록레벨요소는 블록레벨요소 또는 인라인 요소를 감쌀 수 있다.
+<div>텍스트</div>
+<div><span>텍스트</span></div>
+2.블록레벨 요소 중에는 블록레벨 요소를 자식 요소로 포함 할 수 있는 요소와 포함할 수 없는 요소가 있다.
+
+3.인라인 요소는 텍스트(문자)와 인라인 요소를 자식 요소로 포함할 수 있다.
+4.인라인 요소는 블록레벨 요소를 자식 요소로 포함할 수 없다.
+<div> 
+   <div> 
+     <div>
+    </div>
+  </div>
+</div>
+<p>
+ <p>
+   <p>
+     </p>
+     </p>
+    </p>
+   </p>
