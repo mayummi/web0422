@@ -111,3 +111,29 @@ p.32 표
      </p>
     </p>
    </p>
+
+
+   0513
+   의미없는 태그
+   <div>
+   <h1><a href="#">로고</a></h1>
+   <h2>제목</h2>
+   <h1><p>단락이다.</p></h1>
+   <p><h1>단락이다.</h1></p>
+   <p><span>단락</span></p>
+   <div>그룹핑</div>
+   <p>단락</p>
+   <a>링크</a>
+   <span><img></span>
+   </div>
+
+<arcticle>
+
+   header /header
+   <nav> </nav>
+   <section>
+    <h3>제목</h3>
+      <section>
+      <h4>제목</h4>
+      </section>
+   </section>
