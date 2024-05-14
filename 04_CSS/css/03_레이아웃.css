@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* 선택자의 종류
+    1. 요소(태그, 타입)
+    2.그룹: ,
+    3.클래스 선택자: .이름
+*/
+
+/* 레이아웃 유형1의 전체크기 */
+.container1 {
+    width: 1200px;
+    /* 콘텐츠를 가로 가운데 배치 */
+    margin:0 auto; /* 콘텐츠 가로 중앙 배치 */
+}
+
+/* 레이아웃 유형1 */
+/* div1~4는 레이아웃 유형1의 각 박스 크기와 배경색 */
+.div1 {
+    background: aqua;
+    height: 100px;
+}
+.div2 {
+    background: beige;
+    height: 300px;
+}
+.div3 {
+    background: chocolate;
+    height: 200px;
+}
+.div4 {
+    background: darkcyan;
+    height: 100px;
+}
+
+/* 레이아웃 유형2-가로 */
+/* 
+    레이아웃(Layout)
+    1. floating layout
+    2. flexible layout
+    3. grid layout
+    4. positioning
+    5. 블록레벨요소 속성을 인라인 속성으로 바꾼다.
+ */
+ /* 
+    5번 display(표시방식)
+    display: block; - >인라인요소 속성을 블록레벨요소 속성으로 바꾼다.
+    display: inline; - >블록레벨요소 속성을 인라인 속성으로 바꾼다.
+    display: inline-block; ->인라인요소 + 블록레벨요소 두 속성을 모두 갖는다.
+    display: none; -> 화면에서 요소를 제거
+
+    ctrl+d: 다중 선택
+
+    블록레벨 요소
+     display: block;
+        -세로 배치(위에서 아래, 줄 바꿈)
+        -가로는 100%, 세로는 내용(auto) 크기
+        -가로/세로 크기가 지정된다.
+
+    인라인요소
+     display: inline;
+        - 가로 배치(왼쪽에서 오른쪽, 줄바꿈x)
+        - 가로/세로는 내용크기
+        -가로/세로 크기가 지정되지 않는다.
+
+     display: inline-block;
+        -가로 배치(왼쪽에서 오른쪽, 줄바꿈x)
+        - 가로/세로는 내용크기
+        - 가로/세로 크기가 지정된다.
+  */
+
+/* div5~7는 레이아웃 유형1의 각 박스 크기와 배경색 */
+/* 카멜(낙타) 표기법: 소문자, 두번째 단어부터 단어의 첫글자는 대문자 */
+/* box_size, boxSize, box-size */
+.boxSize {
+    width: 400px;
+    height: 200px;
+}
+/* 레이아웃 유형2: inline-block */
+.container2 {
+    display:inline-block;
+}
+.div5 {
+    background: firebrick;
+}
+.div6 {
+    background: gold;
+}
+.div7 {
+    background: hotpink;
+}
+
+/* 레이아웃 유형2: float(과거) */
+/* float: left;-> 왼쪽을 기준으로 가로 배치 */ 
+/* float: right; -> 오른쪽을 기준으로 가로 배치 */ 
+.container3 {
+    float: left;
+}
+
+/* 레이아웃 유형2: flexible */
+.container4 {
+    display: flex;
+}
