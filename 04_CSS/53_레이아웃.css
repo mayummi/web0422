@@ -98,6 +98,50 @@
 
 /* 레이아웃 유형2: flexible */
 /* display: flex는 부모 요소에만 지정할 수 있다. */
+
 .container4 {
     display: flex;
 }
+.header {
+    background-color: honeydew;
+    width: 200px;
+    height: 700px;
+}
+.contents {
+    background-color: khaki;
+    width: 1000px;
+    height: 700px;
+}
+/* 레이아웃 유형3: 가로+세로 */
+
+/* 사용한 클래스명 */
+/*
+ container1~4,
+  .boxSize
+  . div1~7
+  .header
+  .contents
+
+  .s
+ */
+
+ .header2 {
+    width: 200px;
+    height: 850px;
+    background: olive;
+ }
+ .contents2{
+    width: 100px;
+    height: 850px;
+    background: palevioletred;
+ }
+ .section {
+    background: lavender;
+    width: 1200px;
+    height: 850px;
+ }
+ .footer {
+    width: 1200px;
+    height: 100px;
+    background: navy;
+ }
