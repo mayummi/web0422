@@ -8,17 +8,25 @@
 </head>
 <body>
     <!-- 세로배치 -->
-    <div class="container4 section">
-        <!-- 가로배치: 부모 요소에 display:felx; -->
-        <div class="header2">헤더</div>
-        <div class="content2">
-            <!-- 세로배치 -->
-            <div class="slide">슬라이드</div>
-            <div class="banner">배너</div>
-            <div class="notice">공지사항</div>
+    <!-- df란? display:flex; -->
+    <!-- container -->
+    <!-- section과 footer 가로 크기를 1200px으로 지정 -->
+    <div class="container4">
+        <!-- 블록레벨요소의 가로 크기는 부모 크기의 100%이다. -->
+        <!-- .section 과 .footer의 가로 크기는 100%이다. -->
+        <div class="df section">
+            <!-- 가로배치: 부모 요소에 display:felx; -->
+            <div class="header">헤더</div>
+            <!--  콘텐를 하나로 그룹핑 -->
+            <div class="contents">
+                <!-- 세로배치 -->
+                <div class="slide">슬라이드</div>
+                <div class="banner">배너</div>
+                <div class="notice">공지사항</div>
+            </div>
         </div>
+        <div class="footer">푸터</div>
     </div>
-    <div class="footer">푸터</div>
   
 </body>
 </html>
