@@ -7,20 +7,31 @@
     background: yellow;
 }
 
-.tabs {
-    background: #eee;
+/*
+    선택자
+    1. 클래스: .이름
+    2. 그룹: ,
+    3. 요소(태그, 타입)
+    4. 하위: 부모 자식(손자)
+ */
+
+.contents div { 
     width: 400px;
     height: 200px;
+}
+/* .div div { 
+    width: 400px;
+    height: 200px;
+} */
+
+.tabs {
+    background: #eee;
 }
 
 .banner {
     background: #ccc;
-    width: 400px;
-    height: 200px;
 }
 
 .shortcut {
     background: #aaa;
-    width: 400px;
-    height: 200px;
 }
