@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃</title>
-    <link rel="stylesheet" href="./../04_CSS/53_레이아웃.css">
+    <link rel="stylesheet" href="./../04_CSS/53_레이아웃2.css">
 </head>
 <body>
     <!-- 가로400px, 세로200px -->
     <!-- 
-        부모요소: div.container4
-        자식요소: div.boxSize
+        부모요소: contents - > display:felx; - > 플렉스 컨테이너
+        자식요소: tabs, banner, shortcut - > 플렉스 아이템
      -->
-    <div class="container2 df">
-        <div class="boxSize div5">박스1</div>
-        <div class="boxSize div6">박스2</div>
-        <div class="boxSize div7">박스3</div>
+     <!-- 클래스 이름은 대소문자를 구분한다. -->
+    <div class="contents">
+        <div class="tabs">공지사항/갤러리</div>
+        <div class="banner">배너</div>
+        <div class="shortcut">바로가기</div>
     </div>
 </body>
 </html>

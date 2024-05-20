@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* @:엣 */
+/* shift+alt+f 정렬 */
+.contents {
+    display: flex;
+    width: 1200px;
+    background: yellow;
+}
+
+.tabs {
+    background: #eee;
+    width: 400px;
+    height: 200px;
+}
+
+.banner {
+    background: #ccc;
+    width: 400px;
+    height: 200px;
+}
+
+.shortcut {
+    background: #aaa;
+    width: 400px;
+    height: 200px;
+}
