@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/*
+    박스모델
+    width:auto; -> 100% 내용크기
+    hight:auto; -> 내용크기
+    border: 테두리
+    border-style: 실선 점선 대시선 (선종류)
+    border-width: 선굵기
+    border-color: 선색
+    padding: (안쪽 여백) 패딩
+    margin: (바깥)여백
+ */
+body {
+    margin: 0;
+}
+/* 테두리를 지정하려면 스타일은 반드시 기록한다. */
+div {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    background: yellow;
+}
+/* 인라인 요소는 width, hight가 적용되지 않는다. */
+span {
+    border-style: solid;
+    background: purple;
+}
