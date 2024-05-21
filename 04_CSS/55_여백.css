@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* 
+    여백
+    margin
+    padding
+*/
+
+div {
+    width: 200px;
+    height: 200px;
+    background: yellow;
+}

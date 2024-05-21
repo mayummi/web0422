@@ -41,8 +41,10 @@ div {
     margin: 100px;
     box-sizing: border-box;
 }
-/* 인라인 요소는 width, hight가 적용되지 않는다. */
+/* 인라인 요소는 width, hight, box-sizing가 적용되지 않는다. */
 span {
+    width: 500px;
+    height: 200px;
     /* border: 값1 값2 값3; (속기형) */
     border: 1px solid red;
     background: purple;
