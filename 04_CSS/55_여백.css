@@ -1,13 +1,73 @@
 @charset "utf-8";
 
 /* 
-    여백
-    margin
-    padding
-*/
+    margin-top: 상;
+    margin-right
+    margin-bottom
+    margin-left
 
-div {
-    width: 200px;
-    height: 200px;
+    여백
+    margin: 값1; -> 상하좌우 모두 값1
+    margin: 값1 값2; -> 상하는 값1, 좌우는 값2
+    margin: 0 auto;
+    margin: 값1 값2 값3; -> 상은 값1, 좌우는 값2, 하는 값3
+    margin: 값1 값2 값3 값4; -> 상은 값1,우는 값2, 하는 값3, 좌는 값4
+    padding
+
+
+    예시
+    margin: 10px; -> 상하좌우 모두 10px
+    margin: 10px 20px; -> 상하는 10px, 좌우는 20px
+    margin: 0 auto;
+    margin: 10px 20px 30px; -> 상은 10px, 좌우는 20px, 하는 30px
+    margin: 값1 값2 값3 값4; -> 상은 값1,우는 값2, 하는 값3, 좌는 값4
+    padding 
+
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+
+    padding: 상하좌우;
+    padding: 상하 좌우;
+    padding: 상 좌우 하;
+    padding
+
+*/
+body {
+    /* 0만 단위 생략 가능 */
+    margin: 0px;
+}
+.wrap {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+}
+.wrap div {
+    width: 340px;
+    height: 620px;
+    /* 8의 배수: 8, 16, 24, 32, 40, 48, ... */
     background: yellow;
+}
+/* 위아래 여백은 큰 값으로 지정된다. */
+/* 좌우는 그대로 적용 */
+/* .box1 {
+    margin: 0 20px 0 0;
+}
+.box2 {
+    margin: 0 20px;
+}
+.box3 {
+    margin: 0 0 0 20px;
+} */
+
+/* 일반형 */
+.box1 {
+    margin-right: 20px;
+}
+.box2 {
+    margin-right: 20px; margin-left: 20px;
+}
+.box3 {
+    margin-left: 20px;
 }
