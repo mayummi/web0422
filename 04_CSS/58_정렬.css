@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+/*
+    text-align: 글자 맞춤;
+    line-height: 줄간격;
+    padding: 패딩;
+
+    인라인요소와 텍스트 가로 정렬
+    text-align
+    텍스트의 세로 가운데 정렬
+    1.height를 지정하지 않고, padding의 위래 같은 크기를 지정한다.
+    2.line-height 속성 값을 height 속성 크기와 같은 크기로 지정한다.
+    (단, 한 줄 텍스트일때만 가능하다.) 
+ */
+
 div {
     background: yellow;
     margin: 12px;
@@ -7,10 +20,13 @@ div {
 }
 div:nth-of-type(1) {
     text-align: left;
+    height: 100px;
 }
 div:nth-of-type(2) {
     text-align: center;
+    line-height: 100px;
 }
 div:nth-of-type(3) {
     text-align: right;
+    padding: 42px 0;
 }
