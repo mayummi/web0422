@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+div {
+    width: 150px;
+    height: 150px;
+    /* background: green; */
+    border: 1px solid green;
+    margin: 20px;
+}
+
+div:nth-of-type(1) {
+    border-radius: 20px;
+}
+div:nth-of-type(2) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 40px;
+}
+div:nth-of-type(3) {
+    /* 상단왼쪽 하단 오른쪽 10px */
+    /* 상단 오른쪽, 하단왼쪽 20px */
+    border-radius: 10px 20px;
+}
+div:nth-of-type(4) {
+    /* 상단왼쪽 10px */
+    /* 하단오른쪽 30px */
+    /* 상단 오른쪽, 하단왼쪽 20px */
+    border-radius: 10px 20px 30px;
+}
+div:nth-of-type(5) {
+    /* 상단왼쪽 10px */
+    /* 상단오른쪽 20px */
+    /* 하단 오른쪽 30px */
+    /* 하단왼쪽 40px */
+    border-radius: 10px 20px 30px 40px;
+}
+div:nth-of-type(6) {
+    /* border-radius: 75px; */
+    border-radius: 50%; 
+    /* 부모크기의 50% */
+}
+div:nth-of-type(7) {
+    /* border-radius: 75px; */
+    width: 75px;
+    /* 가로세로 크기가 다를 경우 문제 발생 */
+    border-radius: 75px 0 0 75px; 
+}
+div:nth-of-type(8) {
+    /* border-radius: 75px; */
+    width: 75px;
+    height: 75px;
+    /* 가로세로 크기가 다를 경우 문제 발생 */
+    border-radius: 75px 0 0 0; 
+}
