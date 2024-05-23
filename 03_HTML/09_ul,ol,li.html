@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>목록</h1>
+    <!-- emmit 기록후 tab키 -->
+    <!-- 
+        >는 자식
+        *숫자는 숫자만큼 요소 생성
+        {텍스트}
+        {텍스트$} -> $는 순번(1,2,3, ...)
+    -->
+    <!-- ul>li*3{메뉴$} -->
+<p>ul, ol의 자식은 li만 사용할 수 있다.</p>
+<p>li는 ul과 ol의 자식으로만 사용할 수 있다.</p>
+
+    <h2>커피 메뉴</h2>
+    <p>순서가 없는 목록은 ul을 사용한다.</p>
+    <ul>
+        <!-- <h3>품질 좋은 커피</h3> (x) -->
+        <!-- <p>커피</p> (x) -->
+        <!-- <div>div도 안됨</div>(x) -->
+        <li>
+            아메리카노
+            <h3>가장 좋아하는 커피</h3>
+            <p>정말 품질이 좋아요! 선택하시면 후회 안하실거에요~.</p>
+            <ul>
+                <li>아이스 아메리카노</li>
+                <li>핫 아메리카노</li>
+            </ul>
+        </li>
+        <li>카페라떼</li>
+        <li>카페모카</li>
+    </ul>
+    <!-- ol>li*3{목록$} -->
+    <h2>야구 순위</h2>
+    <!-- 특수문자:$lt;은<, &gt;은 > -->
+    <p>순서가 있는 목록은 $lt;ol&gt;을 사용한다.</p>
+    <ol>
+        <li>기아</li>
+        <li>엘지</li>
+        <li>삼성</li>
+    </ol>
+</body>
+</html>
