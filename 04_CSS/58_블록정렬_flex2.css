@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+
+/* 
+    display:flex;인 부모 요소의 지정할 수 있는 속성
+    1. flex-direction:row;
+    2. flex-wrap: nowrap;
+    3. flex-flow: row nowrap; (속기형)
+    3. 주축(교차축)정렬
+        flex-direction:row이면 주축이 가로(교차축은 세로)
+        flex-direction:colum이면 주축이 세로(교차축은 가로)
+
+        justify-content: 주축에 대한 정렬
+            flex-start
+            flex-end
+            center
+        align-items: 교차축에 대한 정렬
+        align-content: 교차축에 대한 정렬
+*/
+
+/* 부모요소 */
+.box {
+    display: flex;
+    /* 줄바꿈 */
+    flex-wrap: wrap;
+    background: yellow;
+    width: 1500px;
+    height: 200px;
+    margin: 12px;
+
+}
+.box1 {
+    /* flex-direction: row; (기본값) */
+    justify-content: center;
+    align-content: center;
+}
+.box2 {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* 자식요소 */
+/* 
+    flex-glow: 성장 (x) 0;
+    flex-shrink:수축 (o) 1;
+*/
+.box div {
+    width: 360px;
+    height: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #000;
+}
+.box1 div:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+
