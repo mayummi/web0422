@@ -9,8 +9,9 @@
 
 /* 눈누폰트 */
 /* 제목: 나눔스퀘어 네오 */
+/* 네이버 폰트 */
 @font-face {
-    font-family: 'NanumSquareNeo-Variable';
+    font-family: 'NanumSquareNeo';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -18,10 +19,20 @@
 
 
 
-
-
-
 body {
-    /* font-family: "Noto Sans KR", sans-serif; */
-    font-family: "NanumSquareNeo-Variable", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    /* font-family: "NanumSquareNeo", sans-serif; */
+}
+h1,h2,h3 {
+    font-family: "NanumSquareNeo", sans-serif;
+}
+h1,h3 {
+    font-size: 15px;
+}
+h2 {
+    font-size: 24px;
+}
+a {
+    color: #111;
 }
