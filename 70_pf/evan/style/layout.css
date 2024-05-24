@@ -27,20 +27,21 @@ a {
 /* 박스모델 속성, display, position */
 nav {
     
-    height: 100px;
+    /* height: 100px; */
     line-height: 100px;
 }
 nav section {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    /* align-items: center;
+    height: 100px; */
 }
-
+nav ul {display: flex;}
 nav li {
     display: inline-block;
 }
 header {
-    height: 200px;
+    /* height: 200px; */
     line-height: 200px;
 }
 section  {
