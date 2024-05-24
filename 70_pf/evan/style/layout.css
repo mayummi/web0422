@@ -1,6 +1,21 @@
 @charset "utf-8";
 
-/* layout */
+/* temp */
+/* body * {outline: 1px solid lime;} */
+
+/* reset(초기화) */
+body,ul,h1,h2 {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    /* 텍스트 밑줄 제거 */
+    text-decoration: none;
+}
+
 /* 
     요소 선택자: 태그명
     그룹 선택자: ,
@@ -8,17 +23,25 @@
     *는 모든 요소를 가리킨다.
 */
 /* body 안의 모든 요소 */
-body * {outline: 1px solid lime;}
-
-body {
-    margin: 0;
-}
+/* layout(배치) */
+/* 박스모델 속성, display, position */
 nav {
+    
     height: 100px;
+    line-height: 100px;
+}
+nav section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
 }
 header {
     height: 200px;
-    background: url(../assets/bg-light.png);
+    line-height: 200px;
 }
 section  {
     width: 940px;
@@ -26,6 +49,7 @@ section  {
 }
 .home-card {
     display: flex;
+    justify-content: space-between;
 }
 .home-icon {
     width: 100px;
@@ -35,6 +59,13 @@ section  {
     width: 790px;
     height: 140px;
 }
+
+/* header */
+header {
+    background: url(../assets/bg-light.png);
+}
+/* section */
+/* footer */
 
 /*
     color: 색
