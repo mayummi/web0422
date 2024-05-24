@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* layout */
 /* 
     요소 선택자: 태그명
     그룹 선택자: ,
@@ -62,6 +63,7 @@ section  {
     */
 
 /* 글자 속성은 상속 받는다. */
+/* font */
 body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
@@ -93,6 +95,6 @@ nav {
 .home-icon {
     background: #eee;
 }
-.home-descrition {
+.home-description {
     background: #ccc;
 }
