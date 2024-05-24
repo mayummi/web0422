@@ -36,27 +36,54 @@ section  {
 }
 
 /*
+    color: 색
     font-family: 글꼴
     font-size: 크기
-    font-style: italic;
-    font-wight: 굵기, 100,200~900
-    line-height: 줄간격
+    font-style: italic; 이탤릭
+    font-wight: 굵기, 100,200~900(단위없음)
+    line-height: 줄간격 150%, 1.5~2(많이 씀), 23px(단위 생략) px은 소수점으로 쓰지 않는다.
     text-align: 맞춤
 
     style guide(스타일 가이드)
-    제목: Georgia h1~h3, nav a
+    제목: Georgia, italic h1~h3, nav a
     본문: Arial body, p, section
     한글 제목: noto sans kr
     한글 본문: noto sans kr
 
-    h1: 50px
-    h2: 30px
-    h3: 24px
-    Nav a: 20px
-    section a
-    body
-    p
-*/
+    단위: rem, em, px, %
+
+    h1: 50px, 700 lh60
+    h2: 30px, 700 lh36px
+    h3: 22.5px, 700, lh33.75px
+    h3 span: 22.5px, 400, lh33.75px
+    Nav a: 20px, lh100px
+    section a: 15px
+    body, p: 15px 1.5(lh22.5px)-> 150~200% 가독성이 좋다.
+    */
+
+/* 글자 속성은 상속 받는다. */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+h1,h2,h3,nav a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+h1 {
+    font-size: 50px;
+    color: #fff;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 22.5px;
+}
+nav a {
+    font-size: 20px;
+    color: #444;
+}
 
 
 /* bg-color */
