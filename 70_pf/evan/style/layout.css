@@ -17,10 +17,11 @@ nav {
 }
 header {
     height: 200px;
+    background: url(../assets/bg-light.png);
 }
 section  {
     width: 940px;
-    margin: auto;
+    margin: 0 auto;
 }
 .home-card {
     display: flex;
@@ -29,7 +30,42 @@ section  {
     width: 100px;
     height: 100px;
 }
-home-description {
+.home-description {
     width: 790px;
     height: 140px;
+}
+
+/*
+    font-family: 글꼴
+    font-size: 크기
+    font-style: italic;
+    font-wight: 굵기, 100,200~900
+    line-height: 줄간격
+    text-align: 맞춤
+
+    style guide(스타일 가이드)
+    제목: Georgia h1~h3, nav a
+    본문: Arial body, p, section
+    한글 제목: noto sans kr
+    한글 본문: noto sans kr
+
+    h1: 50px
+    h2: 30px
+    h3: 24px
+    Nav a: 20px
+    section a
+    body
+    p
+*/
+
+
+/* bg-color */
+nav {
+    background: #eee;
+}
+.home-icon {
+    background: #eee;
+}
+.home-descrition {
+    background: #ccc;
 }
