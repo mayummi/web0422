@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Br Arachitect</title>
+    <style>
+        /* temp */
+        header {
+            background: #ccc;
+        }
+
+        .s1 {
+            background: #777;
+        }
+
+        .s2 li {
+            background: #ccc;
+        }
+
+        h3 {
+            background: #777;
+        }
+
+        .s3 li {
+            background: #ccc;
+        }
+
+        .image {
+            background: #ccc;
+        }
+
+        .image2 {
+            background: #ccc;
+        }
+
+        footer {
+            background: #777;
+        }
+
+        /* typo */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "NanumSquareNeo", serif;
+        }
+
+        h1,
+        h3 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        a {
+            color: #111;
+        }
+
+        /* layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 36px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        /* 섹션1 */
+        .s1 {
+            height: 745px;
+        }
+
+        .s1 h2 {
+            border-bottom: none;
+            margin: 0;
+        }
+
+        /* 섹션의 공통 */
+        section {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        .s2 h2 {
+            border-bottom: 1px solid black;
+            padding: 24px 0;
+            margin-bottom: 48px;
+            margin-top: 64px;
+        }
+
+        /* 섹션2 */
+        .s2 ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .s2 li {
+            width: 360px;
+            height: 240px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        .s2 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s2 h3 {
+            display: inline-block;
+            padding: 8px 24px;
+        }
+
+        /* 섹션3 */
+        .s3 h2 {
+            border-bottom: 1px solid black;
+            padding: 24px 0;
+            margin-bottom: 24px;
+            margin-top: 64px;
+        }
+
+        .s3 ul {
+            display: flex;
+        }
+
+
+        .s3 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 20px;
+        }
+
+        /* .s3 h3 {
+            display: inline-block;
+            padding: 8px 24px;
+        } */
+
+        /* 섹션4 */
+        .s4 h2 {
+            border-bottom: 1px solid black;
+            padding: 24px 0;
+            margin-bottom: 24px;
+            margin-top: 64px;
+        }
+
+        .image {
+            height: 280px;
+            margin-bottom: 20px;
+        }
+
+        .image2 {
+            height: 845px;
+            margin-bottom: 10px;
+        }
+
+        /* 푸터 */
+        footer {
+            height: 84px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* reset */
+        body,
+        h1,
+        h2,
+        h3,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><b>Br</b>Arachitect</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section s1">
+            <h2><span>Br</span>Arachitect</h2>
+        </section>
+        <section class="section s2">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Summer House</h3>
+                </li>
+                <li>
+                    <h3>Brick House</h3>
+                </li>
+                <li>
+                    <h3>Renovated</h3>
+                </li>
+                <li>
+                    <h3>Barn House</h3>
+                </li>
+                <li>
+                    <h3>Summer House</h3>
+                </li>
+                <li>
+                    <h3>Brick House</h3>
+                </li>
+                <li>
+                    <h3>Renovated</h3>
+                </li>
+                <li>
+                    <h3>Barn House</h3>
+                </li>
+            </ul>
+        </section>
+        <section class="section s3">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, provident quaerat praesentium ipsum
+                quasi voluptate sint, sunt molestias quam, commodi velit optio necessitatibus dolorem quia sequi unde
+                dolores tenetur beatae.</p>
+            <ul>
+                <li>
+
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
+                </li>
+            </ul>
+
+        </section>
+        <section class="section s4">
+            <h2>contact</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae odit itaque iusto neque voluptatem
+                non ipsa, soluta natus vitae ex qui rem deserunt, asperiores quisquam. Laborum natus nemo amet delectus!
+            </p>
+            <div class="image"></div>
+            <div class="image2"></div>
+        </section>
+    </main>
+    <footer>Copyright 2024 Br Arachitect. All right reserved.</footer>
+</body>
+
+</html>
