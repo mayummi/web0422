@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* 
+    선택자::before ->이전
+    선택자::after -> 이후
+*/
+
+p::before {
+    /* 특수문자는 한글의 자음(ㅁ) + 한자키 */
+    content: "●";
+    font-size: 8px;
+    margin-right: 8px;
+}
+
+/* p::before {
+            content: "";
+            color: red;
+            display: inline-block;
+            font-size: 8px;
+            margin-right: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: red;
+        } */
+p::after {
+    /* 이모지 윈+. 또는 윈+; */
+    content: "😎";
+}

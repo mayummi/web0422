@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* 
+        :first-of-type
+        :nth-of-type(1)
+        :last-of-type
+        :nth-of-type(9)
+        
+
+        :nth-last-of-type(1)
+        자식선택자:nth-of-type(n) -> type 구분
+        자식선택자:nth-child(n) -> type(태그, 요소)을 구분x
+        */
+/* 첫 번째 자식요소 p */
+/* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 빨강으로 지정한다. */
+p:nth-of-type(1) {
+    color: blue;
+}
+
+/* h3의 부모 즉, div의 자식 요소 중 다섯 번째 h3요소를 선택하여 글자색을 빨강으로 지정한다. */
+h3:nth-child(5) {
+    color: red;
+}
+
+/* h2의 부모 즉, div의 자식 요소 중 다섯 번째 h3요소를 선택하여 배경색을 노랑으로 지정한다. */
+h2:first-of-type {
+    background: yellow;
+}
+
+/* p의 부모 즉, div의 자식 요소 중 다섯 번째 p요소를 선택하여 배경색을 노랑으로 지정한다. */
+
+p:last-child {
+    background: darkcyan;
+}
+
+/* p의 부모 즉, div의 자식 요소 중 홀수 번째 p요소를 선택하여 글자를 bold로 지정한다. */
+p:nth-child(2n+1) {
+    font-weight: bold;
+}
+
+/* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 lightcoral으로 지정한다. */
+p:first-of-type {
+    color: lightcoral;
+}
+
+/* p의 부모 즉, div의 자식 요소 중 마지막 p요소를 선택하여 글자색을 lightgreen으로 지정한다. */
+p:last-of-type {
+    color: lightgreen;
+}
+
+/* p의 부모 즉, div의 자식 요소 중 짝수 번째 p요소를 선택하여 글자색을 이탤릭체로 지정한다. */
+p:nth-of-type(2n) {
+    font-style: italic;
+}
