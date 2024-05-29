@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+                배경 관련 속성
+                background-image: 배경이미지
+                background-repeat: 반복여부
+                background-position: 위치
+                background-size: 크기
+                background-attachment: 고정여부
+                background-color: 배경색
+                background: 속기형
+            */
+
+            div {
+                height: 1000px;
+            }
+        p {
+            height: 600px;
+            border: 1px solid;
+
+            background-image: url(./../assets/figma.png);
+            background-repeat: no-repeat;
+            /* 50% 50% -> 가로 세로 */
+            background-position: 50% 50%;
+            background-size: 100px;
+            background-color: yellowgreen;
+            background-attachment: fixed;
+
+            /* background: 색|url(경로/이미지명) [반복] [위치/크기]; */
+            background: url(./../assets/bg.jpg) no-repeat 0% 50%/cover fixed yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>배경 이미지</h1>
+    <div></div>
+    <div>
+        <p>background-image, background-repeat, background-position, background-size, background-attachment와 같은 css 속성이 있다.</p>
+    </div>
+    <div></div>
+</body>
+</html>
