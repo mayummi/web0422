@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
+
+/* 
+    요소 선택자: 태그명
+    그룹 선택자: ,
+    전체 선택자: *
+    *는 모든 요소를 가리킨다.
+*/
+/* body 안의 모든 요소 */
+/* layout(배치) */
+/* 박스모델 속성, display, position */
+/* :root는 HTML 태그를 가리킨다. */
+:root {
+    /* to the top 버튼을 부드럽게 스크롤 */
+    scroll-behavior: smooth;
+}
+
+/* navigation */
+nav {
+
+    /* height: 100px; */
+    line-height: 100px;
+}
+
+nav section {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center;
+    height: 100px; */
+}
+
+nav ul {
+    display: flex;
+}
+
+/* nav li {
+    display: inline-block;
+} */
+nav li:first-child::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0 12px 4px;
+    background: #999;
+}
+
+/* header */
+header {
+    /* 패럴렉스 스크롤링 기법 */
+    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
+    line-height: 200px;
+}
+
+/* main */
+main {
+    padding-bottom: 200px;
+}
+
+section {
+    width: 940px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 56px 0;
+}
+
+.home-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.home-description {
+    width: 790px;
+    /* height: 140px; */
+}
+
+h3 span {
+    font-weight: 400;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+}

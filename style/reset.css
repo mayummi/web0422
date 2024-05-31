@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* temp */
+/* body * {outline: 1px solid lime;} */
+
+/* reset(초기화) */
+body,
+ul,
+h1,
+h2 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    /* 텍스트 밑줄 제거 */
+    text-decoration: none;
+}
