@@ -12,6 +12,13 @@
 /* body 안의 모든 요소 */
 /* layout(배치) */
 /* 박스모델 속성, display, position */
+/* :root는 HTML 태그를 가리킨다. */
+:root {
+    /* to the top 버튼을 부드럽게 스크롤 */
+    scroll-behavior: smooth;
+}
+
+/* navigation */
 nav {
 
     /* height: 100px; */
@@ -42,9 +49,16 @@ nav li:first-child::after {
     background: #999;
 }
 
+/* header */
 header {
-    /* height: 200px; */
+    /* 패럴렉스 스크롤링 기법 */
+    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
     line-height: 200px;
+}
+
+/* main */
+main {
+    padding-bottom: 200px;
 }
 
 section {
@@ -75,11 +89,8 @@ h3 span {
     font-weight: 400;
 }
 
-/* header */
-header {
-    /* 패럴렉스 스크롤링 기법 */
-    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
-}
 
-/* section */
 /* footer */
+footer {
+    text-align: center;
+}
