@@ -137,3 +137,15 @@ p.32 표
       <h4>제목</h4>
       </section>
    </section>
+
+
+   0604
+   레이아웃(배치)
+   float 
+  display:flex  -> display:flex, display: grid
+  
+   position; -> 
+   -static
+   -absolute
+   -relative
+   
