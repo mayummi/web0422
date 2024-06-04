@@ -144,8 +144,25 @@ p.32 표
    float 
   display:flex  -> display:flex, display: grid
   
-   position; -> 
+   position:fixed; -> 상단 고정 
    -static
-   -absolute
-   -relative
+   -position: absolute; -> 자식
+   -position: relative; -> 부모
+
+   left, right, top, bottom, z-index
+  -position: static;
+
+<div>
+  <div>
+    <div>
+    </div>
+  </div>
+</div>
    
+position
+overflow
+
+인터렉티브(상호작용)
+transition: 시간;
+
+display:flex;
