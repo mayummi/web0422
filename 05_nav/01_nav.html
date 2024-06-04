@@ -8,15 +8,47 @@
         @import url(reset.css);
         @import url(typo.css);
         
+        body {
+            outline: 1px solid lime;
+        }
+
+        header {
+            border: 1px solid;
+            width: 1200px;
+            height: 100px;
+        }
+        .gnb {border: 1px solid;}
+
+        /* 1depth */
+        .main{display: flex;}
+        .main>li {
+            width: 160px;
+            height: 30px;
+        }
+        .main>li:hover {
+            background: #333;
+        }
+        /* 2depth */
+        .sub {
+            background: rgba(0,0,0,.5);
+        }
+        .main>li:hover .sub {
+            height: 120px;
+        }
+        .sub li:hover {
+            background: #111;
+        }
     </style>
 </head>
 <body>
     <!-- header>nav.gnb>ul.main>li*4>a[href="#"]{메인메뉴$}+ul.sub>li*4>a[href="#"]{서브메뉴$} -->
     <header>
         <nav class="gnb">
+            <!-- 1depth -->
             <ul class="main">
                 <li>
                     <a href="#">메인메뉴1</a>
+                    <!-- 2depth -->
                     <ul class="sub">
                         <li><a href="#">서브메뉴1</a></li>
                         <li><a href="#">서브메뉴2</a></li>
