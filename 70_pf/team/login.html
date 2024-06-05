@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <style>
+        @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
         html {
             height: 100%;
         }
@@ -18,13 +25,14 @@
             background: #ddd;
         }
         #main {
-            width: 50%;
+            width: 70%;
             height: 70%;
             display: grid;
             align-items: center;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 0 5px 2px #aaa;
+            margin-top: 10%;
         }
 
         #login-error-msg-holder {
@@ -64,23 +72,26 @@
         }
 
         .login-form-field {
-            width: 100%;
+            width: 35%;
             border: none;
             border-bottom: 1px solid #3a3a3a;
             margin-bottom: 10px;
-            border-radius: 3px;
             outline: none;
             padding: 0 0 5px 5px;
+            display: flex;
         }
 
         #login-form-submit {
-            width: 100%;
+            width: 40%;
             padding: 7px;
             border: none;
             border-radius: 5px;
             color: #fff;
+            background: #BED600;
             cursor: pointer;
             outline: none;
+            display: flex;
+            /* margin-top: 10px; */
         }
 
         html,
@@ -88,7 +99,7 @@
             height: 100%;
         }
 
-        #main-holder {
+        #main {
             width: 50%;
             height: 70%;
         }
