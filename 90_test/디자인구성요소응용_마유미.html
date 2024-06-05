@@ -53,37 +53,28 @@
 
         header {
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: flex-start;
-            /* 블록레벨요소의 가로 가운데 배치 */
-            /* width, margin */
             border: 1px solid;
             width: 1200px;
             height: 100px;
             margin: 0 auto;
-            /* padding: 20px 30px 0; */
         }
 
         .gnb {
-            /* background: red; */
             background: #111;
-            
             margin-top: 20px;
             margin-right: 30px;
         }
 
-
-        /* 1depth */
         .main {
             display: flex;
         }
-        
+
         .main>li {
             width: 160px;
             height: 30px;
-            /* 모든 메뉴 가로 가운데 배치 */
             text-align: center;
-            /* 메인메뉴 텍스트 세로 중앙 배치: line height */
             line-height: 30px;
         }
 
@@ -91,25 +82,24 @@
             background: #333;
         }
 
-        /* 2depth */
         .sub {
             overflow: hidden;
             visibility: hidden;
             opacity: 0;
             height: 0;
             padding: 10px 0 20px 0;
-            /* border: 1px solid red; */
+
             background: rgba(0, 0, 0, .5);
-            /* 숫자가 작을 수록 빠르다. */
             transition: .3s;
             line-height: 2;
         }
-        /* 선택자가 변경됨: >li 제거 */
+
         .main:hover .sub {
             height: 150px;
             visibility: visible;
             opacity: 1;
         }
+
         .sub li a {
             padding: 4px 16px;
         }
@@ -117,6 +107,7 @@
         .sub li:hover a {
             background: #111;
         }
+
     </style>
 </head>
 
@@ -125,21 +116,19 @@
         <nav class="gnb">
             <ul class="main">
                 <li>
-                    <a href="#">메인메뉴1</a>
+                    <a href="#">축제소개</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴2</a>
+                    <a href="#">예약안내</a>
                     <ul class="sub">
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
-                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
                     </ul>
                 </li>
                 <li>
