@@ -81,7 +81,8 @@
         <blockqoute cite="url출처">: 긴 인용문
             1. 블록레벨 요소
             2. 들여쓰기
-            3. cite 속성
+            3. cite: 속성
+            4.margin: 1em, 40px
         <q cite="url">: 한 줄 짧은 인용문
             1. 인라인 요소
             2. 작은 따옴표가 생김
@@ -145,6 +146,15 @@
     </address>
 
 
+    <!-- 
+        <bdo dir="ltr">: 텍스트 방향 지정
+            ltr: left to right, 예) 왼쪽에서 오른쪽
+            rtl: right to left, 예) 쪽른오 서에쪽왼
+        <img>
+        <video>
+        <audio>
+     -->
+
     <img src="https://www.w3schools.com/html/img_the_scream.jpg" width="220" height="277" alt="The Scream">
     <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
 
@@ -171,6 +181,14 @@
 
     <h2>컴퓨터 코드 요소</h2>
 
+    <!-- 
+        <p>: 단락
+        <br>:줄 바꿈
+        <pre>: 사전(미리)에 지정된 서식으로 표시
+            font-family: monospace;
+            white-space: pre;
+        <hr>: 구분선 (수평 규칙)
+     -->
     <pre>
   L          TE
     A       A
@@ -192,11 +210,18 @@
 
 
     <pre>
+
+        <!-- 
+            <code>
+                1.프로그래밍 언어로 작성한 코드 정의
+                2. font-family: monospace;
+        -->
 <code>
 x = 5;
 y = 6;
 z = x + y;
 </code>
+
 </pre>
 
     <p>
@@ -204,12 +229,22 @@ z = x + y;
         the
         array.
     </p>
+    <!-- 
+        1. <kbd>: 키보드의 키 정의
+        2. font-family: monospace;
+     -->
     <p>
         함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가 복사 혹은 삭제를 손쉽게 할 수 있습니다.
     </p>
 
     <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
     <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+    <!-- 
+        <samp>
+            1. 프로그래밍 결과 출력 정의
+            2. font-family: monospace;
+    -->
 
     <p>Message from my computer:</p>
     <p><samp>File not found.<br>Press F1 to continue</samp></p>
@@ -219,6 +254,11 @@ z = x + y;
         <samp>Keyboard not found <br>Press F1 to continue</samp>
     </p>
 
+    <!-- 
+        <var>:
+            1. 변수 정의
+            2. font-style: italic;
+    -->
 
     <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is
         the vertical height.</p>
