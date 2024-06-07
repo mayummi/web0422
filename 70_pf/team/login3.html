@@ -11,7 +11,6 @@
             box-sizing: border-box;
         }
         .page-container {
-            border: 1px solid;
             width: 1200px;
             height: 731px;
             display: flex;
@@ -24,8 +23,23 @@
 
         .login-form-container {
             background: #fff;
-            width: 640px;
+            width: 1200px;
             height: 731px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 10px black;
+            border-radius: 15px;
+        }
+
+        .login-form-right-side {
+            width: 50%;
+            border-radius: 10px 0px 0px 10px;
+            padding: 75px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
         }
 
     </style>
@@ -45,10 +59,10 @@
                     </div>
                     <button class="account">회원가입</button>
                 </div>
+                </div>
+                
+                <div class="login-form-left-side">
                 <p>로그인</p>
-            </div>
-
-            <div class="login-form-left-side">
             
                 <div class="login-input-container">
                     <div class="login-input-wrap input id">
