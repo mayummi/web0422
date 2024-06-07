@@ -4,21 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .page-container {
+            border: 1px solid;
+            width: 1200px;
+            height: 731px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shadow {
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.13);
+        }
+
+        .login-form-container {
+            background: #fff;
+            width: 640px;
+            height: 731px;
+        }
+
+    </style>
 </head>
 <body>
     <div class="page-container">
         <div class="login-form-container shadow">
             <div class="login-form-right-side">
                 <div class="top-logo-wrap">
-
                 </div>
+            
                 <h1>진에어 로그인</h1>
+                <div class="login-top-wrap">
+                    <div>
+                        <h1>아직 진에어 회원이 아니세요?</h1>
+                        <h2>회원가입</h2>
+                    </div>
+                    <button class="account">회원가입</button>
+                </div>
                 <p>로그인</p>
             </div>
+
             <div class="login-form-left-side">
-                <div class="login-top-wrap">
-                    <span>아직 진에어 회원이 아니세요?</span>
-                    <button class=""></button>
+            
+                <div class="login-input-container">
+                    <div class="login-input-wrap input id">
+                        <i class="far"></i>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="login-input-wrap input-password">
+                        <i class="fas"></i>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <div class="login-btn-wrap">
+                    <label><input type="checkbox" name="id" id="id">아이디 저장</label>
+                    <button class="login-btn">로그인</button>
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
                 </div>
             </div>
         </div>
