@@ -7,8 +7,12 @@
     <style>
         * {
             padding: 0;
-            margin: 0;
             box-sizing: border-box;
+        }
+        body {
+            justify-content: center;
+            align-items: center;
+            display: flex;
         }
         .page-container {
             width: 1200px;
@@ -17,6 +21,18 @@
             justify-content: center;
             align-items: center;
         }
+        
+        .line {
+            margin-top: 15px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            height: 700px;
+            width: 0.1px;
+            display: flex;
+            color: #eee;
+        }
+
         .shadow {
             box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.13);
         }
@@ -94,7 +110,23 @@
 
         .login-input-container .login-input-wrap {
             width: 300px;
-            height: 45px;
+            height: 60px;
+            margin-top: 20px;
+        }
+
+        .login-input-container .login-input-wrap i {
+            line-height: 45px;
+        }
+
+        .login-input-container .login-input-wrap input {
+            background: none;
+            border: none;
+            border-bottom: 1px solid;
+            width: 400px;
+        }
+
+        .login-input-container .login-input-wrap input:focus {
+            outline: none;
         }
 
         .login-btn-wrap {
@@ -102,6 +134,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .id-remember {
+            margin-right: 200px;
+            font-size: 12px;
         }
 
         .login-btn-wrap .login-btn {
@@ -118,7 +155,6 @@
             text-decoration: none;
             font-size: 12px;
             color: #3E3E3E;
-            
         }
 
 
@@ -142,25 +178,30 @@
                     <button class="account">회원가입</button>
                 </div>
                 </div>
-                
+                <div class="line"></div>
                 <div class="login-form-left-side">
                 <p>로그인</p>
             
                 <div class="login-input-container">
                     <div class="login-input-wrap input id">
                         <i class="far"></i>
-                        <input type="text" id="username" name="username" required>
+                        <input type="text" id="username" name="username" placeholder="아이디" required>
                     </div>
                     <div class="login-input-wrap input-password">
                         <i class="fas"></i>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password" placeholder="비밀번호" required>
                     </div>
                 </div>
-                <div class="login-btn-wrap">
+                <div class="id-remember">
                     <label><input type="checkbox" name="id" id="id">아이디 저장</label>
+                </div>
+                <div class="login-btn-wrap">
+                    
                     <button class="login-btn">로그인</button>
-                    <a href="#">아이디 찾기</a>
-                    <a href="#">비밀번호 찾기</a>
+                    <span>
+                        <a href="#">아이디 찾기</a>
+                        <a href="#">비밀번호 찾기</a>
+                    </span>
                 </div>
             </div>
         </div>
