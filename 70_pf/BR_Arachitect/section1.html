@@ -18,10 +18,13 @@
         }
 
         section {
+            display: flex;
+            justify-content: center;
             position: relative;
             text-align: center;
             border: 1px solid red;
         }
+
 
         h2 {
             position: absolute;
@@ -29,10 +32,10 @@
             top: 50%;
             margin-left: -110px;
             margin-top: -16px;
+            /* transform: translate(-50%,-50%); */
         }
 
         div {
-            display: inline-block;
             width: 1496px;
             height: 745px;
             background: #ccc;
@@ -43,8 +46,9 @@
     <!-- section 태그는 그 안에 h2~h6 제목이 반드시 존재해야 한다. -->
     <section>
         <h2><b>Br</b>Arachitect</h2>
-        
-        <div><!-- 배너 이미지 삽입 --></div>
+        <div>
+            <!-- 배너 이미지 삽입 -->
+        </div>
     </section>
 </body>
 </html>

@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             padding: 0;
             box-sizing: border-box;
+            font-family: "GmarketSansMedium", sans-serif;
         }
+
         body {
             justify-content: center;
             align-items: center;
             display: flex;
         }
+
         .page-container {
             width: 1200px;
             height: 731px;
@@ -21,7 +32,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .line {
             margin-top: 15px;
             justify-content: center;
@@ -78,7 +89,8 @@
             text-align: right;
             opacity: 0.8;
         }
-        .login-form-left-side{
+
+        .login-form-left-side {
             width: 50%;
             border-radius: 0 10px 10px 0;
             display: flex;
@@ -87,14 +99,15 @@
             padding: 40px;
             background: #fff;
         }
-        .login-form-left-side .login-top-wrap{
+
+        .login-form-left-side .login-top-wrap {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             width: 100%;
         }
 
-        .login-form-left-side .login-top-wrap span{
+        .login-form-left-side .login-top-wrap span {
             color: #ddd;
             font-size: 12px;
             padding-right: 20px;
@@ -145,6 +158,7 @@
 
         .id-remember {
             margin-right: 280px;
+            margin-top: 20px;
             font-size: 12px;
         }
 
@@ -152,6 +166,7 @@
             width: 428px;
             height: 60px;
             border: 0;
+            margin-bottom: 10px;
             border-radius: 15px;
             background: #BED600;
             font-size: 24px;
@@ -179,57 +194,73 @@
         }
 
         span .id {
-            margin-right: 10px;
+            margin-right: 12px;
+
         }
 
-        
+        .another {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #3E3E3E;
+        }
 
+        .far {
+            color: #ABABAB;
+            font-size: 12px;
+        }
+
+        .fas {
+            color:#ABABAB;
+            font-size: 12px;
+        }
     </style>
 </head>
+
 <body>
     <div class="page-container">
         <div class="login-form-container shadow">
             <div class="login-form-right-side">
                 <div class="top-logo-wrap">
                 </div>
-            
-                
+
+
                 <div class="login-top-wrap">
                     <div>
                         <h1>아직, <br>진에어 회원이 <br>아니세요?</h1>
                         <h2>회원가입 하고<br>진에어와 함께 떠나요!</h2>
                     </div>
-                    </div>
-                <button type="button" class="account">회원가입</button>
                 </div>
-                <div class="line"></div>
-                <div class="login-form-left-side">
+                <button type="button" class="account">회원가입</button>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-left-side">
                 <p>로그인</p>
-                
+
                 <div class="login-input-container">
                     <div class="login-input-wrap input-id">
-                        <i class="far"></i>
-                        <input type="text" id="username" name="username" placeholder="아이디" required>
+                        <span class="far">아이디</span>
+                        <input type="text" id="username" name="username" placeholder="" required>
                     </div>
                     <div class="login-input-wrap input-password">
-                        <i class="fas"></i>
-                        <input type="password" id="password" name="password" placeholder="비밀번호" required>
+                        <span class="fas">비밀번호</span>
+                        <input type="password" id="password" name="password" placeholder="" required>
                     </div>
                 </div>
                 <div class="id-remember">
                     <label><input type="checkbox" name="id" id="id">아이디 저장</label>
                 </div>
                 <div class="login-btn-wrap">
-                    
+
                     <button class="login-btn">로그인</button>
                     <span>
                         <a class="id" href="#">아이디 찾기</a>
                         <a href="#">비밀번호 찾기</a>
                     </span>
-                    <span>다른 계정 로그인</span>
+                    <span class="another">간단하게 로그인 할래요</span>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
