@@ -75,6 +75,39 @@
             margin-top: 10px;
             display: none;
         }
+
+    .tabs {
+    position: relative;
+    width:400px;
+    height:200px;
+    padding: 2px;
+    border: 1px solid;
+}
+.tabs label {
+    display: inline-block;
+    padding: 2px 24px;
+    background: #999;
+    color: #777;
+    cursor: pointer;
+}
+.tabs div {
+    display: none;
+    position: absolute;
+    width:calc(100% - 4px);
+    height: calc(100% - 31px);
+    padding: 16px;
+}
+.tabs input {
+    display: none;
+}
+.tabs input:checked + label {
+    background: #333;
+    color: #fff;
+}
+.tabs input:checked + label + div {
+    display: block;
+}
+
     </style>
 </head>
 
@@ -82,7 +115,10 @@
     <div class="login-container">
         <img src="#" alt="진에어" class="logo">
         <h2>로그인</h2>
-        <div class="tabmenu">
+
+    <div class="tabmenu">
+            <input type="radio" name="btn" id="btn1" checked>
+        <label for="btn1">탭1</label>
             
             <form id="login-form" action="/login" method="POST">
                 <div class="input-group">
@@ -97,9 +133,11 @@
                 <p class="error-message" id="error-message"></p>
             </form>
 
-        </div>
+        
         <img src="#" alt="진에어" class="logo">
         <h2>로그인</h2>
+        <input type="radio" name="btn" id="btn2">
+        <label for="btn2">탭2</label>
 
         <form id="login-form" action="/login" method="POST">
             <div class="input-group">
@@ -113,6 +151,7 @@
             <button type="submit">로그인</button>
             <p class="error-message" id="error-message"></p>
         </form>
+    </div>    
 </body>
 
 </html>
