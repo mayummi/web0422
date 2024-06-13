@@ -104,6 +104,38 @@
             width: 50%;
             height: 70%;
         }
+
+        .tabs {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 2px;
+        }
+        .tabs label {
+            display: inline-block;
+            background: green;
+
+        }
+
+        .tabs div {
+            display: none;
+            position: absolute;
+        }
+        .tabs input {
+            display: none;
+        }
+        .tabs input:checked + label {
+            background: #fff;
+        }
+        .tabs input:checked + label + div {
+            display: block;
+        }
+        .tab1 {
+            background: #fff;
+        }
+        .tab2 {
+            background: #fff;
+        }
         
     </style>
 </head>
@@ -116,11 +148,28 @@
             <p id="login-error-msg">잘못된 아이디 <span id="error-msg-second-line">비밀번호 입니다.</span></p>
         </div>
 
-        <form id="login form">
-            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="id">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
-            <input type="submit" value="Login" id="login-form-submit">
-        </form>
+        <div class="tabs">
+            
+                <input type="radio" name="btn" id="btn1" checked>
+                <label for="btn1">탭1</label>
+            <div class="tab1">
+                <form id="login form">
+                    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="id">
+                    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
+                    <input type="submit" value="Login" id="login-form-submit">
+                </form>
+            </div>
+            
+                <input type="radio" name="btn" id="btn1" checked>
+                <label for="btn1">탭2</label>
+            <div class="tab2">
+                <form id="login form">
+                    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="id">
+                    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
+                    <input type="submit" value="Login" id="login-form-submit">
+                </form>
+            </div>
+        </div>
     </main>
 </body>
 
