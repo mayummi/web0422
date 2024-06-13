@@ -238,32 +238,6 @@
 
             margin-top: 50px;
         }
-
-        .tabs {
-            position: relative;
-        }
-
-        .tabs label {
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .tabs div {
-            display: none;
-            position: absolute;
-        }
-
-        .tabs input {
-            display: none;
-        }
-
-        .tabs input:checked+label {
-            background: #BED600;
-        }
-
-        .tabs input:checked+label+div {
-            display: block;
-        }
     </style>
 </head>
 
@@ -289,62 +263,55 @@
 
                 <p>로그인</p>
 
+                <div class="login-input-container tabs">
+                    <input id="tab1" type="radio" name="tab" checked="checked">
+                    <label for="tab1">tab1</label>
+                    <input id="tab2" type="radio" name="tab" checked="checked">
+                    <label for="tab2">tab2</label>
 
-
-
-                <div class="login-input-container">
-                    <div class="tabs">
-                        <input type="radio" name="btn" id="btn1" checked>
-                        <label for="btn1">아이디</label>
-                        <div class="tab1">
-                            <div class="login-input-wrap input-id">
-                                <span class="far">아이디</span>
-                                <input type="text" id="username" name="username" placeholder="" required>
-                            </div>
+                    <div class="tab1_content">
+                        <div class="login-input-wrap input-id">
+                            <span class="far">아이디</span>
+                            <input type="text" id="username" name="username" placeholder="" required>
                         </div>
-
                         <div class="login-input-wrap input-password">
                             <span class="fas">비밀번호</span>
                             <input type="password" id="password" name="password" placeholder="" required>
                         </div>
                     </div>
-                    <div class="login-btn-wrap">
-                        <div class="id-remember">
-                            <label><input type="checkbox" name="id" id="id">아이디 저장</label>
+                    <div class="tab2_content">
+                        <div class="login-input-wrap input-id">
+                            <span class="far">아이디</span>
+                            <input type="text" id="username" name="username" placeholder="" required>
                         </div>
-                        <button class="login-btn">로그인</button>
-                        <span>
-                            <a class="id" href="#">아이디 찾기</a>
-                            <a href="#">비밀번호 찾기</a>
-                        </span>
-                    </div>
-                    <input type="radio" name="btn" id="btn1" checked>
-                    <label for="btn1">예약번호로 로그인</label>
-                    <div class="tab2">
-                        <div class="login-input-container">
-                            <div class="login-input-wrap input-id">
-                                <span class="far">아이디</span>
-                                <input type="text" id="username" name="username" placeholder="" required>
-                            </div>
-                            <div class="login-input-wrap input-password">
-                                <span class="fas">비밀번호</span>
-                                <input type="password" id="password" name="password" placeholder="" required>
+                        <div class="login-input-wrap input-password">
+                            <span class="fas">비밀번호</span>
+                            <input type="password" id="password" name="password" placeholder="" required>
+                            <div class="id-remember">
+                                <label><input type="checkbox" name="id" id="id">아이디 저장</label>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-            </div>
-            <div class="img">
-                <div class="another">간편하게 로그인 할래요</div>
-                <a href="#"><img src="../../assets/naver.svg" alt="네이버"></a>
-                <a href="#"><img class="imgk" src="../../assets/kakao.svg" alt="카카오"></a>
-                <a href="#"><img src="../../assets/apple.svg" alt="애플"></a>
-            </div>
+                <div class="login-btn-wrap">
 
+                    <button class="login-btn">로그인</button>
+                    <span>
+                        <a class="id" href="#">아이디 찾기</a>
+                        <a href="#">비밀번호 찾기</a>
+                    </span>
+
+                </div>
+                <div class="img">
+                    <div class="another">간편하게 로그인 할래요</div>
+                    <a href="#"><img src="../../assets/naver.svg" alt="네이버"></a>
+                    <a href="#"><img class="imgk" src="../../assets/kakao.svg" alt="카카오"></a>
+                    <a href="#"><img src="../../assets/apple.svg" alt="애플"></a>
+                </div>
+
+            </div>
         </div>
-    </div>
     </div>
 </body>
 
