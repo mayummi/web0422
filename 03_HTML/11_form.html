@@ -9,36 +9,56 @@
 
 <body>
     <h1>폼</h1>
-    <h2>입력란의 22가지 종류</h2>
-    <input type="button">
-    <!-- 여러 개 중에서 여러 개 선택 -->
-    <input type="checkbox">
-    <input type="color">
-    <!-- 2024-9-14 -->
-    <input type="date">
-    <!-- 2024-9-14 오전 09:50, Firefox는(x) -->
-    <input type="datetime-local">
-    <input type="email">
-    <input type="file">
+    <p>input 태그의 22가지(입력란, 확인란, 라디오 버튼, 전송버튼, 포기화 버튼)의 22가지 종류</p>
+
+    <!-- 한 줄 텍스트 입력 -->
+    <input type="text">
+    <!-- 비밀번호 입력 -->
+    <input type="password">
+    <!-- 브라우저 표시되지 않는 텍스트 입력 -->
     <input type="hidden">
+    
+    <!-- 이메일 입력 -->
+    <input type="email">
+    <!-- 검색어 입력 -->
+    <input type="search">
+    <!-- 전화번호 입력 -->
+    <input type="tel">
+    <!-- 웹주소 입력 -->
+    <input type="url">
+    
+    <!-- 여러 개 중에서 여러 개 선택, 네모에 체크 -->
+    <input type="checkbox" name="chkgrop">
+    <input type="checkbox" name="chkgrop">
+    <input type="checkbox" name="chkgrop">
+    <!-- 여러 개 중 1개만 선택, 동그라미 선택 -->
+    <!-- name 속성은 개발자가 DB를 연동할 때 사용한다. -->
+    <!-- name 속성이 같아야 라디오 버튼이 그룹핑 된다. -->
+    <input type="radio" name="radiogroup">
+    <input type="radio" name="radiogroup">
+    <input type="radio" name="radiogroup">
+
+    <input type="button">
+    <!-- 2024-9-14, safari(x) -->
+    <input type="color">
+    <!-- 2024-9-14, safari(x) -->
+    <input type="date">
+    <!-- 2024-9-14 오전 09:50, safari(x), Firefox는(x) -->
+    <input type="datetime-local">
+    <input type="file">
     <input type="image">
     <!-- 2024년 06월, Firefox는(x) -->
     <input type="month">
     <input type="number">
     <input type="password">
-    <!-- 여러 개 중 1개만 선택 -->
-    <input type="radio">
     <input type="range">
     <!-- 초기화 -->
     <input type="reset">
-    <input type="search">
     <!-- 전송 -->
     <input type="submit">
-    <input type="tel">
     <input type="text">
     <!-- 오전 10:10, firefox(x) -->
     <input type="time">
-    <input type="url">
     <!-- 2024년, 24번째 주, firefox(x) -->
     <input type="week">
 </body>

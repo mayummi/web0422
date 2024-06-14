@@ -91,7 +91,7 @@
             opacity: 0.8;
         }
 
-        .login-form-right-side  {
+        .login-form-right-side {
             width: 50%;
             border-radius: 0 10px 10px 0;
             display: flex;
@@ -141,7 +141,7 @@
         }
 
         .login-input-container .login-input-wrap input {
-            
+
             margin-right: 42px;
             background: none;
             border: none;
@@ -153,6 +153,7 @@
         .login-input-container .login-input-wrap input:focus {
             outline: none;
         }
+
         .login-input-container {
             margin-right: 128px;
         }
@@ -217,13 +218,13 @@
         }
 
         .far {
-            
+
             color: #ABABAB;
             font-size: 12px;
         }
 
         .fas {
-            
+
             color: #ABABAB;
             font-size: 12px;
         }
@@ -234,11 +235,9 @@
         }
 
         .img {
-            
+
             margin-top: 50px;
         }
-
-        
     </style>
 </head>
 
@@ -261,40 +260,77 @@
             <div class="line"></div>
 
             <div class="login-form-right-side">
-                
+
                 <p>로그인</p>
-
-                <div class="login-input-container">
-                    <div class="login-input-wrap input-id">
-                        <span class="far">아이디</span>
-                        <input type="text" id="username" name="username" placeholder="" required>
-                    </div>
-                    <div class="login-input-wrap input-password">
-                        <span class="fas">비밀번호</span>
-                        <input type="password" id="password" name="password" placeholder="" required>
+                <div class="login-wrap">
+                    <div class="login-html">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                            class="tab">Sign In</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign
+                            Up</label>
+                        <div class="login-form">
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Username</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <input id="check" type="checkbox" class="check" checked>
+                                    <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="Sign In">
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot-lnk">
+                                    <a href="#forgot">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Username</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Repeat Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Email Address</label>
+                                    <input id="pass" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="Sign Up">
+                                </div>
+                                <div class="hr"></div>
+                                <div class="foot-lnk">
+                                    <label for="tab-1">Already Member?</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="login-btn-wrap">
-                    <div class="id-remember">
-                        <label><input type="checkbox" name="id" id="id">아이디 저장</label>
-                    </div>
-                    <button class="login-btn">로그인</button>
-                    <span>
-                        <a class="id" href="#">아이디 찾기</a>
-                        <a href="#">비밀번호 찾기</a>
-                    </span>
 
-                </div>
-                <div class="img">
-                    <div class="another">간편하게 로그인 할래요</div>
-                    <a href="#"><img src="../../assets/naver.svg" alt="네이버"></a>
-                    <a href="#"><img class="imgk" src="../../assets/kakao.svg" alt="카카오"></a>
-                    <a href="#"><img src="../../assets/apple.svg" alt="애플"></a>
-                </div>
 
             </div>
+            <div class="img">
+                <div class="another">간편하게 로그인 할래요</div>
+                <a href="#"><img src="../../assets/naver.svg" alt="네이버"></a>
+                <a href="#"><img class="imgk" src="../../assets/kakao.svg" alt="카카오"></a>
+                <a href="#"><img src="../../assets/apple.svg" alt="애플"></a>
+            </div>
+
         </div>
+    </div>
     </div>
 </body>
 
