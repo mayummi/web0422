@@ -160,17 +160,20 @@
         }
 
         .login-html .tab {
-            font-size: 22px;
+            color: #192547;
+            font-size: 20px;
             margin-right: 15px;
-            padding-bottom: 5px;
-            margin: 0 15px 10px 0;
-            display: inline-block;
+            padding-bottom: 10px;
+            margin: 0 10px 50px 50px;
+            display: inline-flex;
             border-bottom: 2px solid transparent;
+            
+            
         }
 
         .login-html .sign-in:checked+.tab,
         .login-html .sign-up:checked+.tab {
-            /* color: #fff; */
+            
             border-color: #BED600;
         }
 
@@ -182,14 +185,13 @@
         }
 
         .login-form .group {
-            margin-bottom: 15px;
+            margin-bottom: 40px;
         }
 
         .login-form .group .label,
         .login-form .group .input,
         .login-form .group .button {
             width: 100%;
-            color: #fff;
             display: block;
         }
 
@@ -197,6 +199,7 @@
         .login-form .group .button {
             border: none;
             border-bottom: 1px solid #BED600;
+            background: none;
             
             padding: 15px 20px;
             
@@ -210,7 +213,9 @@
             -text-security: circle;
             -webkit-text-security: circle;
         }
-
+        .input:focus {
+            outline: none;
+        }
         .login-form .group .label {
             color: #192547;
             font-size: 12px;
@@ -256,9 +261,14 @@
             font-size: 12px;
             color: #192547;
         }
+        .login-form .group .check+label {
+            font-size: 12px;
+            color: #192547;
+        }
 
         .login-form .group .check:checked+label .icon {
             background: #fff;
+            
         }
 
         .login-form .group .check:checked+label .icon:before {
@@ -280,7 +290,7 @@
         .hr {
             height: 2px;
             margin: 60px 0 50px 0;
-            background: rgba(255, 255, 255, .2);
+            background: black;
         }
 
         .foot-lnk {
@@ -332,6 +342,10 @@
 
             margin-top: 50px;
         }
+
+        .name {
+            display: inline-flex;
+        }
     </style>
 </head>
 
@@ -355,7 +369,7 @@
 
             <div class="login-form-right-side">
 
-                <p>로그인</p>
+                
                 <div class="login-wrap">
                     <div class="login-html">
                         <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
@@ -394,14 +408,19 @@
                                     <label for="user" class="label">예약번호</label>
                                     <input id="user" type="text" class="input">
                                 </div>
-                                <div class="group">
-                                    <label for="pass" class="label">성</label>
-                                    <input id="pass" type="password" class="input" data-type="password">
+                                <div class="group name">
+                                    <span>
+                                        <label for="name" class="label">성</label>
+                                        <input id="name" type="text" class="input">
+                                    </span>
+                                    <span>
+                                        <label for="name" class="label">이름</label>
+                                        <input id="name" type="text" class="input">
+                                    </span>
                                 </div>
-                                <div class="group">
-                                    <label for="pass" class="label">이름</label>
-                                    <input id="pass" type="password" class="input" data-type="password">
-                                </div>
+                                <!-- <div class="group">
+                                    
+                                </div> -->
                                 <div class="group">
                                     <input id="check" type="checkbox" class="check" checked>
                                     <label for="check"><span class="icon"></span> 예약번호 저장</label>
