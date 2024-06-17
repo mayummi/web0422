@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            /* border: solid; */
-            width: 116px;
-            height: 160px;
 
-        }
 
         /* 
             animation-name: 이름
@@ -36,15 +31,39 @@
                 //to는 애니메이션 끝 동작 지정
                 to {속성: 값;}
             }
+
+                또는
+
+            애니메이션의 작업 단위? 프레임
+            키프레임? 요소가 들어있는 프레임
+            @keyframes 이름 {
+                0% {속성: 값;}
+                25% {속성: 값;}
+                50% {속성: 값;}
+                75% {속성: 값;}
+                100% {속성: 값;}
+            }
         */
         div {
-            animation-name: ballnoon;
+            width: 116px;
+            height: 160px;
+            /* animation-name: ballnoon;
             animation-duration: 1s;
             animation-iteration-count: infinite;
-        }
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation: ease-in; */
+
+            animation: ballnoon 1s 2s infinite alternate ease-in;
+            margin-top: 0px;
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: ease-out;
+            animation-timing-function: ease-in; */
+        } 
         @keyframes ballnoon {
-            from {margin-top: -10px;}
-            to {margin-top: 0;}
+            0% {margin-top: -10px;}
+            100% {margin-top: 0px;}
+            /* 100% {margin-top: -10px; animation-timing-function: ease-out;} */
         }
     </style>
 </head>
