@@ -6,14 +6,24 @@
     <title>flight_info</title>
     <style>
         .container {
+            margin: 0;
+            display: flex;
             width: 1280px;
             height: 400px;
             background: #eee;
         }
 
         .form {
+            width: 1280px;
             display: flex;
-            align-content: center;
+            /* align-content: center; */
+            justify-content: space-between;
+            line-height: 79px;
+            height: 158px;
+            
+        }
+        .form {
+            border: 1px solid;
         }
     </style>
 </head>
@@ -32,17 +42,16 @@
             </div>
             <div class="form">
                 <div>
-                    <p>From</p>
-                    <p>출발</p>
+                    <input type="text" placeholder="From 출발">
                 </div>
                 <div>
-                    <p>To</p>
-                    <p>도착</p>
+                    <input type="text" placeholder="To 도착">
+                </div>
+                <div class="date">
+                    <input type="date">
                 </div>
             </div>
-            <div class="date">
-                <input type="date">
-            </div>
+            <button>조회</button>
         </div>
     </div>
 </body>
