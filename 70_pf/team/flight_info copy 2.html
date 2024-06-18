@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            padding: 0;
+            /* box-sizing: border-box; */
+            font-family: "GmarketSansMedium", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1rem;
+            /* font-family: sans-serif; */
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.10);
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* background-color: #222; */
+        }
+
+        .BoxTab {
+            width: 1280px;
+            height: 500px;
+        }
+
+        .BoxTab input {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .BoxTab label {
+            position: relative;
+            height: 40px;
+            width: 250px;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            color: #c2c2c2;
+            /* font-weight: bolder; */
+
+        }
+
+        .BoxTab label:hover {
+            /* background-color: #fff; */
+            color: #c2c2c2;
+        }
+
+        .BoxTab input:checked+label {
+            background-color: #BED600;
+            color: #222;
+            /* box-shadow: none; */
+        }
+
+        .BoxContent {
+            width: 100%;
+            height: 100%;
+            background-color: #c2c2c2;
+        }
+
+        .BoxContent div {
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .BoxTab .tab1:checked~.BoxContent .TabContent1,
+        .BoxTab .tab2:checked~.BoxContent .TabContent2 {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="BoxTab">
+
+        <input type="radio" name="tab" class="tab1" id="tab1" checked="checked">
+        <label for="tab1">
+            운항
+        </label>
+        <input type="radio" name="tab" class="tab2" id="tab2">
+        <label for="tab2">
+            운항
+        </label>
+
+
+        <div class="BoxContent">
+            <div class="TabContent1">
+                <p>
+                    O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a
+                    ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres
+                    de um texto para criar um espécime de livro.
+                </p>
+            </div>
+
+            <div class="TabContent2">
+                <p>
+                    Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa
+                    peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos.
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </section>
+</body>
+
+</html>
