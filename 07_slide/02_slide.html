@@ -19,27 +19,31 @@
             list-style: none;
         }
 
+        img {
+            vertical-align: top;
+        }
         
         /* html=root */
-        :root {
+        /* :root {
             --w: 500px;
             --h: 150px;
-        }
+        } */
 
         .slide {
             position: relative;
-            /* w500px */
-            width: var(--w);
-            /* h150px */
-            height: var(--h);
-            margin: 20px;
+            width: 500px;
+            /* width: var(--w); */
+            height: 150px;
+            /* height: var(--h); */
+            /* margin: 20px; */
             overflow: hidden;
         }
 
         .slide ul {
             position: absolute;
-            display: flex;
-            width: 400%;
+            flex-direction: column;
+            /* display: flex; */
+            width: 100%;
             height: 100%;
         }
 
@@ -54,35 +58,34 @@
 
         @keyframes slide {
             0% {
-                left: 0%;
+                transform: translatey(-0%);
             }
 
             10% {
-                left: -100%;
+                transform: translatey(-25%);
             }
 
             33% {
-                left: -100%;
-            }
+                transform: translatey(-25%);}
 
             43% {
-                left: -200%;
+                transform: translatey(-50%);
             }
 
             66% {
-                left: -200%;
+                transform: translatey(-50%);
             }
 
             76% {
-                left: -300%;
+                transform: translatey(-75%);
             }
 
             99.99% {
-                left: -300%;
+                transform: translatey(-75%);
             }
 
             100% {
-                left: 0%;
+                transform: translatey(-0%);
             }
         }
 
@@ -116,8 +119,8 @@
     <div class="slide">
         <ul>
             <li><img src="../assets/slide3.png" alt=""></li>
-            <li></li>
-            <li></li>
+            <li><img src="../assets/slide3.png" alt=""></li>
+            <li><img src="../assets/slide3.png" alt=""></li>
             <li><img src="../assets/slide3.png" alt=""></li>
         </ul>
     </div>
