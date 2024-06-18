@@ -1,95 +1,86 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flight_info</title>
+    <title>Document</title>
     <style>
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+        body {
+            background: #BED600;
         }
 
-        .container {
-            margin: 0;
-            display: flex;
-            width: 1280px;
-            height: 400px;
-            background: #eee;
+        .tabcontent {
+            margin-left: calc(50% - 200px);
+            margin-top: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+            width: 400px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .form {
-            width: 1280px;
-            display: flex;
-            /* align-content: center; */
-            justify-content: space-between;
-            line-height: 150px;
-            height: 158px;
-            
-        }
-        .form {
-            border: 1px solid;
-        }
-        img {
-            width: 55px;
-            height: 55px;
-            line-height: 150px;
-        }
         input[type="radio"] {
             display: none;
         }
-        input[type="radio"]:checked + label {
-            background: #000;
+
+        input[type="radio"]+label {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #BED600;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
         }
-        .form {
+
+        input[type="radio"]:checked+label {
+            background: #fff;
+            color: #BED600;
+            border: 1px solid #BED600;
+        }
+
+        .content-box {
             display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 340px;
+            height: 250px;
+            font-size: 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center;
+            background: #efe6f4;
+            color: #666;
+
         }
-    input[id="tab1"]:checked ~ .content1 {display: block;}
-    input[id="tab2"]:checked ~ .content2 {display: block;}
+
+        input[id="tabmenu01"]:checked~.content01 {
+            display: block;
+        }
+
+        input[id="tabmenu02"]:checked~.content02 {
+            display: block;
+        }
+
+
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="wrap">
-            <h1>운항정보</h1>
-            <div>
-                <input id="tab1" type="radio" name="tab" class="info">
-                <label for="tab1">구간조회</label>
-                <input id="tab2" type="radio" name="tab" class="info">
-                <label for="tab2">편명조회</label> 
-            </div>
-            <div>
-                <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요</p>
-            </div>
-            <div class="form content1">
-                <div class="form1">
-                    <input type="search" placeholder="From">
-                </div>
-                <img src="../../assets/booking__swap--disabled.svg" alt="swap">
-                <div class="form1">
-                    <input type="search" placeholder="To 도착">
-                </div>
-                <div class="date">
-                    <input type="date">
-                </div>
-            </div>
 
-            <div class="form content2">
-                <div class="form2">
-                    <input type="search" placeholder="From">
-                </div>
-                <img src="../../assets/booking__swap--disabled.svg" alt="swap">
-                <div class="form1">
-                    <input type="search" placeholder="To 도착">
-                </div>
-                <div class="date">
-                    <input type="date">
-                </div>
-            </div>
-            <button>조회</button>
-        </div>
+<body>
+    <div class="tabcontent">
+        <input type="radio" name="tab" checked id="tabmenu01">
+        <label for="tabmenu01">tab01</label>
+        <input type="radio" name="tab" id="tabmenu02">
+        <label for="tabmenu02">tab02</label>
+        <input type="radio" name="tab" id="tabmenu03">
+        <label for="tabmenu03">tab03</label>
+
+        <div class="content-box content01">content01</div>
+        <div class="content-box content02">content02</div>
+        
     </div>
 </body>
+
 </html>
