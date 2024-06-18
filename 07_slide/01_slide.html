@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+        }
+
+        :root {
+            --w: 500px;
+            --h: 150px;
+        }
+
+        .slide {
+            position: relative;
+            width: var(--w);
+            height: var(--h);
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .slide ul {
+            position: absolute;
+            display: flex;
+            width: 400%;
+            height: 100%;
+        }
+
+        .slide li {
+            flex: 0 0 25%;
+        }
+
+        /* animation */
+        .slide ul {
+            animation: slide 12s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0%;
+            }
+
+            10% {
+                left: -100%;
+            }
+
+            33% {
+                left: -100%;
+            }
+
+            43% {
+                left: -200%;
+            }
+
+            66% {
+                left: -200%;
+            }
+
+            76% {
+                left: -300%;
+            }
+
+            99.99% {
+                left: -300%;
+            }
+
+            100% {
+                left: 0%;
+            }
+        }
+
+        /* typo */
+        .slide li {
+            font-size: calc(var(--w) / 5);
+            text-align: center;
+            line-height: calc(var(--h) - 20px);
+        }
+
+        /* bg-color */
+        .slide li:nth-child(1) {
+            background: #d8d8d8;
+        }
+
+        .slide li:nth-child(2) {
+            background: #acacac;
+        }
+
+        .slide li:nth-child(3) {
+            background: #999999;
+        }
+
+        .slide li:nth-child(4) {
+            background: #d8d8d8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>1</li>
+        </ul>
+    </div>
+</body>
+
+</html>
