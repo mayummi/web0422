@@ -37,6 +37,17 @@
             height: 55px;
             line-height: 150px;
         }
+        input[type="radio"] {
+            display: none;
+        }
+        input[type="radio"]:checked + label {
+            background: #000;
+        }
+        .form {
+            display: none;
+        }
+    input[id="tab1"]:checked ~ .content1 {display: block;}
+    input[id="tab2"]:checked ~ .content2 {display: block;}
     </style>
 </head>
 <body>
@@ -65,8 +76,8 @@
                 </div>
             </div>
 
-            <div class="form2 content2">
-                <div class="form1">
+            <div class="form content2">
+                <div class="form2">
                     <input type="search" placeholder="From">
                 </div>
                 <img src="../../assets/booking__swap--disabled.svg" alt="swap">
