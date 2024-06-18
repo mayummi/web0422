@@ -31,14 +31,24 @@
             border-radius: 10px;
             background: #fff;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .box {
+            position:absolute;
+            width: 585px;
+            height: 45px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
         }
 
         input[type="radio"] {
+            
             display: none;
         }
 
         
         input[type="radio"]+label {
+            position: relative;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -89,7 +99,7 @@
     <h2>출도착 안내</h2>
     <div class="tabcontent">
         
-        
+        <div class="box"></div>
             <input type="radio" name="tab" checked id="tabmenu01">
             <label for="tabmenu01">구간조회</label>
             <input type="radio" name="tab" id="tabmenu02">
