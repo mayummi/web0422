@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            padding: 0;
+            /* box-sizing: border-box; */
+            font-family: "GmarketSansMedium", sans-serif;
+        }
+        
         body {
-            background: #BED600;
+            margin: 0 auto;
         }
 
         .tabcontent {
-            margin-left: calc(50% - 200px);
+            /* margin-left: calc(50% - 200px); */
             margin-top: 30px;
             padding: 30px;
             box-sizing: border-box;
-            width: 400px;
+            width: 1280px;
             border-radius: 10px;
             background: #fff;
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
@@ -29,7 +41,7 @@
             display: inline-block;
             padding: 10px 20px;
             background: #BED600;
-            color: #fff;
+            /* color: #fff; */
             border-radius: 10px;
             font-size: 14px;
             cursor: pointer;
@@ -37,15 +49,15 @@
 
         input[type="radio"]:checked+label {
             background: #fff;
-            color: #BED600;
-            border: 1px solid #BED600;
+            /* color: #BED600; */
+            /* border: 1px solid #BED600; */
         }
 
         .content-box {
             display: none;
             margin-top: 10px;
             padding: 10px;
-            width: 340px;
+            width: 1200px;
             height: 250px;
             font-size: 30px;
             box-sizing: border-box;
@@ -71,11 +83,9 @@
 <body>
     <div class="tabcontent">
         <input type="radio" name="tab" checked id="tabmenu01">
-        <label for="tabmenu01">tab01</label>
+        <label for="tabmenu01">구간조회</label>
         <input type="radio" name="tab" id="tabmenu02">
-        <label for="tabmenu02">tab02</label>
-        <input type="radio" name="tab" id="tabmenu03">
-        <label for="tabmenu03">tab03</label>
+        <label for="tabmenu02">편명조회</label>
 
         <div class="content-box content01">content01</div>
         <div class="content-box content02">content02</div>
