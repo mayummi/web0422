@@ -168,15 +168,15 @@
 
     h1 {
         position: relative;
-        animation: move 3s 5;
-        animation-direction: alternate;
+        animation: move 5s linear infinite;
+        
     }
     @keyframes move {
   0% {
-    left: 0;
+        transform: rotateY(0deg);
   }
   100% {
-    left: 500px;
+        transform: rotateY(360deg);
   }
 }
     </style>
