@@ -9,105 +9,34 @@
 
         
 
-        /* 초기화 */
-        ul {
-            margin: 0;
-        }
+         /* 초기화 */
+         ul { 
+            margin: 0; 
+            padding: 0; 
+            list-style: none; 
+        } 
 
-        ul {
-            padding-left: 0;
-            list-style: none;
-        }
-
-        
-        /* html=root */
-        :root {
-            --w: 500px;
-            --h: 150px;
-        }
-
-        .slide {
-            position: relative;
-            /* w500px */
-            width: var(--w);
-            /* h150px */
-            height: var(--h);
-            margin: 20px;
-            overflow: hidden;
-        }
-
-        .slide ul {
-            position: absolute;
-            display: flex;
-            width: 400%;
-            height: 100%;
-        }
-
-        .slide li {
-            flex: 0 0 25%;
-        }
+        /* 슬라이드 */
+        .slide { 
+            width: 500px; 
+            overflow: hidden; 
+        } 
+        .slide ul { 
+            display: flex; 
+            width: 400%; 
+            animation: slide 12s infinite;
+        } 
 
         /* animation */
-        .slide ul {
-            animation: slide 12s infinite;
-        }
-
-        @keyframes slide {
-            0% {
-                left: 0%;
-            }
-
-            10% {
-                left: -100%;
-            }
-
-            33% {
-                left: -100%;
-            }
-
-            43% {
-                left: -200%;
-            }
-
-            66% {
-                left: -200%;
-            }
-
-            76% {
-                left: -300%;
-            }
-
-            99.99% {
-                left: -300%;
-            }
-
-            100% {
-                left: 0%;
-            }
-        }
-
-        /* typo */
-        .slide li {
-            font-size: calc(var(--w) / 5);
-            text-align: center;
-            line-height: calc(var(--h) - 20px);
-        }
-
-        /* bg-color */
-        .slide li:nth-child(1) {
-            background: #d8d8d8;
-        }
-
-        .slide li:nth-child(2) {
-            background: #acacac;
-        }
-
-        .slide li:nth-child(3) {
-            background: #999999;
-        }
-
-        .slide li:nth-child(4) {
-            background: #d8d8d8;
+        @keyframes slide { 
+            0% { transform: translate(0%, 0%); } 
+            10% { transform: translate(-25%, 0%); } 
+            33% { transform: translate(-25%, 0%); } 
+            43% { transform: translate(-50%, 0%); } 
+            66% { transform: translate(-50%, 0%); } 
+            76% { transform: translate(-75%, 0%); } 
+            99.99% { transform: translate(-75%, 0%); } 
+            100% { transform: translate(0%, 0%); } 
         }
     </style>
 </head>
@@ -116,8 +45,8 @@
     <div class="slide">
         <ul>
             <li><img src="../assets/slide3.png" alt=""></li>
-            <li></li>
-            <li></li>
+            <li><img src="../assets/slide3.png" alt=""></li>
+            <li><img src="../assets/slide3.png" alt=""></li>
             <li><img src="../assets/slide3.png" alt=""></li>
         </ul>
     </div>
