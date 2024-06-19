@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
         }
 
         body {
-            
+
             font: 1.5rem/1.5 "Noto Sans KR", sans-serif;
             line-height: 1.5;
         }
@@ -28,7 +29,7 @@
         .sub li a {
             font-size: 1.4rem;
             color: #aaa;
-            
+
         }
 
         /* reset */
@@ -36,6 +37,7 @@
             box-sizing: border-box;
             margin: 0;
         }
+
         h1 {
             line-height: 200px;
             justify-content: center;
@@ -46,7 +48,7 @@
         ul {
             padding-left: 0;
             list-style: none;
-            
+
         }
 
         a {
@@ -61,7 +63,7 @@
             height: 300px;
             margin: 0 auto;
             position: absolute;
-            
+
         }
 
         .gnb {
@@ -69,13 +71,13 @@
             width: 100%;
             position: relative;
             z-index: 10;
-            
+
         }
 
         /* 1depth */
         .main {
             display: flex;
-            
+
         }
 
         .main>li {
@@ -86,7 +88,7 @@
         }
 
         .main>li:hover {
-            
+
             background: #333;
 
         }
@@ -102,14 +104,14 @@
             background: #111;
             transition: .3s;
             line-height: 2;
-            
+
         }
 
         .main:hover .sub {
             height: 150px;
             visibility: visible;
             opacity: 1;
-            
+
         }
 
         .sub li a {
@@ -121,35 +123,60 @@
         }
 
         /* slide */
-         /* 초기화 */
-         ul { 
-            margin: 0; 
-            padding: 0; 
-            list-style: none; 
-        } 
+        /* 초기화 */
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
         /* 슬라이드 */
-        .slide { 
-            overflow: hidden; 
-            
-        } 
-        .slide ul { 
-            display: flex; 
-            width: 405%; 
+        .slide {
+            overflow: hidden;
+
+        }
+
+        .slide ul {
+            display: flex;
+            width: 405%;
             animation: slide 12s infinite reverse;
-            
-        } 
+
+        }
 
         /* animation */
-        @keyframes slide { 
-            0% { transform: translate(0%, 0%); } 
-            10% { transform: translate(-25%, 0%); } 
-            33% { transform: translate(-25%, 0%); } 
-            43% { transform: translate(-50%, 0%); } 
-            66% { transform: translate(-50%, 0%); } 
-            76% { transform: translate(-75%, 0%); } 
-            99.99% { transform: translate(-75%, 0%); } 
-            100% { transform: translate(0%, 0%); } 
+        @keyframes slide {
+            0% {
+                transform: translate(0%, 0%);
+            }
+
+            10% {
+                transform: translate(-25%, 0%);
+            }
+
+            33% {
+                transform: translate(-25%, 0%);
+            }
+
+            43% {
+                transform: translate(-50%, 0%);
+            }
+
+            66% {
+                transform: translate(-50%, 0%);
+            }
+
+            76% {
+                transform: translate(-75%, 0%);
+            }
+
+            99.99% {
+                transform: translate(-75%, 0%);
+            }
+
+            100% {
+                transform: translate(0%, 0%);
+            }
         }
 
         /* footer */
@@ -161,26 +188,29 @@
             line-height: 200px;
             background: #000;
             color: #fff;
-            
+
         }
 
         /* 애니메이션 */
 
-    h1 {
-        position: relative;
-        animation: move 5s linear infinite;
-        
-    }
-    @keyframes move {
-  0% {
-        transform: rotateY(0deg);
-  }
-  100% {
-        transform: rotateY(360deg);
-  }
-}
+        h1 {
+            position: relative;
+            animation: move 5s linear infinite;
+
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1>Vallery-Festival</h1>
     <header>
@@ -232,4 +262,5 @@
     </div>
     <footer>Copyright 2024. Vallery-Festival.</footer>
 </body>
+
 </html>
