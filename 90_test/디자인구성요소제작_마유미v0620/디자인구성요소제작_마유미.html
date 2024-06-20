@@ -46,11 +46,23 @@
             align-items: center;
         }
 
+        /* 로고 */
+        .logo {
+            animation: logo 1s;
+            margin-top: 0px;
+        } 
+        @keyframes logo {
+            0% {margin-top: -50px;}
+            100% {margin-top: 0px;}
+            /* 100% {margin-top: -10px; animation-timing-function: ease-out;} */
+        }
+
         /* 내비게이션 */
         .gnb {
             display: flex;
             justify-content: center;
             position: relative;
+            z-index: 99;
             background: olive;
         }
 
@@ -200,7 +212,7 @@
 <div class="wrap">
     <!-- 헤더: 로고 -->
     <header>
-        <h1 class="logo"><a href="#">로고</a></h1>
+        <h1 class="logo"><a href="#">Vally Festival</a></h1>
     </header>
     <!-- 내비게이션 -->
     <nav class="gnb">
