@@ -1,14 +1,215 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vallery Fastival_마유미</title>
+    <style>
+        /* 초기화 */
+        * {
+            /* padding과 border가 width/height에 포함된다. */
+            box-sizing: border-box;
+        }
+        body,h1,p,ul {
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333
+        }
+        /* 타이포 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        body {
+            font:15px/1.6 "Noto Sans KR", sans-serif;
+        }
+        :root,body {
+            height: 100%;
+        }
+        /* 풀페이지 레이아웃(fullpage layout) */
+        .wrap {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            
+        }
+        /* 헤더 */
+        header {
+            height: 200px;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: relative;
+            background: olive;
+        }
+
+
+        /* 1depth */
+        .main {
+            display: flex;
+            height: 40px;
+        }
+
+        .main>li {
+            width: 160px;
+            height: 40px;
+            /* 모든 메뉴 가로 가운데 배치 */
+            text-align: center;
+            /* 메인메뉴 텍스트 세로 중앙 배치: line height */
+            line-height: 40px;
+        }
+
+        .main>li:hover {
+            background: rgba(101, 118, 61, 0.767);
+        }
+
+        /* 2depth */
+        .sub {
+            /* height: 0; */
+            overflow: hidden;
+            opacity: 0;
+            /* display:none; visibility:hidden;은 trainsition속성이 적용되지 않는다. */
+            /* 메인 메뉴를 통하지 않고 서브에 마우스 오버시 서브 메뉴가 나타나지 않게 한다. */
+            visibility: hidden;
+            padding: 10px 0 20px;
+            transition: .3s;
+            line-height: 2;
+        }
+
+        .main:hover .sub {
+            height: 150px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub li a {
+            padding: 4px 16px;
+            color: #fff;
+        }
+
+        .sub li:hover a {
+            background: #111;
+        }
+
+        .gnb {
+            
+            border: 1px solid red
+        }
+
+        
+        /* 
+            ::before, ::after를 가상요소 선택자
+
+            <ul class="main">
+                ::before
+                <li>메인메뉴1</li>
+                <li>메인메뉴2</li>
+                <li>메인메뉴3</li>
+                <li>메인메뉴4</li>
+                ::after
+            </ul>
+        */
+
+        .main::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 30px;
+            right: 0;
+            display: block;
+            /* display: block; 또는 display:inline-bloxk; 또는 position:staic;이 아니면 width와 height가 지정된다. */
+            width: 100%;
+            height: 0px;
+            opacity: 0;
+            transition: .3s;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .main:hover::before {
+            height: 150px;
+            opacity: 1;
+        }
+
+        /* 슬라이드 */
+        .slide {
+            height: calc(100% - 340px);
+        }
+        /* 푸터 */
+        footer {
+            height: 100px;
+            line-height: 100px;
+            background: #333;
+            text-align: center;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
 </body>
-<!-- 헤더: 로고 -->
-<!-- 내비게이션 -->
-<!-- 슬라이드 -->
-<!-- 푸터 -->
+<div class="wrap">
+    <!-- 헤더: 로고 -->
+    <header>
+        <h1 class="logo"><a href="#">로고</a></h1>
+    </header>
+    <!-- 내비게이션 -->
+    <nav class="gnb">
+        <!-- 1depth -->
+        <ul class="main">
+            <li>
+                <a href="#">메인메뉴1</a>
+                <!-- 2depth -->
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴2</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴3</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메인메뉴4</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- 슬라이드 -->
+    <div class="slide">슬라이드</div>
+    <!-- 푸터 -->
+    <footer>
+        <p>Copyright 2024. Vallery Festival. All rights reserved.</p>
+    </footer>
+</div>
+
 </html>
