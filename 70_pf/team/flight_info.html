@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flight_info</title>
+    <title>Document</title>
     <style>
         @font-face {
             font-family: 'GmarketSansMedium';
@@ -11,61 +12,152 @@
             font-weight: normal;
             font-style: normal;
         }
-
-        .container {
-            margin: 0;
+        * {
+            padding: 0;
+            /* box-sizing: border-box; */
+            font-family: "GmarketSansMedium", sans-serif;
+        }
+        
+        body {
+            margin: 0 auto;
             display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tabcontent {
+            /* margin-left: calc(50% - 200px); */
+            margin-top: 30px;
+            padding: 30px;
+            box-sizing: border-box;
             width: 1280px;
-            height: 400px;
-            background: #eee;
+            border-radius: 10px;
+            background: #fff;
+            
+            position: relative;
+        }
+        .box {
+            position:absolute;
+            width: 585px;
+            height: 44px;
+            border: 1px solid #ABABAB;
+            border-radius: 25px;
+        }
+        h2 {
+            margin-left: 50px;
+        }
+        .content-box span{
+            font-size: 20px;
+            line-height: 150px;
+        }
+        .content-box *{
+            vertical-align: middle;
         }
 
-        .form {
-            width: 1280px;
-            display: flex;
-            /* align-content: center; */
-            justify-content: space-between;
-            line-height: 150px;
+        input[type="radio"] {
+            
+            display: none;
+        }
+
+        
+        input[type="radio"]+label {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display: inline-block;
+            padding: 10px 20px;
+            /* background: #BED600; */
+            /* color: #fff; */
+            border-radius: 25px;
+            width: 250px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked+label {
+            background: #bed600;
+            /* color: #BED600; */
+            /* border: 1px solid #BED600; */
+        }
+
+        .content-box {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 1200px;
             height: 158px;
+            font-size: 30px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            color: #666;
+            position: absolute;
+            z-index: 5;
+        }
+
+        input[id="tabmenu01"]:checked~.content01 {
+            display: block;
+        }
+
+        input[id="tabmenu02"]:checked~.content02 {
+            display: block;
+        }
+        
+        .contentbox2 {
+            position: relative;
+            position: absolute;
+            width: 1200px;
+            height: 158px;
+            margin-top: 5px;
+            background: #bed600;
+            border-radius: 15px;
+        }
+        .contentbox3 {
+            /* display: inline-block;
+            text-align: right;
+            align-items: flex-end;
+            justify-content: flex-end; */
+            float: right;
+            margin-right: 20px;
+            width: 435px;
+            height: 158px;
+            margin-top: 5px;
+            background: #192547;
+            position: relative;
+            border-radius: 15px;
             
         }
-        .form {
-            border: 1px solid;
-        }
-        img {
-            width: 55px;
-            height: 55px;
-            line-height: 150px;
-        }
+        
+
     </style>
 </head>
+
 <body>
+    
     <div class="container">
-        <div class="wrap">
-            <h1>운항정보</h1>
-            <div>
-                <input id="tab1" type="radio" name="tab" class="info">
-                <label for="tab1">구간조회</label>
-                <input id="tab2" type="radio" name="tab" class="info">
-                <label for="tab2">편명조회</label> 
+        <h2>운항정보</h2>
+        <div class="tabcontent">
+        
+            <div class="box"></div>
+                <input type="radio" name="tab" checked id="tabmenu01">
+                <label for="tabmenu01">구간조회</label>
+                <input type="radio" name="tab" id="tabmenu02">
+                <label for="tabmenu02">편명조회</label>
+        
+            <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</p>
+            <div class="content-box content01">
+                <span>from 출발</span>
+                <span"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
+                <span>to 도착</span>
+                <span><input type="date"></span>
             </div>
-            <div>
-                <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요</p>
-            </div>
-            <div class="form">
-                <div class="form1">
-                    <input type="search" placeholder="From">
-                </div>
-                <img src="../../assets/booking__swap--disabled.svg" alt="swap">
-                <div class="form1">
-                    <input type="search" placeholder="To 도착">
-                </div>
-                <div class="date">
-                    <input type="date">
-                </div>
-            </div>
-            <button>조회</button>
+            <div class="content-box content02">content02</div>
+            <div class="contentbox2"></div>
+            <div class="contentbox3"></div>
         </div>
     </div>
 </body>
+
 </html>
