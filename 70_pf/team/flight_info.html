@@ -45,12 +45,13 @@
         h2 {
             margin-left: 50px;
         }
-        .content-box span{
-            font-size: 20px;
+        .content-box {
+            /* font-size: 20px; */
             line-height: 150px;
         }
-        .content-box *{
-            vertical-align: middle;
+        .swap {
+            vertical-align: -5px;
+            margin: 10px;
         }
 
         input[type="radio"] {
@@ -129,7 +130,27 @@
             border-radius: 15px;
             
         }
+        .date {
+            vertical-align: 5px;
+            margin-right: 50px;
+            margin-left: 100px;
+            
+        }
         
+        .from {
+            border-style: none;
+            width: 221px;
+            height: 60px;
+        }
+        .from span,.to span {
+            font-size: 20px;
+        }
+        .to {
+            margin-right: 150px;
+            border-style: none;
+            width: 221px;
+            height: 60px;
+        }
 
     </style>
 </head>
@@ -148,16 +169,17 @@
         
             <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</p>
             <div class="content-box content01">
-                <span>from 출발</span>
-                <span"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
-                <span>to 도착</span>
-                <span><input type="date"></span>
+                <button class="from"><span>From</span> <br>출발</button>
+                <span class="swap"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
+                <button class="to"><span>To</span> <br>도착</button>
+                <span class="date"><input type="date"></span>
             </div>
             <div class="content-box content02">content02</div>
             <div class="contentbox2"></div>
             <div class="contentbox3"></div>
         </div>
     </div>
+    <button>조회</button>
 </body>
 
 </html>
