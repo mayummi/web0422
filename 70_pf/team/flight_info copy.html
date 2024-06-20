@@ -20,8 +20,10 @@
         
         body {
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
         .tabcontent {
             /* margin-left: calc(50% - 200px); */
             margin-top: 30px;
@@ -39,6 +41,11 @@
             height: 44px;
             border: 1px solid #ABABAB;
             border-radius: 25px;
+        }
+        .content-box span{
+            font-size: 20px;
+            line-height: 150px;
+            
         }
 
         input[type="radio"] {
@@ -73,7 +80,7 @@
             margin-top: 10px;
             padding: 10px;
             width: 1200px;
-            height: 250px;
+            height: 158px;
             font-size: 30px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -97,21 +104,27 @@
 </head>
 
 <body>
-    <h2>출도착 안내</h2>
-    <div class="tabcontent">
+    
+    <div class="container">
+        <h2>출도착 안내</h2>
+        <div class="tabcontent">
         
-        <div class="box"></div>
-            <input type="radio" name="tab" checked id="tabmenu01">
-            <label for="tabmenu01">구간조회</label>
-            <input type="radio" name="tab" id="tabmenu02">
-            <label for="tabmenu02">편명조회</label>
+            <div class="box"></div>
+                <input type="radio" name="tab" checked id="tabmenu01">
+                <label for="tabmenu01">구간조회</label>
+                <input type="radio" name="tab" id="tabmenu02">
+                <label for="tabmenu02">편명조회</label>
         
-
-        <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</p>
-
-        <div class="content-box content01">content01</div>
-        <div class="content-box content02">content02</div>
+            <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</p>
+            <div class="content-box content01">
+                <span>from 출발</span>
+                <span><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
+                <span>to 도착</span>
+                <span><input type="date"></span>
+            </div>
+            <div class="content-box content02">content02</div>
         
+        </div>
     </div>
 </body>
 
