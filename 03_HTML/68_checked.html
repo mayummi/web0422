@@ -4,23 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 
+            선택자
+            1. id선택자 -> #이름
+                조상선택자 하위 선택
+            2. 공백, >, +,  ~
+            3. 가상클래스 -> :hover, :checked
+                nth_-child(n), nth-of-type(n)
+            4. 선택자 선택자
+            4. 선택자 > 선택자
+            4. 선택자 + 선택자
+            4. 형선택자~제들선택자
+            가상클래스 -> :checked
+            8. 가상 요소 선택자 -> ::before, ::after
+        */
+        #subject1 {
+            display: none;
+        }
+        /* checked 되지 않은 상태 */
+        #subject1+label::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            background: no-repeat 0% 0%;
+            background: url(../assets/chk_b.svg);
+        }
+        /* checked 된 상태 */
+        #subject1:checked+label::before {
+            background: url(../assets/chk_a.svg);
+        }
+        #subject1+label {
+            color: red;
+            /* 마우스커서: 손가락 */
+            cursor: pointer;
+        }
+        /* 확인란과 라디오 버튼은 margin: 3px, 3px 3px 4px; */
+        /* 라디오 버튼은 margin: 3px 3px 0 5px; */
+        :checked {
+            margin-right: 30px;
+            width: 13px;
+            transform: scale(2);
+            height: 13px;
+            accent-color: blue;
+            zoom: 2;
+        }
+
+        label:nth-of-type(3)~label {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <h1>확인란과 라디오버튼</h1>
-    <p>필수 속성에 type, name, value</p>
+    <p class="p1">input태그의 type, name, value, checked</p>
     <!-- 확인란(checkbox) -->
     <!-- 여러개 중에 여러개 선택 -->
     <!-- 한 페이지에 id의 값은 서로 달라야 한다. -->
     <!-- id와 for로 연결한다. -->
-    <input type="checkbox" id="subject1" name="chkgroup" value="html">
-    <label for="subject1">HTML</label>
-    <input type="checkbox" id="subject2" name="chkgroup" value="css">
+    <input type="checkbox" id="subject1" class="subject" name="chkgroup" value="rule1" checked>
+    <label for="subject1" class="subject">회칙1</label>
+    <input type="checkbox" id="subject2" name="chkgroup" value="rule2">
     <label for="subject2">CSS</label>
-    <input type="checkbox" id="subject3" name="chkgroup" value="js">
+    <input type="checkbox" id="subject3" name="chkgroup" value="rule">
     <label for="subject3">JavaScript</label>
     <!-- 라디오버튼(radio): 여러개 중 하나만 선택 -->
-    <label><input type="radio" name="radiogroup" value="html">HTML</label>
-    <label><input type="radio" name="radiogroup" value="css">CSS</label>
+    <label><input type="radio" name="radiogroup" value="y" checked>동의함</label>
+    <label><input type="radio" name="radiogroup" value="n">동의하지 않음</label>
     <label><input type="radio" name="radiogroup" value="js">JavaScript</label>
 </body>
 </html>

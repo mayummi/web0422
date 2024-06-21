@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+body  {
+    font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+.tabs {
+    position: relative;
+    width:400px;
+    height:200px;
+    padding: 2px;
+    border: 1px solid;
+}
+.tabs label {
+    display: inline-block;
+    padding: 2px 24px;
+    background: #999;
+    color: #777;
+    cursor: pointer;
+}
+.tabs div {
+    display: none;
+    position: absolute;
+    width:calc(100% - 4px);
+    height: calc(100% - 31px);
+    padding: 16px;
+}
+.tabs input {
+    display: none;
+}
+.tabs input:checked + label {
+    background: #333;
+    color: #fff;
+}
+.tabs input:checked + label + div {
+    display: block;
+}
+
+/* bg-color */
+.tab1 {background: #ddd;}
+.tab2 {background: #ccc;}
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <!-- 탭1 -->
+        <input type="radio" name="btn" id="btn1" checked>
+        <label for="btn1">공지사항</label>
+        <div class="tab1">
+            <ul>
+                <li><span>Lorem ipsum dolor sit amet.</span>0000.00.00</li>
+                <li><span>Lorem ipsum dolor sit amet.</span>0000.00.00</li>
+                <li><span>Lorem ipsum dolor sit amet.</span>0000.00.00</li>
+                <li><span>Lorem ipsum dolor sit amet.</span>0000.00.00</li>
+            </ul>
+        </div>
+
+        <!-- 탭2 -->
+        <input type="radio" name="btn" id="btn2">
+        <label for="btn2">갤러리</label>
+        <div class="tab2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta harum, nihil nobis laudantium quaerat, eaque nam officia at unde neque voluptatem quasi, recusandae iste ut soluta molestias reiciendis dolorem?</div>
+    </div>
+</body>
+
+</html>
