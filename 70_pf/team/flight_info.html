@@ -134,6 +134,7 @@
             
         }
         .date {
+            position: relative;
             vertical-align: 5px;
             margin-right: 50px;
             margin-left: 100px;
@@ -175,6 +176,33 @@
             border-radius: 10px;
             cursor: pointer;
         }
+        .deshed {
+            margin-top: -7px;
+            margin-left: -41px;
+            display: inline-block;
+            position: absolute;
+            z-index: 50;
+            background: none;
+            border: 1px solid #eee;
+            
+            margin-right: 20px;
+            height: 150px;
+        }
+        .flight:focus {
+            outline: none;
+        }
+        .flight {
+            font-size: 16px;
+            border-style: none;
+            border-bottom: 1px solid;
+            width: 570px;
+            margin-right: 60px;
+        }
+        .lj {
+            color: #192547;
+            font-size: 20px;
+        }
+        
     </style>
 </head>
 
@@ -195,9 +223,16 @@
                 <button class="from"><span>From</span> <br>출발</button>
                 <span class="swap"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
                 <button class="to"><span>To</span> <br>도착</button>
+                <div class="deshed"></div>
                 <span class="date"><input type="date"></span>
             </div>
-            <div class="content-box content02">content02</div>
+
+            <div class="content-box content02">
+                <label for="text"><span class="lj">LJ</span></label>
+                <input id="text" type="text" class="flight" placeholder="편명(예.0001)"></input>
+                <div class="deshed"></div>
+                <span class="date"><input type="date"></span>
+            </div>
             <div class="contentbox2"></div>
             <div class="contentbox3"></div>
         </div>
