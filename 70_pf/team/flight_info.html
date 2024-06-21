@@ -26,6 +26,7 @@
         }
         .container {
             background: #eee;
+            padding: 100px;
         }
         .tabcontent {
             /* margin-left: calc(50% - 200px); */
@@ -35,7 +36,6 @@
             width: 1280px;
             border-radius: 10px;
             background: #fff;
-            
             position: relative;
         }
         .box {
@@ -86,7 +86,7 @@
 
         .content-box {
             display: none;
-            margin-top: 10px;
+            margin-top: 30px;
             padding: 10px;
             width: 1200px;
             height: 158px;
@@ -114,7 +114,7 @@
             position: absolute;
             width: 1200px;
             height: 158px;
-            margin-top: 5px;
+            margin-top: 20px;
             background: #bed600;
             border-radius: 15px;
         }
@@ -127,7 +127,7 @@
             margin-right: 20px;
             width: 435px;
             height: 158px;
-            margin-top: 5px;
+            margin-top: 20px;
             background: #192547;
             position: relative;
             border-radius: 15px;
@@ -160,14 +160,18 @@
             cursor: pointer;
             color: #ABABAB;
         }
-
+        .text {
+            margin-top: 70px;
+            margin-bottom: 60px;
+            font-size: 16px;
+        }
     </style>
 </head>
 
 <body>
     
     <div class="container">
-        <h2>운항정보</h2>
+        <h1>출도착 안내</h1>
         <div class="tabcontent">
         
             <div class="box"></div>
@@ -176,7 +180,7 @@
                 <input type="radio" name="tab" id="tabmenu02">
                 <label for="tabmenu02">편명조회</label>
         
-            <p>본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</p>
+            <div class="text">본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</div>
             <div class="content-box content01">
                 <button class="from"><span>From</span> <br>출발</button>
                 <span class="swap"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
