@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>확인란과 라디오버튼</h1>
+    <p>필수 속성에 type, name, value</p>
+    <!-- 확인란(checkbox) -->
+    <!-- 여러개 중에 여러개 선택 -->
+    <!-- 한 페이지에 id의 값은 서로 달라야 한다. -->
+    <!-- id와 for로 연결한다. -->
+    <input type="checkbox" id="subject1" name="chkgroup" value="html">
+    <label for="subject1">HTML</label>
+    <input type="checkbox" id="subject2" name="chkgroup" value="css">
+    <label for="subject2">CSS</label>
+    <input type="checkbox" id="subject3" name="chkgroup" value="js">
+    <label for="subject3">JavaScript</label>
+    <!-- 라디오버튼(radio): 여러개 중 하나만 선택 -->
+    <label><input type="radio" name="radiogroup" value="html">HTML</label>
+    <label><input type="radio" name="radiogroup" value="css">CSS</label>
+    <label><input type="radio" name="radiogroup" value="js">JavaScript</label>
+</body>
+</html>
