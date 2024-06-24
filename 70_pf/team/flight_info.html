@@ -138,7 +138,22 @@
             vertical-align: 5px;
             margin-right: 50px;
             margin-left: 100px;
+        }
+        ::-webkit-datetime-edit-fields-wrapper {
+            background: #fff;
+            width: 10em;
+        }
+        ::-webkit-datetime-edit-text {
+            color: #cdcdcd;
+            padding: 0 0.3em;
+        }
+        /* ::-webkit-datetime-edit-day-field,
+        ::-webkit-datetime-edit-month,
+        ::-webkit-datetime-edit-year-field {
             
+        } */
+        .date input[type="date"] {
+            border: none;
         }
         
         .from {
@@ -230,7 +245,7 @@
                 <label for="text"><span class="lj">LJ</span></label>
                 <input id="text" type="text" class="flight" placeholder="편명(예.0001)"></input>
                 <div class="deshed"></div>
-                <span class="date"><input type="date"></span>
+                <span class="date"><input type="date" placeholder="2024.06.24"></span>
             </div>
             <div class="contentbox2"></div>
             <div class="contentbox3"></div>
