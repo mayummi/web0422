@@ -6,11 +6,25 @@
 #link {
     width: 1340px;
     height: 100px;
-    border: 1px solid red;
+    padding: 20px;
+    background: antiquewhite;
+}
+#link ul {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#link li {
+    display: flex;
+    align-items: center;
 }
 /* 아이콘 이미지 */
 #link div {
-    width: 80px;
-    height: 80px;
+    /* display: inline-block; */
+    width: 60px;
+    height: 60px;
     background: #ccc;
+    /* 인라인 요소의 수직 배치 */
+    /* vertical-align: middle; */
+    margin-right: 24px;
 }
