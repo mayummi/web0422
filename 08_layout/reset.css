@@ -1,11 +1,12 @@
 @charset "utf-8";
 
 * {
+    /* border와 padding 값이 width/height에 포함 */
     box-sizing: border-box;
 }
 
-body,
-ul {
+body,h1,h2,
+ul,p {
     margin: 0;
 }
 

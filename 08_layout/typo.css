@@ -5,13 +5,17 @@
 /* html {
     font-size: 10;
 } */
-
+/* 글자 크기 rem 단위 사용 */
+/* :root는 html와 같다 */
+/* rem 단위는 html에서 지정한 글자 크기의 배수 */
 :root {
     font-size: 10px;
 }
 
 body {
-    font: 1.5rem/1.5 "Noto Sans KR", sans-serif;
+    /* font: 1.5rem/1.5 "Noto Sans KR", sans-serif; */
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.5rem;
     line-height: 1.6;
 }
 
