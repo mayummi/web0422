@@ -28,6 +28,33 @@ font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
     height: 220px;
 }
 
+.tabs input {
+    display: none;
+}
+
+
+/* 탭의 콘텐츠 */
+.tabs>div {
+    display: none;
+    /* position: absolute */
+    position: absolute;
+    width: 100%;
+    /* 32px은 label의 높이 */
+    height: calc(100% - 32px);
+    padding: 16px 24px;
+    border: 1px solid #ccc;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
+.tabs input:checked+label {
+    z-index: 99;
+    background: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+/* 탭의 버튼 */
 .tabs label {
     position: relative;
     left: 30px;
@@ -41,54 +68,30 @@ font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
     cursor: pointer;
 }
 
-.tabs>div {
-    display: none;
-    /* position: absolute */
-    position: absolute;
-    width: 100%;
-    /* 32px은 label의 높이 */
-    height: calc(100% - 32px);
-    padding: 16px;
-    border: 1px solid #ccc;
-}
-
-.tabs input {
-    display: none;
-}
-
-/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
-.tabs input:checked+label {
-    z-index: 99;
-    background: #fff;
-    color: #111;
-    border: 1px solid #ccc;
-    border-bottom: none;
-}
-
 /* 체크된 input의 아래 div만 보이게 한다. */
 .tabs input:checked+label+div {
     display: block;
 }
 
 
-/* 공지사항 */
+/* 공지사항의 콘텐츠 */
 
 .tab1 li {
     line-height: 2.3;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px dotted #ccc;
 }
 
 .tab1 li span {
     display: inline-block;
-    width: 430px;
+    width: 422px;
 }
 
-/* 갤러리 */
+/* 갤러리의 콘텐츠 */
 .tab2 ul {
     display: flex;
     justify-content: space-around;
     line-height: .2;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .tab2 div {
