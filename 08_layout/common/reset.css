@@ -22,3 +22,7 @@ a {
     text-decoration: none;
     color: #666666;
 }
+
+img {
+    width: 100%;
+}

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css);
 @import url(common/reset.css);
 @import url(common/typo.css);
 
@@ -82,31 +83,7 @@ header .spot_menu a:hover {
 #main_contents {
     width: 400px;
     border: 1px solid;
-}
-
-/* 링크 영역 */
-#link {
-    height: 100px;
-    padding: 20px;
-    background: bisque;
-}
-
-#link ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#link li a {
-    display: flex;
-    align-items: center;
-}
-
-/* 아이콘 이미지 */
-#link ul li a span {
-    width: 60px;
-    height: 60px;
-    background: #ccc;
-    margin-right: 24px;
+    padding: 0 24px;
 }
 
 /* 배너 영역 */
@@ -114,105 +91,60 @@ header .spot_menu a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
     background: aliceblue;
+    margin-bottom: 32px;
 }
 
 /* 배너 이미지 */
-/* 플렉스 아이템 요소는 display:block; 이다. */
+
 #banner span {
-    width: 120px;
-    height: 100px;
+    width: 40px;
+    height: 30px;
     background: #ccc;
 }
 
 /* 배너 타이틀 및 설명글 */
 #banner>div {
-    width: 1000px;
-    padding-right: 200px;
+    width: 300px;
 }
 
 #banner>div h2 {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 }
 
-/* 공지사항 및 갤러리 */
-#tab_wrap {
-    height: 300px;
+#banner a {
+    width: 12px;
 }
 
-#tab_wrap .tabs {
-    position: relative;
-    left: 50px;
-    top: 30px;
-    width: 550px;
-    height: 220px;
-}
 
-#tab_wrap .tabs input {
-    display: none;
-}
 
-/* 탭의 버튼 */
-#tab_wrap .tabs label {
-    position: relative;
-    left: 24px;
-    top: 1px;
-    display: inline-block;
-    /* label의 높이는 4px */
-    padding: 4px 24px;
-    background: #999;
-    color: #777;
-    /* 손 모양 */
-    cursor: pointer;
-}
 
-/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
-#tab_wrap .tabs input:checked+label {
-    z-index: 99;
-    background: #fff;
-    color: #111;
-    border: 1px solid #ccc;
-    border-bottom: none;
-}
 
-/* 탭의 콘텐츠 */
-#tab_wrap .tabs>div {
-    display: none;
-    /* position:absolute;이면 width는 콘텐츠 크기 */
-    position: absolute;
-    width: 100%;
-    /* 32px은 label의 높이 */
-    height: calc(100% - 32px);
-    padding: 16px 24px;
-    border: 1px solid #ccc;
-}
-
-/* 체크된 input의 아래 label 아래 div만 보이게한다. */
-#tab_wrap .tabs input:checked+label+div {
-    display: block;
-}
 
 /* 공지사항의 콘텐츠 */
-#tab_wrap .tab1 li {
+#notice {
+    margin-bottom: 48px;
+}
+#notice li {
     line-height: 2.3;
     border-bottom: 1px dotted #ccc;
 }
 
-#tab_wrap .tab1 li a {
+#notice li a {
     display: inline-block;
-    width: 422px;
+    width: 250px;
 }
 
 /* 갤러리의 콘텐츠 */
-#tab_wrap .tab2 ul {
+#gallery  ul {
     display: flex;
     justify-content: space-between;
     line-height: 2.3;
     margin-top: 8px;
 }
 
-#tab_wrap .tab2 span {
+#gallery span {
     display: block;
     width: 150px;
     height: 100px;
@@ -259,6 +191,61 @@ footer p {
 }
 
 /* sns */
+/* 폰트어썸 코드로 삽입하기 */
 footer .sns a {
     margin: 0 8px;
+    font-size: 3rem;
+    
+    
 }
+footer .sns a i {
+    transition: .3s;
+    color: #555;
+}
+footer .sns a:hover i {
+    transform: scale(1.2,1.2);
+}
+footer .sns a:nth-child(1):hover i {
+    color: #583DFF;
+}
+footer .sns a:nth-child(2):hover i {
+    color: #65E3FF;
+}
+footer .sns a:nth-child(3):hover i {
+    color: #D66EFB;
+}
+
+/* 배경 이미지로 삽입하기 */
+/* footer .sns a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    text-indent: -999em;
+    background: no-repeat 50% 50%;
+    transition: .5s;
+}
+footer .sns a:nth-child(1) {
+    background-image: url(images/facebook.svg);
+}
+footer .sns a:nth-child(2) {
+    background-image: url(images/twitter.svg);
+}
+footer .sns a:nth-child(3) {
+    background-image: url(images/instagram.svg);
+}
+
+footer .sns a:hover {
+    transform: scale(1.2,1.2);
+}
+
+footer .sns a:nth-child(1):hover {
+    background-image: url(images/facebook_hover.svg);
+}
+footer .sns a:nth-child(2):hover {
+    background-image: url(images/twitter_hover.svg);
+}
+footer .sns a:nth-child(3):hover {
+    background-image: url(images/instagram_hover.svg);
+}
+ */

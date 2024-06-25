@@ -20,6 +20,10 @@ body {
     color: #666666;
 }
 
+h2 {
+    font-size: 1.6rem;
+}
+
 /* font의 위계 */
 .main li:hover a {
     color: #fff;
