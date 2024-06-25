@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
+/* 푸터 영역 */
+footer {
+    display: flex;
+    align-items: center;
+    width: 1320px;
+    height: 120px;
+    background: #333;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+/* 하단 로고 */
+footer .flogo {
+    width: 190px;
+    text-align: center;
+}
+/* 하단 메뉴 */
+footer ul {
+    display: flex;
+    margin-bottom: 8px;
+}
+footer ul a {
+    text-decoration: underline;
+}
+/* 
+    가상클래스
+    선택자1:not(선택자2) - 선택자2를 제외한 선택자1
+    li:not(:last-child) - 마지막 li를 제외한 li
+*/
+/* 마지막 li를 제외한 li */
+footer ul li:not(:last-child) a::after {
+    content: "|";
+    margin: 0 8px;
+}
+
+/* footer ul li a::after {
+    content: "|";
+    margin: 0 8px;
+}
+footer ul li:last-child a::after {
+    content: "|";
+    margin: 0 0px;
+} */
+/* 주소 및 저작권 */
+footer p {
+    width: 850px;
+}
