@@ -1,9 +1,6 @@
-@charset "utf-8";
 
-@import url(reset.css);
-@import url(typo.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
 
 /* * {
 box-sizing: border-box;
@@ -19,11 +16,15 @@ font-size: 10px;
 body  {
 font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
 } */
+#tab_wrap {
+    height: 300px;
+
+}
 
 .tabs {
     position: relative;
     left: 50px;
-    top: 50px;
+    top: 30px;
     width: 550px;
     height: 220px;
 }
