@@ -1,64 +1,113 @@
 @charset "utf-8";
+@import url(common/reset.css);
+@import url(common/typo.css);
 
+/* 상단 영역 */
+.top_wrap {
+    display: flex;
+}
 
-/* @import는 상단에 기록해야한다. */
-@import url(reset.css);
-@import url(typo.css);
-@import url(header.css);
-@import url(footer.css);
+/* 헤더 영역 */
+header {
+    width: 200px;
+}
 
+/* 로고 */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
 
-/* 슬라이드 */
-#slide {
-    height: 350px;
-    background: rgba(240, 68, 102, 0.747);
+/* 내비게이션 */
+.gnb {
+    background: #111;
+}
+
+/* 1depth */
+.main {
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.main>li:hover {
+    background: #333;
+}
+
+/* 2depth */
+.sub {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    transition: .3s;
+    line-height: 2;
+}
+
+.main:hover .sub {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    background: #111;
+}
+
+header .spot_menu {
+    position: relative;
+    top:200px;
 }
 
 /* 메인 콘텐츠 */
 #main_contents {
-    width: 1340px;
-    margin: -100px auto;
+    width: 400px;
     border: 1px solid;
 }
 
-
-
 /* 링크 영역 */
 #link {
-
     height: 100px;
     padding: 20px;
-    background: antiquewhite;
+    background: bisque;
 }
+
 #link ul {
     display: flex;
     justify-content: space-evenly;
-
 }
+
 #link li a {
     display: flex;
     align-items: center;
 }
+
 /* 아이콘 이미지 */
 #link ul li a span {
-
-    /* display: inline-block; */
     width: 60px;
     height: 60px;
     background: #ccc;
-    /* 인라인 요소의 수직 배치 */
-    /* vertical-align: middle; */
     margin-right: 24px;
 }
-
-
 
 /* 배너 영역 */
 #banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 50px;
     background: aliceblue;
 }
@@ -71,21 +120,22 @@
     background: #ccc;
 }
 
-/* 배너 타이틀 및 설명 글 */
+/* 배너 타이틀 및 설명글 */
 #banner>div {
     width: 1000px;
     padding-right: 200px;
 }
+
 #banner>div h2 {
     margin-bottom: 16px;
 }
+
 /* 공지사항 및 갤러리 */
 #tab_wrap {
     height: 300px;
-
 }
 
-.tabs {
+#tab_wrap .tabs {
     position: relative;
     left: 50px;
     top: 30px;
@@ -93,15 +143,37 @@
     height: 220px;
 }
 
-.tabs input {
+#tab_wrap .tabs input {
     display: none;
 }
 
+/* 탭의 버튼 */
+#tab_wrap .tabs label {
+    position: relative;
+    left: 24px;
+    top: 1px;
+    display: inline-block;
+    /* label의 높이는 4px */
+    padding: 4px 24px;
+    background: #999;
+    color: #777;
+    /* 손 모양 */
+    cursor: pointer;
+}
+
+/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
+#tab_wrap .tabs input:checked+label {
+    z-index: 99;
+    background: #fff;
+    color: #111;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
 
 /* 탭의 콘텐츠 */
-.tabs>div {
+#tab_wrap .tabs>div {
     display: none;
-    /* position: absolute */
+    /* position:absolute;이면 width는 콘텐츠 크기 */
     position: absolute;
     width: 100%;
     /* 32px은 label의 높이 */
@@ -110,58 +182,93 @@
     border: 1px solid #ccc;
 }
 
-/* .tabs 안의 하위요소인 체크된 input 아래 동생 label을 선택 */
-.tabs input:checked+label {
-    z-index: 99;
-    background: #fff;
-    color: #111;
-    border: 1px solid #ccc;
-    border-bottom: none;
-}
-
-/* 탭의 버튼 */
-.tabs label {
-    position: relative;
-    left: 30px;
-    top: 1px;
-    display: inline-block;
-    /* label의 높이는 4px */
-    padding: 4px 24px;
-    background: #999;
-    color: #777;
-    /* <label> 태그 손모양 */
-    cursor: pointer;
-}
-
-/* 체크된 input의 아래 div만 보이게 한다. */
-.tabs input:checked+label+div {
+/* 체크된 input의 아래 label 아래 div만 보이게한다. */
+#tab_wrap .tabs input:checked+label+div {
     display: block;
 }
 
-
 /* 공지사항의 콘텐츠 */
-
-.tab1 li {
+#tab_wrap .tab1 li {
     line-height: 2.3;
     border-bottom: 1px dotted #ccc;
 }
 
-.tab1 li a {
+#tab_wrap .tab1 li a {
     display: inline-block;
     width: 422px;
 }
 
 /* 갤러리의 콘텐츠 */
-.tab2 ul {
+#tab_wrap .tab2 ul {
     display: flex;
-    justify-content: space-around;
-    line-height: .2;
+    justify-content: space-between;
+    line-height: 2.3;
     margin-top: 8px;
 }
 
-.tab2 span {
+#tab_wrap .tab2 span {
     display: block;
     width: 150px;
     height: 100px;
     background: #ccc;
+}
+
+/* 슬라이드 이미지 */
+#slide {
+    width: calc(100% - 600px);
+    height: 700px;
+    background: rgba(240, 68, 103, 0.5);
+}
+
+/* 푸터 영역 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #111;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* 하단 로고 */
+footer .flogo {
+    width: 190px;
+    text-align: center;
+}
+
+/* 하단 메뉴 */
+footer ul {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+footer ul a {
+    text-decoration: underline;
+}
+
+/* 
+    가상클래스
+        선택자1:not(선택자2) - 선택자2를 제외한 선택자1
+        li:not(:last-child) - 마지막 li를 제외한 li
+*/
+footer ul li:not(:last-child) a::after {
+    content: "|";
+    margin: 0 8px;
+}
+
+/* footer ul li a::after {
+    content: "|";
+    margin: 0 8px;
+}
+footer ul li:last-child a::after {
+    content: "";
+    margin: 0;
+} */
+
+/* 주소 및 저작권 */
+footer p {
+    width: 850px;
 }
