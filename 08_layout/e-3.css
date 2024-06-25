@@ -10,6 +10,7 @@
 /* 헤더 영역 */
 header {
     width: 200px;
+    padding: 20px;
 }
 
 /* 로고 */
@@ -21,29 +22,30 @@ header {
 }
 
 /* 내비게이션 */
-.gnb {
-    background: #111;
+#gnb {
+    margin-bottom: 24px;
 }
 
 /* 1depth */
-.main {
-    height: 30px;
-}
 
-.main>li {
+
+#gnb .main>li {
     width: 160px;
     height: 30px;
     text-align: center;
     line-height: 30px;
+    border: 1px solid #ccc;
 }
 
-.main>li:hover {
+#gnb .main>li:hover {
     background: #333;
 }
 
 /* 2depth */
-.sub {
+#gnb .sub {
     position: relative;
+    left: 160px;
+    top: -40px;
     height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -51,25 +53,29 @@ header {
     padding: 10px 0 20px;
     transition: .3s;
     line-height: 2;
+    background: red;
 }
 
-.main:hover .sub {
-    height: 300px;
+#gnb .main>li:hover .sub {
+    height: 150px;
     visibility: visible;
     opacity: 1;
 }
 
-.sub li a {
-    padding: 4px 16px;
+#gnb .sub li a {
+    display: block;
 }
 
-.sub li:hover a {
+#gnb .sub li:hover a {
     background: #111;
 }
-
-header .spot_menu {
-    position: relative;
-    top:200px;
+/* 스팟메뉴 */
+header .spot_menu a:first-child::after {
+    content: "|";
+    margin: 0 4px;
+}
+header .spot_menu a:hover {
+    text-decoration: underline;
 }
 
 /* 메인 콘텐츠 */
@@ -239,36 +245,20 @@ footer .flogo {
     text-align: center;
 }
 
-/* 하단 메뉴 */
-footer ul {
-    display: flex;
-    margin-bottom: 16px;
-}
 
-footer ul a {
-    text-decoration: underline;
-}
 
-/* 
-    가상클래스
-        선택자1:not(선택자2) - 선택자2를 제외한 선택자1
-        li:not(:last-child) - 마지막 li를 제외한 li
-*/
 footer ul li:not(:last-child) a::after {
     content: "|";
     margin: 0 8px;
 }
 
-/* footer ul li a::after {
-    content: "|";
-    margin: 0 8px;
-}
-footer ul li:last-child a::after {
-    content: "";
-    margin: 0;
-} */
 
 /* 주소 및 저작권 */
 footer p {
     width: 850px;
+}
+
+/* sns */
+footer .sns a {
+    margin: 0 8px;
 }
