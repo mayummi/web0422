@@ -1,9 +1,9 @@
 @charset "utf-8";
 
+
+/* @import는 상단에 기록해야한다. */
 @import url(reset.css);
 @import url(typo.css);
-
-
 @import url(header.css);
 @import url(link.css);
 @import url(banner.css);

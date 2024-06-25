@@ -82,7 +82,7 @@ font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
     border-bottom: 1px dotted #ccc;
 }
 
-.tab1 li span {
+.tab1 li a {
     display: inline-block;
     width: 422px;
 }
@@ -95,7 +95,8 @@ font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
     margin-top: 8px;
 }
 
-.tab2 div {
+.tab2 span {
+    display: block;
     width: 150px;
     height: 100px;
     background: #ccc;

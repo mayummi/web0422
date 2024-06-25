@@ -11,6 +11,7 @@
 }
 
 /* 배너 이미지 */
+/* 플렉스 아이템 요소는 display:block; 이다. */
 #banner span {
     width: 120px;
     height: 100px;

@@ -17,9 +17,9 @@
     align-items: center;
 }
 /* 아이콘 이미지 */
-#link span {
+#link ul li a span {
 
-    display: inline-block;
+    /* display: inline-block; */
     width: 60px;
     height: 60px;
     background: #ccc;
