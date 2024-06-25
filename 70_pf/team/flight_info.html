@@ -139,7 +139,7 @@
             margin-right: 50px;
             margin-left: 100px;
         }
-        ::-webkit-datetime-edit-fields-wrapper {
+        /* ::-webkit-datetime-edit-fields-wrapper {
             background: #fff;
             width: 10em;
         }
@@ -151,14 +151,28 @@
         ::-webkit-datetime-edit-month-field,
         ::-webkit-datetime-edit-year-field {
             background-color: #fff;
-        }
+        } */
         
-        .date input[type="date"] {
+        /* .date input[type="date"] {
             border: none;
             text-decoration: none;
             background: url(images/date.svg);
             background: no-repeat;
+        } */
+        .date input[type="date"] {
+            appearance: none;
+            
         }
+        ::placeholder:invalid,
+        ::-webkit-datetime-edit {
+            
+            display: none;
+        }
+        ::before {
+            color: var(--placeholder-color);
+            content: attr(placeholder);
+        }
+        
         
         .from {
             border-style: none;
@@ -242,7 +256,7 @@
                 <span class="swap"><img src="../../assets/booking__swap--disabled.svg" alt="버튼"></span>
                 <button class="to"><span>To</span> <br>도착</button>
                 <div class="deshed"></div>
-                <span class="date"><input type="date"></span>
+                <span class="date"><input type="date" placeholder="2024.06.25"></span>
             </div>
 
             <div class="content-box content02">
