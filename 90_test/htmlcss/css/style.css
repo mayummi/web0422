@@ -55,7 +55,6 @@ header .container {
     /* 블록레벨요소의 가로 가운데 배치: width, margin */
     width: 1200px;
     margin: 0 auto;
-    border: 1px solid;
     height: 100px;
 }
 /* 로고 */
@@ -67,7 +66,8 @@ header .container {
 /* 내비게이션 */
 .gnb {
     align-self: flex-end;
-    background: #111;
+    background: #243c84;
+    /* align-self: center; */
 }
 
 /* 1depth */
@@ -85,8 +85,9 @@ header .container {
 .main li a {
     color: #fff;
 }
+
 .main>li:hover {
-    background: #333;
+    background: #ccc;
 }
 
 /* 서브바 */
@@ -100,7 +101,8 @@ header .container {
     height: 0px;
     opacity: 0;
     transition: .3s;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(36, 60, 132, 0.5);
 }
 
 .main:hover::before {
@@ -133,7 +135,7 @@ header .container {
 }
 
 .sub li:hover a {
-    background: #111;
+    background: #243c84;
     color: #fff;
 }
 
@@ -149,7 +151,6 @@ header .container {
     animation: slide 12s infinite;
 }
 #slide li {
-    width: 25%;
     height: 100%;
     background: no-repeat 50% 50%/cover;
 }
@@ -326,11 +327,11 @@ footer .sns a:hover i {
     transform: scale(1.2,1.2);
 }
 footer .sns a:nth-child(1):hover i {
-    color: #583dff;
+    color: #3A579D;
 }
 footer .sns a:nth-child(2):hover i {
-    color: #65e3ff;
+    color: #2AA9E0;
 }
 footer .sns a:nth-child(3):hover i{
-    color: #d66efb;
+    color: #C837AC;
 }
