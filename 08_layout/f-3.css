@@ -2,10 +2,10 @@
 
 
 /* @import는 상단에 기록해야한다. */
-@import url(reset.css);
-@import url(typo.css);
-@import url(header.css);
-@import url(footer.css);
+@import url(common/reset.css);
+@import url(common/typo.css);
+@import url(common/header.css);
+@import url(common/footer.css);
 
 
 /* 슬라이드 */
