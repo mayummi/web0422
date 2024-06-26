@@ -252,13 +252,20 @@ header .container {
 }
 #banner div:nth-child(1) p {
     position: absolute;
-    text-align: center;
-    top:0;
+    line-height: 2;
+    color: #fff;
+    top:30px;
+    right: 440px;
 }
 #banner div:nth-child(2) p {
     position: absolute;
-    top:0;
-    right: 0;
+    line-height: 2;
+    color: #fff;
+    top:30px;
+    right: 20px;
+}
+#banner div p span {
+    font-size: 18px;
 }
 
 #banner div img {
