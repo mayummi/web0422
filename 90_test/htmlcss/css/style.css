@@ -37,7 +37,11 @@ body {
 }
 
 
-
+body {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+}
 /* 헤더 영역 */
 header {
     position: relative;
@@ -48,7 +52,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     /* 블록레벨요소의 가로 가운데 배치: width, margin */
-    width: 1340px;
+    width: 1200px;
     margin: 0 auto;
     border: 1px solid;
     height: 100px;
@@ -148,13 +152,14 @@ header .container {
 
 
 /* animation */
-        @keyframes slide { 
-            0% { transform: translate(0%, 0%); } 
-            10% { transform: translate(-25%, 0%); } 
-            33% { transform: translate(-25%, 0%); } 
-            43% { transform: translate(-50%, 0%); } 
-            66% { transform: translate(-50%, 0%); } 
-            76% { transform: translate(-75%, 0%); } 
-            99.99% { transform: translate(-75%, 0%); } 
-            100% { transform: translate(0%, 0%); } 
-        }
+@keyframes slide { 
+    0% { transform: translate(0%, 0%); } 
+    10% { transform: translate(-25%, 0%); } 
+    33% { transform: translate(-25%, 0%); } 
+    43% { transform: translate(-50%, 0%); } 
+    66% { transform: translate(-50%, 0%); } 
+    76% { transform: translate(-75%, 0%); } 
+    99.99% { transform: translate(-75%, 0%); } 
+    100% { transform: translate(0%, 0%); } 
+}
+
