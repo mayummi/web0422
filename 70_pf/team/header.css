@@ -2,7 +2,6 @@
 @import url(reset.css);
 @import url(typo.css);
 
-
 header {
     z-index: 100;
     position: absolute;
@@ -67,7 +66,7 @@ header {
 }
 
 .main>li a:hover {
-    color: #fff;
+    font-weight: bold;
 }
 
 .all {
@@ -102,6 +101,7 @@ header {
 }
 
 .sub li a:hover {
+    padding: 4px;
     background: #BED600;
     color: #192547;
 }

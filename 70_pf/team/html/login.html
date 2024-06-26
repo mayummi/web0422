@@ -1,357 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        * {
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "GmarketSansMedium", sans-serif;
-        }
-
-        body {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            margin-top: 60px;
-        }
-
-        .page-container {
-            width: 1200px;
-            height: 731px;
-        }
-
-        .line {
-            margin-top: 15px;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid;
-            height: 700px;
-            width: 0.1px;
-            display: flex;
-            color: #eee;
-        }
-
-
-        .shadow {
-            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.13);
-        }
-
-        .login-form-container {
-            background: #fff;
-            width: 1200px;
-            height: 731px;
-            display: flex;
-            flex-direction: row;
-            box-shadow: 10px black;
-            border-radius: 15px;
-        }
-
-        .login-form-left-side {
-            width: 50%;
-            border-radius: 10px 0px 0px 10px;
-            padding: 75px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-        }
-
-        .login-form-left-side h1 {
-            width: 100%;
-            text-align: left;
-            opacity: 0.9;
-            margin-right: 108px;
-            margin-bottom: 50px;
-            color: #192547;
-        }
-
-        .login-form-left-side h2 {
-            color: #192547;
-        }
-
-        .login-form-left-side p {
-            padding-top: 50px;
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
-        .login-form-right-side {
-            width: 50%;
-            border-radius: 0 10px 10px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            background: #fff;
-        }
-
-
-
-
-        .login-wrap {
-            width: 100%;
-            margin: auto;
-            min-height: 670px;
-            position: relative;
-        }
-
-        .login-html {
-            position: absolute;
-            padding: 20px 50px 50px 30px;
-            width: 550px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .login-html .sign-in-htm,
-        .login-html .sign-up-htm {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-            transform: rotateY(180deg);
-            backface-visibility: hidden;
-        }
-
-        .login-html .sign-in,
-        .login-html .sign-up,
-        .login-form .group .check {
-            display: none;
-        }
-
-        .login-html .tab,
-        .login-form .group .label,
-        .login-form .group .button {
-            text-transform: uppercase;
-        }
-
-        .login-html .tab {
-            color: #192547;
-            font-size: 16px;
-            padding-bottom: 10px;
-            margin: 0 0px 50px 0px;
-            display: inline-flex;
-            width: 232px;
-            border-bottom: 1px solid transparent;
-
-        }
-
-        .login-html .sign-in:checked+.tab,
-        .login-html .sign-up:checked+.tab {
-
-            border-color: #BED600;
-            border-bottom: 5px solid #BED600;
-            justify-content: center;
-            
-        }
-        .login-html .sign-in+.tab,
-        .login-html .sign-up+.tab {
-            
-            position: relative;
-            justify-content: center;
-        }
-
-
-
-        .login-form {
-            min-height: 345px;
-            position: relative;
-            
-        }
-
-        .login-form .group {
-            margin-bottom: 40px;
-        }
-
-        .login-form .group .label,
-        .login-form .group .input,
-        .login-form .group .button {
-            width: 100%;
-            display: block;
-        }
-
-        .login-form .group .input,
-        .login-form .group .button {
-            border: none;
-            border-bottom: 1px solid #BED600;
-            background: none;
-
-            padding: 15px 20px;
-
-        }
-
-
-        .login-form .group .button {
-            border-radius: 5px;
-        }
-
-        .login-form .group input[data-type="password"] {
-            -text-security: circle;
-            -webkit-text-security: circle;
-        }
-
-        .input:focus {
-            outline: none;
-        }
-
-        .login-form .group .label {
-            color: #ABABAB;
-            font-size: 12px;
-        }
-
-        .login-form .group .button {
-            background: #BED600;
-            cursor: pointer;
-        }
-
-        .login-form .group label .icon {
-            width: 15px;
-            height: 15px;
-            border-radius: 2px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .login-form .group label .icon:before,
-        .login-form .group label .icon:after {
-            content: '';
-            width: 10px;
-            height: 2px;
-            background: #192547;
-            position: absolute;
-            transition: all .2s ease-in-out 0s;
-        }
-
-        .login-form .group label .icon:before {
-            left: 3px;
-            width: 5px;
-            bottom: 6px;
-            transform: scale(0) rotate(0);
-        }
-
-        .login-form .group label .icon:after {
-            top: 6px;
-            right: 0;
-            transform: scale(0) rotate(0);
-        }
-        .icon {
-            vertical-align:middle;
-        }
-        .login-form .group .check:checked+label {
-            font-size: 12px;
-            color: #192547;
-        }
-
-        .login-form .group .check+label {
-            font-size: 12px;
-            color: #192547;
-        }
-
-        
-
-        .login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
-            transform: rotate(0);
-        }
-
-        .login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
-            transform: rotate(0);
-        }
-
-        
-
-        .foot-lnk {
-            text-align: center;
-        }
-
-        .account {
-            background-color: #fff;
-            width: 230px;
-            height: 50px;
-            margin-top: 20px;
-            border-radius: 10px;
-            border-color: #192547;
-            border-style: solid;
-            font-size: 24px;
-            color: #192547;
-            cursor: pointer;
-        }
-
-
-
-        .another {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            font-size: 12px;
-            color: #3E3E3E;
-        }
-
-
-
-        .imgk {
-            margin-right: 42px;
-            margin-left: 42px;
-        }
-
-        .img {
-
-            margin-top: 50px;
-        }
-
-        .nameid {
-            display: inline-flex;
-        }
-        span .id {
-            text-decoration: none;
-            margin-right: 50px;
-            color: #3E3E3E;
-            font-size: 12px;
-        }
-        span .pass {
-            text-decoration: none;
-            color: #3E3E3E;
-            font-size: 12px;
-        }
-
-        .button {
-            font-size: 20px;
-        }
-        .login-line {
-            position:absolute;
-            margin-top: 37px;
-            border-bottom: 1px solid #ababab;
-            width: 470px;
-        }
-
-        .nameid .lastname {
-            margin-left: 0px;
-            margin-top: -3px;
-        }
-        .nameid .firstname {
-            margin-top: -3px;
-            margin-left: 20px;
-        }
-        .labelname {
-            margin-left: 20px;
-        }
-    </style>
+    <title>진에어</title>
+    <link rel="stylesheet" href="./../css/login.css">
+    
 </head>
+<!-- 헤더 -->
+<header>
+    <div class="header_inner">
+        <!-- Logo -->
+        <a href="#"><img src="https://images.jinair.com/newHom/images/web/common/logo.svg" alt="home"></a>
+        <!-- //Logo -->
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="booking.html">나의예약</a>
+                </li>
+                <li>
+                    <a href="promotion.html">프로모션</a>
+                </li>
+                <li>
+                    <a href="service.html">부가서비스</a>
+                </li>
+                <li>
+                    <a href="flight_info.html">운항정보</a>
+                </li>
+                <li class="all">
+                    <a href="#">전체메뉴</a>
+                    <!-- 2depth -->
+                    <div class="menu">
+                        <ul class="sub">
+                            <li>
+                                <div class="box">
+                                    <span>예약 안내</span><a href="#">항공권 예약</a><br><a href="#">예약/결제 안내</a>
+                                    <span>추천 항공권</span><a href="#">최저가 항공권</a><br><a href="#">맞춤 항공권</a>
+                                    <span>운임 및 수수료</span><a href="#">국내선</a><br><a href="#">국제선</a><br><a
+                                        href="#">비즈니스운임</a>
+                                    <span>할인</span><a href="#">할인쿠폰</a><br><a href="#">프로모션코드</a><br><a
+                                        href="#">신분할인제도</a><br><a href="#">상용우대 프로그램</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>이벤트</span><a href="#">진행중</a><br><a href="#">종료</a><br><a href="#">당첨자
+                                        발표</a>
+                                    <span>제휴</span><a href="#">카드/금융</a><br><a href="#">호텔</a><br><a
+                                        href="#">차량</a><br><a href="#">액티비티</a><br><a href="#">기타 여행상품</a><br><a
+                                        href="#">지니 보딩패스</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>부가서비스 안내</span><a href="#">묶음 할인</a><br><a href="#">좌석</a><br><a
+                                        href="#">수하물</a><br><a href="#">기내식</a><br><a href="#">여행보험</a><br><a
+                                        href="#">JINI PET</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>출도착 안내</span><a href="#">구간 조회</a><br><a href="#">편명 조회</a>
+                                    <span>스케쥴 조회</span><a href="#">왕복</a><br><a href="#">편도</a>
+                                    <span>취항 노선 안내</span><a href="#">국내선</a><br><a href="#">국제선</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>자주 찾는 메뉴</span><a href="#">웹/모바일 체크인</a><br><a href="#">부가서비스 안내</a><br><a
+                                        href="#">국내선 할인제도</a><br><a href="#">할인 쿠폰</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <a href="#"><img src="https://images.jinair.com/newHom/images/web/icons/icon_search.svg"
+                    alt="search"></a>
+            <a href="#"><img src="https://images.jinair.com/newHom/images/web/icons/icon_alarm.svg" alt="alarm"></a>
+            <a href="sign_up.html"><img src="https://images.jinair.com/newHom/images/web/icons/icon_mypage.svg"
+                    alt="login"></a>
+        </div>
+    </div>
+</header>
 
+<!-- 로그인 -->
 <body>
     <div class="page-container">
         <div class="login-form-container shadow">
@@ -407,9 +144,9 @@
                                     </span>
                                     <div class="img">
                                         <div class="another">간편하게 로그인 할래요.</div>
-                                        <a href="#"><img src="../assets/ico-naver.svg" alt="네이버"></a>
-                                        <a href="#"><img class="imgk" src="../assets/ico-kakao.svg" alt="카카오"></a>
-                                        <a href="#"><img src="../assets/apple..svg" alt="애플"></a>
+                                        <a href="#"><img src="../assets/naver.svg" alt="네이버"></a>
+                                        <a href="#"><img class="imgk" src="../assets/kakao.svg" alt="카카오"></a>
+                                        <a href="#"><img src="../assets/apple.svg" alt="애플"></a>
                                     </div>
                                 </div>
                             </div>
@@ -449,9 +186,9 @@
                                     </span>
                                     <div class="img">
                                         <div class="another">간편하게 로그인 할래요.</div>
-                                        <a href="#"><img src="./../assets/ico-naver.svg" alt="네이버"></a>
-                                        <a href="#"><img class="imgk" src="./../assets/ico-kakao.svg" alt="카카오"></a>
-                                        <a href="#"><img src="../assets/apple..svg" alt="애플"></a>
+                                        <a href="#"><img src="./../assets/naver.svg" alt="네이버"></a>
+                                        <a href="#"><img class="imgk" src="./../assets/kakao.svg" alt="카카오"></a>
+                                        <a href="#"><img src="../assets/apple.svg" alt="애플"></a>
                                     </div>
                                 </div>
                             </div>
