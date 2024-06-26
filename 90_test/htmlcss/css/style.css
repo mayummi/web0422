@@ -268,7 +268,23 @@ footer p {
     width: 850px;
 }
 
+footer .sns a {
+    margin: 0 8px;
+    font-size: 3rem;
+}
+footer .sns a i {
+    transition: .3s;
+    color: #555;
+}
 footer .sns a:hover i {
     transform: scale(1.2,1.2);
 }
-footer .sns
+footer .sns a:nth-child(1):hover i {
+    color: #583dff;
+}
+footer .sns a:nth-child(2):hover i {
+    color: #65e3ff;
+}
+footer .sns a:nth-child(3):hover i{
+    color: #d66efb;
+}
