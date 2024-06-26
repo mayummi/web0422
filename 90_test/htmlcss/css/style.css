@@ -151,10 +151,8 @@ header .container {
     height: 100%;
     animation: slide 12s infinite;
 }
-#slide li {
-    height: 100%;
-    background: no-repeat 50% 50%/cover;
-}
+
+
 
 
 /* animation */
