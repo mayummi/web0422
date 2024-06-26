@@ -246,7 +246,22 @@ header .container {
 }
 
 /* 배너 */
-#banner span img {
+#banner {
+    position: relative;
+    display: flex;
+}
+#banner div:nth-child(1) p {
+    position: absolute;
+    text-align: center;
+    top:0;
+}
+#banner div:nth-child(2) p {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+#banner div img {
     width: 300px;
     height: 180px;
 }
