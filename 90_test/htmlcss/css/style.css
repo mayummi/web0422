@@ -30,10 +30,102 @@ img {
     font-size: 10px;
 }
 body {
-    /* font: 1.5rem/1.5 "Noto Sans KR", sans-serif; */
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
     line-height: 1.6;
     color: #666666;
 }
 
+
+
+/* 헤더 영역 */
+header {
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 블록레벨요소의 가로 가운데 배치: width, margin */
+    width: 1340px;
+    margin: 0 auto;
+    border: 1px solid;
+    height: 100px;
+
+}
+/* 로고 */
+.logo {
+    width: 190px;
+    text-align: center;
+}
+
+/* 내비게이션 */
+.gnb {
+    align-self: flex-end;
+    background: #111;
+}
+
+/* 1depth */
+.main {
+    display: flex;
+    height: 30px;
+}
+
+.main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.main>li:hover {
+    background: #333;
+}
+
+/* 서브바 */
+.main::before {
+    content: "";
+    position: absolute;
+
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    transition: .3s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main:hover::before {
+    height: 150px;
+    opacity: 1;
+}
+
+/* 2depth */
+.sub {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    transition: .3s;
+    line-height: 2;
+}
+
+.main:hover .sub {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    background: #111;
+}
+
+/* 슬라이드 */
