@@ -322,7 +322,17 @@ input[id="tabmenu02"]:checked~.content02 {
     margin-left: 100px;
 }
 
-
+input[type="date"] {
+    position: relative;
+    padding: 5px 5px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* .date input[type="date"]::before {
     position: absolute;
