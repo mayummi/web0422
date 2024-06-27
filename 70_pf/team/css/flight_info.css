@@ -296,7 +296,7 @@ input[id="tabmenu02"]:checked~.content02 {
     position: absolute;
     width: 1200px;
     height: 158px;
-    margin-top: 20px;
+    margin-top: 23px;
     background: #bed600;
     border-radius: 15px;
 }
@@ -309,7 +309,7 @@ input[id="tabmenu02"]:checked~.content02 {
     margin-right: 20px;
     width: 435px;
     height: 158px;
-    margin-top: 20px;
+    margin-top: 23px;
     background: #192547;
     position: relative;
     border-radius: 15px;
