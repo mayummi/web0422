@@ -288,7 +288,6 @@ body {
     border-bottom: 5px solid #BED600;
     justify-content: center;
     top: 10px;
-    
 }
 .login-html .sign-in+.tab,
 .login-html .sign-up+.tab {
@@ -467,7 +466,7 @@ span .pass {
     position:absolute;
     margin-top: 37px;
     border-bottom: 1px solid #ababab;
-    width: 470px;
+    width: 465px;
 }
 
 .nameid .lastname {
