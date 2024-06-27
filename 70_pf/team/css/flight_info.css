@@ -317,9 +317,9 @@ input[id="tabmenu02"]:checked~.content02 {
 }
 .date {
     position: relative;
-    vertical-align: 5px;
-    margin-right: 50px;
-    margin-left: 100px;
+
+    margin-right: 35px;
+    margin-left: 80px;
 }
 
 input[type="date"] {
@@ -330,6 +330,7 @@ input[type="date"] {
     width: 160px;
     height: 60px;
     border: none;
+    content: attr(placeholder) !important;
     background: url(../assets/date.svg) no-repeat center left/2.2rem;
     vertical-align: middle;
 }
