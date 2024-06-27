@@ -322,19 +322,17 @@ input[id="tabmenu02"]:checked~.content02 {
     margin-left: 100px;
 }
 
-.date input[type="date"]::before {
+
+
+/* .date input[type="date"]::before {
     position: absolute;
     background: #fff;
     border: none;
     content: attr(placeholder) !important;
     color: #ABABAB;
-    /* margin-right: 0.5em; */
-}
-input[type="date"] {
-    position: relative;
-    background: url(images/date.svg) no-repeat right 2px center/16px auto, #fff;
-    border: none;
-}
+    margin-right: 0.5em;
+} */
+
 
 
 
