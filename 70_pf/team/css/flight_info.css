@@ -325,11 +325,13 @@ input[id="tabmenu02"]:checked~.content02 {
 input[type="date"] {
     position: relative;
     /* padding: 5px 5px; */
-    text-align: center;
+    text-align: end;
     font-size: 15px;
     width: 160px;
     height: 60px;
-    border: 1px solid #ABABAB;
+    border: none;
+    background: url(../assets/date.svg) no-repeat center left/2.2rem;
+    vertical-align: middle;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;

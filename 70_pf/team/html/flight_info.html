@@ -108,20 +108,25 @@
                 <span class="swap"><img src="../assets/booking__swap--disabled 1.svg" alt="버튼"></span>
                 <button class="to"><span>To</span> <br>도착</button>
                 <div class="deshed"></div>
-                <span class="date"><input type="date" placeholder="2024.06.25" id="data"></span>
+                <span class="date"><input type="date" id="data" value="2000.11.11"></span>
             </div>
 
             <div class="content-box content02">
                 <label for="text"><span class="lj">LJ</span></label>
                 <input id="text" type="text" class="flight" placeholder="편명(예.0001)"></input>
                 <div class="deshed"></div>
-                <span class="date"><input type="date" placeholder="2024.06.25" id="currentDate"></span>
+                <span class="date"><input type="date" id="currentDate" placeholder="2024.06.25" ></span>
             </div>
             <div class="contentbox2"></div>
             <div class="contentbox3"></div>
         </div>
         <button class="search">조회</button>
     </div>
+    <script>
+        document.querySelector("#crrentDate").value = new Date( )
+        .toDateString( )
+        .substring(0, 10);
+    </script>
 </body>
 
 </html>
