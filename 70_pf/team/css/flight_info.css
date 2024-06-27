@@ -321,7 +321,9 @@ input[id="tabmenu02"]:checked~.content02 {
     margin-right: 35px;
     margin-left: 80px;
 }
-
+input[type="date"]:focus {
+    outline: none;
+}
 input[type="date"] {
     position: relative;
     /* padding: 5px 5px; */
@@ -394,6 +396,7 @@ input[type="date"]::-webkit-inner-spin-button {
     margin-top: 200px;
     background: #fff;
     border: 1px solid #bed600;
+    font-size: 16px;
     width: 150px;
     height: 48px;
     border-radius: 10px;
