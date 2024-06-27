@@ -64,13 +64,21 @@ input[type="date"]::-webkit-inner-spin-button {
     <input type="date" />
   </div>
 
-      <script>
+
+  <form>
+    <input type='date' id='currentDate'/>
+  </form>
+  
+  <script>
+    document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
+  </script>
+      <!-- <script>
         document.querySelector("#date1").value = new Date()
   .toISOString()
   .substring(0, 10);
-// document.querySelector("#date2").value = new Date()
-//   .toISOString()
-//   .substring(0, 10);
-      </script>
+document.querySelector("#date2").value = new Date()
+  .toISOString()
+  .substring(0, 10);
+      </script> -->
 </body>
 </html>

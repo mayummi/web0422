@@ -330,7 +330,6 @@ input[type="date"] {
     width: 160px;
     height: 60px;
     border: none;
-    content: attr(placeholder) !important;
     background: url(../assets/date.svg) no-repeat center left/2.2rem;
     vertical-align: middle;
 }
