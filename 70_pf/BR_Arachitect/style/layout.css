@@ -2,8 +2,16 @@
 @import url('reset.css');
 @import url('typo.css');
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* 헤더 영역 */
 header {
+    /* position이 fixed나 absolute이면 width가 콘텐츠 크기 */
+    z-index: 1;
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +44,7 @@ nav ul li {
     position: relative;
     /* display: flex;
     justify-content: center;  */
-    border: 1px solid red;
+
 }
 
 #sec1 h2 {
@@ -57,12 +65,25 @@ nav ul li {
     background: #ccc;
 }
 
-/* 섹션2 */
-#sec2 section {
-    width: 1496px;
+/* 섹션2,3,4 공통 */
+section {
+    width: 1480px;
     margin: 0 auto;
-    padding-bottom: 80px;
+    padding-top: 80px 0;
 }
+
+/* 섹션2,3 공통 */
+section li {
+    width: 355px;
+    /* height: 240px;
+    margin-bottom: 20px; */
+}
+
+section li:not(:nth-of-type(4n)) {
+    margin-right: 20px;
+}
+
+/* 섹션2 */
 
 #sec2 h2 {
     border-bottom: 1px solid #ccc;
@@ -77,13 +98,8 @@ nav ul li {
 }
 
 #sec2 li {
-    width: 362px;
     height: 240px;
-    margin: 0 16px 16px 0;
-}
-
-#sec2 li:nth-of-type(4n) {
-    margin-right: 0;
+    margin-bottom: 20px;
 }
 
 #sec2 h3 {
@@ -99,11 +115,7 @@ nav ul li {
 }
 
 /* 섹션3 */
-#sec3 section {
-    width: 1480px;
-    margin: 0 auto;
-    padding: 96px 0;
-}
+
 
 #sec3 h2 {
     border-bottom: 1px solid #111;
@@ -111,7 +123,7 @@ nav ul li {
     margin-bottom: 24px;
 }
 
-#sec3 section>p {
+#sec3>p {
     margin-bottom: 48px;
 }
 
@@ -119,14 +131,14 @@ nav ul li {
     display: flex;
 }
 
-#sec3 li {
+/* #sec3 li {
     width: 355px;
     margin-right: 20px;
 }
 
 #sec3 li:nth-child(4n) {
     margin-right: 0;
-}
+} */
 
 #sec3 div {
     height: 240px;
@@ -150,11 +162,7 @@ nav ul li {
 }
 
 /* 섹션4 */
-#sec4 section {
-    width: 1480px;
-    margin: 0 auto;
-    padding: 96px 0;
-}
+
 #sec4 h2 {
     border-bottom: 1px solid #111;
     padding-bottom: 24px;
