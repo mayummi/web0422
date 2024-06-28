@@ -22,11 +22,21 @@
 </head>
 
 <body>
+    <h1>요소 찾기</h1>
     <ul>
         <li id="orange">목록1</li>
-        <li class="red">목록2</li>
+        <li class="red">목록2 - index 0</li>
+        <li class="red">목록2 - index - 1</li>
+        <li class="red">목록2 -index2</li>
         <li>목록3</li>
         <li id="green">목록1</li>
+        <li class="aqua">목록2</li>
+        <li>목록3</li>
+    </ul>
+
+    <ul>
+        <li class="red">목록2</li>
+        <li>목록3</li>
         <li class="aqua">목록2</li>
         <li>목록3</li>
     </ul>
@@ -44,11 +54,20 @@
         //오른쪽의 값을 왼쪽에 대입(할당)한다.
 
         //문서의 아이디가 orange인 요소를 가져와서 글자색을 (style.color에) "orange"를 지정한다.
+        //아이디는 한 문서내에서 유일하다.
+        //index
         document.getElementById("orange").style.color = "orange";
+        document.getElementsByClassName("red")[0].style.color = "red";
+        document.getElementsByTagName("li")[5].style.borderTop = "1px solid";
+
+        //단일요소 선택
+        document.querySelector("ul").style.borderLeft = "5px solid";
+        //같은 요소가 여러 개
+        document.querySelectorAll("li")[0].style.borderTop = "1px solid";
         //객체: document
-        //메소드: getElementById() - 동작
+        //메소드: getElementById() - 동작 -> 동사(서술어)
         //함수: function()
-        //속성: style.color - 특징
+        //속성: style.color - 특징 -> 형용사
         //대입(할당) 연산자: =
         //리터럴: 문자열 데이터 -> "orange"
         //문장 끝에는 ;를 기록한다.
