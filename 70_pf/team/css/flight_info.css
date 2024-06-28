@@ -252,8 +252,6 @@ input[type="radio"]+label {
     text-align: center;
     display: inline-block;
     padding: 15px 20px;
-    /* background: #BED600; */
-    /* color: #fff; */
     border-radius: 25px;
     width: 250px;
     font-size: 20px;
@@ -262,8 +260,6 @@ input[type="radio"]+label {
 
 input[type="radio"]:checked+label {
     background: #bed600;
-    /* color: #BED600; */
-    /* border: 1px solid #BED600; */
 }
 
 .content-box {
@@ -301,10 +297,6 @@ input[id="tabmenu02"]:checked~.content02 {
     border-radius: 15px;
 }
 .contentbox3 {
-    /* display: inline-block;
-    text-align: right;
-    align-items: flex-end;
-    justify-content: flex-end; */
     float: right;
     margin-right: 20px;
     width: 435px;
@@ -326,7 +318,6 @@ input[type="date"]:focus {
 }
 input[type="date"] {
     position: relative;
-    /* padding: 5px 5px; */
     text-align: end;
     font-size: 15px;
     width: 160px;
