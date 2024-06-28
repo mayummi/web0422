@@ -393,7 +393,7 @@ input[type="date"]::-webkit-inner-spin-button {
     border-radius: 10px;
     cursor: pointer;
 }
-.deshed {
+.line {
     margin-top: -4px;
     margin-left: -41px;
     display: inline-block;
