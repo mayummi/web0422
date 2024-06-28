@@ -5,7 +5,7 @@
 /* 본문: 
     한글:noto sans kr 
     영문: noto sans*/
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 /* 눈누폰트 */
 /* 제목: 나눔스퀘어 네오 */
@@ -27,18 +27,37 @@ body {
     color: #333;
     /* font-family: "NanumSquareNeo", sans-serif; */
 }
+
 h1 {
     font-weight: normal;
 }
-h1,h2,h3 {
+
+h1,
+h2,
+h3 {
     font-family: "NanumSquareNeo", sans-serif;
 }
-h1,h3 {
+
+h1,
+h3 {
     font-size: 1.5rem;
 }
+
 h2 {
     font-size: 2.4rem;
 }
+
 a {
     color: #111;
+    
+}
+
+input, button {
+    font-size: 1.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+    color: #fff;
+
 }
