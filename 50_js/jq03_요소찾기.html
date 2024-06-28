@@ -40,7 +40,13 @@
         <li class="aqua">목록2</li>
         <li>목록3</li>
     </ul>
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <!-- <script <scrip src=https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js></script> -->
 
+        <!-- 파일 다운로드 -->
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <script>
         //변수1 = 값;
         //변수2 = 변수1;
@@ -53,26 +59,23 @@
         //=은 대입(핟당)연산자이다.
         //오른쪽의 값을 왼쪽에 대입(할당)한다.
 
-        //문서의 아이디가 orange인 요소를 가져와서 글자색을 (style.color에) "orange"를 지정한다.
-        //아이디는 한 문서내에서 유일하다.
-        //index
-        document.getElementById("orange").style.color = "orange";
+        //문서에서 아이디가 orange인 요소를 가져와서
+        // 글자색을 (style.color에) "orange"를 지정한다.
+        $("#orange").css("color", "orange");
         //index는 0번 부터
-        document.getElementsByClassName("red")[0].style.color = "red";
-        document.getElementsByTagName("li")[5].style.borderTop = "1px solid";
+        $(".red").eq(0).css("color", "red");
+        $("li").eq(5).css ("borderTop", "1px solid");
 
         //단일요소 선택
-        document.querySelector("ul").style.borderLeft = "5px solid";
+        $("ul").css("borderLeft", "5px solid" );
         //같은 요소가 여러 개
-        document.querySelectorAll("li")[0].style.borderTop = "1px solid";
-        //객체: document
-        //메소드: getElementById() - 동작 -> 동사(서술어)
-        //함수: function()
-        //속성: style.color - 특징 -> 형용사
-        //대입(할당) 연산자: =
-        //리터럴: 문자열 데이터 -> "orange"
-        //문장 끝에는 ;를 기록한다.
+        $('ul').eq(0).css('borderTop', '1px solid');
 
+        //객체: $("문자열")
+        //메소드: eq(숫자), css("문자열", "문자열")
+        //문장 끝에는 ;를 기록한다.
+        
+        //함수: function()
         //객체.style.CSS속성
 
         //자바스크립트 단어는 대소문자를 구별한다.
