@@ -34,12 +34,12 @@
         <li>목록3</li>
     </ul>
 
-    <ul>
+    <!-- <ul>
         <li class="red">목록2</li>
         <li>목록3</li>
         <li class="aqua">목록2</li>
         <li>목록3</li>
-    </ul>
+    </ul> -->
     <!-- CDN방식 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
@@ -61,18 +61,25 @@
 
         //문서에서 아이디가 orange인 요소를 가져와서
         // 글자색을 (style.color에) "orange"를 지정한다.
-        $("#orange").css("color", "orange");
-        //index는 0번 부터
-        $(".red").eq(0).css("color", "red");
-        $("li").eq(5).css ("borderTop", "1px solid");
 
-        //단일요소 선택
+        //형식
+        //$(선택자).eq(숫자);
+        //$(선택자).메소드(속성, 값);
+        //$(선택자).메소드({속성:값, 속성:값, ...})
+
+        $("#orange").css("color", "orange");
+        // $("#orange").css("background-color", "cyan");
+
+        // $("#orange").css({"color":"orange", "background": "cyan"});
+        // :eq(), eq()의 index는 0번 부터
+        // 문서에서 클래스가 첫 번째 red인 요소를 가져와서 글자색을 red로 지정한다. 
+        $(".red:eq(0)").css("color", "red");
+        $("li").eq(5).css ("borderTop", "1px solid");
         $("ul").css("borderLeft", "5px solid" );
-        //같은 요소가 여러 개
         $('ul').eq(0).css('borderTop', '1px solid');
 
         //객체: $("문자열")
-        //메소드: eq(숫자), css("문자열", "문자열")
+        //메소드: eq(숫자), css("속성", "값")
         //문장 끝에는 ;를 기록한다.
         
         //함수: function()
