@@ -323,7 +323,7 @@ input[type="date"] {
     width: 140px;
     height: 60px;
     border: none;
-    background: url(../assets/date.svg) no-repeat center left/2.2rem;
+    background: url(../03.assets/date.svg) no-repeat center left/2.2rem;
     vertical-align: middle;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
