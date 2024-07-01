@@ -14,11 +14,21 @@
         const a = 5;
         // update(갱신)
         // TypeError: Assignment to constant variable.
-        a = 2;
+        // const은 재할당 불가능
+        // a = 2;
 
+        // const은 재선언할 수 없다.
+        // const a;
+
+        // 재할당할 수 있다.
         let b = 5;
         b = 2;
 
+        // let은 재선언 할 수 없다.
+        // let b;
+
+        // 출력
+        console.log("a = ", a,", b = ", b);
 
     </script>
 </body>
