@@ -234,7 +234,7 @@ body {
     box-shadow: 10px black;
     border-radius: 15px;
 }
-
+/* 왼쪽 페이지 */
 .login-form-left-side {
     width: 50%;
     border-radius: 10px 0px 0px 10px;
@@ -273,6 +273,7 @@ body {
     opacity: 0.8;
 }
 
+/* 오른쪽 페이지 */
 .login-form-right-side {
     width: 50%;
     border-radius: 0 10px 10px 0;
@@ -283,9 +284,6 @@ body {
     padding: 40px;
     background: #fff;
 }
-
-
-
 
 .login-wrap {
     width: 100%;
@@ -351,8 +349,6 @@ body {
     justify-content: center;
 }
 
-
-
 .login-form {
     min-height: 345px;
     position: relative;
@@ -378,7 +374,6 @@ body {
     padding: 15px 20px;
 
 }
-
 
 .login-form .group .button {
     border-radius: 5px;
@@ -421,8 +416,7 @@ body {
     transform: rotate(0);
 }
 
-
-
+/* 아이디 비번 찾기 */
 .foot-lnk {
     text-align: center;
 }
@@ -444,8 +438,6 @@ body {
     cursor: pointer;
     margin-right: 100px;
 }
-
-
 
 .another {
     display: flex;

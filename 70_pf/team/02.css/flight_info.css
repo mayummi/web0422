@@ -356,7 +356,9 @@ input[type="date"]::-webkit-inner-spin-button {
 
 
 
-
+input[type="button"] {
+    line-height: 158px;
+}
 .from {
     border-style: none;
     width: 221px;
@@ -364,9 +366,11 @@ input[type="date"]::-webkit-inner-spin-button {
     background: none;
     cursor: pointer;
     color: #ABABAB;
+    font-size: 16px;
 }
 .from span,.to span {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 2;
 }
 .to {
     margin-right: 150px;
@@ -376,6 +380,7 @@ input[type="date"]::-webkit-inner-spin-button {
     background: none;
     cursor: pointer;
     color: #ABABAB;
+    font-size: 16px;
 }
 .text {
     margin-top: 70px;
