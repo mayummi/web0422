@@ -426,6 +426,10 @@ body {
 .foot-lnk {
     text-align: center;
 }
+.foot-lnk span .id,
+.foot-lnk span .pass {
+    color: #192547;
+}
 
 .account {
     background-color: #fff;
@@ -449,7 +453,7 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     font-size: 12px;
-    color: #3E3E3E;
+    color: #192547;
 }
 
 
