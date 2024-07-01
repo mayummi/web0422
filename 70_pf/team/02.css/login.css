@@ -403,50 +403,14 @@ body {
     cursor: pointer;
 }
 
-/* .login-form .group label .icon {
-    width: 15px;
-    height: 15px;
-    border-radius: 2px;
-    position: relative;
-    display: inline-block;
-} */
-
-/* .login-form .group label .icon:before,
-.login-form .group label .icon:after {
-    content: '';
-    width: 10px;
-    height: 2px;
-    background: #192547;
-    position: absolute;
-    transition: all .2s ease-in-out 0s;
-} */
-
-/* .login-form .group label .icon:before {
-    left: 3px;
-    width: 5px;
-    bottom: 6px;
-    transform: scale(0) rotate(0);
-} */
-
-/* .login-form .group label .icon:after {
-    top: 6px;
-    right: 0;
-    transform: scale(0) rotate(0);
-} */
+/* 아이디 저장 체크박스 */
 .icon {
     vertical-align:middle;
-    font-size: 12px;
 }
-/* .login-form .group .check:checked+label {
+.groupcheck {
     font-size: 12px;
     color: #192547;
 }
-
-.login-form .group .check+label {
-    font-size: 12px;
-    color: #192547;
-} */
-
 
 
 .login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
