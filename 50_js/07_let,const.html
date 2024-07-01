@@ -9,8 +9,6 @@
     <h1>변수(variable)</h1>
     <p>변수는 데이터(값)을 저장하는 공간이다.</p>
     <script>
-        // 문(statement)
-        // 표현식(expression)? 결과 값이 있는 식
 
         /* 
             변수? 값 저장 및 유지하는 공간
@@ -30,6 +28,7 @@
         var a3 = true;
         var a4 = function(){};
         var a5 = document.querySelector('h1');
+
         a5.style.color = "red";
         a5.style.fontSize = "10px";
         a5.style.border = "1px solid blue";
@@ -39,7 +38,16 @@
         document.querySelector('p').style.border = "1px solid red";
 
         // 변수 = 변수;
-        var a6 = a;
+        var a6 = a2;
+        console.log("a6 =",a6);
+
+        // 변수 = 표현식;
+        var a7 = 5 + 2;
+        // b는 NaN(Not a Number)
+        var a8 = a + b;
+        console.log("b =",b);
+        console.log("a7 =",a7);
+        console.log("a8 =",a8);
 
         // 재선언
         // var a;

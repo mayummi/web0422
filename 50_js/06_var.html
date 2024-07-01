@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>변수(variable)</h1>
+    <p>변수는 데이터(값)을 저장하는 공간이다.</p>
+    <script>
+        // 문(statement)
+        // 표현식(expression)? 결과 값이 있는 식
+
+        /* 
+            변수? 값 저장 및 유지하는 공간
+            형식: 키워드 식별자 = 값;
+            키워드: var, let, const
+            식별자: 첫 글자는 영문자, 두 번째 글자부터 숫자와 조합, 대소문자를 구별한다.
+            =은 대입(할당)연산자로 오른쪽의 값을 왼쪽 식별자에 넣는다.
+        */
+        // 키워드 식별자 = 값;
+        // =은 대입(할당)연산자
+
+        // 변수 선언 및 할당
+        // 변수 = 값;
+        var a = 5;
+        var 오; // 한글도 사용가능하지만 오류날수도 있음.
+        var a2 = "오";
+        var a3 = true;
+        var a4 = function(){};
+        var a5 = document.querySelector('h1');
+
+        a5.style.color = "red";
+        a5.style.fontSize = "10px";
+        a5.style.border = "1px solid blue";
+
+        document.querySelector('p').style.color = "blue";
+        document.querySelector('p').style.fontSize = "30px";
+        document.querySelector('p').style.border = "1px solid red";
+
+        // 변수 = 변수;
+        var a6 = a2;
+        console.log("a6 =",a6);
+
+        // 변수 = 표현식;
+        var a7 = 5 + 2;
+        // b는 NaN(Not a Number)
+        var a8 = a + b;
+        console.log("b =",b);
+        console.log("a7 =",a7);
+        console.log("a8 =",a8);
+
+        // 재선언
+        // var a;
+        // 재할당
+        // a = 2;
+
+        var a;
+        a = 5;
+
+        // b를 변수로 선언한다.
+        var b;
+        // b에 2를 할당한다.
+        b = 2;
+
+        // e, f는 undefined가 할당된다.
+        var c = 5, d = 2, e, f;
+
+        var c = 5;
+        var d = 2;
+        var e;
+        var f;
+
+        // console.log(a,b,c,d,e,f);
+
+        console.log("a =",a);
+        console.log("b =",b);
+        console.log("c =",c);
+        console.log("d =",d);
+        console.log("e =",e);
+        console.log("f =",f);
+
+    </script>
+</body>
+</html>
