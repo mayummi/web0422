@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+    display: none;
+}
+
+#search-container {
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <button id="search-button">Search</button>
+    <div id="search-container" class="hidden">
+        <input type="text" id="search-input" placeholder="Type to search...">
+        <button id="submit-button">Submit</button>
+    </div>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+    var searchContainer = document.getElementById('search-container');
+    if (searchContainer.classList.contains('hidden')) {
+        searchContainer.classList.remove('hidden');
+    } else {
+        searchContainer.classList.add('hidden');
+    }
+}); 
+    </script>
+</body>
+</html>
