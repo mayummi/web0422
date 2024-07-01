@@ -356,9 +356,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 
 
-input[type="button"] {
-    line-height: 158px;
-}
+
 .from {
     border-style: none;
     width: 221px;
