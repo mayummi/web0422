@@ -324,7 +324,6 @@ input[type="date"] {
     border: none;
     background: url(../03.assets/date.svg) no-repeat center left/2.2rem;
     vertical-align: middle;
-    /* background: #eee; */
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
