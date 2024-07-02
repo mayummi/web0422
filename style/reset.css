@@ -20,3 +20,7 @@ a {
     /* 텍스트 밑줄 제거 */
     text-decoration: none;
 }
+
+img {
+    width: 100%;
+}
