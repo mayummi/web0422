@@ -11,8 +11,58 @@
 
     <div class="box1">박스1</div>
     <div class="box2">박스2</div>
-    <div class="box3">박스3</div>
-    <div class="box4">박스4</div>
+
     <p>여기에 표시됩니다.</p>
+
+    <script>
+        /* 
+            이벤트? 브라우저에서 발생하는 사용자 상호 작용이다.
+            이벤트 핸들러? 이벤트가 발생했을 때 실행되는 함수
+
+            element.on이벤트 = function(){실행 코드;};
+            element.addEventListener("이벤트", function(){실행코드});
+            
+            element.onclick = function(){};
+            이벤트 전파: 자식 -> 부모(bubbling)
+
+            이벤트: click, mouseenter, mouseleave, resize, scroll, ...
+        */
+
+        // 변수 선언: 요소 찾기
+        const ele_box1 = document.querySelector('.box1');
+        const ele_box2 = document.querySelector('.box2');
+        // 요소에 스타일 적용하기
+        ele_box1.style.width = "200px";
+        ele_box1.style.height = "200px";
+        ele_box1.style.border = "solid";
+        ele_box1.style.margin = "5px";
+
+        ele_box2.style.width = "200px";
+        ele_box2.style.height = "200px";
+        ele_box2.style.border = "solid";
+        ele_box2.style.margin = "5px";
+
+        // 이벤트 처리
+        ele_box1.onmouseenter = function(){
+            ele_box1.style.background = "red";
+        };
+
+        ele_box1.onmouseleave = reset;
+        
+        function reset(){
+            ele_box1.style.background = "transparent";
+            console.log(ele_box1.style.background);
+        }
+
+        ele_box2.addEventListener("mouseenter", function(){
+            ele_box2.style.background = "red";
+        });
+
+        ele_box2.addEventListener("mouseleave", reset2);
+
+        function reset2(){
+            ele_box2.style.background = "transparent";
+        }
+    </script>
 </body>
 </html>

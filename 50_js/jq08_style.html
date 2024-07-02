@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소에 스타일 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        /*
+
+            element
+                {
+                    length: 30,
+                    css: function(){},
+                    ...
+                }
+
+                속성들 중에 특별히 그 값이 함수인 속성을 메서드라고 한다.
+
+                객체는 속성과 메서드를 가지고 있다.
+                메서드는 속성이다.
+                함수를 값으로한 속성을 메서드라고 한다.
+
+            함수
+                function(){}
+
+            객체.메서드(인수, 인수, ...);
+            인수는 매서드마다 정해져 있다.
+
+            객체
+                {속성:값, 속성:값, ...}
+
+            방법1: element.css("속성", "값");
+            element.css({"속성":값, "속성":값, ...});
+                객체 형식으로 작성할 경우 CSS속성명으로 기록하면 ""를 사용하고, 카멜표기법으로 표기하면 ""를 생략할 수 있다.
+            빙법2:element.css({속성:값, 속성:값, ...});
+            element.eq(숫자)
+        */
+
+        /* 
+            요소(element)찾기
+            $("선택자").eq(숫자)
+        */
+        // 변수 선언
+        const eleDiv = $('div').eq(0);
+
+        // 실행코드
+        eleDiv.css({
+            width:"100px",
+            height:100,
+            backgroundColor:"red",
+            borderRadius: 50
+        });
+
+        // eleDiv.css("width", "100px");
+        // eleDiv.css("height", "100px");
+        // eleDiv.css("backgroundColor", "red");
+
+        // document.querySelectorAll('div')[1].style.background = "blue";
+    </script>
+</body>
+</html>
