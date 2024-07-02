@@ -360,25 +360,29 @@ input[type="date"]::-webkit-inner-spin-button {
 .from {
     border-style: none;
     width: 221px;
-    height: 60px;
+    height: 65px;
     background: none;
     cursor: pointer;
     color: #ABABAB;
     font-size: 16px;
+    /* background: #000; */
+    line-height: 2;
 }
+
 .from span,.to span {
     font-size: 24px;
-    line-height: 2;
+    line-height: 15px;
 }
 .to {
     margin-right: 150px;
     border-style: none;
     width: 221px;
-    height: 60px;
+    height: 65px;
     background: none;
     cursor: pointer;
     color: #ABABAB;
     font-size: 16px;
+    line-height: 2;
 }
 .text {
     margin-top: 70px;
