@@ -194,7 +194,7 @@ header {
 /* 운항정보 */
 * {
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: "GmarketSansMedium", sans-serif;
 }
 
@@ -240,7 +240,6 @@ h1 {
 }
 
 input[type="radio"] {
-    
     display: none;
 }
 
@@ -319,12 +318,13 @@ input[type="date"]:focus {
 input[type="date"] {
     position: relative;
     text-align: end;
-    font-size: 15px;
+    font-size: 16px;
     width: 140px;
     height: 60px;
     border: none;
     background: url(../03.assets/date.svg) no-repeat center left/2.2rem;
     vertical-align: middle;
+    /* background: #eee; */
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
@@ -368,7 +368,9 @@ input[type="date"]::-webkit-inner-spin-button {
     /* background: #000; */
     line-height: 2;
 }
-
+input[type="button"] {
+    line-height: 158px;
+}
 .from span,.to span {
     font-size: 24px;
     line-height: 15px;
