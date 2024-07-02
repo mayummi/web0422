@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소에 스타일 적용하기</h1>
+    <div>박스1</div>
+    <div>박스2</div>
+
+    <script>
+        /*
+            element.style.CSS속성명 = "속성값";
+            단, css속성명은 카멜표기법으로 한다.
+
+            카멜 표기법(Camel Case)[편집]?
+            여러 단어를 연달아 사용할 때 각 단어의 첫 
+            글자를 대문자로 적되, 맨 앞에 오는 글자는 
+            소문자로 표기하는 것이다.
+        */
+
+        /* 
+            요소(element)찾기
+            document.querySelectorAll('선택자')
+        */
+
+        const eleDiv = document.querySelector('div')[0];
+        document.querySelectorAll('div')[0].style.width = "100px";
+        document.querySelectorAll('div')[0].style.height = "100px";
+        document.querySelectorAll('div')[0].style.background = "red";
+        
+        document.querySelectorAll('div')[1].style.background = "blue";
+    </script>
+</body>
+</html>
