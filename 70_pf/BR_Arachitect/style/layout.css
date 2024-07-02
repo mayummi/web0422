@@ -28,9 +28,21 @@ nav ul li {
 }
 
 /* 섹션1 */
+#sec1 {
+    position: relative;
+    padding-top: 54px;
+}
+
 #sec1 h2 {
     letter-spacing: 4px;
     font-weight: 400;
+}
+
+#sec1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #sec1 b {
@@ -40,17 +52,7 @@ nav ul li {
     margin-right: 16px;
 }
 
-#sec1 {
-    position: relative;
-}
 
-#sec1 h2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -110px;
-    margin-top: -16px;
-}
 
 #sec1 div {
     width: 1496px;
@@ -59,11 +61,11 @@ nav ul li {
     background: #ccc;
 }
 
-/* 섹션2,3,4 공통 */
+/* 섹션1,2,3,4 공통 */
 section {
     width: 1480px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 96px;
 }
 
 /* 섹션2,3 공통 */
@@ -80,7 +82,7 @@ section li:not(:nth-of-type(4n)) {
 #sec2 h2 {
     border-bottom: 1px solid #ccc;
     padding-bottom: 24px;
-    margin-top: 72px;
+    /* margin-top: 72px; */
     margin-bottom: 48px;
 }
 
@@ -143,6 +145,9 @@ section li:not(:nth-of-type(4n)) {
 }
 
 /* 섹션4 */
+#sec4 {
+    padding-bottom: 8px;
+}
 #sec4 h2 {
     border-bottom: 1px solid #111;
     padding-bottom: 24px;
