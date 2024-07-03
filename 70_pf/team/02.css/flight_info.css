@@ -309,8 +309,7 @@ input[id="tabmenu02"]:checked~.content02 {
 .date {
     position: relative;
 
-    margin-right: 40px;
-    margin-left: 85px;
+    margin-left: 83px;
 }
 input[type="date"]:focus {
     outline: none;
@@ -405,7 +404,7 @@ input[type="button"] {
 }
 .line {
     margin-top: -4px;
-    margin-left: -41px;
+    margin-left: -62px;
     display: inline-block;
     position: absolute;
     z-index: 50;
