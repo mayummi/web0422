@@ -211,7 +211,6 @@ body {
     padding: 100px;
 }
 .tabcontent {
-    /* margin-left: calc(50% - 200px); */
     margin-top: 30px;
     padding: 30px;
     box-sizing: border-box;
@@ -231,12 +230,12 @@ h1 {
     font-size: 30px;
 }
 .content-box {
-    /* font-size: 20px; */
     line-height: 158px;
 }
 .swap {
-    vertical-align: -5px;
+    vertical-align: -6px;
     margin: 10px;
+    
 }
 
 input[type="radio"] {
@@ -271,6 +270,7 @@ input[type="radio"]:checked+label {
     box-sizing: border-box;
     border-radius: 15px;
     text-align: center;
+    line-height: 138px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     background: #fff;
     color: #666;
@@ -364,7 +364,9 @@ input[type="date"]::-webkit-inner-spin-button {
     cursor: pointer;
     color: #ABABAB;
     font-size: 16px;
+    vertical-align: -11px;
     /* background: #000; */
+    
     line-height: 2;
 }
 input[type="button"] {
@@ -372,7 +374,6 @@ input[type="button"] {
 }
 .from span,.to span {
     font-size: 24px;
-    line-height: 15px;
 }
 .to {
     margin-right: 150px;
@@ -383,6 +384,7 @@ input[type="button"] {
     cursor: pointer;
     color: #ABABAB;
     font-size: 16px;
+    vertical-align: -11px;
     line-height: 2;
 }
 .text {
