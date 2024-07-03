@@ -19,6 +19,8 @@
     <div class="box2">박스2</div>
     <p>여기에 표시됩니다.</p>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script>
         /* 
             객체.이벤트(함수);
@@ -39,8 +41,10 @@
         ele_box1.mouseleave(reset);
         
         // 방법3
-        ele_box2.on("mouseenter", function(){
-            ele_box1.css({background:"red"});
+        // ele_box2를 클릭하면 함수를 실행
+        ele_box2.on("click", function(){
+            // ele_box1의 배경색을 green으로 지정한다.
+            ele_box1.css({background:"green"});
         });
 
         // 방법4
