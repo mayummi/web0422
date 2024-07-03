@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소의 콘텐츠를 변경하거나 가져오기</h1>
+    <p class="p1">나는 첫 번째 단락입니다.</p>
+    <p class="p2">나는 두 번째 단락입니다.</p>
+    <p class="p3">아무것도 없다</p>
+    <p class="p4">아무것도 없다2</p>
+
+    <script>
+        /* 
+            콘텐츠 가져오기
+            객체.innerHTML
+            객체.textContent
+
+            콘텐츠 변경
+            객체.innerHTML = "값"
+            객체.textContent = "값"
+
+            innerHTML은 HTML태그 인식,
+            textContent는 문자열로 처리
+        */
+
+        const p1 = document.querySelector('.p1');
+        const p2 = document.querySelector('.p2');
+        const p3 = document.querySelector('.p3');
+        const p4 = document.querySelector('.p4');
+
+        // 콘텐츠 가져오기
+        let getP1 = p1.innerHTML;
+        let getP2 = p2.textContent;
+        // comsole.log("getP1 = ", getP1);
+        // comsole.log("getP2 = ", getP2);
+
+        // 콘텐츠 변경하기
+        p1.innerHTML = '<a href="#">네이버</a>';
+        p2.textContent = '<a href="#">네이버</a>';
+        p3.innerHTML = getP1;
+        p4.textContent = getP2;
+    </script>
+</body>
+</html>
