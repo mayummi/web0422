@@ -375,7 +375,7 @@ input[type="button"] {
     font-size: 24px;
 }
 .to {
-    margin-right: 150px;
+    margin-right: 165px;
     border-style: none;
     width: 221px;
     height: 65px;
@@ -404,7 +404,7 @@ input[type="button"] {
 }
 .line {
     margin-top: -4px;
-    margin-left: -62px;
+    margin-left: -70px;
     display: inline-block;
     position: absolute;
     z-index: 50;
