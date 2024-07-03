@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+        .cont {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <a href="#">이미지1</a>
+        <a href="#">이미지2</a>
+        <a href="#">이미지3</a>
+    </div>
+    <div class="cont">
+        <img src="../assets/KakaoTalk_20240703_141418063.jpg" alt="이미지1">
+    </div>
+
+    <script>
+        // 요소 찾기
+        const btn1 = document.querySelectorAll('a')[0];
+        const btn2 = document.querySelectorAll('a')[1];
+        const btn3 = document.querySelectorAll('a')[2];
+        const cont = document.querySelector('.cont');
+
+        // 이벤트 처리
+        btn1.onclick = function(){
+            // div.cont의 콘텐츠 변경하기
+            cont.innerHTML = '<img src="../assets/KakaoTalk_20240703_141418063.jpg" alt="이미지2">';
+        }
+        btn2.onclick = function(){
+            // div.cont의 콘텐츠 변경하기
+            cont.innerHTML = '<img src="../assets/KakaoTalk_20240703_141418063_01.jpg" alt="이미지2">';
+        }
+        btn3.onclick = function(){
+            // div.cont의 콘텐츠 변경하기
+            cont.innerHTML = '<img src="../assets/KakaoTalk_20240703_141418063_02.jpg" alt="이미지2">';
+        }
+    </script>
+</body>
+</html>
