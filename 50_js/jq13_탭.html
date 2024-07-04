@@ -25,36 +25,31 @@
         <div class="on" id="tab1">나는 첫 번째 콘텐츠</div>
         <div id="tab2">나는 두 번째 콘텐츠</div>
     </div>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
         // 문제)버튼1을 클릭하면 첫 번째 콘텐츠가 보이고 두 번째 콘텐츠는 숨기고, 버튼2를 클릭하면 두 번째 콘텐츠는 보이고, 첫 번째 콘테츠를 숨기시오. (단 classList 사용할 것!)
 
         // 요소 찾기
-        const btn1 = document.querySelectorAll('#tabs a').item(0);
-        const btn2 = document.querySelectorAll('#tabs a').item(1);
-        const cont1 = document.querySelectorAll('#tads>div')[0];
-        const cont2 = document.querySelectorAll('#tabs>div')[1];
+        const btn1 = $('#tabs a').eq(0);
+        const btn2 = $('#tabs a').eq(1);
+        const cont1 = $('#tads>div').eq(0);
+        const cont2 = $('#tabs>div').eq(1);
         // console.log(cont1);
         // console.log(cont2);
 
         // 이벤트 처리
         // 버튼1을 클릭하면
-        btn1.onclick = function(){
-            // cont1.style.display =" block";
-            // cont2.style.display = "none";
-            cont1.classList.add('on');
-            cont2.classList.remove('on');
-        };
+        btn1.click(function(){
+            cont1.addClass('on');
+            cont2.removeClass('on');
+        });
 
         // 버튼2을 클릭하면
-        btn2.onclick = function(){
-            // p에 클래스 on을 제거한다.
-            // cont1.style.display =" block";
-            // cont2.style.display = "none";
-            cont2.classList.add('on');
-            cont1.classList.remove('on');
-        };
+        btn2.click(function(){
+            cont2.addClass('on');
+            cont1.removeClass('on');
+        });
     </script>
 </body>
 </html>
