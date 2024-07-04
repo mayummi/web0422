@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 50px;
+        }
+        p.on {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>탭</h1>
+    <div>
+        <a href="#" class="red">버튼1</a>
+        <a href="#" class="black">버튼2</a>
+    </div>
+    <p>나는 단락이다.</p>
+        
+    
+
+    <script>
+        // 문제)버튼1을 클릭하면 p를 숨기고, 버튼2를 클릭하면 p가 나타나게 하시오. (단 classList 사용할 것!)
+
+        // 요소 찾기
+        const btn1 = document.querySelector('.red');
+        const btn2 = document.querySelector('.black');
+        const p = document.querySelector('p');
+
+        // 이벤트 처리
+        // 버튼1을 클릭하면
+        btn1.onclick = function(){
+            // p.style.color = "red";
+            // p에 클래스 on을 추가한다.
+            p.classList.add('on');
+        }
+
+        // 버튼2을 클릭하면
+        btn2.onclick = function(){
+            // p에 클래스 on을 제거한다.
+            p.classList.remove('on');
+        }
+    </script>
+</body>
+</html>
