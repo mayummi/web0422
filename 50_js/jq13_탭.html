@@ -5,51 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #tabs>div {
-            font-size: 20px;
-            display: none;
-        }
-        #tabs>div.on {
-            display: block;
-        }
-        
+        #tabs>div {font-size: 20px; display: none;}
+        #tabs>div.on {display: block;}
     </style>
 </head>
 <body>
     <h1>탭</h1>
     <div id="tabs">
         <ul>
-            <li><a href="#tab1">공지사항</a></li>
-            <li><a href="#tab2">갤러리</a></li>
+            <li><a href="#tab1">전체</a></li>
+            <li><a href="#tab2">20대</a></li>
         </ul>
-        <div class="on" id="tab1">나는 첫 번째 콘텐츠</div>
-        <div id="tab2">나는 두 번째 콘텐츠</div>
+        <div class="on" id="tab1">첫 번째 콘텐츠</div>
+        <div id="tab2">두 번째 콘텐츠</div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <script>
-        // 문제)버튼1을 클릭하면 첫 번째 콘텐츠가 보이고 두 번째 콘텐츠는 숨기고, 버튼2를 클릭하면 두 번째 콘텐츠는 보이고, 첫 번째 콘테츠를 숨기시오. (단 classList 사용할 것!)
-
         // 요소 찾기
         const btn1 = $('#tabs a').eq(0);
         const btn2 = $('#tabs a').eq(1);
-        const cont1 = $('#tads>div').eq(0);
+        const cont1 = $('#tabs>div').eq(0);
         const cont2 = $('#tabs>div').eq(1);
-        // console.log(cont1);
-        // console.log(cont2);
 
         // 이벤트 처리
-        // 버튼1을 클릭하면
         btn1.click(function(){
             cont1.addClass('on');
             cont2.removeClass('on');
         });
-
-        // 버튼2을 클릭하면
         btn2.click(function(){
             cont2.addClass('on');
             cont1.removeClass('on');
         });
+
     </script>
 </body>
 </html>
