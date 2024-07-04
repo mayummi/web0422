@@ -15,12 +15,6 @@ body {
     /* font-family: "NanumSquareNeo", sans-serif; */
 }
 
-
-
-h3 {
-    font-size: 4rem;
-    font-weight: 600;
-}
 h3 {
     font-size: 1.6rem;
     font-weight: 600;
@@ -39,16 +33,15 @@ a {
     color: #111;
     
 }
-::placeholder {
-    font-size: 1.5rem;
-    color: #aaa;
-}
-input, button {
-    /* font-size: 1.5rem; */
-    font:1.5rem 'Noto Sans KR', sans-serif;
-}
 
-button {
-    color: #fff;
-
+/* 섹션2 */
+#s2>.inner>p {
+    color: #777;
+}
+#s2 #tabs>ul a{
+    color: #777;
+}
+#s2 h3.rank1 {
+    font-size: 4rem;
+    font-weight: 600;
 }
