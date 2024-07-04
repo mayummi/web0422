@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소의 콘텐츠를 변경하거나 가져오기</h1>
+    <p class="p1">나는 첫 번째 단락입니다.</p>
+    <p class="p2">나는 두 번째 단락입니다.</p>
+    <p class="p3">나는 세 번째 단락입니다.</p>
+    <p class="p4">나는 네 번째 단락입니다.</p>
+
+    <!-- 
+        첫 번째 단락 내용과 두 번째 단락 내용을 가져와서
+        세 번째/네 번째 단락 내용을 가져온 내용으로 변경한다.
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* 
+            콘텐츠 가져오기
+            객체.html()
+            객체.text()
+
+            콘텐츠 변경
+            객체.html("값");
+            객체.text("값");
+
+            html()은 HTML태그 인식,
+            text()는 문자열로 처리
+        */
+
+        const p1 = $('.p1');
+        const p2 = $('.p2');
+        const p3 = $('.p3');
+        const p4 = $('.p4');
+
+        // 콘텐츠 가져오기
+        let getP1 = $('.p1').html();
+        let getP2 = p2.text();
+
+        // 콘텐츠 변경하기
+        p3.html('getP1');
+        p4.text(getP2);
+    </script>
+</body>
+</html>
