@@ -76,13 +76,9 @@ section {
     margin-bottom: 50px;
 }
 
-
-
 .tabs>ul li a:hover {
     border-bottom: 4px solid #253B82;
 }
-
-
 
 img {
     width: 175px;
@@ -98,7 +94,6 @@ img {
 .tabs>div ul li:not(:last-child) {
     margin: 0 75px 0 0;
 }
-
 
 /* 탭 기능 */
 section .tabs>div {
