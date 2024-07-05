@@ -51,6 +51,7 @@ a {
 
 p {
     font-size: 16px;
+    text-align: center;
 }
 
 
@@ -60,6 +61,7 @@ section {
 }
 .inner {
     width: 1200px;
+    height: 600px;
     margin: 0 auto;
     border: 1px solid red;
 }
@@ -67,11 +69,23 @@ section {
     display: inline-block;
     border: 1px solid lawngreen;
 }
+.tabs>ul li {
+    margin: 0 10px 0 0;
+    margin-bottom: 50px;
+}
 img {
     width: 175px;
     height: 278px;
 }
 
+.tabs>div ul li {
+    width: 175px;
+    height: 278px;
+    vertical-align: middle;
+}
+.tabs>div ul li:not(:last-child) {
+    margin: 0 75px 0 0;
+}
 
 
 /* 탭 기능 */
