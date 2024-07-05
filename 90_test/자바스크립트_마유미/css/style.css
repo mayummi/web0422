@@ -61,14 +61,17 @@ section {
 .inner {
     width: 1200px;
     margin: 0 auto;
+    border: 1px solid red;
 }
 .tabs li {
     display: inline-block;
+    border: 1px solid lawngreen;
 }
 img {
     width: 175px;
     height: 278px;
 }
+
 
 
 /* 탭 기능 */
