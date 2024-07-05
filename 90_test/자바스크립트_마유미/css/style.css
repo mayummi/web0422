@@ -60,6 +60,7 @@ section {
 }
 .inner {
     width: 1200px;
+    margin: 0 auto;
 }
 .tabs li {
     display: inline-block;
@@ -67,4 +68,12 @@ section {
 img {
     width: 175px;
     height: 278px;
+}
+
+/* 탭 기능 */
+section .tabs>div {
+    display: none;
+}
+section .tabs>div.on {
+    display: block;
 }
