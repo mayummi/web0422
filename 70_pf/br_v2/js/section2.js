@@ -18,11 +18,25 @@ const cont4 = document.querySelector('#tab4');
 
 // 이벤트 처리
 btn1.onclick = function(){
+    resetF();
     cont1.classList.add('on');
-    cont2.classList.remove('on');
 }
-// 버튼2을 클릭하면
 btn2.onclick = function(){
+    resetF();
     cont2.classList.add('on');
+}
+btn3.onclick = function(){
+    resetF();
+    cont3.classList.add('on');
+}
+btn4.onclick = function(){
+    resetF();
+    cont4.classList.add('on');
+}
+
+function resetF(){
     cont1.classList.remove('on');
+    cont2.classList.remove('on');
+    cont3.classList.remove('on');
+    cont4.classList.remove('on');
 }
