@@ -55,9 +55,16 @@ p {
 
 
 /* 탭 메뉴 */
+section {
+    padding: 72px 0;
+}
 .inner {
     width: 1200px;
 }
 .tabs li {
     display: inline-block;
+}
+img {
+    width: 175px;
+    height: 278px;
 }
