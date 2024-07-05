@@ -26,3 +26,7 @@
 #s2 #tabs>div a {display:block; width: 222px; height: 168px;}
 #s2 #tabs>div a.rank1 {width: 570px; height: 432px;}
 #s2 #tabs>div a.rank1+h3 {position: absolute; width:474px; height:48px; right:0; top:48px; text-wrap: nowrap;}
+
+/* 탭의 기능 핵심 */
+#s2 #tabs>div {display: none;}
+#s2 #tabs>div.on {display: block;}
