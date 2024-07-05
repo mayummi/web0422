@@ -342,19 +342,6 @@ input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
-
-/* .date input[type="date"]::before {
-    position: absolute;
-    background: #fff;
-    border: none;
-    content: attr(placeholder) !important;
-    color: #ABABAB;
-    margin-right: 0.5em;
-} */
-
-
-
-
 .from {
     border-style: none;
     width: 221px;
