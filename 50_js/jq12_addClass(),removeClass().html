@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {font-size: 50px;}
+        p.on {color: red;}
+    </style>
+</head>
+<body>
+    <h1>HTML 요소에 class를 추가/제거하기</h1>
+    <div>
+        <a href="#" class="red">버튼1</a>
+        <a href="#" class="black">버튼2</a>
+    </div>
+    <p>나는 단락이다.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // 요소 찾기
+        const btn1 = $('.red');
+        const btn2 = $('.black');
+        const p = $('p');
+
+        // 이벤트 처리
+        btn1.click(function(){
+            p.addClass('on');
+        });
+        btn2.click(function(){
+            p.removeClass('on');
+        });
+    </script>
+</body>
+</html>
