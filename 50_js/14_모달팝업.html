@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal {
+            position: fixed;
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+        #modal .popup {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 600px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            background: #c2c2c2;
+            padding: 20px;
+        }
+        #modal .popup button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 콘텐츠 -->
+    <div id="notice">
+        <ul>
+            <li><a href="#">목록1</a></li>
+            <li><a href="#">목록2</a></li>
+            <li><a href="#">목록3</a></li>
+            <li><a href="#">목록4</a></li>
+        </ul>
+    </div>
+
+    <!-- 모달 팝업 -->
+    <div id="modal">
+        <div class="popup">
+            <h2>모달 팝업</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis voluptatum, dicta ipsum voluptates, distinctio porro cupiditate aliquam minus, tenetur nemo voluptas illum. Repellat harum officiis ad cum perspiciatis sunt rem?</p>
+            <button>닫기</button>
+        </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        // 요소 찾기
+        const fli = document.querySelectorAll("#notice a").item(0);
+        const modal = document.querySelectorAll("#modal a").item(0);
+        //console.log(fli);
+
+        const btn = document.querySelector
+    </script>
+</body>
+</html>

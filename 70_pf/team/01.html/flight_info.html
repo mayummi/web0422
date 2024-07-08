@@ -92,42 +92,46 @@
     </header>
 
     <!-- 운항정보 -->
-    <div class="container">
-        <h1>출도착 안내</h1>
-        <div class="tabcontent">
+    <section>
+        <div class="container">
+            <h1>출도착 안내</h1>
+            <div class="tabcontent">
+                <div id="box"></div>
+                <input type="radio" name="tab" checked id="tabmenu01">
+                <label for="tabmenu01">구간조회</label>
+                <input type="radio" name="tab" id="tabmenu02">
+                <label for="tabmenu02">편명조회</label>
+                <div class="text">본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</div>
+                <div class="content-box content01">
+                    <button class="from"><span>From</span> <br>출발</button>
+                    <span class="swap"><img src="../03.assets/booking__swap--disabled 1.svg"
+                            alt="버튼"></span>
+                    <button class="to"><span>To</span> <br>도착</button>
+                    <div class="line"></div>
+                    <span class="date"><input type='date' id='currentDate'></span>
+                </div>
+                <div class="content-box content02">
+                    <label for="text">
+                        <span class="lj">LJ</span>
+                    </label>
+                    <input id="text" type="text" class="flight" placeholder="편명(예.0001)">
 
-            <div id="box"></div>
-            <input type="radio" name="tab" checked id="tabmenu01">
-            <label for="tabmenu01">구간조회</label>
-            <input type="radio" name="tab" id="tabmenu02">
-            <label for="tabmenu02">편명조회</label>
-
-            <div class="text">본인 또는 가족, 지인의 비행기 출도착 상태가 궁금하신가요? 지금 바로 검색해 보세요.</div>
-            <div class="content-box content01">
-                <button class="from"><span>From</span> <br>출발</button>
-                <span class="swap"><img src="../03.assets/booking__swap--disabled 1.svg" alt="버튼"></span>
-                <button class="to"><span>To</span> <br>도착</button>
-                <div class="line"></div>
-                <span class="date"><input type='date' id='currentDate'></span>
+                    <div class="line"></div>
+                    <span class="date"><input type='date' id='currentDate1'></span>
+                </div>
+                <div class="contentbox2"></div>
+                <div class="contentbox3"></div>
             </div>
-
-            <div class="content-box content02">
-                <label for="text"><span class="lj">LJ</span></label>
-                <input id="text" type="text" class="flight" placeholder="편명(예.0001)"><input>
-                <div class="line"></div>
-                <span class="date"><input type='date' id='currentDate1'></span>
-            </div>
-            <div class="contentbox2"></div>
-            <div class="contentbox3"></div>
+            <button class="search">조회</button>
         </div>
-        <button class="search">조회</button>
-    </div>
+    </section>
     <script>
         document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);;
 
         document.getElementById('currentDate1').value = new Date().toISOString().substring(0, 10);;
 
     </script>
+
 </body>
 
 </html>
