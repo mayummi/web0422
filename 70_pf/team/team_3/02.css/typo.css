@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@import url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansTTFBold';
+    src: url('./GmarketSansTTFBold.ttf');
+}
+
+@font-face {
+    font-family: 'GmarketSansTTFLight';
+    src: url('./GmarketSansTTFLight.ttf');
+}
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    font-family: "GmarketSansMedium", sans-serif;
+    line-height: 1;
+}
+
+/* font의 위계 */
+/* 1depth, mainmenu */
+.main>li>a {
+    font-size: 2.0rem;
+    color: #192547;
+}
+
+.main li:hover a {
+    color: #192547;
+}
+
+/* 2depth, submenu */
+.sub li a {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+a {
+    color: #192547;
+}
+
+a:visited {
+    color: #192547;
+}
+
+a:hover {
+    color: #192547;
+}
+
+a:active {
+    color: #192547;
+}

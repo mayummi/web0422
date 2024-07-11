@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+
+main {
+    background: #f9f9f9;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1120px;
+}
+
+header {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.header_box {
+    font-size: 10px;
+    height: 25px;
+}
+
+.main>li a:hover {
+    color: #192547;
+}
+
+.header_box>a {
+    font-size: 10px;
+}
+
+/* sing_up 전용 typo */
+
+body {
+    font-size: 16px;
+    color: #192547;
+}
+
+main h1,
+main h2 {
+    font-weight: 700;
+}
+
+main h1 {
+    font-size: 2em;
+}
+
+main h2 {
+    font-size: 2.4rem;
+}
+
+main p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+main p:last-of-type {
+    font-weight: 500;
+}
+
+section p:nth-of-type(1) {
+    font-size: 1.6rem;
+    color: #bed600;
+    margin: 0;
+}
+
+.su_sub_title {
+    margin-top: 80px;
+    background: #192547;
+}
+
+.su_sub_title>h2 {
+    color: #fff;
+    margin: 40px 0 0;
+}
+
+section button,
+section input,
+section select {
+    font-family: "GmarketSansMedium", sans-serif;
+    font-size: 16px;
+}
+
+section>li {
+    font-size: 1.2rem;
+}
+
+.su_yn a {
+    line-height: 60px;
+    text-align: center;
+}
+
+.su_yn_center p {
+    color: #192547;
+}
+
+.main>li>a:hover {
+    color: #192547;
+}
+
+.su_text_box li {
+    font-size: 12px;
+}
+
+/* section */
+
+.su_sub_title {
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 18px 18px;
+    width: 1120px;
+    height: 88px;
+    margin-bottom: 142px;
+}
+
+.su_sub_title h2 {
+    margin-bottom: 20px;
+}
+
+.su_box_1 {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+}
+
+.su_box_2 {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin: 0 0 20px 180px;
+}
+
+section input {
+    width: 340px;
+    height: 48px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #ababab;
+}
+
+section label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* 유의사항_box */
+
+.su_text_box {
+    width: 690px;
+    line-height: 65px;
+    border: 1px solid #bed600;
+    border-radius: 5px;
+    padding: 0;
+    background: #fff;
+}
+
+.su_text_box ul {
+    display: flex;
+    padding: 3px 0 0;
+    margin: 0;
+}
+
+.su_text_box ul::before {
+    padding: 0 20px;
+    content: url(../../03.assets/sub/sign_up/sing_up_icon.png);
+}
+
+
+/* 성별,국가 */
+
+section select {
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    width: 348px;
+    padding: 15px 10px;
+}
+
+section select {
+    height: 48px;
+    width: 340px;
+}
+
+section option {
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #192547
+}
+
+/* button */
+
+.su_yn a:nth-of-type(2):active,
+.su_yn a:nth-of-type(1):active {
+    color: #fff;
+    background: #009fda;
+}
+
+section button {
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #ababab;
+    width: 145px;
+    height: 50px;
+    color: #fff;
+    background: #192547;
+}
+
+section input {
+    height: 48px;
+    padding: 2px 20px 0;
+}
+
+select[name="user_tel"] {
+    width: 170px;
+    height: 50px;
+    margin-right: 10px;
+    color: #f9f9f9;
+    background: #ababab;
+}
+
+/* last */
+
+.su_yn a:nth-of-type(1) {
+    background: #bed600;
+}
+
+.su_yn a:nth-of-type(2) {
+    background: #192547;
+}
+
+.su_yn a {
+    border: none;
+    border-radius: 5px;
+    width: 148px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.su_yn {
+    display: flex;
+    margin-top: 160px;
+    height: 120px;
+    border-top: 1px dashed #192547;
+    background: #fff;
+}
+
+.su_yn_center {
+    width: 1120px;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+hr {
+    border: 1px dashed #192547;
+    margin: 20px 0 20px 0;
+}
+
+/* select -> option 내부 변경 */

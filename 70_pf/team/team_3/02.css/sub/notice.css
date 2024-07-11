@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+
+body {
+    margin: 0;
+    background: #f9f9f9;
+}
+
+#tit .suv_title {
+    width: 1200px;
+    height: 120px;
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 0 0 18px 18px;
+}
+
+.id h2 {
+    font-size: 24px;
+    line-height: 120px;
+    width: 1120px;
+    margin: 0 auto;
+}
+
+hr {
+    width: 1120px;
+    border: 1px dashed #192547;
+}
+
+section {
+    display: flex;
+    width: 1120px;
+    margin: 0 auto 130px;
+}
+
+#side_menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 38px;
+    font-size: 16px;
+}
+
+.br:not(:nth-of-type(3)) {
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    background: #fff;
+}
+
+.br:nth-of-type(3) {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 45px 0;
+    width: 180px;
+    height: 85px;
+    line-height: 2;
+    background: #fff;
+    border-bottom: 1px solid #000;
+}
+
+.br:hover {
+    color: #f9f9f9;
+    background: #0e0e0e;
+    text-decoration: underline;
+}
+
+#side_menu a:last-of-type {
+    color: #f9f9f9;
+}
+
+.bk {
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: #0e0e0e;
+}
+
+.bk:hover {
+    text-decoration: underline;
+}
+
+
+
+#board {
+    position: relative;
+    width: 895px;
+    margin: 0 auto;
+}
+
+#board .box {
+    background: #fff;
+    font-size: 24px;
+    text-align: left;
+    width: 895px;
+    height: 55px;
+    padding: 10px;
+    margin-top: 39px;
+}
+
+#board .box1 {
+    background: #ababab;
+    border-top: 10px;
+    padding: 50px 0;
+    width: 895px;
+    height: 113px;
+}
+
+
+#tit .suv_title h2 {
+    margin-left: 24px;
+    font-size: 24px;
+}
+
+#tit .suv_title img {
+    margin-right: 32px;
+}
+
+
+#board .box1 {
+    width: 895px;
+    height: 113px;
+    z-index: -10px;
+    padding: 50px 0;
+    background: #fff;
+    border: lpx solid;
+    font-size: 15px;
+    width: 895px;
+    height: 560px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    padding-top: 20px;
+}
+
+.text button {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    width: 100px;
+    line-height: 50px;
+    font-size: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+#board .box1>.link {
+    display: flex;
+    background: #fff;
+    font-size: 15px;
+    width: 545px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+#board .box {
+    background: #ababab;
+    width: 895px;
+    height: 113px;
+    padding-top: 10px;
+}
+
+#board .text {
+    display: flex;
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#board .link {
+    position: relative;
+    font-size: 24px;
+    margin-top: -82px;
+    padding-right: 12px;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link input {
+    width: 550px;
+    padding: 12px;
+    border: none;
+}
+
+
+#side_menu p {
+    border-bottom: 1px solid;
+    padding: 10px;
+
+}
+
+
+#board .t1,
+#board .p2,
+#board .t2,
+#board .t3,
+#board .t4,
+#board .t5,
+#board .t6,
+#board .t7,
+#board .t8 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding: 15px;
+}
+
+
+#board .p9 {
+    position: relative;
+    padding-right: 35px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#board .text1,
+#board .text2,
+#board .text3,
+#board .text4,
+#board .text5,
+#board .text6,
+#board .text7,
+#board .text8 {
+    display: flex;
+    padding-right: 15px;
+}
+
+.gr {
+    position: absolute;
+    bottom: 87px;
+    right: 310px;
+}
+
+#board .text {
+    display: flex;
+    background: #fff;
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#board .link {
+    display: flex;
+    font-size: 15px;
+    width: 545px;
+    height: 50px;
+    padding-right: 12px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#board .text1,
+#board .text2,
+#board .text3,
+#board .text4,
+#board .text5,
+#board .text6,
+#board .text7,
+#board .text8 {
+    padding-right: 15px;
+}
+
+.text1:hover,
+.text2:hover,
+.text3:hover,
+.text4:hover,
+.text5:hover,
+.text6:hover,
+.text7:hover,
+.text8:hover {
+    text-decoration: underline;
+}
+
+.link img {
+    position: absolute;
+    top: 7px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
+}

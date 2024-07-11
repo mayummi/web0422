@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 공통 font */
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Gmarket", sans-serif;
+    line-height: 1;
+}
+
+/* font의 위계 */
+/* 1depth, mainmenu */
+.main>li>a {
+    font-size: 2.0rem;
+    color: #192547;
+}
+
+.main li:hover a {
+    color: #192547;
+}
+
+/* 2depth, submenu */
+.sub li a {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+
+/* 리셋 */
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #fff;
+}
+
+/* 로그인 */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GmarketSansMedium", sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+.page-container {
+    width: 1280px;
+    height: 731px;
+    margin-bottom: 30px;
+}
+
+.line {
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    height: 700px;
+    width: 0.1px;
+    display: flex;
+    color: #eee;
+}
+
+
+.shadow {
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.13);
+}
+
+.login-form-container {
+    background: #fff;
+    width: 1280px;
+    height: 731px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 10px black;
+    border-radius: 15px;
+}
+
+/* 왼쪽 페이지 */
+.login-form-left-side {
+    width: 50%;
+    border-radius: 10px 0px 0px 10px;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.login-form-left-side h1 {
+    width: 100%;
+    text-align: left;
+    opacity: 0.9;
+    margin-right: 108px;
+    margin-bottom: 50px;
+    color: #192547;
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 80px;
+}
+
+.login-form-left-side h2 {
+    color: #192547;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.login-form-left-side p {
+    padding-top: 50px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* 오른쪽 페이지 */
+.login-form-right-side {
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #fff;
+}
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    min-height: 670px;
+    position: relative;
+}
+
+.login-html {
+    position: absolute;
+    padding: 20px 50px 50px 30px;
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+    display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+}
+
+.login-html .tab {
+    color: #192547;
+    font-size: 16px;
+    padding-bottom: 10px;
+    margin: 0 0px 50px 0px;
+    display: inline-flex;
+    width: 232px;
+    border-bottom: 1px solid transparent;
+    top: 10px;
+}
+
+.login-html .sign-in:checked+.tab,
+.login-html .sign-up:checked+.tab {
+
+    border-color: #BED600;
+    border-bottom: 5px solid #BED600;
+    justify-content: center;
+    top: 10px;
+}
+
+.login-html .sign-in+.tab,
+.login-html .sign-up+.tab {
+
+    position: relative;
+    justify-content: center;
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+
+}
+
+.login-form .group {
+    margin-bottom: 40px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+    border: none;
+    border-bottom: 1px solid #BED600;
+    background: none;
+    padding: 15px 20px;
+
+}
+
+.login-form .group .button {
+    border-radius: 5px;
+}
+
+.login-form .group input[data-type="password"] {
+    -text-security: circle;
+    -webkit-text-security: circle;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.login-form .group .label {
+    color: #ABABAB;
+    font-size: 12px;
+}
+
+.login-form .group .button {
+    background: #BED600;
+    cursor: pointer;
+}
+
+/* 아이디 저장 체크박스 */
+.icon {
+    vertical-align: middle;
+}
+
+.groupcheck {
+    font-size: 12px;
+    color: #192547;
+}
+
+
+.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+/* 아이디 비번 찾기 */
+.foot-lnk {
+    text-align: center;
+}
+
+.foot-lnk span .id,
+.foot-lnk span .pass {
+    color: #192547;
+}
+
+.account {
+    background-color: #fff;
+    width: 230px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-color: #192547;
+    border-style: solid;
+    font-size: 24px;
+    color: #192547;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.another {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #192547;
+}
+
+
+/* sns */
+.imgk {
+    margin-right: 42px;
+    margin-left: 42px;
+}
+
+.img {
+
+    margin-top: 50px;
+}
+
+.nameid {
+    display: inline-flex;
+}
+
+span .id {
+    text-decoration: none;
+    margin-right: 50px;
+    color: #3E3E3E;
+    font-size: 12px;
+}
+
+span .pass {
+    text-decoration: none;
+    color: #3E3E3E;
+    font-size: 12px;
+}
+
+.button {
+    font-size: 20px;
+}
+
+.login-line {
+    position: absolute;
+    margin-top: 37px;
+    border-bottom: 1px solid #ababab;
+    width: 465px;
+}
+
+.nameid .lastname {
+    margin-left: 0px;
+    margin-top: .5px;
+}
+
+.nameid .firstname {
+    margin-top: .5px;
+    margin-left: 20px;
+}
+
+.labelname {
+    margin-left: 20px;
+}

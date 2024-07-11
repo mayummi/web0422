@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+
+/* 운항정보 */
+section {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GmarketSansMedium", sans-serif;
+}
+
+section input {
+    font-family: "GmarketSansMedium", sans-serif;
+}
+
+section {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container {
+    margin-top: 4%;
+    background: #fff;
+    padding: 100px;
+}
+
+.tabcontent {
+    margin-top: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 1280px;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+}
+
+#box {
+    position: absolute;
+    width: 504px;
+    height: 50px;
+    border: 1px solid #ABABAB;
+    border-radius: 25px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.content-box {
+    line-height: 158px;
+}
+
+.swap {
+    vertical-align: -6px;
+    margin: 10px;
+
+}
+
+section input[type="radio"] {
+    display: none;
+}
+
+
+section input[type="radio"]+label {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+section input[type="radio"]:checked+label {
+    background: #bed600;
+}
+
+.content-box {
+    display: none;
+    margin-top: 30px;
+    padding: 10px;
+    width: 1200px;
+    height: 138px;
+    font-size: 30px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 138px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #666;
+    position: absolute;
+    z-index: 5;
+}
+
+section input[id="tabmenu01"]:checked~.content01 {
+    display: block;
+}
+
+section input[id="tabmenu02"]:checked~.content02 {
+    display: block;
+}
+
+.contentbox2 {
+    position: relative;
+    position: absolute;
+    width: 1200px;
+    height: 138px;
+    margin-top: 23px;
+    background: #bed600;
+    border-radius: 15px;
+}
+
+.contentbox3 {
+    float: right;
+    margin-right: 20px;
+    width: 435px;
+    height: 138px;
+    margin-top: 23px;
+    background: #192547;
+    position: relative;
+    border-radius: 15px;
+
+}
+
+.date {
+    position: relative;
+
+    margin-left: 83px;
+}
+
+input[type="date"]:focus {
+    outline: none;
+}
+
+input[type="date"] {
+    position: relative;
+    text-align: end;
+    font-size: 16px;
+    width: 140px;
+    height: 60px;
+    border: none;
+    background: url(../../03.assets/sub/flight_info/date.svg) no-repeat center left/2.2rem;
+    vertical-align: middle;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+
+    z-index: 1;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.from {
+    border-style: none;
+    width: 221px;
+    height: 65px;
+    background: none;
+    cursor: pointer;
+    color: #ABABAB;
+    font-size: 16px;
+    vertical-align: -11px;
+    /* background: #000; */
+
+    line-height: 2;
+}
+
+input[type="button"] {
+    line-height: 158px;
+}
+
+.from span,
+.to span {
+    font-size: 24px;
+}
+
+.to {
+    margin-right: 165px;
+    border-style: none;
+    width: 221px;
+    height: 65px;
+    background: none;
+    cursor: pointer;
+    color: #ABABAB;
+    font-size: 16px;
+    vertical-align: -11px;
+    line-height: 2;
+}
+
+.text {
+    margin-top: 70px;
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+.search {
+    margin-left: 555px;
+    margin-top: 200px;
+    background: #fff;
+    border: 1px solid #bed600;
+    font-size: 16px;
+    width: 150px;
+    height: 48px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.line {
+    margin-top: -4px;
+    margin-left: -70px;
+    display: inline-block;
+    position: absolute;
+    z-index: 50;
+    background: none;
+    border: 1px solid #eee;
+
+    margin-right: 20px;
+    height: 125px;
+}
+
+.flight:focus {
+    outline: none;
+}
+
+.flight {
+    font-size: 16px;
+    border-style: none;
+    border-bottom: 1px solid;
+    width: 474px;
+    margin-right: 180px;
+}
+
+.lj {
+    color: #192547;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 추가 */
+
+#footer2 .text {
+    margin: 0;
+}
