@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진에어 로그인</title>
+    <link rel="stylesheet" href="../../02.css/header.css">
+    <link rel="stylesheet" href="../../02.css/sub/login.css">
+    <link rel="stylesheet" href="../../02.css/footer.css">
+
+</head>
+<!-- 헤더 -->
+<header>
+    <div class="header_inner">
+        <!-- Logo -->
+        <a href="../../index.html"><img src="https://images.jinair.com/newHom/images/web/common/logo.svg"
+                alt="home"></a>
+        <!-- //Logo -->
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="booking.html">나의예약</a>
+                </li>
+                <li>
+                    <a href="promotion.html">프로모션</a>
+                </li>
+                <li>
+                    <a href="service.html">부가서비스</a>
+                </li>
+                <li>
+                    <a href="flight_info.html">운항정보</a>
+                </li>
+                <li class="all">
+                    <a href="#">전체메뉴</a>
+                    <!-- 2depth -->
+                    <div class="menu">
+                        <ul class="sub">
+                            <li>
+                                <div class="box">
+                                    <span>예약 안내</span><a href="#">항공권 예약</a><br><a href="#">예약/결제 안내</a>
+                                    <span>추천 항공권</span><a href="#">최저가 항공권</a><br><a href="#">맞춤 항공권</a>
+                                    <span>운임 및 수수료</span><a href="#">국내선</a><br><a href="#">국제선</a><br><a
+                                        href="#">비즈니스운임</a>
+                                    <span>할인</span><a href="#">할인쿠폰</a><br><a href="#">프로모션코드</a><br><a
+                                        href="#">신분할인제도</a><br><a href="#">상용우대 프로그램</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>이벤트</span><a href="#">진행중</a><br><a href="#">종료</a><br><a href="#">당첨자
+                                        발표</a>
+                                    <span>제휴</span><a href="#">카드/금융</a><br><a href="#">호텔</a><br><a
+                                        href="#">차량</a><br><a href="#">액티비티</a><br><a href="#">기타 여행상품</a><br><a
+                                        href="#">지니 보딩패스</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>부가서비스 안내</span><a href="#">묶음 할인</a><br><a href="#">좌석</a><br><a
+                                        href="#">수하물</a><br><a href="#">기내식</a><br><a href="#">여행보험</a><br><a
+                                        href="#">JINI PET</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>출도착 안내</span><a href="#">구간 조회</a><br><a href="#">편명 조회</a>
+                                    <span>스케쥴 조회</span><a href="#">왕복</a><br><a href="#">편도</a>
+                                    <span>취항 노선 안내</span><a href="#">국내선</a><br><a href="#">국제선</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <span>자주 찾는 메뉴</span><a href="#">웹/모바일 체크인</a><br><a href="#">부가서비스 안내</a><br><a
+                                        href="#">국내선 할인제도</a><br><a href="#">할인 쿠폰</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <a href="#"><img src="../../03.assets/index/icon_search.svg" alt="search"></a>
+            <a href="#"><img src="../../03.assets/index/icon_alarm.svg" alt="alarm"></a>
+            <a href="login.html"><img src="../../03.assets/index/icon_mypage.svg" alt="login"></a>
+        </div>
+    </div>
+</header>
+
+<!-- 로그인 -->
+
+<body>
+    <div class="page-container">
+        <div class="login-form-container shadow">
+            <div class="login-form-left-side">
+                <div class="top-logo-wrap">
+                </div>
+
+                <!-- 왼쪽 -->
+                <div class="login-top-wrap">
+                    <div>
+                        <h1>아직, <br>진에어 회원이 <br>아니세요?</h1>
+                        <h2>회원가입 하고<br>진에어와 함께 떠나요!</h2>
+                    </div>
+                </div>
+                <a href="sign_up.html"><button type="button" class="account">회원가입</button></a>
+            </div>
+            <div class="line"></div>
+            <!-- 오른쪽 페이지 -->
+            <div class="login-form-right-side">
+
+
+                <div class="login-wrap">
+                    <div class="login-html">
+                        <div class="login-line"></div>
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1"
+                            class="tab">아이디</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">예약번호로
+                            로그인</label>
+
+
+                        <div class="login-form">
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user" class="label">아이디</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">비밀번호</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group groupcheck">
+                                    <label for="check">
+                                        <input class="icon" type="checkbox" name="check" id="check">아이디 저장</label>
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="로그인">
+                                </div>
+
+                                <div class="foot-lnk">
+                                    <span>
+                                        <a class="id" href="#">아이디 찾기</a>
+                                        <a class="pass" href="#">비밀번호 찾기</a>
+                                    </span>
+                                    <div class="img">
+                                        <div class="another">간편하게 로그인 할래요.</div>
+                                        <a href="#"><img src="../../03.assets/sub/login/naver.svg" alt="네이버"></a>
+                                        <a href="#"><img class="imgk" src="../../03.assets/sub/login/kakao.svg"
+                                                alt="카카오"></a>
+                                        <a href="#"><img src="../../03.assets/sub/login/apple.svg" alt="애플"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user" class="label">진에어예약번호</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group nameid">
+
+
+                                    <div>
+                                        <label for="name" class="label">성(LASTNAME)</label>
+
+                                        <input id="name" type="text" class="input lastname">
+                                    </div>
+                                    <div>
+                                        <label for="name" class="label labelname">이름</label>
+
+                                        <input id="name" type="text" class="input firstname">
+                                    </div>
+                                </div>
+
+                                <div class="group groupcheck">
+                                    <label for="check2">
+                                        <input class="icon" type="checkbox" name="check" id="check2">예약번호 저장</label>
+
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="로그인">
+                                </div>
+
+                                <div class="foot-lnk">
+                                    <span>
+                                        <a class="id" href="#">아이디 찾기</a>
+                                        <a class="pass" href="#">비밀번호 찾기</a>
+                                    </span>
+                                    <div class="img">
+                                        <div class="another">간편하게 로그인 할래요.</div>
+                                        <a href="#"><img src="../../03.assets/sub/login/naver.svg" alt="네이버"></a>
+                                        <a href="#"><img class="imgk" src="../../03.assets/sub/login/kakao.svg"
+                                                alt="카카오"></a>
+                                        <a href="#"><img src="../../03.assets/sub/login/apple.svg" alt="애플"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer1">
+        <div class="wrap_1">
+            <ul>
+                <li>
+                    <h2>회사안내</h2>
+                </li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">기업개요</a></li>
+                <li><a href="#">ESG경영</a></li>
+                <li><a href="#">소비자중심경영</a></li>
+                <li><a href="#">투자정보</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>회사안내</h2>
+                </li>
+                <li><a href="#">CI소개</a></li>
+                <li><a href="#">항공기 소개</a></li>
+                <li><a href="#">화물운송</a></li>
+                <li><a href="#">홍보센터</a></li>
+                <li><a href="#">채용정보</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>약관 및 규정</h2>
+                </li>
+                <li><a href="#">자주 묻는 질문(FAQ)</a></li>
+                <li><a href="#">고객의 말씀(Q&A)</a></li>
+                <li><a href="#">기내 유실물 찾기</a></li>
+                <li><a href="#">서류 양식함</a></li>
+                <li><a href="#"><strong>대리점 사이트 바로가기</strong></a></li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>고객서비스</h2>
+                </li>
+                <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">운송약관 및 고지사항</a></li>
+                <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                <li><a href="#">피해구제계획</a></li>
+                <li><a href="#">e-티켓 확인증 법적 고지문</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <div class="sns_sec">
+                <ul>
+                    <li>
+                        <h2>SNS</h2>
+                    </li>
+                    <li><a href="#"><img src="../../03.assets/index/icon_instagram.svg" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="../../03.assets/index/icon_facebook.svg" alt="페이스북"></a></li>
+                    <li><a href="#"><img src="../../03.assets/index/icon_youTube.svg" alt="유튜브"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap_2">
+            <div class="letter">
+                <h2>뉴스레터 신청</h2>
+                <form action="custom.jsp">
+                    <input type="email" name="uemail" placeholder="메일 주소 입력">
+                    <button type="submit">전송</button>
+                </form>
+            </div>
+            <ul>
+                <li>
+                    <h2>고객서비스센터</h2>
+                </li>
+                <li><span>1600-6200, 02-6099-1200</span></li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>업무시간</h2>
+                </li>
+                <li><span>오전 09:00 ~ 오후 18:00</span></li>
+            </ul>
+        </div>
+    </footer>
+    <footer id="footer2">
+        <div class="wrap">
+            <div class="text">
+                <div class="logo">
+                    <a href="#"><img src="../../03.assets/index/logo2.png" alt="logo"><span>(주) 진에어</span></a>
+                </div>
+                <ul>
+                    <li>대표이사: 박병률</li>
+                    <li>사업자등록번호: 121-21-89086</li>
+                    <li>통신판매업신고: 제2008-서울 강서-0408</li>
+                    <li>개인정보보호책임자: 유준욱</li>
+                </ul>
+                <p>Copyright ⓒ JIN AIR. All Rights Reserved.</p>
+            </div>
+            <div class="icon">
+                <img src="../../03.assets/index/icon_isms.png" alt="isms">
+                <img src="../../03.assets/index/icon_ccm.png" alt="ccm">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
