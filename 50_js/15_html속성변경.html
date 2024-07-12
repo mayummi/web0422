@@ -32,13 +32,18 @@
         <a href="#" id="prev">이전(previous) 버튼</a>
         <a href="#" id="next">다음(next) 버튼</a>
     </div>
-    <img src="../assets/KakaoTalk_20240703_141418063_01.jpg" alt="자연1">
+    <img src="../assets/KakaoTalk_20240703_141418063_01.jpg" alt="자연1" title="자연1">
 
     <script>
         // 요소 찾기
         const prev = document.querySelector("#prev")
         const next = document.querySelector("#next")
         const img = document.querySelector("img");
+
+        // HTML속성 가져오기
+        const tit = img.alt;
+        // console.log(tit);
+        img.title = tit;
 
         
         // 이벤트 처리

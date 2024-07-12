@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>날짜와 시간</h1>
+    <script>
+        // 날짜와 시간 표시 객체
+        // Fri Jul 12 2024 12:27:44 GMT+0900 (한국 표준시)
+        // GMT? GMT+0900 그리니치 평균시
+
+        // 생성자 함수
+        // d는 날짜(시간) 인스턴스 객체이다.
+        const d = new Date();
+        // +연산자는 숫자는 더하기, 문자는 연결한다.
+        // 1 + 2 -> 3
+        // "일" + 2 -> 일2
+        // "일" + "이" -> 일이
+        document.write(d + "<br>");
+
+        const y = d.getFullYear();
+        document.write(y);
+    </script>
+</body>
+</html>

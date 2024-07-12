@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <script>
+        document.write("문자열<br>");
+        // +더하기
+        // 숫자 + 숫자 -> 숫자
+        document.write("5 + 2 =" + (5 + 2) + "<br>");
+        // +연결
+        // 문자 + 숫자 -> 문자로 연결
+        // 문자 + 문자 -> 문자로 연결
+        document.write("오 + 2 = 오" + 2 + "<br>");
+        // 탬플릿 리터럴(백틱: backticks `)
+        // 백틱 안에 내용은 모두 문자열로 취급한다.
+        // html 태그 인식한다.
+        // {연산식 또는 변수}
+        document.write(`오 + 2 = ${"오" + 2}<br>`);
+        
+        // NAN(Not a Number)
+        document.write("5 - 2 =" + (5 - 2) + "<br>");
+        document.write("5 * 2 =" + 5 * 2);
+        document.write("<br>");
+        document.write("5 / 2 =" + 5 / 2);
+        document.write("<br>");
+        // %는 나머지
+        document.write("5 % 2 =" + 5 % 2 + "<br>");
+        // ^는 거듭제곱
+        // 5^2 -> 5*5
+        document.write(5 ^ 2);
+    </script>
+</body>
+</html>
