@@ -37,20 +37,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         // 요소 찾기
-        const prev = $("#prev")
-        const next = $("#next")
+        const prev = $("#prev");
+        const next = $("#next");
         const img = $("img");
 
         
         // 이벤트 처리
-        next.click(function(){
-            // HTML속성 변경하기
-            img.attr("src","../assets/KakaoTalk_20240703_141418063_02.jpg");
-            img.attr("alt","자연2");
-        });
         prev.click(function(){
             img.attr("src","../assets/KakaoTalk_20240703_141418063_01.jpg");
             img.attr("alt","자연1");
+        });
+        next.click(function(){
+            // HTML속성 변경하기
+            img.attr({src:"../assets/KakaoTalk_20240703_141418063_02.jpg", alt: "자연2"});
         });
     </script>
 </body>
