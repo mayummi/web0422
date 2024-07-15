@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <script>
+        /*
+            지역변수: 블록 내부에서만 사용 가능한 변수
+            전역변수: 전지역에서 사용 가능한 변수
+                -parameter(매개변수)
+        */
+
+
+        // b는 전역변수
+        const b = "헬로우";
+
+        
+
+        // 선언적 함수
+        function fn1(x, y, z=1) {
+            // a은 지역변수
+            const a = "hi";
+            document.write("2."+(x+y)+"<br>");
+            
+        };
+        document.write("1."+b+"<br>");
+
+        // 익명 함수
+        const fn2 = function () { document.write("hello"); };
+
+        // 화살표 함수
+        const fn3 = () => { document.write("bye"); };
+
+        // 함수 호출
+        // 함수명(argument1, argument2)
+        fn1("엑스", "와이");
+        fn1(10, 20);
+        fn2();
+        fn3();
+
+
+    </script>
+</body>
+
+</html>

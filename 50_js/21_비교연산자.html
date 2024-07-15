@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비교연산자</h1>
+    <script>
+        /*
+            비교 연산자
+            >   크다(초과)
+            <   작다(미만)
+            >=  크거나 같다(이상)
+            <=  작거나 같다(이하)
+            === 같다 (데이터유형을 구분한다.)
+            ==  같다 (데이터유형을 구분하지 않는다.)
+            !== 같지않다.
+            !=  같지않다.
+
+        대입(할당) 연산자
+            =
+        */
+
+        let m = 5;
+
+
+        // 비교연산 결과는 true 또는 false이다.
+        document.write(`${m>10}<br>`);
+        document.write(`${m<10}<br>`);
+        document.write(`${m>=10}<br>`);
+        document.write(`${m<=10}<br>`);
+        document.write(`${m===10}<br>`);
+        document.write(`${m!==10}<br>`);
+        document.write(`<hr>`);
+
+        // 재할당
+        /*
+            데이터 유형
+                1. number(숫자): 10
+                2. string(문자열): "10"
+        */
+        // 10은 number(숫자), "10"은 string(문자열)
+        m = "9";
+        document.write(`${m===10}<br>`);
+        document.write(`${m==10}<br>`);
+        document.write(`${m!==10}<br>`);
+        document.write(`${m!=10}<br>`);
+    </script>
+</body>
+</html>

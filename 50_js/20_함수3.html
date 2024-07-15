@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <script>
+        /*
+            이벤트
+            요소.onclick = function(매개변수){지역변수}
+        */
+
+
+        // b는 전역변수
+        const b = "헬로우";
+
+        // 익명 함수
+        const fn1 = function (x) {
+            document.write(`${x}<br>`);
+        };
+
+        // 화살표 함수
+        // 매개변수가 1개이면 () 생략
+        // 실행문이 1개이면 {} 생략
+        const fn2 = x => document.write(`${x}<br>`);
+
+        // 함수 호출
+        fn1("엑스");
+        fn1(1);
+
+
+    </script>
+</body>
+
+</html>
