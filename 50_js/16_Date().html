@@ -21,8 +21,16 @@
         // "일" + "이" -> 일이
         document.write(d + "<br>");
 
-        const y = d.getFullYear();
-        document.write(y);
+        const yy = d.getFullYear();
+        // getMonth()는 0~11
+        const mm = d.getMonth()+1;
+        const dd = d.getDate();
+        const hh = d.getHours();
+        const mi = d.getMinutes();
+        const ss = d.getSeconds();
+        document.write("<hr>"+yy+"년"+mm+"월"+dd+"일<br>"+hh+":"+mi+":"+ss);
+
+        document.write(`<hr>${yy}년월일`);
     </script>
 </body>
 </html>
