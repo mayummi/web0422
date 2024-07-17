@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
+/* 공통 */
+/* 
+    뷰포트(viewport): 창 기준
+    1. vw
+    2. vh
+    3. vmin
+    4. vmax
+*/
+section {
+    height: 100vh;
+    background: url(../assets/s4_bg.png) no-repeat -270px 0/cover;
+}
+
+.ibx {
+    display: flex;
+    align-items: center;
+    width: 1120px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* 섹션4 */
+#s4 .cont {
+    width: 560px;
+    background: yellow;
+}
