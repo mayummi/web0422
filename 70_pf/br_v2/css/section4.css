@@ -26,5 +26,41 @@ section {
 /* 섹션4 */
 #s4 .cont {
     width: 560px;
-    background: yellow;
+}
+#s4 h3 {
+    position: relative;
+    margin: 24px 0 48px 0;
+}
+#s4 h3::after {
+    z-index: -100;
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 100px;
+    width: 360px;
+    height: 40px;
+    background: #5e2bb8;
+}
+#s4 p:last-of-type {
+    margin: 24px 0;
+}
+#s4 .link a {
+    display: inline-block;
+    padding: 16px 24px;
+    background: #5e2bb8;
+    transition: .1s;
+}
+/* 
+    변형(transform)
+        1. scale(1, 1), scaleX(1), scaleY(1)
+        2. roate(0deg)
+        3. translate(0px, 0px), translateX(0px), translateY(0px)
+        4. skew(0deg, 0deg), skewX(0deg), skewY(0deg)
+*/
+#s4 .link a:hover {
+    transform: translateY(-4px);
+    background: #4c0cb9;
+}
+#s4 .link a:first-child {
+    margin-right: 20px;
 }
