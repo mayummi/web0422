@@ -27,8 +27,8 @@
                 객체.addEventListener("이벤트", 익명함수);
         */
         window.onscroll = function(){
-
-            p.innerHTML = window.pageYOffset;
+            // Math.floor(숫자) ~ 소수점 이하 버림
+            p.innerHTML = Math.floor(pageYOffset);
         };
 
     </script>
