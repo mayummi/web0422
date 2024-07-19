@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        p{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>스크롤 이벤트</h1>
+    <p></p>
+    <script>
+        // 요소 찾기
+        const p = document.querySelector("p");
+
+        // 이벤트 처리
+        /* 
+            이벤트 형식
+                객체.on이벤트 = 익명함수;
+                객체.addEventListener("이벤트", 익명함수);
+        */
+        window.onscroll = function(){
+
+            p.innerHTML = window.pageYOffset;
+        };
+
+    </script>
+
+</body>
+</html>
