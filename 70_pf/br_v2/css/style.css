@@ -97,6 +97,7 @@ header {
 }
 
 /* 섹션2 */
+#s2 .ibx {height: 100vh;}
 #s2 .ibx h2 {text-align: center;}
 #s2 .ibx h2+p {text-align: center; margin: 24px 0 48px;}
 
@@ -131,7 +132,7 @@ header {
 #s4 .ibx {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 #s4 .cont {
     position: relative;
