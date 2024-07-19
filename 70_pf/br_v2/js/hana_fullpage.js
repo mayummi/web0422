@@ -1,4 +1,6 @@
-// Hanatour fullpage.js
+
+// section Common Layout
+// jQuery Hanatour fullpage.js
 
 // document).ready 생략 가능
 // $(document).ready(function() {

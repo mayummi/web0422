@@ -1,5 +1,5 @@
 // section1 - carousel
-// bxSlider.js Plug-in
+// jQuery bxSlider.js Plug-in
 
 /* 
     프레임워크는 애플리케이션의 구조 또는 틀을 제공하며, 개발을 위한 기본적인 형태와 필수 요소를 포함하고 있습니다. 프레임워크가 정한 규칙과 구조 내에서 개발을 진행해야 합니다.
