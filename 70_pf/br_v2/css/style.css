@@ -51,6 +51,11 @@ header {
     border: none;
     margin-bottom: 0;
 }
+/* ********************************************* */
+/* 
+    현재 사용한 이미지 크기: 2000 * 1100
+    뷰포트 크기에 맞게
+*/
 .bx-viewport {
     height: 100% !important;
 }
@@ -59,7 +64,7 @@ header {
     width: 100vw;
     height: 100vh;
 }
-
+/* ////////////////////////////////////////////////////////////////////// */
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
     bottom: 30px;
 }
@@ -88,7 +93,7 @@ header {
     background-position: 0 0;
 }
 
-/* 텍스트 */
+/* 슬라이드 중앙 텍스트 */
 #s1 .slideWrap p {
     z-index: 9999;
     position: absolute;
@@ -97,7 +102,7 @@ header {
 }
 
 /* 섹션2 */
-#s2 .ibx {height: 100vh;}
+/* #s2 .ibx {height: 100vh;} */
 #s2 .ibx h2 {text-align: center;}
 #s2 .ibx h2+p {text-align: center; margin: 24px 0 48px;}
 
@@ -132,7 +137,7 @@ header {
 #s4 .ibx {
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 #s4 .cont {
     position: relative;

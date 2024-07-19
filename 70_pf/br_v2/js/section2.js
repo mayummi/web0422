@@ -1,3 +1,5 @@
+
+
 const btn1 = document.querySelectorAll('#tabs a').item(0);
 const btn2 = document.querySelectorAll('#tabs a').item(1);
 const btn3 = document.querySelectorAll('#tabs a').item(2);
