@@ -14,7 +14,11 @@
         }
 
         header {
+            z-index: 9999;
             position: fixed;
+        }
+        header p {
+            font-size: 10rem;
         }
 
         .section {
@@ -33,18 +37,51 @@
             background: lightgreen;
             position: relative;
         }
+
         #s3 .mbx {
             position: absolute;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
+            top: 90%;
+            transform: translate(-50%, -50%);
             font-size: 50px;
+            padding: 100px;
+            border: 1px solid black;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        #s3 .mbx.active {
+            top: 50%;
+            opacity: 1;
         }
 
         #s4 {
             background: lightgray;
         }
     </style>
+    <script>
+        // 로드 이벤트
+        window.addEventListener("DOMContentLoaded", function(){
+            // 요소 찾기
+            const p = document.querySelector("p");
+            const mbx = document.querySelector(".mbx");
+            // 스크롤 이벤트
+            window.addEventListener("scroll", function(){
+
+                // 스크롤양을 p요소에 넣기
+                p.innerHTML = Math.floor(pageYOffset);
+
+                // 조건 비교
+                if(p.innerHTML >= 1750) {
+                    // .active 클래스를 추가
+                    mbx.classList.add("active");
+                } else {
+                    // .active 클래스를 제거
+                    mbx.classList.remove("active");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -61,7 +98,7 @@
     </div>
     <div id="s3" class="section">
         <h2>섹션3</h2>
-        <div class="mbx">스크롤하면 내가 움직여요</div>
+        <div class="mbx">스크롤하면 내가 움직~!</div>
     </div>
     <div id="s4" class="section">
         <h2>섹션4</h2>
