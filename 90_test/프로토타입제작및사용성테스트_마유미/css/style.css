@@ -268,11 +268,22 @@ footer div {
     height: 615px;
     background: url(../images/footer.png);
     position: relative;
+    bottom: -30px;
 }
-footer p {
+
+footer .cc {
     margin-top: -50px;
     z-index: 2;
     position: relative;
     color: antiquewhite;
     text-align: center;
+}
+/* 아이콘 */
+.ii img {
+    margin: 5px;
+    position: relative;
+    width: 40px;
+    z-index: 77;
+    top: -40px;
+    right: -20px;
 }
