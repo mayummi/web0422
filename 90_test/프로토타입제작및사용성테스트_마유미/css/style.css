@@ -213,15 +213,27 @@ header {
     color: #fff;
 }
 
+#s3 {
+    height: 100vh;
+
+}
 
 /* 탭 */
+.tab_cont {
+    text-align: center;
+}
+.tab__content-wrapper {
+    height: 100vh;
+    text-align: center;
+}
+
 .tab__content-wrapper img {
     width: 300px;
 }
 
 .tab {
-    display: flex;
     align-items: center;
+    display: inline-flex;
     padding: 1rem;
 }
 
@@ -234,7 +246,7 @@ header {
 
 .tab__item.active {
     display: inline-block;
-    background-color: #b81c0f;
+    background-color: #E3051B;
     color: #fff;
 }
 
@@ -248,4 +260,19 @@ header {
 
 .tab__content.active {
     display: block;
+}
+
+
+/* 푸터 */
+footer div {
+    height: 615px;
+    background: url(../images/footer.png);
+    position: relative;
+}
+footer p {
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+    color: antiquewhite;
+    text-align: center;
 }
