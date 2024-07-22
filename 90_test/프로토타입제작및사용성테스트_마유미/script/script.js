@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+// 탭
 const tabItem = document.querySelectorAll(".tab__item");
 const tabContent = document.querySelectorAll(".tab__content");
 
