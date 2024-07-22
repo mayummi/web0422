@@ -62,9 +62,7 @@ header {
 .main>li {
     width: 160px;
     height: 30px;
-    /* 모든 메뉴 가로 가운데 배치 */
     text-align: center;
-    /* 메인메뉴 텍스트 세로 중앙 배치: line height */
     line-height: 30px;
 }
 
@@ -98,3 +96,34 @@ header {
 }
 
 
+/* 슬라이더 */
+#s2 bxslider {
+    position: relative;
+}
+#s2 .wrap {
+    margin-left: 25%;
+    position: relative;
+    width: 100vh;
+}
+#s2 .bx-viewport {
+    width: 1200px;
+}
+#s2 .bx-pager-link {
+    display: none;
+}
+#s2 .bx-prev {
+    position: absolute;
+    background: url(./../images/prev.png) no-repeat 1px;
+    padding: 35px;
+    top: 50%;
+    left: -150px;
+    text-indent: -999px;
+}
+#s2 .bx-next {
+    background: url(../images/next.png) no-repeat 1px;
+    position: absolute;
+    padding: 35px;
+    top: 50%;
+    left: 1000px;
+    text-indent: -99999px;
+}
