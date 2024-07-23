@@ -239,6 +239,9 @@ header {
 .tab_cont {
     text-align: center;
 }
+.tab_cont h2 {
+    margin-bottom: 30px;
+}
 .tab__content-wrapper {
     height: 100vh;
     text-align: center;
