@@ -12,58 +12,87 @@
         * {
             box-sizing: border-box;
         }
+        ul {margin: 0;}
+        ul {padding: 0; list-style: none;}
 
+        /* 타이포 */
+        body {
+            font-family: "Lucida Sans", sans-serif; color: #fff;
+        }
+
+        /* 색상 */
+        :root {
+            /* --변수명 */
+            /* 변수(variable) */
+            --violet: #93c;
+            --bluesky: #33b5e5;
+            --skyblue: #0099cc;
+        }
+        
+        /* 헤더 */
+        .header {
+            background: var(--violet);
+            /* background-color: #9933cc; */
+            padding: 15px;
+        }
+
+        /* 섹션 */
+        .row {display: flex;}
         .row::after {
             content: "";
-            clear: both;
+            /* clear: both; */
             display: table;
         }
-
+        /* .rov>div */
         [class*="col-"] {
-            float: left;
+            /* float: left; */
             padding: 15px;
         }
 
-        html {
-            font-family: "Lucida Sans", sans-serif;
-        }
 
-        .header {
-            background-color: #9933cc;
-            color: #ffffff;
-            padding: 15px;
-        }
-
-        .menu ul {
+        /* 왼쪽 메뉴 */
+        /* .menu ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-        }
+        } */
 
         .menu li {
             padding: 8px;
             margin-bottom: 7px;
-            background-color: #33b5e5;
+            background: var(--bluesky);
+            /* background-color: #33b5e5; */
             color: #ffffff;
+            transition: .3s;
+
+            /* box-shadow: x위치 y위치 흐림 [퍼짐] 색, x위치 y위치 흐림 [퍼짐] 색, ... */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
 
         .menu li:hover {
-            background-color: #0099cc;
+            /* background-color: #0099cc; */
+            background: var(--skyblue);
         }
 
+        /* 메인 콘텐츠 */
+        .main {
+            color: #333;
+        }
+
+        /* 사이드 콘텐츠 */
         .aside {
-            background-color: #33b5e5;
+            background-color: var(--bluesky);
             padding: 15px;
-            color: #ffffff;
+            /* color: #ffffff; */
             text-align: center;
             font-size: 14px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
 
+        /* 푸터 */
         .footer {
-            background-color: #0099cc;
-            color: #ffffff;
+            background-color: var(--skyblue);
+            /* color: #ffffff; */
             text-align: center;
             font-size: 12px;
             padding: 15px;
@@ -202,7 +231,7 @@
         </div>
 
         <!-- 메인콘텐츠 -->
-        <div class="col-6 col-s-9">
+        <div class="col-6 col-s-9 main">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
