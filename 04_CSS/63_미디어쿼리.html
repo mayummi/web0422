@@ -9,139 +9,167 @@
     <style>
         /* 초기화 */
         /* width, height 크기에 border와 padding 포함된다. */
-        * { box-sizing: border-box; } 
-        body, ul {margin:0;}
-        ul {padding:0; list-style:none;}
+        * {
+            box-sizing: border-box;
+        }
 
-        /* 타이포 */
-        body { font-family: "Lucida Sans", sans-serif; color: #fff; } 
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+
+        /* 
+            CSS 변수(variable)
+                1. 선언 
+                    :root {--변수명: 값;}
+                2. 사용
+                    선택자 {속성: var(--변수명);}
+        */
 
         /* 색상 */
         :root {
-            /* --변수명 */
-            /* 변수(variable) */
-            --violet: #93c;
+            --violet: rgb(81, 7, 118);
+            --bluesky: #a4f208;
+            --skyblue: rgb(138, 172, 13);
+            --white: #fff;
+            --gray: #333;
+            /* --violet: #93c;
             --bluesky: #33b5e5;
             --skyblue: #09c;
+            --white: #fff;
+            --gray: #333; */
+        }
+
+        /* 타이포 */
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            color: var(--white);
         }
 
         /* 헤더 */
-        .header { 
-            background: var(--violet); 
-            padding: 15px; 
-        } 
+        .header {
+            background: var(--violet);
+            padding: 15px;
+        }
 
         /* 섹션 */
-        .row {display: flex;}
-        .row>div { padding: 15px; } 
-        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* 
+            CSS 스타일 적용 우선순위
+                0. !important (값)
+                1. 인라인 스타일
+                ---------------------------------
+                2. #아이디
+                3. .클래스, :클래스, [속성]
+                4. 요소, ::가상요소
+        */
+
+        .menu, .main, .aside {
+            padding: 15px;
+        }
+
         /* 왼쪽 메뉴 */
-        .menu li { 
-            padding: 8px; 
-            margin-bottom: 7px; 
-            background: var(--bluesky); 
-            color: #fff; 
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background: var(--bluesky);
             transition: .3s;
 
             /* box-shadow: x위치 y위치 흐림 [퍼짐] 색, x위치 y위치 흐림 [퍼짐] 색, ... */
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         }
-        .menu li:hover { 
-            background: var(--skyblue); 
-        } 
+
+        .menu li:hover {
+            background: var(--skyblue);
+        }
 
         /* 메인 콘텐츠 */
         .main {
-            color: #333;
+            color: var(--gray);
         }
 
         /* 사이드 콘텐츠 */
-        .aside { 
-            background: var(--bluesky); 
-            padding: 15px; 
-            text-align: center; 
-            font-size: 14px; 
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
-        } 
+        .aside div {
+            background: var(--bluesky);
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
 
         /* 푸터 */
-        .footer { 
-            background: var(--skyblue); 
-            text-align: center; 
-            font-size: 12px; 
-            padding: 15px; 
+        .footer {
+            background: var(--skyblue);
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
         }
-
-        /* For mobile phones: */
-        [class*="col-"] { width: 100%; } 
-
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
-        /* 최소 600px 이상의 장치: tablets */
-        @media (min-width: 600px) {
-            .col-s-1 { width: 8.33%; } 
-            .col-s-2 { width: 16.66%; } 
-            .col-s-3 { width: 25%; } 
-            .col-s-4 { width: 33.33%; } 
-            .col-s-5 { width: 41.66%; } 
-            .col-s-6 { width: 50%; } 
-            .col-s-7 { width: 58.33%; } 
-            .col-s-8 { width: 66.66%; } 
-            .col-s-9 { width: 75%; } 
-            .col-s-10 { width: 83.33%; } 
-            .col-s-11 { width: 91.66%; } 
-            .col-s-12 { width: 100%; } 
+        /* 최소 600px 이상의 장치: tablet */
+        @media (min-width: 576px) {
+            .section {display: flex; flex-wrap: wrap;}
+            
+            /* 
+                flex-grow: 1
+                flex-shrink: 0
+                flex-basis: auto (단위:px, %, ...
+                flex: grow shrink basis;
+            */
+            .menu {flex:33%;}
+            .main {flex:67%;}
+            .aside {flex:100%;}
         }
-
+        
         /* 최소 768이상의 장치: desktop */
         @media (min-width: 768px) {
-            /* 한 칸이 8.33, 두 칸이면 8.33 * 2 = 16.66 */
-            .col-1 { width: 8.33%; } 
-            .col-2 { width: 16.66%; } 
-            .col-3 { width: 25%; } 
-            .col-4 { width: 33.33%; } 
-            .col-5 { width: 41.66%; } 
-            .col-6 { width: 50%; } 
-            .col-7 { width: 58.33%; } 
-            .col-8 { width: 66.66%; } 
-            .col-9 { width: 75%; } 
-            .col-10 { width: 83.33%; } 
-            .col-11 { width: 91.66%; } 
-            .col-12 { width: 100%; } 
+            .menu {flex:25%;}
+            .main {flex:50%;}
+            .aside {flex:25%;}
         }
     </style>
 </head>
 
 <body>
     <!-- 헤드 영역 -->
-    <div class="header">
+    <header class="header">
         <h1>Chania</h1>
-    </div>
+    </header>
 
     <!-- row: 행, column:열 -->
-    <div class="row">
+    <section class="section">
         <!-- 왼쪽 메뉴 -->
         <!-- col-*는 데스크탑, col-s-*는 테블릿, *는 1~12 -->
         <!-- col-를 지정하지 않으면 폰 -->
-        <div class="col-3 col-s-3 menu">
+        <nav class="menu">
             <ul>
                 <li>The Flight</li>
                 <li>The City</li>
                 <li>The Island</li>
                 <li>The Food</li>
             </ul>
-        </div>
+        </nav>
 
         <!-- 메인 콘텐츠 -->
-        <div class="col-6 col-s-9 main">
+        <main class="main">
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
-        </div>
+        </main>
 
         <!-- 사이드 콘텐츠 -->
-        <div class="col-3 col-s-12">
-            <div class="aside">
+        <aside class="aside">
+            <div>
                 <h2>What?</h2>
                 <p>Chania is a city on the island of Crete.</p>
                 <h2>Where?</h2>
@@ -149,13 +177,14 @@
                 <h2>How?</h2>
                 <p>You can reach Chania airport from all over Europe.</p>
             </div>
-        </div>
-    </div>
+        </aside>
+
+    </section>
 
     <!-- 푸터 영역 -->
-    <div class="footer">
+    <footer class="footer">
         <p>Copyright 2024 Chania. All rights reserved.</p>
-    </div>
+    </foot>
 </body>
 
 </html>
