@@ -5,51 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        [target] {text-decoration: none;}
-        [target="_blank"] {color: #333;}
+
+        /* 
+            키보드 특수문자 영문 표기
+                ~ tilde, 틸더
+                | vertical bar 또는 pipe, 파이프
+                
+                * caret, 캐럿
+                ^ dollar sign, 달러 사인
+                $ asterisk, 아스테리스크
+            -----------------------------------------------------------------------------
+            속성 선택자
+                [속성] -> 속성을 갖고 있는 요소
+                [속성="값"] -> 속성=값을 갖고 있는 요소
+
+
+                [속성~="값"] -> 값(공백으로 구분된 단어)포함하는
+                [속성|="값"] -> 시작하는
+                
+                [속성*="값"] -> 포함하는
+                [속성^="값"] -> 시작하는
+                [속성$="값"] -> 끝나는
+
+                en en- en_ en us us-en us_en, us en ko, ...
+                en en- en_ en us us-en us_en us en ko
+        */
+
+        /* [title] {text-decoration: none;} */
+        /* [title="en"] {border-bottom: 2px solid #333;} */
         
-        /* title 속성 값이 com을 포함하는 요소 -> com, com_on, on com, ... */
-        [title~="com"] {border: 2px solid red;}
-        /* title 속성 값이 en으로 시작하는 요소 */
-        [title|="en"] {background: yellow;}
+        /* [title~="en"] {border: 2px solid red;} */
+        /* [title|="en"] {background: yellow;} */
         
-        /* div 중에서 class 속성 값이 test로 시작하는 요소 */
-        div[class^="test"] {background: yellow;}
-        /* div 중에서 class 속성 값이 test로 끝나는 요소 */
-        div[class$="test"] {border: 2px solid red;}
+        [title^="en"] {background: yellow;}
+        /* [title$="en"] {border: 2px solid red;} */
+        /* [title*="en"] {color: red;} */
 
     </style>
 </head>
 <body>
     <h1>속성 선택자</h1>
-    <h2>[속성]</h2>
-    <h2>[속성="값"]</h2>
-    <a href="https://www.w3schools.com">W3schools.com</a>
-    <a href="https://www.google.com" target="_self">Google.com</a>
-    <a href="https://www.microsoft.com" target="_blank">Microsoft.com</a>
-
-    <!-- tilde, 틸더, ~은 값(단어)을 포함하는 -->
-    <!-- vertical bar 또는 pipe, 파이프, |는 값으로 시작하는 -->
-    <h2>[속성~="값"]</h2>
-    <h2>[속성|="값"]</h2>
-    <a href="https://www.w3schools.com" title="en com">W3schools.com</a>
-    <a href="https://www.google.com" target="_self" title="en-us Google. com">Google.com</a>
-    <a href="https://www.microsoft.com" target="_blank" title="en-ko Microsoft.com">Microsoft.com</a>
-    <a href="https://www.naver.com" target="_blank" title="ko Naver.com">Naver.com</a>
-    <a href="https://feweb.rf.gd" target="_blank" title="ja-jp feweb.rf.gd">feweb.rf.gd</a>
-
-    <!-- caret, 캐럿, ^는 값으로 시작하는 -->
-    <!-- dollar sign, 달러 사인, $는 값으로 끝나는 -->
-    <h2>[속성^="값"]</h2>
-    <h2>[속성$="값"]</h2>
-    <div class="first_test">The first div element.</div>
-    <div class="second">The second div element.</div>
-    <div class="test">The third div element.</div>
-    <div class="test_ex">The fourth div element.</div>
-    <p class="test">This is a paragraph.</p>
-    <p class="test_ex">This is a paragraph.</p>
-
-    <!-- asterisk, 아스테리스크 -->
-    <h2>[속성*="값"]</h2>
+    <a href="#" title="en">링크1</a>
+    <a href="#" title="en-">링크2</a>
+    <a href="#" title="en_">링크3</a>
+    <a href="#" title="enus">링크4</a>
+    <a href="#" title="us-en">링크5</a>
+    <a href="#" title="us_en">링크6</a>
+    <a href="#" title="us en">링크7</a>
+    <a href="#" title="us en ko">링크8</a>
+    <a href="#">링크9</a>
 </body>
 </html>
