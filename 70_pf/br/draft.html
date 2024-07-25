@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {margin: 0;}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tablet, .desktop {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            .phone {display: none;}
+            .tablet {display: block;}
+        }
+        @media (min-width: 992px) {
+            .tablet {display: none;}
+            .desktop {display: block;}
+        }
+    </style>
 </head>
 <body>
-    <img src="assets/phone.png" alt="폰">
+    <img class="phone" src="assets/phone.png" alt="폰">
+    <img class="tablet" src="assets/tablet.png" alt="테블릿">
+    <img class="desktop" src="assets/desktop.png" alt="데스크탑">
 </body>
 </html>
