@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        /* width, height 크기에 border와 padding 포함된다. */
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        img, video {
+            width: 100%;
+            /* update */
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* 
+            CSS 변수(variable)
+                1. 선언 
+                    :root {--변수명: 값;}
+                2. 사용
+                    선택자 {속성: var(--변수명);}
+
+
+            url(이미지)
+            scale()
+            rotate()
+            translate()
+            skew()
+            calc(10 - 2)
+            var()
+
+        */
+
+        /* 색상 */
+        html {
+            --violet: rgb(81, 7, 118);
+            --bluesky: #a4f208;
+            --skyblue: rgb(138, 172, 13);
+            --white: #fff;
+            --gray: #333;
+            /* --violet: #93c;
+            --bluesky: #33b5e5;
+            --skyblue: #09c;
+            --white: #fff;
+            --gray: #333; */
+        }
+
+        /* 타이포 */
+        body {
+            font-family: "Lucida Sans", sans-serif;
+            color: var(--white);
+        }
+
+        /* 헤더 */
+        .header {
+            background: var(--violet);
+            padding: 15px;
+        }
+
+        /* 섹션 */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* 
+            CSS 스타일 적용 우선순위
+                0. !important (값)
+                1. 인라인 스타일
+                ---------------------------------
+                2. #아이디
+                3. .클래스, :클래스, [속성]
+                4. 요소, ::가상요소
+        */
+
+        .menu, .main, .aside {
+            padding: 15px;
+        }
+
+        /* 왼쪽 메뉴 */
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background: var(--bluesky);
+            transition: .3s;
+
+            /* box-shadow: x위치 y위치 흐림 [퍼짐] 색, x위치 y위치 흐림 [퍼짐] 색, ... */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .menu li:hover {
+            background: var(--skyblue);
+        }
+
+        /* 메인 콘텐츠 */
+        .main {
+            color: var(--gray);
+        }
+        /* 이미지 숨기기 update */
+        .main img:first-of-type {
+            display: none;
+        }
+
+        /* 사이드 콘텐츠 */
+        .aside div {
+            background: var(--bluesky);
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        /* 푸터 */
+        .footer {
+            background: var(--skyblue);
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* https://www.w3schools.com/css/css_rwd_intro.asp */
+        /* 최소 576px 이상의 장치: tablet, desktop */
+
+        /* 
+            미디어쿼리
+            중단점(breakpoint): 576, 992
+            @media (조건) {
+                CSS 코드
+            }
+        */
+
+        @media (min-width: 576px) {
+            .section {display: flex; flex-wrap: wrap;}
+            /* 
+                flex-grow: 1
+                flex-shrink: 0
+                flex-basis: auto (단위: %, px, ...)
+                flex: grow shrink basis;
+            */
+            .menu {flex:33%;}
+            .main {flex:67%;}
+            .aside {flex:100%;}
+            /* 큰이미지 보이기+작은 이미지 숨기기 update */
+            .main img:first-of-type {
+                display: block;
+            }
+            .main img:last-of-type {
+                display: none;
+            }
+        }
+        
+        /* 최소 768이상의 장치: desktop */
+        @media (min-width: 768px) {
+            .menu {flex:25%;}
+            .main {flex:50%;}
+            .aside {flex:25%;}
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤드 영역 -->
+    <header class="header">
+        <h1>Chania</h1>
+    </header>
+
+    <!-- row: 행, column:열 -->
+    <section class="section">
+        <!-- 왼쪽 메뉴 -->
+        <!-- col-*는 데스크탑, col-s-*는 테블릿, *는 1~12 -->
+        <!-- col-를 지정하지 않으면 폰 -->
+        <nav class="menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </nav>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="main">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+
+            <!-- 이미지 추가 업데이트(update) -->
+            <img src="https://www.w3schools.com/css/img_flowers.jpg" alt="하니아">
+            <img src="https://www.w3schools.com/css/img_smallflower.jpg" alt="하니아">
+        </main>
+
+        <!-- 사이드 콘텐츠 -->
+        <aside class="aside">
+            <!--
+                controls: 플레이 버튼/정지 버튼
+                autoplay + muted: 자동 플레이
+                muted: 소리 끄기
+                loop: 무한 반복
+            -->
+            <video autoplay muted>
+                <source src="../assets/mov_bbb.mp4" type="video/mp4">
+                <source src="../assets/mov_bbb.webm" type="video/webm">
+                <source src="../assets/mov_bbb.ogv" type="video/ogg">
+                당신의 웹 브라우저는 비디오 태그를 지원하지 않습니다.
+            </video>
+            <div>
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete.</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport from all over Europe.</p>
+            </div>
+        </aside>
+
+    </section>
+
+    <!-- 푸터 영역 -->
+    <footer class="footer">
+        <p>Copyright 2024 Chania. All rights reserved.</p>
+    </foot>
+</body>
+
+</html>
