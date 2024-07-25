@@ -30,6 +30,14 @@
                     :root {--변수명: 값;}
                 2. 사용
                     선택자 {속성: var(--변수명);}
+
+            background: url(이미지);
+            scale()
+            rotate()
+            translate()
+            skew()
+            left: calc(10 - 2);
+            var()
         */
 
         /* 색상 */
@@ -117,6 +125,15 @@
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
         /* 최소 600px 이상의 장치: tablet */
+
+        /* 
+            미디어쿼리
+            중단점(breakpoint): 576, 768, 992, 1200, 1440, (576, 992 많이 사용)
+            @media (조건) {
+                CSS 코드
+            }
+        */
+
         @media (min-width: 576px) {
             .section {display: flex; flex-wrap: wrap;}
             
