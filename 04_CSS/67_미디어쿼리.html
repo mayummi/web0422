@@ -12,35 +12,33 @@
         }
         /* 공통 */
         
+        .bx {
+            /* 가로 가운데 배치: width+margin */
+            width: 300px;
+            margin: 0 auto;
+        }
         .bx div {
             /* 블록레벨 요소는 width를 쓰지 않으면 auto가 100% */
+            width: 300px;
             height: 300px;
             background: yellow;
             font-size: 50px;
             margin: 20px 0;
         }
-        /* .bx div:first-child {
-            margin-left: 30px;
-        }
-        .bx div:last-child {
-            margin-right: 30px;
-        } */
-        /* 폰 */
-        .bx {
-            /* 가로 중앙 배치: width+margin */
-            width: 300px;
-            margin: 0 auto;
-        }
+        
         
         @media (min-width: 576px) {
             /* 테블릿 */
             body {background: lightblue;}
             .bx {
-                flex-direction: row;
+                display: flex;
+                width: auto;
                 justify-content: center;
                 flex-wrap: wrap;
             }
-            
+            .bx div {
+                margin: 10px;
+            }
         }
         @media (min-width: 992px) {
             /* 데스크탑 */
