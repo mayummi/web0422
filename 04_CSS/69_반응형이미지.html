@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html {font-size: 10px;}
+        html {
+            font-size: 10px;
+        }
         img {
-            /*
-            가변이미지
-            이미지 크기보다 큰 화면에서는 이미지 원래 크기대로 표시되고,
-            이미지 크기보다 작은 화면에서는 이미지가 장치 크기에 맞게 작아짐.
+            /* 
+                가변 이미지
+                이미지 크기보다 큰 화면에서는 이미지 원래 크기대로 표시되고,
+                이미지 크기보다 작은 화면에서는 이미지가 장치 크기에 맞게 작아짐.
             */
             max-width: 100%;
             /* height: auto; */
         }
 
-        /*  뷰포트 단위: vw, vh, v */
+        /* 뷰포트 단위: vw, vh, vmin, vmax */
         p {
             font-size: 2vw;
         }
