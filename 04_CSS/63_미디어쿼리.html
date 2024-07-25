@@ -22,6 +22,7 @@
             padding: 0;
             list-style: none;
         }
+
         img {
             width: 100%;
             max-width: 100%;
@@ -36,17 +37,19 @@
                 2. 사용
                     선택자 {속성: var(--변수명);}
 
-            background: url(이미지);
+
+            url(이미지)
             scale()
             rotate()
             translate()
             skew()
-            left: calc(10 - 2);
+            calc(10 - 2)
             var()
+
         */
 
         /* 색상 */
-        :root {
+        html {
             --violet: rgb(81, 7, 118);
             --bluesky: #a4f208;
             --skyblue: rgb(138, 172, 13);
@@ -109,7 +112,6 @@
         /* 메인 콘텐츠 */
         .main {
             color: var(--gray);
-
         }
         .main img:first-of-type {
             display: none;
@@ -133,11 +135,11 @@
         }
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
-        /* 최소 600px 이상의 장치: tablet */
+        /* 최소 576px 이상의 장치: tablet, desktop */
 
         /* 
             미디어쿼리
-            중단점(breakpoint): 576, 768, 992, 1200, 1440, (576, 992 많이 사용)
+            중단점(breakpoint): 576, 992
             @media (조건) {
                 CSS 코드
             }
@@ -145,11 +147,10 @@
 
         @media (min-width: 576px) {
             .section {display: flex; flex-wrap: wrap;}
-            
             /* 
                 flex-grow: 1
                 flex-shrink: 0
-                flex-basis: auto (단위:px, %, ...
+                flex-basis: auto (단위: %, px, ...)
                 flex: grow shrink basis;
             */
             .menu {flex:33%;}
@@ -157,7 +158,7 @@
             .aside {flex:100%;}
 
             .main img:first-of-type {
-                display: inline-block;
+                display: block;
             }
             .main img:last-of-type {
                 display: none;
@@ -198,8 +199,8 @@
             <h1>The City</h1>
             <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
                 the old town and the modern city.</p>
-                <img src="https://www.w3schools.com/css/img_flowers.jpg" alt="하니아">
-                <img src="https://www.w3schools.com/css/img_smallflower.jpg" alt="하니아">
+            <img src="https://www.w3schools.com/css/img_flowers.jpg" alt="하니아">
+            <img src="https://www.w3schools.com/css/img_smallflower.jpg" alt="하니아">
         </main>
 
         <!-- 사이드 콘텐츠 -->
