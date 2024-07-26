@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            함수
+                1. 선언적 함수
+                2. 익명 함수 -> 화살표 함수
+
+                const 변수 = function(매개변수){실행문;}
+                const 변수 = 매개변수 => 실행문;
+        */
+        window.addEventListener("DOMContentLoaded", ()=>{
+            const ho = document.querySelectorAll("span").item(0);
+            const mi = document.querySelectorAll("span").item(2);
+            const se = document.querySelectorAll("span").item(4);
+            const d = new Date();
+
+            console.log(d);
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <span>시</span>
+        <span>:</span>
+        <span>분</span>
+        <span>:</span>
+        <span>초</span>
+    </div>
+</body>
+</html>

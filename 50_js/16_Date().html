@@ -27,15 +27,46 @@
         const mm = d.getMonth()+1;
         // 일:1~37
         const dd = d.getDate();
+        // 요일: 0(일)~6(토)
+        let we = d.getDay();
         // 시:0~23
         const hh = d.getHours();
         // 분:0~59
         const mi = d.getMinutes();
         // 초:0~59
         const ss = d.getSeconds();
+
+        /* if (we == 0) {
+            we = "일요일";
+        } else if (we === 1) {
+            we = "월요일";
+        } else if (we === 2) {
+            we = "화요일";
+        } else if (we === 3) {
+            we = "수요일";
+        } else if (we === 4) {
+            we = "목요일";
+        } else if (we === 5) {
+            we = "금요일";
+        } else {
+            we = "토요일";
+        } */
+
+        switch (we) {
+            case 0: we = "일"; break;
+            case 1: we = "월"; break;
+            case 2: we = "화"; break;
+            case 3: we = "수"; break;
+            case 4: we = "목"; break;
+            case 5: we = "금"; break;
+            default: we = "토";
+            
+        }
+
+        // 출력
         document.write("<hr>"+yy+"년"+mm+"월"+dd+"일<br>"+hh+":"+mi+":"+ss);
 
-        document.write(`<hr>${yy}년${mm}월${dd}일<br>${hh}:${mi}:${ss}`);
+        document.write(`<hr>${yy}년${mm}월${dd}일 (${we})<br>${hh}:${mi}:${ss}`);
     </script>
 </body>
 </html>

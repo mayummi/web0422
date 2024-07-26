@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* typo */
+html {
+    font-size:10px;
+}
+body {
+    /* font: 굵기 크기/줄간격 글꼴1, 글골2; */
+    font:1.5rem/1.5 "Noto Sans KR", Arial, sans-serif;
+}
+h2, h3 {
+    font-weight: 300;
+}
+img, vedio {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    height: auto;
+}
