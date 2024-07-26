@@ -14,13 +14,65 @@
                 const 변수 = 매개변수 => 실행문;
         */
         window.addEventListener("DOMContentLoaded", ()=>{
-            const ho = document.querySelectorAll("span").item(0);
-            const mi = document.querySelectorAll("span").item(2);
-            const se = document.querySelectorAll("span").item(4);
-            const d = new Date();
+            const ho = document.querySelectorAll("span")[0];
+            const mi = document.querySelectorAll("span")[2];
+            const se = document.querySelectorAll("span")[4];
+            
+            // setInterval(함수, 밀리초);
+            setInterval(clock, 1000);
 
-            console.log(d);
-        });
+            function clock() {
+                const d = new Date();
+
+                /* if (se < 10) {
+                    se = "0" + se;
+                } else {
+                    se = se;
+                } */
+
+                /* 
+                    연산자
+                        1. 산술: +, -, *, /, %, **
+                        2. 비교: >, <, >=, <=, ==, ===, !=, !==
+                        3. 대입(할당): =, +=, -=, *=, /=, %=, **=
+                        4. 증감: ++, --
+                        5. 조건: ? :                
+
+                    항의 개수
+                        1. 단항: 증감
+                        2. 이항: 나머지
+                        3. 삼항: 조건
+
+                        예) 2 + 5
+
+                    조건 연산자
+                    (조건) ? 참 : 거짓;
+
+                */
+               
+               let hou = d.getHours();
+               (hou < 10) ? hou = "0" + hou : hou = hou;
+               //console.log(hou);
+               ho.innerText = hou;
+
+               let min = d.getMinutes();
+               (min < 10) ? min = "0" + min : min = min;
+               //console.log(min);
+               mi.innerText = min;
+
+                // 초(0~59)를 sec에 할당
+               let sec = d.getSeconds();
+               (sec < 10) ? sec = "0" + sec : sec = sec;
+               //console.log(sec);
+               se.innerText = sec;
+
+                function ze(num){
+                    return (num < 10) ? num = "0" + num : num = num;
+                }
+
+            } // clock_fn
+
+        }); // DOMContentLoaded
     </script>
 </head>
 <body>
