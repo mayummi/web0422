@@ -7,21 +7,100 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <style>
-        body * {outline: 1px dotted lime;}
+        body * {
+            outline: 1px dotted lime;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <!-- 
+            576이하 100% 
+            575이상: 540px
+            768이상: 720px
+            992이상: 960px
+            1200이상: 1140px
+        -->
         <div class="row">
-            <div class="col-sm">
+            <!-- col-sm: 576이하일때 100% -->
+            <!-- col-md: 768이하일때 100% -->
+            <!-- col-lg: 992이하일때 100% -->
+            <!-- col-xl: 1200이하일때 100% -->
+            <!-- col: 12등분 -->
+            <!-- 
+                col[-*][-숫자] 
+                여기서 *는 sm, md, lg, xl
+                숫자는 1~12, 숫자를 사용하지 않으면 균등하게 분할 된다.
+                기본적으로 숫자의 합은 12이하 이어야 한다.
+            -->
+            <div class="col-xl-2">
                 One of three columns
             </div>
-            <div class="col-sm">
+            <div class="col-xl-8">
                 One of three columns
             </div>
-            <div class="col-sm">
+            <div class="col-xl-2">
                 One of three columns
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <!-- 줄바꿈 -->
+            <div class="w-100"></div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+                1 of 3
+            </div>
+            <!-- 가변 가로 크기: col-*-auto -->
+            <div class="col-md-auto">
+                Variable width content
+            </div>
+            <div class="col col-lg-2">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-md-auto">
+                Variable width content
+            </div>
+            <div class="col col-lg-2">
+                3 of 3
             </div>
         </div>
     </div>
