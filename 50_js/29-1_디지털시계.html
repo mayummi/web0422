@@ -55,6 +55,11 @@
                 text-shadow: 0 0 5px #999;
                 font-family: "HSGaeulSenggak20", sans-serif;
             }
+            /* span의 크기를 지정하여 움직임 방지 */
+            #s1 #clock .dtime span {
+                display: inline-block;
+                width: 140px;
+            }
             /* 시간 */
             .dtime span:not(:last-child)::after {
                 content: " :";
