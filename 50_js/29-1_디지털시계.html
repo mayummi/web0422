@@ -5,30 +5,91 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
-            span:not(:last-child)::after {
+            /* 초기값 */
+            html {
+                font-size: 10px;
+            }
+            body {margin: 0;}
+            img {width: 100%; height: auto; object-fit: cover;}
+            /* 섹션1 */
+            #s1 {
+                position: relative;
+                /* display: flex; */
+                /* flex-direction: row; */
+                /* 주축 가운데 */
+                /* justify-content: center; */
+                /* 교차축 가운데 */
+                /* align-items: center; */
+                height: 100vh;
+                overflow: hidden;
+            }
+            #s1 #clock {
+                /* 화면 정가운데 배치 */
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            /* 날짜 디자인 */
+            .ddate {
+                font-size: 3rem;
+            }
+            /* 시간 */
+            .dtime {
+                font-size: 7.7rem;
+                font-weight: 300;
+                color: #fff;
+            }
+            /* 시간 */
+            .dtime span:not(:last-child)::after {
                 content: " :";
             }
         </style>
         <script>
             // DOM 요소를 모두 로딩한 후 - load 이벤트
             window.addEventListener("DOMContentLoaded", () => {
-                const ho = document.querySelectorAll("span")[0];
-                const mi = document.querySelectorAll("span")[1];
-                const se = document.querySelectorAll("span")[2];
+                const ye = document.querySelectorAll("span")[0];
+                const mo = document.querySelectorAll("span")[1];
+                const da = document.querySelectorAll("span")[2];
+                const we = document.querySelectorAll("span")[3];
+                const ho = document.querySelectorAll("span")[4];
+                const mi = document.querySelectorAll("span")[5];
+                const se = document.querySelectorAll("span")[6];
 
                 // 1초마다 clock 호출
                 setInterval(clock, 1000);
 
                 function clock() {
+                    // d라는 날짜 인스턴스 생성
                     const d = new Date();
 
+                    // 날짜/시간 값 가져오기
+                    let yea = d.getFullYear();
+                    let mon = d.getMonth()+1; /* 0~11 */
+                    let dat = d.getDate(); /* 0~11 */
+                    let wee = d.getDay(); /* 0(일)~6(토) */
                     let hou = d.getHours();
                     let min = d.getMinutes();
                     let sec = d.getSeconds();
                     
+                    switch (wee) {
+                        case 0: wee = "일"; break;
+                        case 1: wee = "월"; break;
+                        case 2: wee = "화"; break;
+                        case 3: wee = "수"; break;
+                        case 4: wee = "목"; break;
+                        case 5: wee = "금"; break;
+                        default: wee = "토";
+                    }
+
+                    // 출력
+                    ye.innerText = yea + "년";
+                    mo.innerText = ze(mon) + "월";
+                    da.innerText = ze(dat) + "일"; 
+                    we.innerText = wee + "요일"; 
                     ho.innerText = ze(hou);
                     mi.innerText = ze(min);
-                    se.innerText = ze(sec);
+                    se.innerText = ze(sec); 
                     
                     function ze(num) {
                         // 0~9는 00~09로 표기
@@ -39,10 +100,21 @@
         </script>
     </head>
     <body>
-        <div>
-            <span>시</span>
-            <span>분</span>
-            <span>초</span>
+        <div id="s1">
+            <img src="../assets/pic_1.jpg.jpg" alt="이미지">
+            <div id="clock">
+                <div class="ddate">
+                    <span>년</span>
+                    <span>월</span>
+                    <span>일</span>
+                    <span>요일</span>
+                </div>
+                <div class="dtime">
+                    <span>시</span>
+                    <span>분</span>
+                    <span>초</span>
+                </div>
+            </div>
         </div>
-    </body>
+        </body>
 </html>
