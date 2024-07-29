@@ -5,12 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+            @font-face {
+                font-family: "HSGaeulSenggak20";
+                src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSGaeulSenggak20.woff");
+            }
             /* 초기값 */
             html {
                 font-size: 10px;
             }
-            body {margin: 0;}
-            img {width: 100%; height: auto; object-fit: cover;}
+            body {
+                font-family: "Noto Sans KR", sans-serif;
+                margin: 0;
+                
+            }
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
             /* 섹션1 */
             #s1 {
                 position: relative;
@@ -39,6 +52,8 @@
                 font-size: 7.7rem;
                 font-weight: 300;
                 color: #fff;
+                text-shadow: 0 0 5px #999;
+                font-family: "HSGaeulSenggak20", sans-serif;
             }
             /* 시간 */
             .dtime span:not(:last-child)::after {
@@ -65,32 +80,45 @@
 
                     // 날짜/시간 값 가져오기
                     let yea = d.getFullYear();
-                    let mon = d.getMonth()+1; /* 0~11 */
+                    let mon = d.getMonth() + 1; /* 0~11 */
                     let dat = d.getDate(); /* 0~11 */
                     let wee = d.getDay(); /* 0(일)~6(토) */
                     let hou = d.getHours();
                     let min = d.getMinutes();
                     let sec = d.getSeconds();
-                    
+
                     switch (wee) {
-                        case 0: wee = "일"; break;
-                        case 1: wee = "월"; break;
-                        case 2: wee = "화"; break;
-                        case 3: wee = "수"; break;
-                        case 4: wee = "목"; break;
-                        case 5: wee = "금"; break;
-                        default: wee = "토";
+                        case 0:
+                            wee = "일";
+                            break;
+                        case 1:
+                            wee = "월";
+                            break;
+                        case 2:
+                            wee = "화";
+                            break;
+                        case 3:
+                            wee = "수";
+                            break;
+                        case 4:
+                            wee = "목";
+                            break;
+                        case 5:
+                            wee = "금";
+                            break;
+                        default:
+                            wee = "토";
                     }
 
                     // 출력
                     ye.innerText = yea + "년";
                     mo.innerText = ze(mon) + "월";
-                    da.innerText = ze(dat) + "일"; 
-                    we.innerText = wee + "요일"; 
+                    da.innerText = ze(dat) + "일";
+                    we.innerText = wee + "요일";
                     ho.innerText = ze(hou);
                     mi.innerText = ze(min);
-                    se.innerText = ze(sec); 
-                    
+                    se.innerText = ze(sec);
+
                     function ze(num) {
                         // 0~9는 00~09로 표기
                         return num < 10 ? (num = "0" + num) : (num = num);
@@ -101,7 +129,7 @@
     </head>
     <body>
         <div id="s1">
-            <img src="../assets/pic_1.jpg.jpg" alt="이미지">
+            <img src="../assets/pic_1.jpg.jpg" alt="이미지" />
             <div id="clock">
                 <div class="ddate">
                     <span>년</span>
@@ -116,5 +144,5 @@
                 </div>
             </div>
         </div>
-        </body>
+    </body>
 </html>
