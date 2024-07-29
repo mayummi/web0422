@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            span:not(:last-child)::after {
+                content: " :";
+            }
+        </style>
+        <script>
+            // DOM 요소를 모두 로딩한 후 - load 이벤트
+            window.addEventListener("DOMContentLoaded", () => {
+                const ho = document.querySelectorAll("span")[0];
+                const mi = document.querySelectorAll("span")[1];
+                const se = document.querySelectorAll("span")[2];
+
+                // 1초마다 clock 호출
+                setInterval(clock, 1000);
+
+                function clock() {
+                    const d = new Date();
+
+                    let hou = d.getHours();
+                    let min = d.getMinutes();
+                    let sec = d.getSeconds();
+                    
+                    ho.innerText = ze(hou);
+                    mi.innerText = ze(min);
+                    se.innerText = ze(sec);
+                    
+                    function ze(num) {
+                        // 0~9는 00~09로 표기
+                        return num < 10 ? (num = "0" + num) : (num = num);
+                    }
+                } // clock_fn
+            }); // DOMContentLoaded
+        </script>
+    </head>
+    <body>
+        <div>
+            <span>시</span>
+            <span>분</span>
+            <span>초</span>
+        </div>
+    </body>
+</html>

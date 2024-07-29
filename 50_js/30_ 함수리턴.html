@@ -15,14 +15,22 @@
                     함수명(argument, 인수, ...);
         */
 
-        // 함수 선언
-        function fn(para){
-            return (para + "호출?");
+        // 더하기
+        function add(parameter1, parameter2){
+            // return은 리턴값을 호출한 함수에게 되돌려 준다.
+            return (parameter1 + parameter2);
+            // 또는 return은 함수의 종료를 의미한다. 그래서 document.write는 출력되지 않는다.
+            document.write("나도 출력해줄래?");
         }
         // 함수 호출
-        console.log(fn("나"));
-        console.log(fn("너"));
-        console.log(fn("홍길동"));
+        const na = add(2, 5);
+        const yo = add(20, 50);
+        // const hong = fn("홍길동");
+
+        // 출력
+        document.write("2+5=", na);
+        document.write("<br>");
+        document.write("20+50=", yo);
     </script>
 </head>
 <body>
