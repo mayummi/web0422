@@ -8,13 +8,12 @@
     <script>
         /* 
             객체
-            window
-            document
-            DOM(HTML)
-            Date
-            Math.floor()
-            String
-            Object
+                window
+                document
+                DOM(HTML)
+                Date
+                Math
+                Object
 
             객체: {}
                 함수: function(){}
@@ -28,17 +27,41 @@
             color: "white"
         };
 
-        // 객체 리터럴로 객체 생성하면서 속성 추가
+        // 객체 리터럴로 객체 생성하면서 속성 할당
         const person1 = {
-            firstName: "John",
+            "firstName": "John",
             lastName: "Doe",
-            age: 50,
-            eyeColor: "blue"
+            age: 50
         };
 
-        // Create an Object
+        // 객체 접근 방법
+        person1.firstName;
+        person1["firstName"];
+        person1.lastName;
+        person1["lastName"];
+
+        const person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            "남자니?": true,
+            // 함수 값을 갖는 속성은 메소드이다.
+            fullName: function () {
+                // return person2.firstName + " " + person2.lastName;
+                // this는 person2를 참조한다. -> this는 person2 이다.
+                // 객체 내부의 this는 객체 자신을 가리킨다.
+                return this.firstName + " " + this.lastName;
+            },
+            "소유하고 있는것": {
+                car: "2대",
+                home: "5채", 
+            }
+        };
+
+        person2.fullname();
+
         // 객체 리터럴로 객체 생성
-        const person2 = {};
+        const person3 = {};
 
         // 속성 추가
         person2.firstName = "John";
@@ -46,10 +69,8 @@
         person2.age = 50;
         person2.eyeColor = "blue";
 
-
-        // new 키워드 객체 생성
-        const person3 = new Object();
-
+        // new 키워드로 객체 생성
+        const person4 = new Object();
 
         // 속성 추가
         person3.firstName = "John";
