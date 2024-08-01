@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*
-            transform
-            2D(x,y) 
-                rotate
-                scale
-                translate
-                skew
-
-            3D(x, y, z)
-                rotate
-                scale
-                translate
+        /* 
+            perspective(원근감): 숫자px;
+            transform(변형)
+                2D(x, y)
+                    rotate(각도)
+                    scale(w, h)
+                    scaleX(w)
+                    scaleY(h)
+                    translate(x, y)
+                    translateX(x)
+                    translateY(y)
+                    skew(각도, 각도)
+                    skewX(각도)
+                    skewY(각도)
+                3D(x, y, z)
+                    큐브 만들기
+                    rotateX(회전)
+                    rotateY(회전)
+                    scaleZ(크기 조절)
+                    translateZ(위치)
 
             2D
                 transform: rotate(숫자deg);
             3D
-                transformx: rotate(숫자deg);
-                transformY: rotate(숫자deg);
+                transform: rotateX(숫자deg);
+                transform: rotateY(숫자deg);
         */
         .rot {
             display: flex;
-            /* width: 90%; */
-            height: 400px;
+            width: 500px;
+            height: 200px;
             border: 1px solid red;
         }
+
         .rot div {
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             border: 1px solid red;
             margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+
             /* 
                 원근감
                 perspective: 숫자;
@@ -43,16 +56,19 @@
             */
             perspective: 800px;
         }
+
         span {
             display: block;
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             background: yellow;
             transition: 1s;
             text-align: center;
-            line-height: 300px;
+            /* line-height: 300px; */
+            /* backface-visibility: hidden; */
 
         }
+
         .rot div:first-child:hover span {
             transform: rotate(180deg);
             /* 
@@ -65,16 +81,19 @@
                 transition: [속성] 전환시간 [가속도] [지연시간];
             */
         }
+
         .rot div:nth-child(2):hover span {
             transform: rotateX(180deg);
         }
+
         .rot div:last-child:hover span {
             transform: rotateY(180deg);
         }
     </style>
 </head>
+
 <body>
-    
+
     <h1>변형</h1>
     <div class="rot">
         <div><span>2D</span></div>
@@ -82,4 +101,5 @@
         <div><span>3D-Y</span></div>
     </div>
 </body>
+
 </html>

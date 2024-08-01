@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* https://www.farmhannong.com/kor/main/index.do */
+        #rotate3d {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            perspective: 800;
+        }
+
+        /* .front {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .back {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        } */
+        #rotate3d:hover>div {
+            transform: rotateY(180deg);
+        }
+
+        #rotate3d>div {
+            /* 
+                글자 정중앙
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            */
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            transition: 1s;
+        }
+        #rotate3d .front {
+            background: lightcoral;
+            /* backface-visibility: hidden; */
+        }
+        #rotate3d .back {
+            background: lightblue;
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>팜한농 벤치 - 3-Y 회전</h1>
+
+    <div id="rotate3d">
+        <div class="front">
+            <div>Y거꾸로</div>
+        </div>
+        <div class="back">
+            <div>3D</div>
+        </div>
+    </div>
+</body>
+
+</html>
