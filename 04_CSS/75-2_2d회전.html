@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 2D 회전 벤치: https://www.chairone.co.kr/NEW_MY/ */
+        #rotate2d {
+            position: fixed;
+            right: -150px;
+            top: -150px;
+            width: 300px;
+            height: 300px;
+            /* transition: 1s; */
+            animation: rotate2d 10s infinite linear;
+        }
+
+        @keyframes rotate2d {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+
+        /* #rotate2d:hover {
+            transform: rotate(360deg);
+        } */
+    </style>
+</head>
+<body>
+    <h1>2D 회전</h1>
+    <div id="rotate2d"><a href="#"><img src="../assets/rotate2d.svg" alt="2D 회전"></a></div>
+</body>
+</html>
