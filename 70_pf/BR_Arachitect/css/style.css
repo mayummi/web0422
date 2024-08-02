@@ -38,16 +38,20 @@ nav ul li {
 
 /* 섹션1 */
 #sec1 {
+    /* h2의 position:absolute;의 left,top의 기준 */
     position: relative;
+    /* 헤더의 높이(54px)만큼 메인 이미지를 아래로 내리기 위해 지정함 */
     padding-top: 54px;
 }
 
 #sec1 h2 {
+    /* h2를 화면에 정중앙(가로/세로) 배치 */
     letter-spacing: 4px;
     font-weight: 400;
 }
 
 #sec1 h2 {
+    /* h2를 화면에 정중앙(가로/세로) 배치 */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -63,14 +67,15 @@ nav ul li {
 
 
 #sec1 div {
-    width: 1480px;
-    margin: 0 auto;
+    /* width: 1480px; */
+    /* margin: 0 auto; */
     height: 745px;
 }
 
 /* 섹션1,2,3,4 공통 */
 section {
     width: 1480px;
+    /* 블록레벨요소를 가로 가운데로 지정 */
     margin: 0 auto;
     padding-top: 96px;
 }
@@ -80,6 +85,7 @@ section li {
     width: 355px;
 }
 
+/* li요소 중에서 4의 배수(4번째, 8번째, ...) 요소를 제외한 li요소에 오른쪽 여백을 20px지정 */
 section li:not(:nth-of-type(4n)) {
     margin-right: 20px;
 }
@@ -87,7 +93,7 @@ section li:not(:nth-of-type(4n)) {
 
 /* 섹션2 */
 #sec2 h2 {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #f1f1f1;
     padding-bottom: 24px;
     /* margin-top: 72px; */
     margin-bottom: 48px;
@@ -95,6 +101,9 @@ section li:not(:nth-of-type(4n)) {
 
 #sec2 ul {
     display: flex;
+    /* flex-wrap은 줄바꿈 속성으로 기본값은 nowrap(줄바꿈 안함) */
+    /* 줄바꿈하기 위해서 wrap으로 지정 */
+    /* 줄바꿈은 부모의 가로 크기를 자식이 벗어날 상태일때 줄바꿈된다. */
     flex-wrap: wrap;
 }
 

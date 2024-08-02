@@ -13,12 +13,72 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
 }
 
+#sec1 {
+    position: relative;
+    padding-top: 54px;
+}
+
+/* #sec1 h2 {
+    
+    letter-spacing: 4px;
+    font-weight: 400;
+} */
+#sec1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+}
+
+#sec1 b {
+    padding: 8px 16px;
+    margin-right: 16px;
+}
+
+/* 폰 */
+nav {
+    display: none;
+}
+
+/* 섹션1 */
+#sec1 span {
+    display: none;
+}
+
 /* 768이상: 테블릿, 데스크탑 */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 40px;
+    }
+
+    #sec1 h2 {
+        top: 50%;
+    }
+}
 
 /* 992이상: 데스크탑 */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    /* 섹션공통 */
+    section {
+        width: 1480px;
+        margin: 0 auto;
+        padding-top: 96px;
+    }
+
+    /* 섹션1 */
+    #sec1 div {
+        height: 745px;
+    }
+}
