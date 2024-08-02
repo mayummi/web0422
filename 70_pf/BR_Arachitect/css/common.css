@@ -17,6 +17,7 @@
     font-style: normal;
 }
 
+/* 글꼴과 색상은 임의 지정한다. */
 html {
     font-size: 10px;
 }
@@ -69,6 +70,7 @@ button {
 }
 
 /* 헤더 */
+
 /* 섹션1 */
 #sec1 h2 {letter-spacing: 4px; font-weight: 400;}
 #sec1 b {
@@ -87,4 +89,43 @@ button {
 /* 푸터 */
 footer {
     color: #fff;
+}
+
+/* 배경색 */
+/* 헤더 */
+header {
+    background: #fff;
+}
+/* 섹션1 */
+#sec1 b {
+    background: #000;
+}
+#sec1 div {
+    background: #ccc;
+}
+
+/* 섹션2 */
+#sec2 div {
+    background: #ccc;
+}
+
+/* 섹션3 */
+#sec3 div {
+    background: #ccc;
+}
+#sec3 a {
+    background: #ccc;
+}
+
+/* 섹션4 */
+#sec4 button {
+    background: #000;
+}
+#sec4 .map {
+    background: #ccc;
+}
+
+/* 푸터 */
+footer {
+    background: #000;
 }

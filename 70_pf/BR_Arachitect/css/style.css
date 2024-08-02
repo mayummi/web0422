@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('reset.css');
-@import url('typo.css');
+@import url('common.css');
 
 html {
     scroll-behavior: smooth;
@@ -17,9 +17,10 @@ header {
     align-items: center;
     height:54px;
     padding: 0 30px;
-    background: #fff;
+    /* background: #fff; */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+/* 내비게이션 */
 nav ul {
     display: flex;
 }
@@ -46,8 +47,7 @@ nav ul li {
 }
 
 #sec1 b {
-    background: #000;
-    color: #fff;
+    
     padding: 8px 16px;
     margin-right: 16px;
 }
@@ -58,7 +58,6 @@ nav ul li {
     width: 1480px;
     margin: 0 auto;
     height: 745px;
-    background: #ccc;
 }
 
 /* 섹션1,2,3,4 공통 */
@@ -99,13 +98,12 @@ section li:not(:nth-of-type(4n)) {
 #sec2 h3 {
     position: absolute;
     background: #000;
-    color: #fff;
+    /* color: #fff; */
     padding: 8px 24px;
 }
 
 #sec2 div {
     height: 100%;
-    background: #ccc;
 }
 
 /* 섹션3 */
@@ -125,13 +123,12 @@ section li:not(:nth-of-type(4n)) {
 
 #sec3 div {
     height: 240px;
-    background: #ccc;
 }
 
-#sec3 h3 {
+/* #sec3 h3 {
     font-size: 2.4rem;
     margin: 24px 0;
-}
+} */
 
 #sec3 li p {
     margin: 24px 0;
@@ -139,7 +136,6 @@ section li:not(:nth-of-type(4n)) {
 
 #sec3 a {
     display: block;
-    background: #ccc;
     text-align: center;
     padding: 12px 0;
 }
@@ -167,13 +163,11 @@ section li:not(:nth-of-type(4n)) {
 #sec4 button {
     margin: 16px 0 48px;
     padding: 12px 20px;
-    background: #000;
 }
 
 #sec4 .map {
     /* width: 1480px; */
     height: 845px;
-    background: #ccc;
 }
 
 /* 푸터 */
@@ -184,6 +178,4 @@ footer {
     /* text-align: center; */
     height: 85px;
     /* padding: 30px 0; */
-    background: #000;
-    color: #fff;
 }
