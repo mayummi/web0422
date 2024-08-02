@@ -3,21 +3,29 @@
 @import url('common.css');
 
 html {
+    /* 내비게이션의 버튼 클릭시 부드러운 움직임 */
     scroll-behavior: smooth;
 }
 
 /* 헤더 영역 */
 header {
+    /* 헤더 고정 */
+    position: fixed;
     /* position이 fixed나 absolute이면 width가 콘텐츠 크기 */
     z-index: 11;
-    position: fixed;
+    /* position: fixed와 position:absolut는 width가 내용크기로 지정된다. */
     width:100%;
     display: flex;
+    /* flex-direction: row(기본값)이면 주축이 가로, 교차축은 세로 */
+    /* flex-direction: column이면 주축이 세로, 교차축은 가로 */
+    /* 주축 정렬 */
     justify-content: space-between;
+    /* 교차축 정렬 */
     align-items: center;
     height:54px;
+    /* padding: 상하 좌우; */
     padding: 0 30px;
-    /* background: #fff; */
+    /* box-shawdow: x위치 y위치 흐림 색, 채 */
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 /* 내비게이션 */

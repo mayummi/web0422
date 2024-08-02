@@ -94,6 +94,14 @@ button {
 }
 
 /* 섹션4 */
+/* 폰트컬러 */
+::placeholder {
+    color: var(--graya);
+}
+body {
+    
+    color: var(--gray3);
+}
 /* 푸터 */
 footer {
     color: var(--white);
@@ -110,31 +118,15 @@ header {
     background: var(--black);
 }
 
-#sec1 div {
+#sec1 div,#sec2 div,#sec3 div,#sec3 a,#sec4 .map {
     background: var(--grayc);
 }
 
-/* 섹션2 */
-#sec2 div {
-    background: var(--grayc);
-}
 
-/* 섹션3 */
-#sec3 div {
-    background: var(--grayc);
-}
-
-#sec3 a {
-    background: var(--grayc);
-}
 
 /* 섹션4 */
 #sec4 button {
     background: var(--black);
-}
-
-#sec4 .map {
-    background: var(--grayc);
 }
 
 /* 푸터 */
