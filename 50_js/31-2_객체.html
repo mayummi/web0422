@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        b {
+            color: rgb(116, 115, 115);
+            font-weight: normal;
+            line-height: 2;
+        }
+    </style> -->
+    <script>
+
+        window.addEventListener("DOMContentLoaded", () => {
+
+
+            const person = {
+                firstName: "존",
+                lastName: "도",
+                age: 50,
+                "남자니?": true,
+                성과이름: function () {
+                    // return person.firstName + " " + person.lastName
+                    return this.firstName + " " + this.lastName
+                }
+            };
+            myCar = {
+                type: "피아트",
+                model: "500",
+                color: "흰색"
+            };
+
+            const div = document.querySelector("div");
+
+            // 출력
+            div.innerHTML = 
+            `<b>이름은 어떻게 되세요?</b><br>
+            ${person.firstName}
+            <br><b>성은?</b><br>
+            ${person.lastName}
+            <br><b>나이는?</b><br>
+            ${person.age}
+            세<br>
+            <b>너 남자니?</b> <br>
+            ${(person["남자니?"] ? "예" : "아니오")}
+            <br><b>이름을 다시 한 번 성과 함께 말해주세요?</b>
+            ${person.성과이름()}
+            입니다. <br><b>차를 가지고 있군요 어떤 차인가요?</b>
+            <br>
+            ${person.myCar.type}
+            이구요. <br>모델명은
+            ${person.myCar.model}
+            이구요. <br>색깔은
+            ${person.myCar.color}
+            입니다.`
+
+            const b = document.querySelectorAll("b");
+
+            console.log(b.length);
+
+            /* 
+                HTML컬렉션 객체
+                    length: 개수
+                HTMLCollection 객체의 개수
+            */
+            // 요소의 개수 만큼 반복
+            // for ~ of 
+            /* 
+                객체.forEach(function(ele, idx){}) (ver.ES5)
+            */
+            /* 
+
+                for ~ of (ver.ESS)
+                for(let 변수명 of HTML컬렉션) {
+                    변수명.코드;
+                }
+            */
+
+            // 화살표함수의 매개변수 괄호는 매개변수 1개일때만 생략할 수 있다.
+            b.forEach ((x, i) => {
+                x[i].style.color = "#333";
+                x[i].style.lineHeight = 2;
+                x[i].style.fontWeight = "normal";
+                x[i].style.fontSize = ".7rem";
+                console.log(x, i);
+            });
+            
+           // b 요소 개수 만큼 for문을 반복한다.
+            // for (let x of b) {
+            //     x.style.color = "#333";
+            //     x.style.lineHeight = 2;
+            //     x.style.fontWeight = "normal";
+            //     x.style.fontSize = ".7rem";
+            // }
+
+            // for(let i = 0; i < b.length; i++) {
+            //     b[i].style.color = "#333";
+            //     b[i].style.lineHeight = 2;
+            //     b[i].style.fontWeight = "normal";
+            //     b[i].style.fontSize = ".7rem";
+            // }
+            // b[0].style.color = "gray";
+            // b[1].style.color = "gray";
+            // b[2].style.color = "gray";
+            // b[3].style.color = "gray";
+            // b[4].style.color = "gray";
+            // b[5].style.color = "gray";
+            // b[6].style.color = "gray";
+
+            console.log(person.firstName);
+            console.log(person.lastName);
+            console.log(person.age);
+            // console.log(person.남자니?); -> 에러
+            console.log("객체.메소드():");
+            console.log(person.성과이름());
+
+            console.log('객체["속성"]:');
+            console.log(person["firstName"]);
+            console.log(person["lastName"]);
+            console.log(person["age"]);
+            console.log(person["남자니?"]);
+
+
+            console.log('객체.객체.속성');
+            console.log(person.myCar.type);
+            console.log(person.myCar.model);
+            console.log(person.myCar.color);
+
+
+            // 속성 값 변경 및 추가
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "blue";
+
+            console.log(person);
+
+
+
+
+        }); // DOMcontentLoaded
+    </script>
+</head>
+
+<body>
+    <h1>객체</h1>
+    <div>여기에 출력됩니다.</div>
+
+</body>
+
+</html>
