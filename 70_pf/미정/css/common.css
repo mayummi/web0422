@@ -29,9 +29,7 @@ body {
     font-size: 1.5rem;
 }
 
-h1 {
-    font-weight: normal;
-}
+
 
 h1,
 h2,
@@ -39,21 +37,29 @@ h3 {
     font-family: "NanumSquareNeo", sans-serif;
 }
 
-h1,
-h3 {
+h1 {
     font-size: 1.5rem;
 }
 
+/* 섹션제목 */
+/* h2는 글자 크기 부모 요소 크기의 1.5rem */
 h2 {
+    /* 2.4rem은 html(:root)의 2.4배, root에서 font-size; 24px  */
     font-size: 2.4rem;
 }
 
+/* 폼 요소는 글자 관련 속성을 상속 */
 input, ::placeholder, button {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
 }
 
 /* 헤더 */
+.logo {
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
 /* 섹션1 */
 #sec1 h2 {
     letter-spacing: 4px;
@@ -79,13 +85,14 @@ a {
 
 
 /* bg color */
-body {
-    background: var(--gray3);
-}
-header {
+
+body,header {
     background: var(--white);
 }
-#sec1 b, #sec4 button, footer {
+#sec1 b {
+    background: rgb(68, 67, 67);
+}
+#sec1 b, #sec4 button, footer, #sec2 h3 {
     background: var(--black);
 }
 #sec1 div,#sec2 div, #sec3 div,#sec3 a, #sec4 .map  {

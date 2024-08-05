@@ -23,15 +23,14 @@ header {
 }
 /* 섹션 공통 */
 section {
-    width: 1480px;
-    margin: 0 auto;
-    padding-top: 96px;
+    padding: 96px 32px 0;
 }
+
 
 /* 섹션1 */
 #sec1 {
     position: relative;
-    padding-top: 54px;
+    padding: 54px 0 0;
 }
 
 #sec1 h2 {
@@ -45,10 +44,21 @@ section {
     padding: 8px 16px;
     margin-right: 16px;
 }
+/* 섹션2 */
+#sec2 h2 {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+}
 
-
-
-/* 폰 */
+#sec2 li {
+    margin-bottom: 20px;
+}
+#sec2 h3 {
+    position: absolute;
+    padding: 8px 24px;
+}
+/* /////////////////////////////////폰//////////////////////////////////// */
 nav {
     display: none;
 }
@@ -57,6 +67,7 @@ nav {
     display: none;
 }
 
+/* ////////////////////////////////////////////////////////////////////// */
 /* 내비게이션 */
 
 /* 768이상: 테블릿, 데스크탑 */
@@ -81,6 +92,7 @@ nav {
         width: 1480px;
         margin: 0 auto;
     }
+    /* 섹션1 */
     /* 섹션2,3 공통 */
     section li {
         width: 355px;
@@ -88,10 +100,18 @@ nav {
     section li:not(:nth-of-type(4n)) {
         margin-right: 20px;
     }
-
-    /* 섹션1 */
     #sec1 div {
         height: 745px;
+    }
+    /* 섹션2 */
+    #sec2 ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #sec2 li {
+        height: 240px;
+        
     }
     
 }
