@@ -10,12 +10,12 @@
 
 :root {
     font-size: 10px;
-    /*
+    /* 
         변수 선언
             --변수명: 값; 
         사용
             속성: var(--변수명);
-     */
+    */
     --black: #000;
     --gray1: #111;
     --gray3: #333;
@@ -27,7 +27,6 @@
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
-    color: var(--gray3);
 }
 
 h1 {
@@ -49,27 +48,9 @@ h2 {
     font-size: 2.4rem;
 }
 
-/* a태그는 글자색을 상속받지 않는다. */
-a {
-    color: var(--gray1);
-}
-
-/* input, button, ::placeholder는 글자색, 글자크기, 글꼴 등을 상속받지 않는다. */
-input {
-    font-size: 1.5rem;
-    font-family: "Noto Sans KR", sans-serif;
-}
-
-::placeholder {
+input, ::placeholder, button {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
-    color: var(--graya);
-}
-
-button {
-    font-size: 1.5rem;
-    color: var(--white);
-    font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 헤더 */
@@ -79,57 +60,34 @@ button {
     font-weight: 400;
 }
 
-#sec1 b {
-    color: var(--white);
-}
-
-/* 섹션2 */
-#sec2 h3 {
-    color: var(--white);
-}
-
 /* 섹션3 */
 #sec3 h3 {
     font-size: 2.4rem;
 }
 
-/* 섹션4 */
-/* 폰트컬러 */
-::placeholder {
-    color: var(--graya);
-}
-body {
-    
-    color: var(--gray3);
-}
-/* 푸터 */
-footer {
-    color: var(--white);
+/* font color */
+a {
+    color: var(--gray1);
 }
 
-/* 배경색 */
-/* 헤더 */
+#sec1 b, #sec2 h3, #sec4 button, footer {
+    color: var(--white);
+}
+#sec4 ::placeholder {
+    color: var(--graya);
+}
+
+
+/* bg color */
+body {
+    background: var(--gray3);
+}
 header {
     background: var(--white);
 }
-
-/* 섹션1 */
-#sec1 b {
+#sec1 b, #sec4 button, footer {
     background: var(--black);
 }
-
-#sec1 div,#sec2 div,#sec3 div,#sec3 a,#sec4 .map {
+#sec1 div,#sec2 div, #sec3 div,#sec3 a, #sec4 .map  {
     background: var(--grayc);
-}
-
-
-
-/* 섹션4 */
-#sec4 button {
-    background: var(--black);
-}
-
-/* 푸터 */
-footer {
-    background: var(--black);
 }
