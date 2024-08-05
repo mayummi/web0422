@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+
+        window.addEventListener("DOMContentLoaded", ()=>{
+
+        
         /* 
             객체 생성
                 const 변수 = {
@@ -16,23 +20,31 @@
                 };
         */
         
+
        // 숫자 데이터의 경우 ""을 묶지 않는 것이 원칙!
        // 숫자형 문자 데이터의 경우는 묶을 수 있다.
-        const car = {
+        
+        // 속성은 ""을 묶어 사용 가능
+        const person = {
+            firstName: "존",
+            lastName: "도",
+            age: 50,
+            "남자니?": true,
+            "성과 이름": function(){
+                // return person.firstName + " " + person.lastName
+                return this.firstName + " " + this.lastName
+            }
+        };
+        myCar = {
             type: "Fiat",
             model: "500",
             color: "white"
         };
 
-        // 속성은 ""을 묶어 사용 가능
-        const person1 = {
-            "이름": "존",
-            "성": "도",
-            "나이": 50
-        };
-
         // 요소 찾기
         const div = document.querySelector("div");
+
+        div.innerText = person.firstName;
 
         // 출력
         /* 
@@ -46,52 +58,71 @@
             객체 접근 방법
                 객체.속성
                 객체["속성"]
+
+                객체.객체.속성
+
+            const div = document.querySelector("div");
+
+            div.style.color = "red";
         */
         // div.innerText = car.type;
         // div.innerText = car.model;
         // div.innerText = car.color;
 
-        console.log(cartype);
-        person1.firstName;
-        person1["firstName"];
 
-        const person2 = {
-            firstName: "John",
-            lastName: "Doe",
-            id: 5566,
-            "남자니?": true,
-            // 함수 값을 갖는 속성은 메소드이다.
-            fullName: function () {
-                // return person2.firstName + " " + person2.lastName;
-                // this는 person2를 참조한다. -> this는 person2 이다.
-                // 객체 내부의 this는 객체 자신을 가리킨다.
-                return this.firstName + " " + this.lastName;
-            },
-            "소유하고 있는것": {
-                car: "2대", 
-                home: "5채",
-            }
-        };
+        console.log("객체.속성:");
+        console.log(person.firstName);
+        console.log(person.lastName);
+        console.log(person.age);
+        // console.log(person.남자니?); -> 에러
+        console.log("객체.메소드():");
+        console.log(person.성과이름());
 
-        person2.fullname();
+        console.log(person["firstName"]);
+        console.log(person["lastName"]);
+        console.log(person["age"]);
+        console.log(person["남자니?"]);
 
-        // 객체 리터럴로 객체 생성
-        const person3 = {};
 
-        // 속성 추가
-        person2.firstName = "John";
-        person2.lastName = "Doe";
-        person2.age = 50;
-        person2.eyeColor = "blue";
+        // const person2 = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     id: 5566,
+        //     "남자니?": true,
+        //     // 함수 값을 갖는 속성은 메소드이다.
+        //     fullName: function () {
+        //         // return person2.firstName + " " + person2.lastName;
+        //         // this는 person2를 참조한다. -> this는 person2 이다.
+        //         // 객체 내부의 this는 객체 자신을 가리킨다.
+        //         return this.firstName + " " + this.lastName;
+        //     },
+        //     "소유하고 있는것": {
+        //         car: "2대", 
+        //         home: "5채",
+        //     }
+        // };
 
-        // new 키워드로 객체 생성
-        const person4 = new Object();
+        // person2.fullname();
 
-        // 속성 추가
-        person3.firstName = "John";
-        person3.lastName = "Doe";
-        person3.age = 50;
-        person3.eyeColor = "blue";
+        // // 객체 리터럴로 객체 생성
+        // const person3 = {};
+
+        // // 속성 추가
+        // person.firstName = "John";
+        // person.lastName = "Doe";
+        // person.age = 50;
+        // person.eyeColor = "blue";
+
+        // // new 키워드로 객체 생성
+        // const person4 = new Object();
+
+        // // 속성 추가
+        // person.firstName = "John";
+        // person.lastName = "Doe";
+        // person.age = 50;
+        // person.eyeColor = "blue";
+
+        }); // DOMcontentLoaded
     </script>
 </head>
 
