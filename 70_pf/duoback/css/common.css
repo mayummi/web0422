@@ -62,8 +62,10 @@ input, ::placeholder, button {
 
 /* 섹션1 */
 #sec1 h2 {
+    font-size: 3.6rem;
     letter-spacing: 4px;
     font-weight: 400;
+    color: var(--white);
 }
 
 /* 섹션3 */

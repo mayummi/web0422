@@ -24,6 +24,8 @@ body {
 }
 button {
     border:none;
+    /* 손 모양 */
+    cursor: pointer;
 }
 iframe {
     border:none;
