@@ -25,14 +25,14 @@
                 성과이름: function () {
                     // return person.firstName + " " + person.lastName
                     return this.firstName + " " + this.lastName
-                }
-            };
-            myCar = {
+                },
+            
+            myCar : {
                 type: "피아트",
                 model: "500",
                 color: "흰색"
-            };
-
+            }
+        };
             const div = document.querySelector("div");
 
             // 출력
@@ -70,6 +70,7 @@
             // for ~ of 
             /* 
                 객체.forEach(function(ele, idx){}) (ver.ES5)
+                객체.forEach(function(currentValue, index){}) (ver.ES5)
             */
             /* 
 
@@ -80,22 +81,29 @@
             */
 
             // 화살표함수의 매개변수 괄호는 매개변수 1개일때만 생략할 수 있다.
-            b.forEach ((x, i) => {
-                x[i].style.color = "#333";
-                x[i].style.lineHeight = 2;
-                x[i].style.fontWeight = "normal";
-                x[i].style.fontSize = ".7rem";
-                console.log(x, i);
-            });
-            
-           // b 요소 개수 만큼 for문을 반복한다.
-            // for (let x of b) {
-            //     x.style.color = "#333";
-            //     x.style.lineHeight = 2;
-            //     x.style.fontWeight = "normal";
-            //     x.style.fontSize = ".7rem";
-            // }
+            // c는 b[0]~b[5]를 의미한다.
+            // b.forEach (cv => {
+            //     cv.style.color = "#333";
+            //     cv.style.lineHeight = 2;
+            //     cv.style.fontWeight = "normal";
+            //     cv.style.fontSize = ".7rem";
+            //     console.log(x, i);
+            // });
 
+            // each()
+            
+            // for ~ of -> HTML컬렉션(Nodelist) 또는 배열
+            // for ~ in -> 객체
+            // b 요소 개수 만큼 for문을 반복한다.
+            // x는 b[0]이다.
+            for (let x of b) {
+                x.style.color = "#333";
+                x.style.lineHeight = 2;
+                x.style.fontWeight = "normal";
+                x.style.fontSize = ".7rem";
+            }
+
+            // length는 객체의 총 개수
             // for(let i = 0; i < b.length; i++) {
             //     b[i].style.color = "#333";
             //     b[i].style.lineHeight = 2;
@@ -110,24 +118,24 @@
             // b[5].style.color = "gray";
             // b[6].style.color = "gray";
 
-            console.log(person.firstName);
-            console.log(person.lastName);
-            console.log(person.age);
-            // console.log(person.남자니?); -> 에러
-            console.log("객체.메소드():");
-            console.log(person.성과이름());
+            // console.log(person.firstName);
+            // console.log(person.lastName);
+            // console.log(person.age);
+            // // console.log(person.남자니?); -> 에러
+            // console.log("객체.메소드():");
+            // console.log(person.성과이름());
 
-            console.log('객체["속성"]:');
-            console.log(person["firstName"]);
-            console.log(person["lastName"]);
-            console.log(person["age"]);
-            console.log(person["남자니?"]);
+            // console.log('객체["속성"]:');
+            // console.log(person["firstName"]);
+            // console.log(person["lastName"]);
+            // console.log(person["age"]);
+            // console.log(person["남자니?"]);
 
 
-            console.log('객체.객체.속성');
-            console.log(person.myCar.type);
-            console.log(person.myCar.model);
-            console.log(person.myCar.color);
+            // console.log('객체.객체.속성');
+            // console.log(person.myCar.type);
+            // console.log(person.myCar.model);
+            // console.log(person.myCar.color);
 
 
             // 속성 값 변경 및 추가
