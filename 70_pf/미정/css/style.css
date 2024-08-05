@@ -21,9 +21,19 @@ header {
     padding: 0 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+
 /* 섹션 공통 */
 section {
     padding: 96px 32px 0;
+}
+section h2 {
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 24px;
+    /* 세션3,4 */
+    margin-bottom: 24px;
+}
+section li {
+    margin-bottom: 20px;
 }
 
 
@@ -45,18 +55,38 @@ section {
     margin-right: 16px;
 }
 /* 섹션2 */
-#sec2 h2 {
-    border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 24px;
-    margin-bottom: 48px;
-}
 
-#sec2 li {
-    margin-bottom: 20px;
+
+#sec2 h2 {
+    margin-bottom: 24px;
 }
 #sec2 h3 {
     position: absolute;
     padding: 8px 24px;
+}
+
+/* 섹션3 */
+
+#sec3 li {
+    margin-bottom: 48px;
+}
+#sec3>p {
+    margin-bottom: 48px;
+}
+#sec3 h3, #sec3 li p:last-of-type {
+    margin: 24px 0;
+}
+#sec3 a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+}
+/* 섹션4 */
+#sec4>p {
+    margin-bottom: 24px;
+}
+#sec4 input {
+    width: 100%;
 }
 /* /////////////////////////////////폰//////////////////////////////////// */
 nav {
@@ -94,6 +124,10 @@ nav {
     }
     /* 섹션1 */
     /* 섹션2,3 공통 */
+    section ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
     section li {
         width: 355px;
     }
@@ -104,10 +138,7 @@ nav {
         height: 745px;
     }
     /* 섹션2 */
-    #sec2 ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    
 
     #sec2 li {
         height: 240px;

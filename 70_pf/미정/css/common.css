@@ -95,6 +95,6 @@ body,header {
 #sec1 b, #sec4 button, footer, #sec2 h3 {
     background: var(--black);
 }
-#sec1 div,#sec2 div, #sec3 div,#sec3 a, #sec4 .map  {
+#sec3 a {
     background: var(--grayc);
 }
