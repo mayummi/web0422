@@ -40,6 +40,7 @@ section li {
 #sec1 {
     position: relative;
     padding: 54px 0 0;
+    border: 1px sil;
 }
 
 #sec1 h2 {
@@ -47,6 +48,7 @@ section li {
     left: 50%;
     top: 62%;
     transform: translate(-50%, -50%);
+    border: none;
 }
 
 #sec1 b {
@@ -152,7 +154,8 @@ nav {
     }
 
     section li {
-        width: 355px;
+        /* calc숫자 - 숫자, 연산자 앞뒤는 띄어쓰기 한다. */
+        width: calc(25% - 15px);
     }
 
     section li:not(:nth-of-type(2n)) {
@@ -170,16 +173,21 @@ nav {
 @media (min-width: 992px) {
 
     /* 섹션 공통 */
+    /* 
+    환산? 전체: 1920, 콘텐트: 1480
+    문> 1480은 1903*100 = 77.77%
+    */
     section {
-        width: 1480px;
+        width: 77.77%;
         margin: 0 auto;
+        
     }
 
     /* 섹션1 */
     #sec1 h2 {
         top: 50%;
     }
-
+    
     /* 섹션2,3 공통 */
     section li:not(:nth-of-type(4n)) {
         margin-right: 20px;
@@ -191,9 +199,9 @@ nav {
     }
 
     /*  섹션2 */
-    #sec2 li {
+    /* #sec2 li {
         height: 240px;
-    }
+    } */
 
     /* 섹션4 */
     #sec4 .map {
