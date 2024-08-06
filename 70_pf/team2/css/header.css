@@ -11,7 +11,9 @@ a,ul,li {
     font-size: 15px;
     color: #292929;
 }
-
+header h1 img {
+    vertical-align: middle;
+}
 /* 헤더 */
 header {
     display: flex;
