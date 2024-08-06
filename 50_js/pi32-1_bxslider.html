@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        /* 공통 */
+
+        /* 섹션1 */
+
+        /* 슬라이드 */
+        .bx-wrapper {
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .bx-viewport {
+            height: 100% !important;
+        }
+
+        .bx-wrapper li {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .bx-wrapper .bx-controls-auto,
+        .bx-wrapper .bx-pager {
+            bottom: 30px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #fff;
+            margin: 0 18px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            transform: scale(2, 2);
+            background: #06D0DA;
+        }
+
+        .bx-wrapper .bx-controls-direction a {
+            width: 40px;
+            height: 80px;
+        }
+
+        .bx-wrapper .bx-prev {
+            left: 48px;
+            background: url(../assets/prev.png) no-repeat 0px 0px;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 48px;
+            background: url(../assets/next.png) no-repeat 0px 0px;
+        }
+
+        /* next 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+
+        /* 텍스트 */
+        #s1 .slideWrap p {
+            z-index: 9999;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="s1">
+        <div class="slideWrap">
+            <ul class="slide">
+                <li>
+                    <img src="../assets/pic_1.jpg.jpg" alt="슬라이드 이미지1">
+                    <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                </li>
+                <li>
+                    <img src="../assets/pic_2.jpg.jpg" alt="슬라이드 이미지2">
+                    <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                </li>
+                <li>
+                    <img src="../assets/pic_3.jpg.jpg" alt="슬라이드 이미지3">
+                    <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 제이쿼리 라이브러리 파일 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        // section1 - carousel
+        // jQuery bxSlide.js Plug-in
+
+        // 문서가 준비되면;
+        $(function () {
+
+            $('.slide').bxSlider({
+
+                ////////////////////////////////////////////////////////
+
+                // mode: "horizontal"(기본값), "fade", "vertical"
+                //mode: "fade",
+                // speed: 500(기본값), 밀리초
+                //speed: 1000,
+                // slideMargin: 0(기본값) -> 이미지 사이의 여백 지정
+                // slideMargin: 0
+                // https://gsgd.co.uk/sandbox/jquery/easing/ 
+                // easing: null
+
+                ////////////////////////////////////////////////////////
+
+                // pager: true(기본값) - pagination, indicator라고 부른다.
+                //pager: true,
+                // pagerType: 'full'(기본값), 'short'
+                //pagerType: 'short',
+                // pagerShortSeparator: '/'(기본값)
+                //pagerShortSeparator: ' | ',
+
+                ////////////////////////////////////////////////////////
+
+                // controls: true (기본값) -> next/prev 버튼
+                //controls: false, 
+                // play/stop 버튼 표시
+                autoControls: false,
+
+                ////////////////////////////////////////////////////////
+
+                // auto: false(기본값), true이면 자동 전환
+                auto: true,
+                // 클릭시 자동 슬라이드 정지
+                //stopAutoOnClick: false(기본값)
+                //stopAutoOnClick: true,
+                // pause: 4000 (기본값) -> 일시정지 시간
+                //pause: 1000,
+                // autoStart: true(기본값) -> 자동 슬라이드
+                //autoStart: true,
+                // autoDirection: 'next'(기본값) -> 슬라이드 방향
+                // next이면 오른쪽에서 왼쪽 방향
+                // prev이면 왼쪽에서 오른쪽 방향
+                //autoDirection: 'prev',
+                // autoHover: false(기본값), true이면 슬라이드에 호버시 일시정지
+                //autoHover: true,
+                // autoDelay: 0(기본값) -> 자동 슬라이드 시작 시 지연 시간
+                //autoDelay: 4000
+                // 슬라이드 크기(단, px 단위 생략)
+                // slideWidth: 1903
+            });
+
+        }); // document.readay()
+
+    </script>
+</body>
+
+</html>
