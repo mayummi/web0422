@@ -34,13 +34,13 @@ section h2 {
 
 section li {
     margin-bottom: 20px;
+    border: 1px solid #f1f1f1;
 }
 
 /* 섹션1 */
 #sec1 {
     position: relative;
     padding: 54px 0 0;
-    border: 1px sil;
 }
 
 #sec1 h2 {
@@ -154,8 +154,8 @@ nav {
     }
 
     section li {
-        /* calc숫자 - 숫자, 연산자 앞뒤는 띄어쓰기 한다. */
-        width: calc(25% - 15px);
+        /* calc(숫자 - 숫자), 연산자 앞뒤는 띄어쓰기 한다. */
+        width: calc(50% - 15px);
     }
 
     section li:not(:nth-of-type(2n)) {
@@ -174,21 +174,28 @@ nav {
 
     /* 섹션 공통 */
     /* 
-    환산? 전체: 1920, 콘텐트: 1480
-    문> 1480은 1903*100 = 77.77%
+        환산? 전체: 1920, 콘텐츠: 1480 
+        문> 1480은 1920 중에 몇 %인가?
+            1480 / 1903 * 100 = 77.77%
     */
     section {
         width: 77.77%;
+        /* width: 1480px; */
         margin: 0 auto;
-        
+        border: 1px solid red;
     }
 
     /* 섹션1 */
     #sec1 h2 {
-        top: 50%;
+        top: 55%;
     }
-    
+
     /* 섹션2,3 공통 */
+    section li {
+        /* calc(숫자 - 숫자), 연산자 앞뒤는 띄어쓰기 한다. */
+        width: calc(25% - 15px);
+    }
+
     section li:not(:nth-of-type(4n)) {
         margin-right: 20px;
     }
