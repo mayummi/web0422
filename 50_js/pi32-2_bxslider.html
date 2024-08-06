@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,47 +7,160 @@
     <title>Document</title>
     <!-- bx슬라이더 라이브러리 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        #slideWrap {
+            position: relative;
+            height: 450px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        .bx-wrapper {
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .bx-viewport {
+            height: 100%;
+        }
+
+        /* 인디케이터(페이저) */
+        .bx-wrapper .bx-pager {
+            /* 위치 */
+            bottom: 20px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            /* 전체 색상 */
+            background: #999;
+            /* 페이저 아이템의 좌우 간격 */
+            margin: 0 8px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* transform: scale(2, 2); */
+            /* 현재 보이는 이미지의 해당하는 페이저 색상 */
+            background: #fff;
+        }
+
+        /* 이전/다음 버튼 */
+        .bx-wrapper .bx-controls-direction a {
+            /* 크기 */
+            width: 60px;
+            height: 60px;
+            display: none;
+        }
+
+        /* 이전 */
+        .bx-wrapper .bx-prev {
+            left: 195px;
+            /* background: url() 반복 x위치 y위치/가로 세로; */
+            background: url(../assets/chevron_left_white_24dp.svg) no-repeat 0px 0px/60px 60px;
+        }
+
+        /* 다음 */
+        .bx-wrapper .bx-next {
+            right: 195px;
+            background: url(../assets/chevron_right_white_24dp.svg) no-repeat 0px 0px/60px 60px;
+        }
+
+        /* 다음 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+
+        /* 폰 */
+        #slideWrap img:last-of-type {
+            display: none;
+        }
+
+
+        @media (min-width: 768px) {
+
+            #slideWrap img:first-of-type {
+                display: none;
+            }
+            #slideWrap img:last-of-type {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* 이전/다음 버튼 */
+            .bx-wrapper .bx-controls-direction a {
+                /* 크기 */
+                display: block;
+            }
+        }
+    </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bx슬라이더 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
     <script>
-        /* 
-            예제 코드
-                https://bxslider.com/examples/auto-show-start-stop-controls
-            
-            1. 위 사이트의 HTML 코드를 <body> 태그 사이에 붙어 넣기한다.
-            2. img 태그의 이미지 경로와 파일 변경한다. alt 속성 추가
-            3. <script> 태그 사이에 제이쿼리 로드 이벤트 작성 후
-            4. 위 사이트의 JS 코드를 로드 이벤트 사이에 붙어 넣기 한다.
-            5. 제이쿼리, bx슬라이더 라이브러리 파일을 연결한다.
-                라이브러리 파일은? cdnjs.com
-                가) 제이쿼리.min.js -> <script>
-                나) bx슬라이더.min.js -> <script>
-                다) bx슬라이더.min.css -> <link>
-
-        */
-        // 로드 이벤트
-        // window.addEventListener("DOMContentLoaded", ()=>{});
-        // bxSlider은 제이쿼리 플러그인 프로그램이다.
-        // $(document).ready(()=>{});
         $(() => {
-            $('.bxslider').bxSlider({
+            // $(".slider")와 <div class="slider"> 이름이 같아야 한다.
+            $('.slider').bxSlider({
+                // auto는 자동슬라이드 기능으로 true이면 자동슬라이드 처리하고, false(기본값)이면 자동슬라이드되지 않는다.
                 auto: true,
-                autoControls: true,
                 stopAutoOnClick: true,
-                pager: true,
-                slideWidth: 600
+
+                // autoControls은 play(실행)/pasue(일지정지) 버튼을 true이면 보이고, false(기본값) 이면 숨긴다.
+                // autoControls: true,
+
+                // pager는 하단 중앙의 인디케이터로 true(기본값)이면 보이고, false이면 숨겨진다.
+                // pager: false,
+
+                // slideWidth는 슬라이드 크기 지정, 단위는 px로 숫자만 기록한다.
+                // slideWidth: 1200,
+
+                // controls는 다음(next)/이전(prev) 버튼으로 true(기본값)이면 보이고, false이면 숨겨진다.
+                // constrols: false
             });
         }); // 로드 이벤트
     </script>
 </head>
 
 <body>
-    <div class="bxslider">
-        <div><img src="../assets/pic_1.jpg.jpg" alt="슬라이드이미지1"></div>
-        <div><img src="../assets/pic_2.jpg.jpg" alt="슬라이드이미지2"></div>
-        <div><img src="../assets/pic_3.jpg.jpg" alt="슬라이드이미지3"></div>
+    <div id="slideWrap">
+        <div class="slider">
+            <div>
+                <img src="../assets/0RyBuyO4OFxt.png" alt="슬라이드이미지1">
+                <img src="../assets/NKVws2Qx14xK.png" alt="슬라이드이미지1">
+            </div>
+            <div>
+                <img src="../assets/9RKeDkxjvrKG.png" alt="슬라이드이미지2">
+                <img src="../assets/RZiIYqEyx85H.png" alt="슬라이드이미지2">
+            </div>
+            <div>
+                <img src="../assets/aimIqX97EM7r.png" alt="슬라이드이미지3">
+                <img src="../assets/SqbkkoVoWh13.png" alt="슬라이드이미지3">
+            </div>
+            <div>
+                <img src="../assets/DDU1fdvczj5l.png" alt="슬라이드이미지4">
+                <img src="../assets/veCv6O0G1uVg.png" alt="슬라이드이미지4">
+            </div>
+            <div>
+                <img src="../assets/rFvblXYtQcdB.png" alt="슬라이드이미지5">
+                <img src="../assets/zHZDQBo8Rv2I.png" alt="슬라이드이미지5">
+            </div>
+        </div>
     </div>
 </body>
 
