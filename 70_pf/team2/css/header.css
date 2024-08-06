@@ -6,9 +6,11 @@
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.2rem;
+    border: 1px solid red;
 }
 a,ul,li {
     font-size: 15px;
+    font-weight: 500;
     color: #292929;
 }
 header h1 img {
@@ -29,9 +31,9 @@ header {
     display: flex;
 }
 .main>li {
-    height: 30px;
+    height: 50px;
     text-align:center;
-    line-height: 30px;
+    /* line-height: 100px; */
     padding: 0 30px;
 }
 .main>li>a {
