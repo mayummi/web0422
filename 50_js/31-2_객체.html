@@ -14,142 +14,82 @@
     </style> -->
     <script>
 
-        window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
+
+const person = {
+    "first Name": "존",
+    lastName: "도",
+    age: 50,
+    "남자니?": true,
+    "성과 이름": function () {
+        return this["first Name"] + " " + this.lastName
+    },
+    myCar: {
+        type: "피아트",
+        model: "500",
+        color: "흰색"
+    }
+};
+
+// 요소 찾기
+const div = document.querySelector("div");
+
+// 출력
+div.innerHTML = `<b>이름이 어떻게 되세요?</b> ${person["first Name"]}<br><b>성은 어떻게 되세요?</b> ${person.lastName} <br><b>나이는 어떻게 되세요?</b> ${person.age}세<br><b>남자 입니까?</b> ${(person["남자니?"] ? "예" : "아니오")}<br><b>이름을 다시 한 번 성과 함께 말해주세요?</b> ${person["성과 이름"]()}입니다. <br><b>차를 가지고 있군뇨! 어떤 차인가요?</b> ${person.myCar.type} 이구요. 모델명은 ${person.myCar.model}이구요. 색깔은 ${person.myCar.color}입니다.`
+
+const b = document.querySelectorAll("b");
+
+// console.log(b.length);
+
+/* 
+    HTML컬렉션 객체
+        length: 개수
+*/
+/* 
+    객체.forEach(function(currentValue, index){}) (ver.ES5)            
+*/
+// 화살표함수의 매개변수 괄호는 매개변수 1개일때만 생략할 수 있다.
+// c는 b[0]~b[5]를 의미한다.
+// b.forEach(cv => {
+//     cv.style.color = "#333";
+//     cv.style.lineHeight = 2;
+//     cv.style.fontWeight = "normal";
+//     cv.style.fontSize = ".7rem";
+// });
+
+/* 
+    for ~ of (ver.ES6)
+    for(let 변수명 of HTML컬렉션) {
+        변수명.코드;
+    }       
+*/
+// for ~ of -> HTML컬렉션(Nodelist)
+// b 요소 개수 만큼 for문을 반복한다.
+for (let x of b) {
+    x.style.color = "#333";
+    x.style.lineHeight = 2;
+    x.style.fontWeight = "normal";
+    x.style.fontSize = ".7rem";
+}
+
+// length는 객체의 총 개수
+// for(let i = 0; i < b.length; i++) {
+//     b[i].style.color = "#333";
+//     b[i].style.lineHeight = 2;
+//     b[i].style.fontWeight = "normal";
+//     b[i].style.fontSize = ".7rem";
+// }
 
 
-            const person = {
-                firstName: "존",
-                lastName: "도",
-                age: 50,
-                "남자니?": true,
-                성과이름: function () {
-                    // return person.firstName + " " + person.lastName
-                    return this.firstName + " " + this.lastName
-                },
-            
-            myCar : {
-                type: "피아트",
-                model: "500",
-                color: "흰색"
-            }
-        };
-            const div = document.querySelector("div");
+// 속성 값 변경 및 추가
+person["first Name"] = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
 
-            // 출력
-            div.innerHTML = 
-            `<b>이름은 어떻게 되세요?</b><br>
-            ${person.firstName}
-            <br><b>성은?</b><br>
-            ${person.lastName}
-            <br><b>나이는?</b><br>
-            ${person.age}
-            세<br>
-            <b>너 남자니?</b> <br>
-            ${(person["남자니?"] ? "예" : "아니오")}
-            <br><b>이름을 다시 한 번 성과 함께 말해주세요?</b>
-            ${person.성과이름()}
-            입니다. <br><b>차를 가지고 있군요 어떤 차인가요?</b>
-            <br>
-            ${person.myCar.type}
-            이구요. <br>모델명은
-            ${person.myCar.model}
-            이구요. <br>색깔은
-            ${person.myCar.color}
-            입니다.`
+// console.log(person);
 
-            const b = document.querySelectorAll("b");
-
-            console.log(b.length);
-
-            /* 
-                HTML컬렉션 객체
-                    length: 개수
-                HTMLCollection 객체의 개수
-            */
-            // 요소의 개수 만큼 반복
-            // for ~ of 
-            /* 
-                객체.forEach(function(ele, idx){}) (ver.ES5)
-                객체.forEach(function(currentValue, index){}) (ver.ES5)
-            */
-            /* 
-
-                for ~ of (ver.ESS)
-                for(let 변수명 of HTML컬렉션) {
-                    변수명.코드;
-                }
-            */
-
-            // 화살표함수의 매개변수 괄호는 매개변수 1개일때만 생략할 수 있다.
-            // c는 b[0]~b[5]를 의미한다.
-            // b.forEach (cv => {
-            //     cv.style.color = "#333";
-            //     cv.style.lineHeight = 2;
-            //     cv.style.fontWeight = "normal";
-            //     cv.style.fontSize = ".7rem";
-            //     console.log(x, i);
-            // });
-
-            // each()
-            
-            // for ~ of -> HTML컬렉션(Nodelist) 또는 배열
-            // for ~ in -> 객체
-            // b 요소 개수 만큼 for문을 반복한다.
-            // x는 b[0]이다.
-            for (let x of b) {
-                x.style.color = "#333";
-                x.style.lineHeight = 2;
-                x.style.fontWeight = "normal";
-                x.style.fontSize = ".7rem";
-            }
-
-            // length는 객체의 총 개수
-            // for(let i = 0; i < b.length; i++) {
-            //     b[i].style.color = "#333";
-            //     b[i].style.lineHeight = 2;
-            //     b[i].style.fontWeight = "normal";
-            //     b[i].style.fontSize = ".7rem";
-            // }
-            // b[0].style.color = "gray";
-            // b[1].style.color = "gray";
-            // b[2].style.color = "gray";
-            // b[3].style.color = "gray";
-            // b[4].style.color = "gray";
-            // b[5].style.color = "gray";
-            // b[6].style.color = "gray";
-
-            // console.log(person.firstName);
-            // console.log(person.lastName);
-            // console.log(person.age);
-            // // console.log(person.남자니?); -> 에러
-            // console.log("객체.메소드():");
-            // console.log(person.성과이름());
-
-            // console.log('객체["속성"]:');
-            // console.log(person["firstName"]);
-            // console.log(person["lastName"]);
-            // console.log(person["age"]);
-            // console.log(person["남자니?"]);
-
-
-            // console.log('객체.객체.속성');
-            // console.log(person.myCar.type);
-            // console.log(person.myCar.model);
-            // console.log(person.myCar.color);
-
-
-            // 속성 값 변경 및 추가
-            person.firstName = "John";
-            person.lastName = "Doe";
-            person.age = 50;
-            person.eyeColor = "blue";
-
-            console.log(person);
-
-
-
-
-        }); // DOMcontentLoaded
+}); //DOMContentLoaded
     </script>
 </head>
 
