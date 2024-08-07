@@ -46,7 +46,7 @@
             width: auto;
             left: calc(50% - 100px);
             transform: translateX(-50%);
-            bottom: 35%;
+            bottom: 38%;
         }
 
         .bx-wrapper .bx-pager.bx-default-pager a:focus,
@@ -71,7 +71,7 @@
         /* 실행/일시정지 버튼 */
         .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
             height: 30px;
-            bottom: 35%;
+            bottom: 38%;
             right: calc(50% - 100px);
             width: auto;
         }
@@ -152,11 +152,19 @@
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
-            top: 35%;
+            top: 38%;
             font-size: 60px;
+            font-weight: 700;
             color: #fff;
             /* p태그 안에서 가운데 */
             text-align: center;
+            opacity: 0;
+        }
+
+        #slideWrap p.active{
+            top: 38%;
+            opacity: 1;
+            transition: 1s;
         }
     </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
@@ -168,8 +176,31 @@
             $('.slider').bxSlider({
                 auto: true,
                 autoControls: true,
-                stopAutoOnClick: true
+                stopAutoOnClick: true,
+
+                // 이벤트:슬라이드 이미지가 바뀌면,
+                //onSlideBefore: function(){코드;}
+                onSlideBefore: function(){beforeMotion()},
+                onSlideAfter: function(){afterMotion()}
+                // 슬라이딩 전 메인타이틀이 아래에있다,ㄱ\
+                //동작: 메인타이틀이 아래서 위로 나타난다.
+                
             });
+            // 슬라이딩 전 메인타이틀이 아래에 있다가
+            /* 
+                document.querySelector("#slideWrap").querySelectorAll("p")객체.classList.add("클래스명") -> 클래스 추가
+                document.querySelector("#slideWrap").querySelectorAll("p")객체.classList.remove("클래스명") -> 클래스 제거
+
+                $("#slideWrap p").addClass() -> 클래스 추가
+                $("#slideWrap p").removeClass() -> 클래스 제거
+            */
+            function beforeMotion(){
+                $("#slideWrap p").removeClass("active")
+            }
+            // 슬라이딩 후 메인타이틀이 위로 나타난다.
+            function afterMotion(){
+                $("#slideWrap p").addClass("active")
+            }
         }); // 로드 이벤트
     </script>
 </head>
@@ -180,7 +211,7 @@
             <div>
                 <!-- 테블릿/데스크 탑 -->
                 <img src="../assets/lotte/202010280624033660 (1).jpg" alt="슬라이드이미지1">
-                <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께합니다.</p>
+                <p class="active">언제 어디서나, 모든 순간<br>고객의 곁에서 함께합니다.</p>
             </div>
             <div>
                 <img src="../assets/lotte/202010280628151570 (1).jpg" alt="슬라이드이미지2">
