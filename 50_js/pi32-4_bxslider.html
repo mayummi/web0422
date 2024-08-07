@@ -19,7 +19,7 @@
             vw,vh,vmin,vmax - viewport(뷰포트)
                 
              */
-            height: 100vh;
+            min-height: 100vh;
             object-fit: cover;
         }
 
@@ -44,7 +44,7 @@
         .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
             /* 위치 */
             width: auto;
-            left: calc(50% - 100px);
+            left: calc(50% - 30px);
             transform: translateX(-50%);
             bottom: 38%;
         }
@@ -72,7 +72,7 @@
         .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
             height: 30px;
             bottom: 38%;
-            right: calc(50% - 100px);
+            right: calc(50% - 90px);
             width: auto;
         }
 
@@ -116,7 +116,7 @@
         /* 이전/다음 버튼 */
         .bx-wrapper .bx-controls-direction a {
             /* 크기 */
-            /* display: block; */
+            display: none;
             width: 40px;
             height: 79px;
             /* 버튼의 수직 중양 배치 */
@@ -152,8 +152,21 @@
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
-            top: 50%;
-            font-size: 60px;
+            top: 43%;
+            width: 100%;
+            /* 
+                url(이미지)
+                calc(숫자 - 숫자)
+                var(--변수명)
+                translate()
+
+                max(숫자, 숫자) -> 숫자 중에 큰 값으로 지정
+                min(숫자, 숫자) -> 숫자 중에 작은 값으로 지정
+            */
+            /* 
+                1920 * 7 / 100 = 164.4px
+            */
+            font-size: min(60px, 7vw);
             font-weight: 700;
             color: #fff;
             /* p태그 안에서 가운데 */
@@ -164,7 +177,17 @@
         #slideWrap p.active{
             top: 38%;
             opacity: 1;
-            transition: 1s;
+            transition: .5s;
+        }
+
+        @media (min-width:992px) {
+            .bx-wrapper .bx-controls-direction a {
+                #slideWrap {
+                    min-height: 850px;
+                };
+
+                /* display: block; */
+            }
         }
     </style>
     <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
@@ -182,10 +205,11 @@
                 //onSlideBefore: function(){코드;}
                 onSlideBefore: function(){beforeMotion()},
                 onSlideAfter: function(){afterMotion()}
-                // 슬라이딩 전 메인타이틀이 아래에있다,ㄱ\
+                // 슬라이딩 전 메인타이틀이 아래에있다,
                 //동작: 메인타이틀이 아래서 위로 나타난다.
                 
             });
+            afterMotion();
             // 슬라이딩 전 메인타이틀이 아래에 있다가
             /* 
                 document.querySelector("#slideWrap").querySelectorAll("p")객체.classList.add("클래스명") -> 클래스 추가
