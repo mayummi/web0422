@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBWAY</title>
     <style>
-        body {
-            margin: 0;
+        body {margin: 0;}
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .tablet, .desktop {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            .phone {display: none;}
+            .tablet {display: block;}
+        }
+        @media (min-width: 992px) {
+            .tablet {display: none;}
+            .desktop {display: block;}
         }
     </style>
 </head>
 <body>
-    <img src="images/draft.png" alt="시안">
+    <img class="desktop" src="images/draft_main-pc.png" alt="데스크탑시안">
+    <img class="tablet" src="images/draft_main-tablet.png" alt="테블릿시안">
+    <img class="phone" src="images/draft_main-phone.png" alt="폰시안">
+
 </body>
 </html>
