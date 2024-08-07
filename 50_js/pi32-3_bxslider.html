@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bx슬라이더 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        #slideWrap {
+            position: relative;
+            height: 450px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        .bx-wrapper {
+            height: 100%;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .bx-viewport {
+            height: 100%;
+        }
+
+        /* 인디케이터(페이저) */
+        .bx-wrapper .bx-pager {
+            /* 위치 */
+            bottom: 20px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            /* 전체 색상 */
+            background: #999;
+            /* 페이저 아이템의 좌우 간격 */
+            margin: 0 8px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            /* transform: scale(2, 2); */
+            /* 현재 보이는 이미지의 해당하는 페이저 색상 */
+            background: #fff;
+        }
+
+        /* 이전/다음 버튼 */
+        .bx-wrapper .bx-controls-direction a {
+            /* 크기 */
+            width: 50px;
+            height: 76px;
+            display: none;
+            background: url(../assets/larocheposay/ico_comm_sp.png) no-repeat;
+        }
+
+
+        /* 이전 */
+        .bx-wrapper .bx-controls-direction a.bx-prev {
+            left: 0px;
+            /* background: url() 반복 x위치 y위치/가로 세로; */
+            background-position: 0 -129px;
+            
+        }
+
+        /* 다음 */
+        .bx-wrapper .bx-controls-direction a.bx-next {
+            right: 0px;
+            background-position: -55px -129px;
+        }
+
+        /* 다음 버튼 호버시 사라지는 현상 초기화 */
+        .bx-wrapper .bx-next:focus,
+        .bx-wrapper .bx-next:hover {
+            background-position: 0 0;
+        }
+
+        /* 폰 */
+        #slideWrap img:last-of-type {
+            display: none;
+        }
+
+
+        @media (min-width: 768px) {
+
+            #slideWrap img:first-of-type {
+                display: none;
+            }
+            #slideWrap img:last-of-type {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* 이전/다음 버튼 */
+            .bx-wrapper .bx-controls-direction a {
+                /* 크기 */
+                display: block;
+            }
+        }
+    </style>
+    <!-- 제이쿼리 라이브러리 파일이 위쪽으로 지정 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        $(() => {
+            $('.slider').bxSlider({
+                auto: true,
+                stopAutoOnClick: true,
+            });
+        }); // 로드 이벤트
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <div class="slider">
+            <div>
+                <!-- 테블릿/데스크 탑 -->
+                <img src="../assets/larocheposay/20211229_1320012_157.jpg" alt="슬라이드이미지1">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/20240329_1805022_472.png" alt="슬라이드이미지2">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/20240329_1816050_478.jpg" alt="슬라이드이미지3">
+            </div>
+            <div>
+                <img src="../assets/larocheposay/20240730_1604050_061.png" alt="슬라이드이미지4">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
