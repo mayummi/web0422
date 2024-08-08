@@ -68,6 +68,7 @@ section li {
 
 /* 섹션3 */
 #sec3 li {
+    position: li;
     margin-bottom: 48px;
 }
 
@@ -75,7 +76,13 @@ section li {
     margin-bottom: 48px;
 }
 
-#sec3 h3,
+#sec3 li h3 {
+    /* ...생략효과 */
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#sec3 li h3,
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
@@ -210,9 +217,18 @@ nav {
         height: 240px;
     } */
 
-    /* 섹션4 */
-    #sec4 .map {
-        height: 845px;
+    /* 섹션3 */
+    #sec3 li {
+        position: relative;
+    }
+    #sec3 li p:last-of-type {
+        margin: 24px 0 64px;
+    }
+    
+    #sec3 a {
+        position: absolute;
+        width: 100%;
+        bottom:0;
     }
 
 }
