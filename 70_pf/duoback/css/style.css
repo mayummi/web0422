@@ -22,7 +22,9 @@ header {
 
 /* 섹션 공통 */
 section {
+    width: 77.77%;
     padding: 96px 32px 0;
+    margin: 0 auto;
 }
 
 section h2 {
@@ -42,7 +44,14 @@ section li {
     position: relative;
     padding: 54px 0 0;
 }
+#sec1 div {
+    /* 
+        1903 : 745 = 100 : x
+        1903x = 745 * 100 -> x = 39.1487...%
+    */
 
+    height: 39.15vw;
+}
 #sec1 h2 {
     position: absolute;
     left: 50%;
@@ -86,7 +95,6 @@ section li {
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
-
 #sec3 a {
     display: block;
     text-align: center;
@@ -110,9 +118,16 @@ section li {
     margin: 16px 0 48px;
 }
 
+
+/* 섹션4 */
 #sec4 .map {
-    height: 260px;
+    /* 
+        height: 845px; 
+        1903 : 845 = 100 : x
+        1903x = 845 * 100 -> x=44.4035...%
+    */
     margin-bottom: 8px;
+    height: 44.4vw;
 }
 
 /* 푸터 */
@@ -168,11 +183,23 @@ nav {
     section li:not(:nth-of-type(2n)) {
         margin-right: 20px;
     }
-
-    /* 섹션4 */
-    #sec4 .map {
-        height: 420px;
+    /* 섹션3 */
+    #sec3 li {
+        position: relative;
     }
+    #sec3 li p:last-of-type {
+        margin: 24px 0 64px;
+    }
+    
+    #sec3 a {
+        position: absolute;
+        width: 100%;
+        bottom:0;
+    }
+    /* 섹션4 */
+    /* #sec4 .map {
+        height: 420px;
+    } */
     
 }
 
@@ -208,27 +235,8 @@ nav {
     }
 
     /* 섹션1 */
-    #sec1 div {
+    /* #sec1 div {
         height: 745px;
-    }
-
-    /*  섹션2 */
-    /* #sec2 li {
-        height: 240px;
     } */
-
-    /* 섹션3 */
-    #sec3 li {
-        position: relative;
-    }
-    #sec3 li p:last-of-type {
-        margin: 24px 0 64px;
-    }
-    
-    #sec3 a {
-        position: absolute;
-        width: 100%;
-        bottom:0;
-    }
 
 }
