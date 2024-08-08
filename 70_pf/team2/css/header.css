@@ -40,6 +40,7 @@ header {
     display: block;
     padding: 16px 24px;
 }
+
 .main>li a:hover {
     color: #009132;
 }
@@ -56,5 +57,19 @@ header {
 .main:hover .sub {
     height: 200px;
     visibility: visible;
+    opacity: 1;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    transition: .3s;
+    background: #000;
+}
+.main:hover::before {
+    height: 20px;
     opacity: 1;
 }
