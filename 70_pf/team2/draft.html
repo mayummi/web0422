@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBWAY</title>
     <style>
         /* reset */
-        body {margin: 0;}
+        body {
+            margin: 0;
+        }
+
         img {
             width: 100%;
             height: auto;
             vertical-align: top;
         }
 
-        .tablet, .desktop {
+        .tablet,
+        .desktop {
             display: none;
         }
+
         @media (min-width: 768px) {
-            .phone {display: none;}
-            .tablet {display: block;}
+            .phone {
+                display: none;
+            }
+
+            .tablet {
+                display: block;
+            }
         }
+
         @media (min-width: 992px) {
-            .tablet {display: none;}
-            .desktop {display: block;}
+            .tablet {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- https://www.w3schools.com/html/html_images_imagemap.asp -->
     <!-- https://www.image-map.net/ -->
-    <img class="desktop" src="images/main/desktop_main.png" alt="데스크탑시안">
-    <img class="tablet" src="images/main/tablet_main.png" alt="테블릿시안">
-    <img class="phone" src="images/main/phone_main.png" alt="폰시안">
 
-    
+    <!-- 
+        이미지맵:
+        1. 하나의 이미지의 특정 영역의 링크를  적용시킬 때
+        2. 하나의 이미지에 두 개 이상의 링크를 적용시킬 때 
+    -->
+
+    <img class="desktop" src="images/main/desktop_main.png" alt="데스크탑시안" usemap="#image-map-desktop">
+    <img class="tablet" src="images/main/tablet_main.png" alt="테블릿시안" usemap="#image-map-tablet">
+    <img class="phone" src="images/main/phone_main.png" alt="폰시안" usemap="#image-map-phone">
+
+
+    <map name="image-map-desktop">
+        <!-- 
+            shape="reck" coords="x1,y1,x2,y2"
+        -->
+        <area target="" alt="로고" title="로고" href="#" coords="67,29,286,76" shape="rect">
+        <area target="" alt="메뉴소개" title="메뉴소개" href="#" coords="669,75,580,34" shape="rect">
+        <area target="" alt="이용방법" title="이용방법" href="#" coords="712,35,810,74" shape="rect">
+        <area target="" alt="로그인" title="로그인" href="#" coords="1538,25,1666,75" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area target="" alt="로고" title="로고" href="#" coords="22,15,142,39" shape="rect">
+    </map>
+
+    <map name="image-map-phone">
+        <area target="" alt="로고" title="로고" href="#" coords="14,14,117,38" shape="rect">
+    </map>
 </body>
+
 </html>
