@@ -37,9 +37,27 @@
         파일 폴더 명명 규칙 
         시안_페이지명_장치.png
     -->
-    <img class="desktop" src="../images/login/desktop_login.png" alt="desktop PC">
-    <img class="tablet" src="../images/login/tablet_login.png" alt="tablet PC">
-    <img class="phone" src="../images/login/phone_login.png" alt="phone">
+    <img class="desktop" src="../images/login/desktop_login.png" alt="desktop PC" usemap="#image-map-desktop">
+    <img class="tablet" src="../images/login/tablet_login.png" alt="tablet PC" usemap="#image-map-tablet">
+    <img class="phone" src="../images/login/phone_login.png" alt="phone" usemap="#image-map-phone">
+
+    <map name="image-map-desktop">
+        <!-- 
+            shape="reck" coords="x1,y1,x2,y2"
+        -->
+        <area alt="로고" title="로고" href="../draft.html" coords="67,29,286,76" shape="rect">
+        <area alt="메뉴소개" title="메뉴소개" href="draft_menu.html" coords="669,75,580,34" shape="rect">
+        <area alt="이용방법" title="이용방법" href="draft_use.html" coords="712,35,810,74" shape="rect">
+        <area alt="로그인" title="로그인" href="draft_login.html" coords="1538,25,1666,75" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area alt="로고" title="로고" href="../draft.html" coords="22,15,142,39" shape="rect">
+    </map>
+
+    <map name="image-map-phone">
+        <area alt="로고" title="로고" href="../draft.html" coords="14,14,117,38" shape="rect">
+    </map>
 
 </body>
 </html>
