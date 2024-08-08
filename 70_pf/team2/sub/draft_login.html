@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBWAY</title>
+    <style>
+        /* reset */
+        body {margin: 0;}
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        /* phone */
+        [alt*="P"] {display: none;}
+        @media (min-width: 768px) {
+            /* tablet */
+            [alt="phone"] {display: none;}
+            [alt*="ta"] {display: block;}
+        }
+        @media (min-width: 992px) {
+            /* desktop */
+            /* 
+                속성 선택자
+                    [속성 = "값"] -> 값이 일치
+                    [속성 *= "값"] -> 값을 포함
+            */
+            [alt*="ta"] {display: none;}
+            [alt*="d"] {display: block;}
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        파일 폴더 명명 규칙 
+        시안_페이지명_장치.png
+    -->
+    <img class="desktop" src="../images/login/desktop_login.png" alt="desktop PC">
+    <img class="tablet" src="../images/login/tablet_login.png" alt="tablet PC">
+    <img class="phone" src="../images/login/phone_login.png" alt="phone">
+
+</body>
+</html>

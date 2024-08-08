@@ -13,28 +13,28 @@
             vertical-align: top;
         }
 
+        /* phone */
+
         .tablet, .desktop {
             display: none;
         }
         @media (min-width: 768px) {
+            /* tablet */
             .phone {display: none;}
             .tablet {display: block;}
         }
         @media (min-width: 992px) {
+            /* desktop */
             .tablet {display: none;}
             .desktop {display: block;}
         }
     </style>
 </head>
 <body>
-    <img class="desktop" src="images/main/desktop_main.png" alt="데스크탑시안" usemap="imgmap202487174643">
-    <img class="tablet" src="images/main/tablet_main.png" alt="테블릿시안">
-    <img class="phone" src="images/main/phone_main.png" alt="폰시안">
+    <img class="desktop" src="../images/main/desktop_main.png" alt="desktop PC">
+    <img class="tablet" src="../images/main/tablet_main.png" alt="tablet PC">
+    <img class="phone" src="../images/main/phone_main.png" alt="phone">
 
-    <map id="imgmap202487174643" name="imgmap202487174643"><area shape="rect" alt="" title="" coords="581,34,665,67" href="sub/menu.html" target="_blank"/>
 
-    <!-- <map name="workmap">
-        <area shape="rect" coords="581,34,665,67" href="sub/menu.html" alt="메뉴소개">
-    </map> -->
 </body>
 </html>
