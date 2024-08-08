@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+footer {
+    height: 724px;
+    background: #000;
+}
+footer p,footer h3, footer a {
+    color: #fff;
+}
