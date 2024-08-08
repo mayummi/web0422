@@ -67,9 +67,17 @@ header {
     z-index: -1;
     width: 100%;
     transition: .3s;
-    background: #000;
 }
 .main:hover::before {
     height: 20px;
     opacity: 1;
+}
+
+/* util menu */
+.util_menu ul {
+    display: flex;
+}
+.util_menu ul li a {
+    padding: 0 5px;
+    border: 1px solid lightslategray;
 }
