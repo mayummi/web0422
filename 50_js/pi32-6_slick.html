@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- slick 슬라이더 CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <!-- slick 슬라이더 테마 CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- 사용자 CSS -->
+    <style>
+        body {
+            background: darkcyan;
+        }
+    </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- slick 슬라이더 JS라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        // https://kenwheeler.github.io/slick/
+        $(() => {
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToScroll: 1,
+                slidesToShow: 3,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }); // ready 이벤트
+    </script>
 </head>
+
 <body>
-    
+    <div class="slider">
+        <!-- div*9>img[src="../assets/dessert39/이미지명" alt="슬라이드 이미지$"] -->
+        <!-- 2. ctrl+sp -> tab -->
+        <!-- 
+            에밋 기능
+                1. 기호
+                    *   
+                    > 자식
+                    [] 속성 -> [속성=값 속성=값 ...]
+                    & 색인번호, 1부터~
+                    + 형제
+        -->
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지1"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지2"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지3"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지4"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지5"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지6"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지7"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지8"></div>
+        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지9"></div>
+
+        <div><img
+                src="../assets/dessert39/thumb-3543165506_1CfiqAsY_1159b5c380b9d62281ca662698fcac95f7511d45_270x410.png"
+                alt="이미지1"></div>
+
+        <div>your content</div>
+        <div>your content</div>
+    </div>
 </body>
+
 </html>
