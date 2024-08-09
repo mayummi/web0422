@@ -35,15 +35,35 @@
     </style>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
+            // 요소 찾기
+            const collapsedMenuIcon = document.querySelector(".collapsedMenuIcon");
+
+            // 이벤트 처리
+            collapsedMenuIcon.onclick = function(e){
+                // 함수 호출
+                // myFunction(this);
+                // 화살표 함수 이벤트 함수 내에서 this는 window이다.
+                // 익명 함수 이벤트 내에서 this는 이벤트 객체이다.
+                console.log(collapsedMenuIcon);
+                console.log(event.currentTarget);
+                console.log(e.currentTarget);
+                console.log(this);
+            };
+
+            // 호이스팅
+            // 함수 선언(정의)
             function myFunction(x) {
                 x.classList.toggle("change");
             }
+
+            // 호출
+
         });
     </script>
 </head>
 
 <body>
-    <div class="container" onclick="myFunction(this)">
+    <div class="collapsedMenuIcon">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
