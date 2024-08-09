@@ -21,6 +21,15 @@
             vertical-align: top;
         }
 
+        /* typo */
+        html {
+            font-size: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
         /* slick 슬라이드 */
         .slider {
             position: absolute;
@@ -28,21 +37,13 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
-            /* 데스크탑 슬라이드 전체 크기 */
-            max-width: 540px;
+            /* 슬라이드 전체 크기 */
+            max-width: 260px;
         }
-
-        @media (min-width: 768px){
-            max-width: 960px;
-        };
-        @media (min-width: 992px){
-            max-width: 1210px;
-        };
-
 
         /* 슬라이드 아이템 */
         .slick-slide {
-            margin: 8px 16px;
+            margin: 8px 10px;
             background: #fff;
             border-radius: 15px;
             /* 이미지 상단 영역 모서리 둥글게 보이기 */
@@ -56,14 +57,12 @@
         }
 
         /* 이전(prev)/다음(next) 버튼 */
-        .slick-prev:hover,
-        .slick-next:hover,
         .slick-prev,
         .slick-next {
             z-index: 9999;
-            width: 50px;
-            height: 50px;
-            padding: 8px;
+            width: 30px;
+            height: 30px;
+            padding: 4px;
             border-radius: 50%;
             background: #ccc;
         }
@@ -83,16 +82,49 @@
         }
 
         .slick-prev {
-            /* 기본값 -25px, 버튼의 가로 크기 50px, -50px-70px */
-            left: min(-5vw, -120px);
+            left: min(-7vw, -40px);
         }
 
         .slick-next {
-            right: min(-5vw, -120px);
+            right: min(-7vw, -40px);
         }
 
         .slick-prev::before {
             transform: rotate(180deg);
+        }
+
+
+        @media (min-width: 768px) {
+            .slider {
+                max-width: 620px;
+            }
+
+            .slick-slide {
+                margin: 8px 12px;
+            }
+            .slick-prev,
+            .slick-next {
+                width: 44px;
+                height: 44px;
+                padding: 6px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .slider {
+                max-width: 1210px;
+            }
+
+            .slick-slide {
+                margin: 8px 16px;
+            }
+
+            .slick-prev,
+            .slick-next {
+                width: 50px;
+                height: 50px;
+                padding: 8px;
+            }
         }
     </style>
 
@@ -120,17 +152,17 @@
                         settings: {
                             arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '180px',
                             slidesToShow: 3
                         }
                     },
                     {
                         // 768 이하 폰
-                            breakpoint: 768,
-                            settings: {
+                        breakpoint: 768,
+                        settings: {
                             arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '30px',
                             slidesToShow: 1
                         }
                     }
