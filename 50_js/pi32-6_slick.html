@@ -11,9 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <!-- 사용자 CSS -->
     <style>
+        /* reset */
         body {
+            margin: 0;
             background: darkcyan;
         }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /* slick 슬라이드 */
+        .slider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            max-width: 1210px;
+            transform: translate(-50%, -50%);
+            /* width: 270px !important; */
+        }
+
+        .slick-slide {
+            margin: 0 16px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        .slick-
+
     </style>
     <!-- 제이쿼리 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -23,16 +50,19 @@
         // https://kenwheeler.github.io/slick/
         $(() => {
             $('.slider').slick({
+                // 데스크탑
+                // 자동 슬라이드
                 autoplay: true,
                 autoplaySpeed: 2000,
                 slidesToScroll: 1,
+                // 현재 보이는 슬라이드 수
                 slidesToShow: 3,
                 centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
+                centerPadding: '145px',
                 responsive: [
                     {
-                        breakpoint: 768,
+                        // 992 이하 테블릿
+                        breakpoint: 992,
                         settings: {
                             arrows: false,
                             centerMode: true,
@@ -41,7 +71,8 @@
                         }
                     },
                     {
-                        breakpoint: 480,
+                        // 768 이하 폰
+                        breakpoint: 768,
                         settings: {
                             arrows: false,
                             centerMode: true,
@@ -62,28 +93,76 @@
         <!-- 
             에밋 기능
                 1. 기호
-                    *   
+                    * 개수
                     > 자식
                     [] 속성 -> [속성=값 속성=값 ...]
                     & 색인번호, 1부터~
                     + 형제
         -->
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지1"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지2"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지3"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지4"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지5"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지6"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지7"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지8"></div>
-        <div><img src="../assets/dessert39/이미지명" alt="슬라이드 이미지9"></div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_1CfiqAsY_1159b5c380b9d62281ca662698fcac95f7511d45_270x410.png" alt="슬라이드 이미지1">
+            <div>
+                <h3>[24년 8월 신메뉴]저칼로리 딸기 음료 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_4JA7D3NV_ccfe1d1c8a81ba34d3019e70f647a6a6d0ba3542_270x410.png" alt="슬라이드 이미지2">
+            <div>
+                <h3>[24년 8월 신메뉴]피스타치오크림 음료 3종 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_dtqCPEjF_369ba1cb54467331e5b17e1dc2c0517f315cedd9_270x410.png" alt="슬라이드 이미지3">
+            <div>
+                <h3>[24년 7월 신메뉴]오레오 쉐이크 3종 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_hes5AWGj_256954940c95be8a5a28571938aa0aace04b3d65_270x410.png" alt="슬라이드 이미지4">
+            <div>
+                <h3>[24년 7월 신메뉴]카라멜 인절미 퐁 라떼 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_KJlqgvMQ_66f720f95828fd00e6fe91425f482d0446226fb2_270x410.png" alt="슬라이드 이미지5">
+            <div>
+                <h3>[24년 7월~8월 이벤트]디저트39 X 사이퍼즈 친환경 콜라보 이벤트!</h3>
+                <p>2024-07-25</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-3543165506_yT5Q4zbd_ec24c5f7de07e85e0ef8d9040accb7ea94543730_270x410.png" alt="슬라이드 이미지6">
+            <div>
+                <h3>[24년 7월 신메뉴]설탕 무첨가 과일 슬러시 4종 출시! </h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-977819194_3YdrwDsH_edc8aeda1b52c30ab2b2514fb34ddaef30c93c0b_270x410.png" alt="슬라이드 이미지7">
+            <div>
+                <h3>[24년 7월 신메뉴]애사비 탄산수 3종 출시!</h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-977819194_JERN7LPk_429e949f26ef97717f500d352c590132fb7136c1_270x410.png" alt="슬라이드 이미지8">
+            <div>
+                <h3>[24년 7월 신메뉴]코코넛 프라페 2종 출시!</h3>
+                <p>2024-07-09</p>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/dessert39/thumb-977819194_vycATl06_c83d50eb20c45abc2ceb95641733621e3689b333_270x410.png" alt="슬라이드 이미지9">
+            <div>
+                <h3>[24년 8월 신메뉴]저칼로리 & 라이스 슬림 요거트 스무디 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
 
-        <div><img
-                src="../assets/dessert39/thumb-3543165506_1CfiqAsY_1159b5c380b9d62281ca662698fcac95f7511d45_270x410.png"
-                alt="이미지1"></div>
-
-        <div>your content</div>
-        <div>your content</div>
     </div>
 </body>
 
