@@ -20,6 +20,7 @@
 
         /* 헤더 */
         header {
+            background: blue;
             position: fixed;
             z-index: 9999;
             width: 100%;
@@ -37,6 +38,7 @@
             right: 30px;
             cursor: pointer;
         }
+        
 
         .bar1,
         .bar2,
@@ -65,11 +67,16 @@
         nav {
             z-index: -1;
             position: absolute;
-            right: 0;
+            right: -65%;
             top: 0;
             width: 65%;
             height: 100vh;
             background: #fed;
+            transition: .3s ease-in-out;
+        }
+
+        nav.change {
+            right: 0;
         }
 
         /* 768이상: 테블릿 */
@@ -83,7 +90,7 @@
             }
 
             nav ul li {
-                margin-left: 30px;
+                margin-left: 40px;
             }
             .collapsedMenuIcon {
                 display: none;
@@ -93,6 +100,7 @@
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             // 요소 찾기
+            const nav = document.querySelector("nav")
             const collapsedMenuIcon = document.querySelector(".collapsedMenuIcon");
 
             // 이벤트 처리
@@ -105,8 +113,12 @@
             // 호이스팅
             // 함수 선언(정의)
             function btnMotion(x) {
+                // 햄버서 버튼: x에서 트릴플 바로 바꿈
                 // toggle()은 x객체가 change를 가지고 있으면 제거, 아니면 추가
                 x.classList.toggle("change");
+
+                // nav 태그의 change 추가
+                nav.classList.add("change")
             }
 
         });
