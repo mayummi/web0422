@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
+        .collapsedMenuIcon {
+            position: absolute;
             display: inline-block;
+            /* 마우스 포인터 모양 */
             cursor: pointer;
         }
 
@@ -17,6 +19,7 @@
             width: 35px;
             height: 5px;
             background-color: #333;
+            border-radius: 3px;
             margin: 6px 0;
             transition: 0.4s;
         }
@@ -39,24 +42,39 @@
             const collapsedMenuIcon = document.querySelector(".collapsedMenuIcon");
 
             // 이벤트 처리
-            collapsedMenuIcon.onclick = function(e){
-                // 함수 호출
-                // myFunction(this);
+            collapsedMenuIcon.onclick = ()=>{
+                // event
+                btnMotion(event.currentTarget);
                 // 화살표 함수 이벤트 함수 내에서 this는 window이다.
+                // console.log(this);
+                // 따라서 화살표 함수일 때는 event.currentTarget를 사용한다.
+                // console.log(collapsedMenuIcon);
+                // console.log(event.currentTarget);
+                // console.log(e.currentTarget);
+
+                // collapsedMenuIcon.onclick = function(){
+                // btnMotion(this)};
                 // 익명 함수 이벤트 내에서 this는 이벤트 객체이다.
-                console.log(collapsedMenuIcon);
-                console.log(event.currentTarget);
-                console.log(e.currentTarget);
-                console.log(this);
+                // console.log(this);
+                // console.log(collapsedMenuIcon);
+                // console.log(event.currentTarget);
+                // console.log(e.currentTarget);
+                // console.log(this);
             };
 
             // 호이스팅
             // 함수 선언(정의)
-            function myFunction(x) {
+            function btnMotion(x) {
+                /* 
+                    classList.add("선택자"); -> 선택자 추가
+                    classList.remove("선택자"); -> 선택자 제거
+                    classList.toggle("선택자"); -> 선택자를 추가 또는 제거
+                */
+
+                // x객체가 
                 x.classList.toggle("change");
             }
 
-            // 호출
 
         });
     </script>
