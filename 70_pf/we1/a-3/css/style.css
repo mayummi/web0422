@@ -117,11 +117,26 @@ img {
     width: 100%;
     display: flex;
 }
+
+/* contents: info */
 #contents .info {
     width: 400px;
     height: 200px;
-    background: #d1d1d1;
+    background: #e5f1ff;
+    padding: 20px;
+    box-sizing: border-box;
 }
+#contents .info .info-menu {
+    margin-bottom: 10px;
+}
+#contents .info .info-menu a {
+    font-size: 24px;
+}
+#contents .info .info-menu a.active {
+    text-decoration: underline;
+}
+
+
 #contents .banner {
     width: 400px;
     height: 200px;
@@ -132,6 +147,7 @@ img {
     height: 200px;
     background: #bcbcbc;
 }
+
 
 /* footer */
 #footer {
