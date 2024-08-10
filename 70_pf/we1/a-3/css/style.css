@@ -135,6 +135,31 @@ img {
 #contents .info .info-menu a.active {
     text-decoration: underline;
 }
+#contents .info .info-cont .notice {
+    display: none;
+}
+#contents .info .info-cont .notice li {
+    display: flex;
+}
+#contents .info .info-cont .notice li a {
+    width: 75%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+#contents .info .info-cont .notice li a:hover {
+    text-decoration: underline;
+}
+#contents .info .info-cont .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+#contents .info .info-cont .gallery ul li a {
+    border: 2px solid transparent;
+    display: block;
+}
+#contents .info .info-cont .gallery ul li a:hover {
+    border-color: #0a4288;
+}
 
 
 #contents .banner {
