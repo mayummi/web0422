@@ -28,16 +28,55 @@ img {
 #header {
     width: 100%;
     display: flex;
+    background: #0c51a6;
 }
 #header .logo {
     width: 20%;
     height: 100px;
-    background: #efefef;
+}
+#header .logo a {
+    display: inline-block;
+    color: #fff;
+    padding: 30px 40px;
 }
 #header .nav {
     width: 80%;
     height: 100px;
-    background: #e3e3e3;
+    position: relative;
+    z-index: 1000;
+}
+#header .nav>ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+#header .nav>ul>li {
+    position: relative;
+}
+#header .nav>ul>li>a {
+    color: #fff;
+    padding: 15px 45px;
+    background: #0a4288;
+    display: block;
+}
+#header .nav>ul>li>a:hover {
+    background: #126bd8;
+}
+#header .nav>ul>li>ul {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+#header .nav>ul>li>ul>li>a {
+    padding: 10px 20px;
+    display: block;
+}
+#header .nav>ul>li>ul>li>a:hover {
+    background: #c0dcff;
 }
 
 /* slider */
