@@ -85,6 +85,32 @@ img {
     height: 300px;
     background: #d9d9d9;
 }
+#slider .sliderWrap {
+    position: relative;
+}
+#slider .sliderWrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    padding: 20px 30px;
+}
+#slider .sliderWrap .slider .text h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+#slider .sliderWrap .slider .text p {
+    color: #fff;
+    font-size: 16px;
+}
 
 /* contents */
 #contents {
