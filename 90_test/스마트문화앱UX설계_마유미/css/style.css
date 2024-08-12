@@ -204,6 +204,13 @@ header .logo {
     width: 400%; 
     animation: slide 12s infinite;
 } 
+#slide>ul>li>p {
+    z-index: 99;
+    top: 50%;
+    right: 50%;
+    color: #fff;
+    font-size: 35px;
+}
 
 /* animation */
 @keyframes slide { 
