@@ -83,13 +83,10 @@ h3 {
 }
 
 /* 섹션 제목 */
-/* h2의 글자 크기 기본값은 부모 요소 크기의 1.5em */
 h2 {
-    /* 2.4rem은 html(:root)의 2.4배, :root에서 font-size:10px 지정했으므로 2.4rem은 24px이다. */
     font-size: 2.4rem;
 }
 
-/* 폼 요소는 글자 관련 속성을 상속 받지 않기 때문에 추가 지정 */
 input,
 ::placeholder,
 button {
@@ -116,22 +113,9 @@ button {
     font-size: 2.4rem;
 }
 #sec3 li p:first-of-type {
-    /*  
-        fluid(유동형), flexible(유연한) 디자인 -> 반응형 디자인
-            1. 미디어 쿼리
-            2. 단위 변경: % 또는 vw, vh, ... 
-
-            1903 : 15 = 100 : x
-            1903x = 15 * 100 -> x = 0.788...
-    */
     font-size: 1.5rem;
 }
 
-/* @media (min-width: 768px) {
-    #sec3 p:first-of-type {
-        font-size: 1.5rem;
-    }
-} */
 @media (min-width: 992px) {
     #sec3 li p:first-of-type {
         font-size: max(0.76vw, 1.1rem);
@@ -142,7 +126,6 @@ button {
         font-size: max(0.8vw, 1.1rem);
     }
 }
-
 
 /* font color */
 a {
@@ -192,7 +175,6 @@ header .logo {
 }
 
 
-/* slide */
 /* 슬라이드 */
 #slide { 
     width: 100%; 
@@ -250,10 +232,6 @@ section li {
 }
 
 #sec1 div {
-    /* 
-        1500 : 745 = 100 : x
-        1500x = 745 * 100 -> x = 49.17vw
-    */
     height: min(745px, 49.17vw);
     margin: 0 auto;
 }
@@ -261,9 +239,7 @@ section li {
 #sec1 h2 {
     position: absolute;
     left: 50%;
-    /* 27px은 내비게이션 높이의 반만큼 내린다. */
     top: calc(50% + 27px);
-    /* 27px의 반만큼 내린다. -> 14px */
     transform: translate(-50%, calc(-50% + 14px));
     border: none;
 }
@@ -329,11 +305,6 @@ section li {
 
 /* 섹션4 */
 #sec4 .map {
-    /* 
-    height: 845px; 
-    1903 : 845 = 100 : x
-    1903x = 845 * 100 -> x=44.4vw
-    */
     margin-bottom: 8px;
     height: 44.4vw;
 }
@@ -440,7 +411,6 @@ nav.change {
     }
 
     section li {
-        /* calc(숫자 - 숫자), 연산자 앞뒤는 띄어쓰기 한다. */
         width: calc(50% - 15px);
     }
 
@@ -471,7 +441,6 @@ nav.change {
     section {
         margin: 0 auto;
     }
-
     /* 섹션2,3 공통 */
     section li {
         width: calc(25% - 15px);
@@ -489,7 +458,6 @@ nav.change {
     /* 섹션 공통 */
     section {
         width: 1480px;
-        /* 데스크탑에서는 좌우 32px 여백 제거 */
         padding: 96px 0px 0;
     }
 
