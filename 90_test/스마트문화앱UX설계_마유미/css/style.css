@@ -4,37 +4,44 @@
 * {
     box-sizing: border-box;
 }
-body,h1,h2,h3,ul,p {
-    margin:0;
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
 }
+
 ul {
-    padding:0;
+    padding: 0;
     list-style: none;
 }
+
 img {
     width: 100%;
     height: 100%;
-    /* 비율 유지 */
-    /* contain은 100% 이미지가 잘림없이 보여지며, 빈공간이 생길 수 있다. */
-    /* cover는 빈공간이 생기지 않지만, 이미지 일부가 잘릴 수 있다. */
     object-fit: cover;
-    /* object-position: x위치 y위치; (기본값: 50% 50%) */
     object-position: 50% 50%;
     vertical-align: top;
 }
+
 a {
     text-decoration: none;
 }
+
 body {
     background: #fff;
 }
+
 button {
-    border:none;
-    /* 손 모양 */
+    border: none;
     cursor: pointer;
 }
+
 iframe {
-    border:none;
+    border: none;
     width: 100%;
     height: 100%;
 }
@@ -83,7 +90,9 @@ h2 {
 }
 
 /* 폼 요소는 글자 관련 속성을 상속 받지 않기 때문에 추가 지정 */
-input, ::placeholder, button {
+input,
+::placeholder,
+button {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
 }
@@ -129,11 +138,13 @@ input, ::placeholder, button {
         font-size: max(0.76vw, 1.1rem);
     }
 }
+
 @media (min-width: 1020px) {
     #sec3 li p:first-of-type {
         font-size: max(0.8vw, 1.1rem);
     }
 }
+
 /* @media (min-width: 1318px) {
     #sec3 p:first-of-type {
         font-size: 1.5rem;
@@ -145,24 +156,163 @@ a {
     color: var(--gray1);
 }
 
-#sec1 b, #sec2 h3, #sec4 button, footer {
+#sec1 b,
+#sec2 h3,
+#sec4 button,
+footer {
     color: var(--white);
 }
+
 #sec4 ::placeholder {
     color: var(--graya);
 }
 
 
 /* bg color */
-body, header {
+body,
+header {
     background: var(--white);
 }
+
 #sec1 b {
     background: rgba(0, 0, 0, 0.786);
 }
-#sec2 h3, #sec4 button, footer {
+
+#sec2 h3,
+#sec4 button,
+footer {
     background: var(--black);
 }
+
 #sec3 a {
     background: var(--grayc);
+}
+
+/* 헤더 */
+#header {
+    display: flex;
+    padding: 0 0px;
+    height: 100px;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: #fff;
+}
+
+/* 1depth */
+.main {
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main>li {
+    height: 50px;
+    text-align: center;
+    /* line-height: 100px; */
+    padding: 0 40px;
+    /* line-height: 30px; */
+}
+
+.main>li>a {
+    display: block;
+    padding: 28px 24px;
+}
+
+.main>li a:hover {
+    color: #20a999
+}
+
+/* 2depth */
+.sub {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 10px 0 20px 0;
+    line-height: 2;
+    transition: .5s;
+}
+
+.main:hover .sub {
+    height: 400px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub li a {
+    padding: 4px 16px;
+    z-index: 99;
+}
+
+.gnb {
+    position: relative;
+    z-index: 999;
+}
+
+.gnb .main::before {
+    content: "";
+    width: 100%;
+    top: 20px;
+    right: 0;
+    position: absolute;
+    display: block;
+    z-index: -1;
+    /* width: 100%; */
+    transition: .5s;
+    background: #fff;
+}
+
+.gnb .main:hover::before {
+    height: 400px;
+    opacity: 1;
+}
+
+/* util menu */
+.util_menu ul {
+    display: flex;
+}
+
+.util_menu ul li a {
+    line-height: 100px;
+    display: flex;
+    padding: 0 5px;
+}
+.util_menu ul li a:hover {
+    color: #20a999;
+}
+
+/* slide */
+/* 슬라이드 */
+#slide { 
+    width: 100%; 
+    overflow: hidden; 
+} 
+#slide ul { 
+    display: flex; 
+    width: 400%; 
+    animation: slide 12s infinite;
+} 
+
+/* animation */
+@keyframes slide { 
+    0% { transform: translate(0%, 0%); } 
+    10% { transform: translate(-25%, 0%); } 
+    33% { transform: translate(-25%, 0%); } 
+    43% { transform: translate(-50%, 0%); } 
+    66% { transform: translate(-50%, 0%); } 
+    76% { transform: translate(-75%, 0%); } 
+    99.99% { transform: translate(-75%, 0%); } 
+    100% { transform: translate(0%, 0%); } 
 }
