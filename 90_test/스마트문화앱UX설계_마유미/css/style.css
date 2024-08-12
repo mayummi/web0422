@@ -182,12 +182,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 54px;
     padding: 0 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-
+header .logo {
+    width: 250px;
+}
 
 
 /* slide */
@@ -197,6 +199,7 @@ header {
     overflow: hidden; 
 }
 #slide ul { 
+    top: 50px;
     display: flex; 
     width: 400%; 
     animation: slide 12s infinite;
