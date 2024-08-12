@@ -2,10 +2,13 @@
 
 /* 사용후 지울것 */
 body * {
-    outline: 1px solid red;
+    outline: 1px solid lime;
 }
 
 /* 공통 */
+* {
+    box-sizing: border-box;
+}
 html {
     font-size: 10px;
 }
@@ -19,8 +22,7 @@ body {
     color: #333;
     background: #fff;
     /* font: [굵기] [기울임] 크기 글꼴; */
-    font-family:1.5rem 굴림, Arial, san-serif;
-    font-size: 1.5rem;
+    font:1.5rem Arial, 굴림, sans-serif;
 }
 
 ul {
@@ -33,13 +35,12 @@ a {
     text-decoration: none;
 }
 
-
-/* a영역 */
+/* A영역 */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding:0 30px;
     height: 100px;
     width: 1340px;
     margin: 0 auto;
@@ -51,34 +52,32 @@ header {
     height: 44px;
 }
 
-/* 네비게이션 */
+/* 내비게이션 */
 nav {
-    align-self: flex-end;
+   align-self: flex-end; 
 }
 /* 1뎁스 */
 .main {
     display: flex;
-    /* align-items: center; */
     font-size: 1.8rem;
     font-weight: bold;
 }
 .main>li>a {
-    /* margin: 상하 좌우 */
-    /* margin: 0 24px; */
-    display: block;
+    display: inline-block;
     padding: 16px 24px;
 }
 .main>li>a:hover {
     background: #e31a40;
 }
 
+/* 2뎁스 */
 .sub {
+    display: none;
     font-size: 1.4rem;
     font-weight: normal;
-    display: none;
 }
 
-/* b영역 */
+/* B영역 */
 #slide {
     height: 350px;
     overflow: hidden;
@@ -92,10 +91,21 @@ nav {
     margin: 0 auto;
 }
 
-/* c영역 */
+/* C영역 */
 #link {
     height: 100px;
     background: #e31a40;
+}
+#link ul {
+    display: flex;
+}
+#link li {
+    width: 120px;
+    height: 60px;
+}
+#link li img {
+    width: 60px;
+    height: 60px;
 }
 
 #banner {
@@ -106,14 +116,14 @@ nav {
     height: 300px;
 }
 
-/* d영역 */
+/* D영역 */
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 100px;
     padding: 0 30px;
 }
+/* 1340px */
 .flogo {
     width: 200px;
 }
