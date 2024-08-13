@@ -1,14 +1,15 @@
 @charset "utf-8";
 
 /* 사용후 지울것 */
-body * {
+/* body * {
     outline: 1px solid lime;
-}
+} */
 
 /* 공통 */
 * {
     box-sizing: border-box;
 }
+
 html {
     font-size: 10px;
 }
@@ -22,7 +23,7 @@ body {
     color: #333;
     background: #fff;
     /* font: [굵기] [기울임] 크기 글꼴; */
-    font:1.5rem Arial, 굴림, sans-serif;
+    font: 15px Arial, 굴림, sans-serif;
 }
 
 ul {
@@ -40,7 +41,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 30px;
+    padding: 0 30px;
     height: 100px;
     width: 1340px;
     margin: 0 auto;
@@ -54,18 +55,21 @@ header {
 
 /* 내비게이션 */
 nav {
-   align-self: flex-end; 
+    align-self: flex-end;
 }
+
 /* 1뎁스 */
 .main {
     display: flex;
     font-size: 1.8rem;
     font-weight: bold;
 }
+
 .main>li>a {
     display: inline-block;
     padding: 16px 24px;
 }
+
 .main>li>a:hover {
     background: #e31a40;
 }
@@ -96,21 +100,21 @@ nav {
     height: 100px;
     background: #e31a40;
 }
+
 #link ul {
     display: flex;
-    /* 
-        flex-direction: row; (기본값)
-    */
     /* 주축(가로) 배치 */
     justify-content: space-evenly;
     /* 교차축(세로) 배치 */
     align-items: center;
     height: 100%;
 }
+
 #link li {
     width: 120px;
     height: 60px;
 }
+
 #link li img {
     width: 60px;
     height: 60px;
@@ -124,11 +128,14 @@ nav {
     align-items: center;
     height: 150px;
     padding: 0 70px;
+    border: 1px dottde
 }
+
 #banner img {
     width: 100px;
     height: 80px;
 }
+
 #banner .txt {
     /* 상우하좌 */
     margin: 0 160px 0 24px;
@@ -137,28 +144,51 @@ nav {
 #board {
     display: flex;
     height: 300px;
-    padding: 24px 40px;
+    padding: 20px 40px;
 }
-#board div {
+
+#board>div {
     width: 600px;
     height: 260px;
 }
-#board .notice {
+
+
+/* 공지사항 */
+.notice {
+    line-height: 2;
     margin-right: 60px;
 }
+.notice li {
+    border-bottom: 1px dotted red;
+}
+
+.notice a:hover {
+    font-weight: bold;
+}
+.notice span {
+    display: inline-block;
+    width: 510px;
+
+    /* 수직정렬 */
+    vertical-align: top;
+}
+
 .gallery div {
     display: flex;
 }
+
 .gallery a {
-    height: 170ox;
+    height: 170px;
     margin: 10px;
-    margin-bottom: 8px;
 }
+
 .gallery img {
     display: block;
     width: 180px;
-    height: 160px;
+    height: 140px;
+    margin-bottom: 8px;
 }
+
 
 /* D영역 */
 footer {
@@ -166,14 +196,22 @@ footer {
     align-items: center;
     height: 100px;
     padding: 0 30px;
+    background: #c0c0c0c0;
+    color: #fff;
 }
+footer a {
+    color: #fff;
+}
+
 /* 1340px */
 .flogo {
     width: 200px;
 }
+
 .addr {
     width: 900px;
 }
+
 .fs {
     width: 240px;
 }
