@@ -83,20 +83,61 @@
                 slideList.style.width = 100 * slideCount + "%";
                 slideList.style.height = 100 + "%";
 
-                // for ~ of 반복문
-                for (x of slideListItem) {
+                /* 
+                    for(표현식1; 표현식2; 표현식3) { 코드; }
+                    for(초기식; 조건식; 증감식) { 코드; }
+                    
+                    for(let i = 0; i < 10; i++) { 코드; }
+
+                    0번 li -> w:100%, h:100%
+                    1번 li -> w:100%, h:100%
+                    2번 li -> w:100%, h:100%
+                    3번 li -> w:100%, h:100%
+                    
+                    결론은 4번 반복
+                    for(let i = 0; i < slideListItem.length + 1; i++) { 코드; }
+                */
+               // i = 0 -> 1 -> 2
+                // for (let i = 0; i< slideListItem.length; i++) {
+                //     slideListItem[i].style.width = 100 + "%";
+                // }
+
+                // for ~ of 반복문 (ver.ES6)
+                /* 
+                    for(const 변수 of HTML컬렉션)
+                    for(const 변수 of 배열)
+                */
+                // slideListItem 즉, li 개수 만큼 3번 반복
+                for (const x of slideListItem) {
                     x.style.width = 100 + "%";
                 }
             }
 
             // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
             /* 
+                객체
+                    lastElementChild -> 마지막 자식 요소
+                    firstElementChild -> 첫 번째 자식 요소
+                메소드
+                    객체.appendChild(요소) -> 객체의 요소를 잘라서 맨 끝에 요소 추가
+                    예) slideList.appendChild(slideListItem[0]) -> ul의 맨 끝에 li 추가
+
+                    객체.insertBefore(요소1, 요소2) -> 맨 앞에 요소 추가
+                    cloneNode(true)
+                속성
+                이벤트
+
                 1. appendChild()
                 2. firstElementChild
                 3. cloneNode(true)
 
             */
-            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+            // 첫 번째 li 요소를 잘라서 ul 끝에 추가
+            // slideList.appendChild(slideListItem[0]);
+            
+            // 첫 번째 li 요소를 복제하여 ul 끝에 추가
+            slideList.appendChild(slideListItem[0].cloneNode(true));
+            // slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
             // 2초 마다 자동 슬라이드 함수 호출
             setInterval(autoSlide, speed);
@@ -130,6 +171,7 @@
             <li><img src="../assets/pic_1.jpg.jpg" alt="이미지1"></li>
             <li><img src="../assets/pic_2.jpg.jpg" alt="이미지2"></li>
             <li><img src="../assets/pic_3.jpg.jpg" alt="이미지3"></li>
+            <li><img src="../assets/pic_1.jpg.jpg" alt="이미지1"></li>
         </ul>
     </div>
 </body>
