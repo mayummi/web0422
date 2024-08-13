@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 슬라이드 */
+        #slideWrap {
+            /* fixed(고정)의 left, top 기준은 뷰포트이다. */
+            /* absoluste의 부모가 없으면 left, top 의 기준은 뷰포트 */
+            /* 정중앙 배치 공식 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
+
+        #slideWrap ul {
+            /* li를 가로 배치 */
+            display: flex;
+            /* left를 이용하여 좌우 이동 */
+            /* relativ의 left, top의 기준은 자기자시ㅈ */
+            position: relative;
+            left: 0%;
+        }
+    </style>
+
+    <script>
+        // 로드 이벤트
+        window.addEventListener("DOMContentLoaded", () => {
+            // 요소 찾기
+            const slide = document.querySelector("#slideWrap");
+            const slideList = slide.querySelector("ul");
+            const slideListItem = slideList.querySelectorAll("li");
+            const slideListItemImg = slideList.querySelectorAll("img");
+
+            // 요소 순번
+            let idx = 0;
+            // 슬라이드 전환 시간
+            const speed = 2000;
+
+            // 슬라이드 개수
+            // length는 속성은 nodelist(HTML 컬렉션)의 개수
+            const slideCount = slideListItemImg.length + 1;
+            console.log("슬라이드 개수는?", slideCount);
+
+            // 슬라이드 크기
+            const slideWidth = 30;
+            const slideHeight = 30;
+
+            // 슬라이드 크기 함수 호출
+            slideSize();
+
+            function slideSize() {
+                // 슬라이드 크기
+                // slide는 div#slideWrap
+                slide.style.width = slideWidth + "%";
+                slide.style.height = slideHeight + "%";
+                // slideList는 <ul>
+                slideList.style.width = 100 * slideCount + "%";
+                slideList.style.height = 100 + "%";
+
+                // for ~ of 반복문
+                for (x of slideListItem) {
+                    x.style.width = 100 + "%";
+                }
+            }
+
+            // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
+            /* 
+                1. appendChild()
+                2. firstElementChild
+                3.
+
+            */
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
+            // 2초 마다 자동 슬라이드 함수 호출
+            setInterval(autoSlide, speed);
+
+            // 자동 슬라이드 함수 선언
+            function autoSlide() {
+                idx++;
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = speed/2000 + "s";
+
+                if (idx === slideCount) {
+                    idx = 0;
+                    slideList.style.left = "0%";
+                    slideList.style.transition = "0s";
+                    setTimeout(() => {
+                        idx = 1;
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = speed/2000 + "s";
+                    }, 0);
+                }
+            }
+        });
+
+    </script>
+</head>
+
+
+<body>
+    <div id="slideWrap">
+        <ul>
+            <li><img src="../assets/pic_1.jpg.jpg" alt="이미지1"></li>
+            <li><img src="../assets/pic_2.jpg.jpg" alt="이미지2"></li>
+            <li><img src="../assets/pic_3.jpg.jpg" alt="이미지3"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
