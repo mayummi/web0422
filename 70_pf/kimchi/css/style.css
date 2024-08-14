@@ -14,7 +14,6 @@ body {
 .wrap {
     /* flex의 영향으로 자식요소는 늘어난다. (align-items: stretch;) */
     display: flex;
-    /*  */
     height: calc(100% - 120px);
 }
 /* 헤더 */
