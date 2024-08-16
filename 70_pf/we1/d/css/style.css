@@ -89,7 +89,6 @@ img {
 #slider .image {
     width: calc(100% - 230px);
     height: 400px;
-    background: #d9d9d9;
 }
 #slider .banner {
     width: 230px;
