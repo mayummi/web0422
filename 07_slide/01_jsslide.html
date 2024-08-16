@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드-가로</title>
     <style>
+        body, ul {
+        margin: 0;
+        }
         /* 초기화 */
         ul { 
             margin: 0; 
@@ -14,27 +17,17 @@
 
         /* 슬라이드 */
         .slide { 
-            width: 500px; 
+            width: 100%; 
+            height: 350px;
             overflow: hidden; 
+
         } 
         .slide ul { 
             position: relative;
             display: flex; 
             width: 400%; 
-            animation: slide 9s infinite;
         } 
 
-        /* animation */
-        @keyframes slide { 
-            0% { left: 0; } 
-            10% { left: -100%; } 
-            33% { left: -100%; } 
-            43% { left: -200%; } 
-            66% { left: -200%; } 
-            76% { left: -300%; } 
-            99.99% { left: -300%; } 
-            100% { left:0; } 
-        }
     </style>
 </head>
 <body>
