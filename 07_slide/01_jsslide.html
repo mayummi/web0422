@@ -34,7 +34,7 @@
             /* left: -100% -> -200% -> -300% -> 0 */
             left: 0;
             display: flex;
-            width: 400%;
+            width: 300%;
         }
     </style>
     <!-- 제이쿼리 라이브러리 -->
@@ -55,7 +55,6 @@
                 가속도(easing): 33가지 easing종류
                 콜백함수는 animate 진행후 바로 이어서 실행한 내용 기록
 
-
                 https://api.jqueryui.com/easings/ -> 33가지 easing종류
             */
 
@@ -67,18 +66,17 @@
 
             // 위치 변수 선언
             // 단위를 생략하면 px이다.
+            
             let posx = 0 + "%";
-
             setInterval(autoSlide, 1000);
-
-
+            
             function autoSlide() {
                 console.log("posx",posx);
                 // posx가 0 -> 1 -> 2 -> 3 -> 0
                 // if (posx === 0) {
                 //     posx = 0;
                 // } else {
-                //     posx++;
+                // posx++;
                 // }
                 (posx === 3) ? posx = 0 : posx++;
                 $("#slide ul").animate({ left: posx * -100 + "%" });
@@ -94,7 +92,6 @@
             <li><img src="slide1.jpg" alt="슬라이드 이미지1"></li>
             <li><img src="slide2.jpg" alt="슬라이드 이미지2"></li>
             <li><img src="slide3.jpg" alt="슬라이드 이미지3"></li>
-            <li><img src="slide1.jpg" alt="슬라이드 이미지1"></li>
         </ul>
     </div>
 </body>
