@@ -6,7 +6,7 @@
     <title>슬라이드-가로</title>
     <style>
         body, ul {
-        margin: 0;
+            margin: 0;
         }
         /* 초기화 */
         ul { 
@@ -19,22 +19,36 @@
         }
 
         /* 슬라이드 */
-        .slide {
+        #slide {
             width: 400px; 
             /* height: 350px; */
             /* overflow: hidden;  */
         } 
-        .slide ul { 
+        #slide ul { 
             position: relative;
+            /* left: -100% -> -200% -> -300% -> 0 */
+            left: 0;
             display: flex; 
             width: 400%; 
         } 
 
     </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        // 준비 이벤트
+        $(function(){
+            // 요소 찾기
+            const slideList= $("#slide ul");
+
+            // 객체.animate({속성: 값, 속성: 값, ...})
+            // 여기서 값은 "문자열", 숫자
+            slideList.animate({left: "-100%"}, 1000);
+        });
+    </script>
 </head>
 <body>
 
-    <div class="slide">
+    <div id="slide">
         <ul>
             <li><img src="slide1.jpg" alt="슬라이드 이미지1"></li>
             <li><img src="slide2.jpg" alt="슬라이드 이미지2"></li>
