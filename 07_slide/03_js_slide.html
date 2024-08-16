@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드-페이드</title>
+    <style>
+        body,
+        ul {
+            margin: 0;
+        }
+
+        /* 초기화 */
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* 슬라이드 */
+        #slide {
+            height: 350px;
+            /* overflow: hidden; */
+        }
+
+        #slide ul {
+            position: relative;
+            /* top: 0 -> -100% */
+            top: 0;
+            height: 1050px;
+        }
+        #slide li {
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            let idx = 0;
+            setInterval(autoSlide, 2000);
+            
+            function autoSlide() {
+                console.log("idx",idx);
+                (idx === 2) ? idx = 0 : idx++;
+                // fatd- 
+                $("#slide li").eq(idx).animate({opacity: 1 },1000,function(){
+                    if (idx === 0) idx = 3;
+                    $("#slide li").eq(idx-1).animate({opacity: 0}, 1000);
+                    if (idx === 3) idx = 0;
+                });
+            };
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="slide">
+        <ul>
+            <li><img src="slide1.jpg" alt="슬라이드 이미지1"></li>
+            <li><img src="slide2.jpg" alt="슬라이드 이미지2"></li>
+            <li><img src="slide3.jpg" alt="슬라이드 이미지3"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>

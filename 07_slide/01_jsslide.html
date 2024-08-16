@@ -67,19 +67,19 @@
             // 위치 변수 선언
             // 단위를 생략하면 px이다.
             
-            let posx = 0 + "%";
+            let idx = 0;
             setInterval(autoSlide, 1000);
             
             function autoSlide() {
-                console.log("posx",posx);
-                // posx가 0 -> 1 -> 2 -> 3 -> 0
-                // if (posx === 0) {
-                //     posx = 0;
+                console.log("idx",idx);
+                // idx가 0 -> 1 -> 2  -> 0
+                // if (idx === 0) {
+                //     idx = 0;
                 // } else {
-                // posx++;
+                // idx++;
                 // }
-                (posx === 3) ? posx = 0 : posx++;
-                $("#slide ul").animate({ left: posx * -100 + "%" });
+                (idx === 2) ? idx = 0 : idx++;
+                $("#slide ul").animate({ left: idx * -100 + "%" });
             };
         });
     </script>
