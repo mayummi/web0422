@@ -40,9 +40,10 @@
             // 요소 찾기
             const slideList= $("#slide ul");
 
-            // 객체.animate({속성: 값, 속성: 값, ...})
+            // 객체.css({속성: 값, 속성: 값, ...})
+            // 객체.animate({속성: 값, 속성: 값, ...}, 시간, 가속도)
             // 여기서 값은 "문자열", 숫자
-            slideList.animate({left: "-100%"}, 1000);
+            slideList.animate({left: "-100%"}, 1000, "linear");
         });
     </script>
 </head>
