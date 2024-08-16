@@ -1,52 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드-가로</title>
     <style>
-        body, ul {
+        body,
+        ul {
             margin: 0;
         }
+
         /* 초기화 */
-        ul { 
-            margin: 0; 
-            padding: 0; 
-            list-style: none; 
-        } 
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
         img {
             width: 100%;
         }
 
         /* 슬라이드 */
         #slide {
-            width: 400px; 
+            width: 400px;
             /* height: 350px; */
-            /* overflow: hidden;  */
-        } 
-        #slide ul { 
+            overflow: hidden; 
+        }
+
+        #slide ul {
             position: relative;
             /* left: -100% -> -200% -> -300% -> 0 */
             left: 0;
-            display: flex; 
-            width: 400%; 
-        } 
-
+            display: flex;
+            width: 400%;
+        }
     </style>
+    <!-- 제이쿼리 라이브러리 -->
     <script src="jquery-3.7.1.min.js"></script>
+    <!-- 제이쿼리 UI 라이브러리 -> ainmate -->
+    <script src="jquery-ui.min.js"></script>
     <script>
         // 준비 이벤트
-        $(function(){
+        $(function () {
             // 요소 찾기
-            const slideList= $("#slide ul");
+            // const slide = $("#slide");
+            // const slideList = slide.find("ul");
+
+            /* 
+                객체.animate({속성: 값, 속성: 값, ...}, [시간], [가속도], [콜백함수])
+                값은 "문자열", 숫자
+                시간: 400ms 가 기본값, (ms란? 밀리초)
+                가속도(easing): 33가지 easing종류
+                콜백함수는 animate 진행후 바로 이어서 실행한 내용 기록
+
+
+                https://api.jqueryui.com/easings/ -> 33가지 easing종류
+            */
 
             // 객체.css({속성: 값, 속성: 값, ...})
             // 객체.animate({속성: 값, 속성: 값, ...}, 시간, 가속도)
             // 여기서 값은 "문자열", 숫자
-            slideList.animate({left: "-100%"}, 1000, "linear");
+            // setInterval(함수, 시간)
+            // 
+
+            // 위치 변수 선언
+            // 단위를 생략하면 px이다.
+            let posx = 0 + "%";
+
+            setInterval(autoSlide, 1000);
+
+
+            function autoSlide() {
+                console.log("posx",posx);
+                // posx가 0 -> 1 -> 2 -> 3 -> 0
+                // if (posx === 0) {
+                //     posx = 0;
+                // } else {
+                //     posx++;
+                // }
+                (posx === 3) ? posx = 0 : posx++;
+                $("#slide ul").animate({ left: posx * -100 + "%" });
+            };
         });
     </script>
 </head>
+
 <body>
 
     <div id="slide">
@@ -61,4 +101,5 @@
 
 </html>
 </body>
+
 </html>
