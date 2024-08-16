@@ -20,6 +20,9 @@
 
         img {
             vertical-align: top;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
         }
 
         /* 슬라이드 */
@@ -33,17 +36,36 @@
             /* top: 0 -> -100% */
             top: 0;
             height: 1050px;
+            width: 100%;
         }
         #slide li {
             position: absolute;
-            opacity: 0;
+
         }
+
     </style>
     <script src="jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
             let idx = 0;
             setInterval(autoSlide, 2000);
+
+            /* 
+                객체.show([시간], [가속도], [콜백함수]) ~ 나타남
+                객체.hide([시간], [가속도], [콜백함수]) ~ 사라짐
+                객체.toggle([시간], [가속도], [콜백함수]) ~ 나타남/사라짐 번갈아 반복
+                객체.slideDown([시간], [가속도], [콜백함수]) ~ 위에서 아래로 서서히 나타남
+                객체.slideUp([시간], [가속도], [콜백함수]) ~ 아래서 위로 서서히 사라짐
+                객체.slideToggle([시간], [가속도], [콜백함수])
+                객체.fadeIn([시간], [가속도], [콜백함수]) ~ 서서히 나타남
+                객체.fadeOut([시간], [가속도], [콜백함수]) ~ 서서히 사라짐
+                객체.fadeToggle([시간], [가속도], [콜백함수])
+
+                객체.animate({속성: 값, ...}, [시간], [가속도], [콜백함수])
+                    시간은 생략하면 400
+                    가속도는 생략하면 swing
+                    콜백함수는 메소드 실행후 실행할 함수 기록!
+            */
             
             function autoSlide() {
                 console.log("idx",idx);
@@ -54,6 +76,17 @@
                     $("#slide li").eq(idx-1).animate({opacity: 0}, 1000);
                     if (idx === 3) idx = 0;
                 });
+
+                /* 
+
+                */
+
+                // 1in, 0out -> 2in, 1out -> 0in, 2out
+                // $("#slide li").eq(idx).fadeIn(1000,function(){
+                //     if (idx === 0) idx = 3;
+                //     $("#slide li").eq(idx-1).fadeOut(1000);
+                //     if (idx === 3) idx = 0;
+                // });
             };
         });
     </script>

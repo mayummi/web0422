@@ -10,6 +10,12 @@ body {
     height: 100vh;
     margin: 0;
 }
+ul {
+    list-style: none;
+}
+img {
+    width: 100%;
+}
 /* 상단영역 헤더베치 */
 .wrap {
     /* flex의 영향으로 자식요소는 늘어난다. (align-items: stretch;) */
@@ -32,7 +38,10 @@ header {
 /* 링크 */
 
 /* 슬라이드 */
-#slide {width: calc(100% -600px);}
+#slide {width: calc(100% -120px);}
+#slide ul {
+    width: calc(100% -120px)* 3px;
+}
 
 /* 푸터 */
 footer {
