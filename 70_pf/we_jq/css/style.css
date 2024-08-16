@@ -80,21 +80,21 @@ nav {
 
 /* B영역 */
 #slide {
-    height: 350px;
-    /* overflow: hidden; */
-}
+            height: 350px;
+            /* overflow: hidden; */
+        }
 
-#slide ul {
-    position: relative;
-    /* top: 0 -> -100% */
-    top: 0;
-    height: 1050px;
-    width: 100%;
-}
-#slide li {
-    position: absolute;
+        #slide ul {
+            position: relative;
+            /* top: 0 -> -100% */
+            top: 0;
+            height: 1050px;
+            width: 100%;
+        }
+        #slide li {
+            position: absolute;
 
-}
+        }
 
 /* @keyframes slide {
     0% {
