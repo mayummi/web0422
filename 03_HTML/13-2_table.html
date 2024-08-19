@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
         table {
-            border: 1px solid red;
             height: 300px;
-            width: 300px;
-            /* 
-                table과 td 사이 경계
-                border-collapse: separate; (기본값)
-                border-collapse: collapse; (붕괴)
-
-            */
-            border-collapse: collapse;
+            width: 800px;
+            margin: 0 auto;
+            /* border-spacing: 좌우 상하 */
+            border-spacing: 0 20px;
         }
+
+        caption {
+            margin-bottom: 48px;
+        }
+
+        tr:not(thead>tr) {
+            background: #fff;
+        }
+
         td {
-            border: 1px solid black;
-            vertical-align: top;
-            
+            height: 56px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+
         }
 
+        tr td:first-child {
+            border-left: 1px solid #e6e6e6;
+            text-align: center;
+            border-radius: 5px 0 0 5px;
+        }
+
+        tr td:last-child {
+            border-right: 1px solid #e6e6e6;
+            border-radius: 0 5px 5px 0;
+
+        }
+
+        col:nth-of-type(2)~col {
+            text-align: center;
+        }
+
+        td:nth-child(2)~td {
+            text-align: center;
+        }
+
+        tfoot {
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-    <h1>테이블</h1>
+    <h1>파리 2024</h1>
     <!-- 
             필수: <table>, <tr>, <td>
             선택: 나머지는 그러나 <th>는 대체로 사용한다.
@@ -43,24 +81,93 @@
                     <th>: 셀의 제목
                     <td>: 셀의 내용
 
-            <thead>: <th>를 그룹핑
+            <thead>: <th>를 그룹핑, 가로 가운데 맞춤(기본값)
             <tbody>: <td>를 그룹핑, 본문
             <tfoot>: <td>를 그룹핑, 집계(합계, 평균, ...)
     -->
     <table>
+        <!-- 표의 제목 -->
         <caption>메달 순위표</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <!-- 제목 영역 -->
         <thead>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>순서</th>
+                <th>NOC</th>
+                <th>금</th>
+                <th>은</th>
+                <th>동</th>
             </tr>
         </thead>
-        <tbody></tbody>
-        <tfppt></tfppt>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>미국</td>
+                <td>40</td>
+                <td>44</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>중화인민공화국</td>
+                <td>40</td>
+                <td>27</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>일본</td>
+                <td>20</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>오스트레일리아</td>
+                <td>18</td>
+                <td>19</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>프랑스</td>
+                <td>16</td>
+                <td>26</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfppt>
+            <tr>
+                <td colspan="2">합계</td>
+                <td>200</td>
+                <td>192</td>
+                <td>191</td>
+            </tr>
+        </tfppt>
         <tr></tr>
     </table>
 </body>
+
 </html>
