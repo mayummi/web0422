@@ -4,20 +4,32 @@
 #footer {
     height: 724px;
     background: #000;
+}
+#footer .fw {
     padding: 100px 224px 34px ;
 }
 #footer p,#footer h3, #footer a {
     color: #eee;
 }
+#footer .fs {
+    display: flex;
+    justify-content: space-between;
+}
 
 #footer .ff {
     border-top: 1px solid #fff;
 }
+#footer .ff div {
+    padding: 100px 384px 34px 224px;
+    display: flex;
+    justify-content: space-between;
+}
 
-#footer .footer2 {
+
+/* #footer .footer2 {
     margin-top: 75px;
     margin-bottom: 34px;
-}
+} */
 .line {
     width: 100%;
     height: 1px;
