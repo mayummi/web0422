@@ -9,6 +9,7 @@
 /* 글꼴과 색상은 임의 지정한다. */
 
 :root {
+    scroll-behavior: smooth;
     font-size: 10px;
     /* 
         변수 선언
@@ -66,9 +67,8 @@ input, ::placeholder, button {
 #sec3 h3 {
     font-size: 2.4rem;
 }
-
 #sec3 li p:first-of-type {
-    /* 
+    /*  
         fluid(유동형), flexible(유연한) 디자인 -> 반응형 디자인
             1. 미디어 쿼리
             2. 단위 변경: % 또는 vw, vh, ... 
@@ -76,7 +76,7 @@ input, ::placeholder, button {
             1903 : 15 = 100 : x
             1903x = 15 * 100 -> x = 0.788...
     */
-    font-size: max(0.8vw, 1.2rem);
+    font-size: 1.5rem;
 }
 
 /* @media (min-width: 768px) {
@@ -94,11 +94,7 @@ input, ::placeholder, button {
         font-size: max(0.8vw, 1.1rem);
     }
 }
-/* @media (min-width: 1318px) {
-    #sec3 p:first-of-type {
-        font-size: 1.5rem;
-    }
-} */
+
 
 /* font color */
 a {
