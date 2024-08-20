@@ -56,6 +56,15 @@ input, ::placeholder, button {
     font-weight: normal;
 }
 
+/* 탑 */
+#top h2 {
+    font-size: 6rem;
+    color: #D05FFF;
+}
+#top span {
+    font-size: 2.4rem;
+}
+
 /* 섹션1 */
 #sec1 h2 {
     font-size: 3.6rem;
@@ -101,7 +110,7 @@ a {
     color: var(--gray1);
 }
 
-#sec1 b, #sec2 h3, #sec4 button, footer {
+#top, #top a, #sec1 b, #sec2 h3, #sec4 button, footer {
     color: var(--white);
 }
 #sec4 ::placeholder {
@@ -112,6 +121,9 @@ a {
 /* bg color */
 body, header {
     background: var(--white);
+}
+#top {
+    background: var(--graya);
 }
 #sec1 b {
     background: rgba(0, 0, 0, 0.786);

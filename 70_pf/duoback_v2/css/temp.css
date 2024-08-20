@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("common.css");
+
+/* 공통 영역 */
+
+/* 헤더 */
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* top */
+#top {
+    display: flex;
+    padding-top: 54px;
+
+    height: 370px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 32px 0;
+}
+
+/*///////////////// 폰 ////////////////*/
+/* 모바일 버튼 */
+.collapsedMenuIcon {
+    display: inline-block;
+    right: 30px;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+nav {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -65%;
+    width: 65%;
+    height: 100vh;
+    background: red;
+    transition: .3s ease-in-out;
+}
+
+nav.change {
+    right: 0;
+}
+
+
+
+/*////////////////////////////////////*/
+
+
+/* 768이상: 테블릿 */
+@media (min-width: 768px) {
+
+    /* 내비게이션 */
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        transition: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 40px;
+    }
+
+    .collapsedMenuIcon {
+        display: none;
+    }
+
+}
+
+/* 992이상: 데스크탑 */
+@media (min-width: 992px) {
+
+
+}
+
+/* 1480이상: 데스크탑 */
+@media (min-width: 1500px) {
+
+
+}
