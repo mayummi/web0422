@@ -44,7 +44,9 @@ h2 {
 }
 
 /* 폼 요소는 글자 관련 속성을 상속 받지 않기 때문에 추가 지정 */
-input, ::placeholder, button {
+input,
+::placeholder,
+button {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.5rem;
 }
@@ -58,11 +60,16 @@ input, ::placeholder, button {
 
 /* 탑 */
 #top h2 {
-    font-size: 6rem;
+    font-size: 3.2rem;
     color: #D05FFF;
 }
+
 #top span {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+}
+
+#notice h2 {
+    font-size: 3.2rem;
 }
 
 /* 섹션1 */
@@ -76,6 +83,7 @@ input, ::placeholder, button {
 #sec3 h3 {
     font-size: 2.4rem;
 }
+
 #sec3 li p:first-of-type {
     /*  
         fluid(유동형), flexible(유연한) 디자인 -> 반응형 디자인
@@ -94,10 +102,21 @@ input, ::placeholder, button {
     }
 } */
 @media (min-width: 992px) {
+
+    /* 탑 */
+    #top h2 {
+        font-size: 6rem;
+    }
+
+    #top span {
+        font-size: 2.4rem;
+    }
+
     #sec3 li p:first-of-type {
         font-size: max(0.76vw, 1.1rem);
     }
 }
+
 @media (min-width: 1020px) {
     #sec3 li p:first-of-type {
         font-size: max(0.8vw, 1.1rem);
@@ -110,27 +129,40 @@ a {
     color: var(--gray1);
 }
 
-#top, #top a, #sec1 b, #sec2 h3, #sec4 button, footer {
+#top,
+#top a,
+#sec1 b,
+#sec2 h3,
+#sec4 button,
+footer {
     color: var(--white);
 }
+
 #sec4 ::placeholder {
     color: var(--graya);
 }
 
 
 /* bg color */
-body, header {
+body,
+header {
     background: var(--white);
 }
+
 #top {
     background: var(--graya);
 }
+
 #sec1 b {
     background: rgba(0, 0, 0, 0.786);
 }
-#sec2 h3, #sec4 button, footer {
+
+#sec2 h3,
+#sec4 button,
+footer {
     background: var(--black);
 }
+
 #sec3 a {
     background: var(--grayc);
 }

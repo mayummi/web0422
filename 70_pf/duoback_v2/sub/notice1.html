@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메가박스</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../css/notice.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="../index.html"><b>MB</b>MegaBox</a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav>
+            <ul>
+                <li><a href="#sec2">제품</a></li>
+                <li><a href="#sec3">이벤트</a></li>
+                <li><a href="#sec4">고객센터</a></li>
+                <li><a href="sub/notice1.html">공지사항</a></li>
+            </ul>
+        </nav>
+
+        <!-- 모바일 버튼 -->
+        <div class="collapsedMenuIcon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <!-- 탑 영역 -->
+    <div id="top">
+        <!-- #top을 flex적용하면 .inner을 수직 중앙 배치할 수 있다. -->
+        <div class="inner">
+            <span>MEGA NEWS</span>
+            <h2>MEGA NOTICES</h2>
+            <!-- 브레드 크럼(Breadcrumb)이란 주로 페이지 상단 좌측에 자리하여 유저가 웹사이트 내에서 어디에 있는지 알려주는 네비게이션 텍스트 입니다 -->
+            <div>
+                <a href="../index.html">홈</a>
+                <a href="notice.html">메가소식</a>
+                <a href="notice.html">공지사항</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 섹션 영역 -->
+    <section id="notice">
+        <h2>메가박스 공지사항</h2>
+        <p>메가박스 소식을 알려드립니다.</p>
+
+        <!-- 검색 영역 -->
+        <!-- *.jsp(자바 서버 페이지)는 백앤드 개발자 -->
+        <form action="notice.jsp">
+            <div>
+                <select name="" id="">
+                    <option value="">제목</option>
+                    <option value="">내용</option>
+                    <option value="">작성자</option>
+                </select>
+                <input type="search" placeholder="검색어를 입력하세요">
+            </div>
+            <input type="submit" value="검색">
+        </form>
+
+        <!-- 공지사항 게시판 -->
+        <table id="board">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>날짜</th>
+                <th>조회</th>
+            </tr>
+            <tr>
+                <td>공지</td>
+                <td><a href="#">[2024 아레나 디 베로나 오페라 페스티벌: 라보엠] 러닝타임 변경</a></td>
+                <td>메가박스</td>
+                <td>2023-02-21</td>
+                <td>1703</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#">[컬쳐랜드] 시스템 점검 공지 안내 (8/29)</a></td>
+                <td>메가박스</td>
+                <td>2024-08-02</td>
+                <td>359</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#">[북앤라이프] 도서문화상품권 서비스 점검 안내 (8/28)</a></td>
+                <td>메가박스</td>
+                <td>2024-07-03</td>
+                <td>601</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#">[토스페이] NICE정보통신 시스템 작업 일정 안내(8/8)</a></td>
+                <td>메가박스</td>
+                <td>2023-03-16</td>
+                <td>1812</td>
+            </tr>
+        </table>
+        <div class="paging">
+            <a href="#">처음</a>
+            <a href="#">1</a>
+            <a href="#">마지막</a>
+        </div>
+    </section>
+    
+    <!-- 푸터 -->
+    <footer>
+        <p>Copyright Hanatour. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
