@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border: 1px solid red;
+        }
+
+        #slideWrap ul {
+            display: flex;
+            position: relative;
+            left: 0%;
+        }
+
+        /* prev/next */
+        #slideWrap .controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #slideWrap .controls a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            border: 1px solid blue;
+        }
+
+        #slideWrap .prev {
+            left: 30px;
+        }
+
+        #slideWrap .next {
+            right: 30px;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // 요소 찾기
+            const slide = document.querySelector("#slideWrap");
+            const slideList = slide.querySelector("ul");
+            const slideListItem = slideList.querySelectorAll("li");
+            const slideListItemImg = slideList.querySelectorAll("img");
+            const prevBtn = slide.querySelector(".prev");
+            const nextBtn = slide.querySelector(".next");
+
+            // 요소 순번
+            let idx = 0;
+            // 슬라이드 전환 시간
+            const speed = 2000;
+
+            // 슬라이드 개수
+            const slideCount = slideListItemImg.length + 1;
+            console.log(slideCount);
+
+            // 슬라이드 크기
+            const slideWidth = 50;
+            const slideHeight = 50;
+
+            slideSize();
+
+            function slideSize() {
+                // 슬라이드 크기
+                slide.style.width = slideWidth + "%";
+                slide.style.height = slideHeight + "%";
+                slideList.style.width = 100 * slideCount + "%";
+                slideList.style.height = 100 + "%";
+                for (x of slideListItem) {
+                    x.style.width = 100 + "%";
+                }
+            }
+
+            // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
+            // 2초 마다 자동 슬라이드 함수 호출
+            // setInterval(autoSlide, speed);
+
+            // auto slide function
+            function autoSlide() {
+                nextSlide();
+            }
+
+            // prev/next button event
+            prevBtn.onclick = () => { prevSlide() };
+            nextBtn.onclick = () => { nextSlide() };
+
+
+            // previous slide function
+            function prevSlide() {
+                idx--;
+                
+                if (idx === -1) {
+                    idx = slideCount - 1;
+                    slideList.style.left = -100 * idx + "%";
+                    slideList.style.transition = "0s";
+                    setTimeout(() => {
+                        idx--;
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = "1s";
+                    }, 0)
+                } else {
+                    slideList.style.left = -100 * idx + "%";
+                    slideList.style.transition = "1s";
+                }
+
+                console.log("이전", idx);
+            }
+
+            // next slide function
+            function nextSlide() {
+                idx++;
+
+                if (idx === slideCount) {
+                    idx = 0;
+                    slideList.style.left = -100 * idx + "%";
+                    slideList.style.transition = "0s";
+                    setTimeout(() => {
+                        idx++;
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = "1s";
+                    }, 0)
+                } else {
+                    slideList.style.left = -100 * idx + "%";
+                    slideList.style.transition = "1s";
+                }
+
+                console.log("다음", idx);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul>
+            <li><img src="../assets/pic_1.jpg.jpg" alt="이미지1"></li>
+            <li><img src="../assets/pic_2.jpg.jpg" alt="이미지2"></li>
+            <li><img src="../assets/pic_3.jpg.jpg" alt="이미지3"></li>
+        </ul>
+        <div class="controls">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
+    </div>
+</body>
+
+</html>
