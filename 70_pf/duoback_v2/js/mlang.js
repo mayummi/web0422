@@ -35,18 +35,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
         // 섹션의 제목 h2 변경
+            // if (sTit[0]) return;
+
         sTit.forEach((ele, idx) => {
-            if (sTit[0]) return;
-            ele.innerText = data["stit"][idx]});
+            if (idx === 0) return;
+            ele.innerText = data["stit"][idx]
+        });
         
         // 섹션2의 아이템 제목 변경
-        section2ItemTitle.forEach((ele, idx) =>
-        ele.innerText = data["s2"]["tit"][idx]);
+        section2ItemTitle.forEach((ele, idx) => ele.innerText = data["s2"]["tit"][idx]);
         // console.log(data["flogo"]);
         
         // 섹션2의 아이템 이미지 변경
-        section2ItemImg.forEach((ele, idx) =>
-            ele.setAttribute("src", `${data["s2"]["img"][idx]}`));
+        section2ItemImg.forEach((ele, idx) => ele.setAttribute("src", `${data["s2"]["img"][idx]}`));
         console.log(data["s2"]["img"][idx]);
     };
 });
