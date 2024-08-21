@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 초기화 */
-        * {
+       /* 초기화 */
+       * {
             box-sizing: border-box;
         }
 
@@ -27,7 +27,7 @@
         /* 슬라이드 */
         #slideWrap {
             /* fixed(고정)의 left, top 기준은 뷰포트이다. */
-            /* absoluste의 부모가 없으면 left, top 의 기준은 뷰포트 */
+            /* absolute의 부모가 없으면 left, top의 기준은 뷰포트이다. */
             /* 정중앙 배치 공식 */
             position: absolute;
             left: 50%;
@@ -35,16 +35,15 @@
             transform: translate(-50%, -50%);
 
             overflow: hidden;
-            /* border: 1px solid red; */
         }
 
         #slideWrap ul {
             /* li를 가로 배치 */
             display: flex;
-            /* left를 이용하여 좌우 이동 */
-            /* relativ의 left, top의 기준은 자기자시ㅈ */
+            /* left를 사용하여 좌우 이동 */
+            /* relatve의 left, top의 기준은 자기자신이다. */
             position: relative;
-            left: 0%;
+            left: 0;
         }
     </style>
 
@@ -59,11 +58,12 @@
 
             // 요소 순번
             let idx = 0;
+
             // 슬라이드 전환 시간
             const speed = 2000;
 
             // 슬라이드 개수
-            // length는 속성은 nodelist(HTML 컬렉션)의 개수
+            // length 속성은 nodeList(HTML 컬렉션)의 개수
             const slideCount = slideListItemImg.length + 1;
             console.log("슬라이드 개수는?", slideCount);
 
@@ -79,6 +79,7 @@
                 // slide는 div#slideWrap
                 slide.style.width = slideWidth + "%";
                 slide.style.height = slideHeight + "%";
+
                 // slideList는 <ul>
                 slideList.style.width = 100 * slideCount + "%";
                 slideList.style.height = 100 + "%";
@@ -86,28 +87,35 @@
                 /* 
                     for(표현식1; 표현식2; 표현식3) { 코드; }
                     for(초기식; 조건식; 증감식) { 코드; }
-                    
+
+                    예)
                     for(let i = 0; i < 10; i++) { 코드; }
 
-                    0번 li -> w:100%, h:100%
-                    1번 li -> w:100%, h:100%
-                    2번 li -> w:100%, h:100%
-                    3번 li -> w:100%, h:100%
-                    
+                    0번 li -> w:100%
+                    1번 li -> w:100%
+                    2번 li -> w:100%
+                    3번 li -> w:100%
+                    ---------
                     결론은 4번 반복
-                    for(let i = 0; i < slideListItem.length + 1; i++) { 코드; }
+                    for(let i = 0; i < slideListItem.length + 1; i++) { 
+                        코드; 
+                    }
                 */
                // i = 0 -> 1 -> 2
-                // for (let i = 0; i< slideListItem.length; i++) {
-                //     slideListItem[i].style.width = 100 + "%";
-                // }
+            //    for (let i = 0; i< slideListItem.length; i++) {
+            //         slideListItem[i].style.width = 100 + "%";
+            //    }
 
                 // for ~ of 반복문 (ver.ES6)
                 /* 
                     for(const 변수 of HTML컬렉션)
-                    for(const 변수 of 배열)
                 */
-                // slideListItem 즉, li 개수 만큼 3번 반복
+               // slideListItem 즉, li 개수 만큼 반복
+
+                /* 
+                    제어문 > 반복문 > for, for of(컬렉션, 배열), for in(객체)
+                    메소드: fotEach()
+                */
                 for (const x of slideListItem) {
                     x.style.width = 100 + "%";
                 }
@@ -119,25 +127,21 @@
                     lastElementChild -> 마지막 자식 요소
                     firstElementChild -> 첫 번째 자식 요소
                 메소드
-                    객체.appendChild(요소) -> 객체의 요소를 잘라서 맨 끝에 요소 추가
-                    예) slideList.appendChild(slideListItem[0]) -> ul의 맨 끝에 li 추가
+                    객체.appendChild(요소) -> 객체의 요소를 잘라서 맨 끝에 추가
+                    예) slideList.appendChild(slideListItem[0]) -> ul의 맨 끝에 첫 번째 li 추가
 
-                    객체.insertBefore(요소1, 요소2) -> 맨 앞에 요소 추가
+                    객체.insertBefore(요소1, 요소2) -> 맨 앞에 추가           
                     cloneNode(true)
                 속성
                 이벤트
-
-                1. appendChild()
-                2. firstElementChild
-                3. cloneNode(true)
-
             */
+
             // 첫 번째 li 요소를 잘라서 ul 끝에 추가
             // slideList.appendChild(slideListItem[0]);
-            
             // 첫 번째 li 요소를 복제하여 ul 끝에 추가
-            slideList.appendChild(slideListItem[0].cloneNode(true));
-            // slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+            // slideList.appendChild(slideListItem[0].cloneNode(true));
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
+
 
             // 2초 마다 자동 슬라이드 함수 호출
             setInterval(autoSlide, speed);

@@ -171,7 +171,8 @@
     }
     #footer .ff .flink a {
         padding: 0 0px 34px 134px;
-
+        height: 10px;
+        width: 50px;
     }
     
     
