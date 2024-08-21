@@ -7,41 +7,46 @@ window.addEventListener("DOMContentLoaded", () => {
     const sel = document.querySelector("header select");
     const logoB = document.querySelector(".logo b");
     const logoSpan = document.querySelector(".logo span");
-    const gnb = document.querySelectorAll(".gnb a");
-    const titB = document.querySelector("#sec1 b");
-    const titSpan = document.querySelector("#sec1 span");
-    
-    const flogo = document.querySelector(".flogo img");
-    const fmenu = document.querySelectorAll(".fmenu a");
-    const addr = document.querySelector(".addr");
+    const gnbA = document.querySelectorAll(".gnb a");
+    const s1B = document.querySelector("#sec1 b");
+    const s1Span = document.querySelector("#sec1 span");
+    const sTit = document.querySelectorAll("section h2");
+    const section2ItemTitle = document.querySelectorAll("#sec2 h3");
+    const section2ItemImg = document.querySelectorAll("#sec2 img");
 
-    // select의 값이 바뀔 때
+    // 이벤트
     sel.onchange = (e) => {
         let opt = e.currentTarget.value;
-        console.log("opt?",opt);
+        // console.log("opt?",opt);
         let data = main_data[opt];
 
         //로고 변경
-        logo.setAttribute("src", `${data["logo"]}`);
-        console.log(data["logo"]);
+        logoB.innerText = data["mtit"][0];
+        logoSpan.innerText = data["mtit"][1];
+        // console.log(data["logo"]);
 
-        // 메인 타이틀 변경
-        tit.forEach((ele, idx) =>
-            ele.innerText = data["tit"][idx]);
-
-        // 메뉴 변경
-        gnb.forEach((ele, idx) =>
+        // 글로벌 네비게이션 변경
+        gnbA.forEach((ele, idx) =>
             ele.innerText = data["gnb"][idx]);
 
-        // 푸터 메뉴 변경
-        fmenu.forEach((ele, idx) =>
-            ele.innerText = data["fmenu"][idx]);
+        // 섹션1 메인 타이틀 변경
+        s1B.innerText = data["mtit"][0];
+        s1Span.innerText = data["mtit"][1];
 
-        //푸터 로고 변경
-        flogo.setAttribute("src", `${data["flogo"]}`);
-        console.log(data["flogo"]);
 
-        // 주소 변경
-        addr.innerText = data["addr"];
+        // 섹션의 제목 h2 변경
+        sTit.forEach((ele, idx) => {
+            if (sTit[0]) return;
+            ele.innerText = data["stit"][idx]});
+        
+        // 섹션2의 아이템 제목 변경
+        section2ItemTitle.forEach((ele, idx) =>
+        ele.innerText = data["s2"]["tit"][idx]);
+        // console.log(data["flogo"]);
+        
+        // 섹션2의 아이템 이미지 변경
+        section2ItemImg.forEach((ele, idx) =>
+            ele.setAttribute("src", `${data["s2"]["img"][idx]}`));
+        console.log(data["s2"]["img"][idx]);
     };
 });
