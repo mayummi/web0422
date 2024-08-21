@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어</title>
+    <style>
+        @import url(css/reset.css);
+        @import url(css/typo.css);
+
+        /* common */
+        .ibx {
+            width: 1120px;
+            margin: 0 auto;
+        }
+
+        #s2 {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        #s2 .ibx h2 {
+            text-align: center;
+        }
+
+        #s2 .ibx h2+p {
+            text-align: center;
+            margin: 24px 0 48px;
+        }
+
+        /* 탭 공통 */
+        #s2 #tabs {
+            position: relative;
+        }
+
+        #s2 #tabs ul {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* 탭의 버튼 */
+        #s2 #tabs>ul {
+            position: absolute;
+            right: 0;
+            width: 474px;
+        }
+
+        #s2 #tabs>ul>li:not(:first-child) {
+            margin: 0 16px;
+        }
+
+        #s2 #tabs>ul>li:not(:first-child)::before {
+            content: '|';
+            margin-right: 24px;
+        }
+
+        /* 탭의 콘텐츠 */
+        #s2 #tabs>div ul {
+            height: 432px;
+        }
+
+        #s2 #tabs>div ul li:nth-child(1) {
+            align-self: flex-start;
+        }
+
+        #s2 #tabs>div ul li:nth-child(2) {
+            margin: 0 30px 0 75px;
+        }
+
+        #s2 #tabs>div ul li {
+            height: 216px;
+        }
+
+        #s2 #tabs>div a {
+            display: block;
+            width: 222px;
+            height: 168px;
+        }
+
+        #s2 #tabs>div h3 {
+            margin-top: 16px;
+        }
+
+        #s2 #tabs>div a.rank1 {
+            width: 570px;
+            height: 432px;
+        }
+
+        #s2 #tabs>div a.rank1+h3 {
+            position: absolute;
+            width: 474px;
+            height: 48px;
+            right: 0;
+            top: 48px;
+            text-wrap: nowrap;
+        }
+
+        /* 탭의 기능 핵심 */
+        /* #s2 #tabs>div {
+            display: none;
+        }
+
+        #s2 #tabs>div.on {
+            display: block;
+        } */
+    </style>
+
+    <script>
+        // 탭 구현하기
+
+        // 데이터
+        const season = {
+            "전체": {
+                rankImg: ["/assets/hana/hokkaido.jpg", "/assets/hana/turkiye.jpg", "/assets/hana/hawaii.jpg"],
+                rankTxt: ["홋카이도", "튀르키예 이스탄불", "하와이"]
+            },
+            "2~30대": {
+                rankImg: ["/assets/hana/turkiye.jpg", "/assets/hana/hokkaido.jpg", "/assets/hana/hawaii.jpg"],
+                rankTxt: ["튀르키예 이스탄불", "홋카이도", "하와이"]
+            },
+            "4~50대": {
+                rankImg: ["/assets/hana/hokkaido.jpg", "/assets/hana/hawaii.jpg", "/assets/hana/turkiye.jpg"],
+                rankTxt: ["홋카이도", "하와이", "튀르키예 이스탄불"]
+            },
+            "6~70대": {
+                rankImg: ["/assets/hana/hawaii.jpg", "/assets/hana/hokkaido.jpg", "/assets/hana/turkiye.jpg"],
+                rankTxt: ["하와이", "홋카이도", "튀르키예 이스탄불"]
+            },
+        };
+
+        window.addEventListener("DOMContentLoaded", function () {
+
+            // 요소 찾기
+            const tbtn = document.querySelectorAll('#tabs>ul>li a');
+            const rimg = document.querySelectorAll('#tabs img');
+            const rtxt = document.querySelectorAll('#tabs h3');
+
+            // 이벤트 처리
+            /* for(let i = 0; i<tBtn.length; i++) {
+                console.log(i);
+            } */
+
+            /* 
+                for(let v of nodelist){코드;} (ver.ES6)
+                v는 배열, 문자열, 노드리스트의 각 항목
+            */
+            for (let v of tbtn) {
+                v.onclick = () => {
+                    let btxt = v.innerHTML;
+                    /* 
+                        arr.forEach((val,[idx],[arr])=>{코드;}); (ver.ES5)
+                    */
+
+                    let data = season[btxt];
+                    console.log(data);
+
+                    data.rankImg.forEach((val,idx) => {
+                        rimg[idx].setAttribute("src", val);
+                        rimg[idx].setAttribute("alt", season[btxt].rankTxt[idx]);
+                        //console.log(rimg[idx]);
+                    });
+                    data.rankTxt.forEach((val,idx) => {
+                        rtxt[idx].innerHTML = season[btxt].rankTxt[idx];
+                    });
+                };
+            }
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 섹션2 -->
+    <section id="s2">
+        <div class="ibx">
+            <h2>여름 시즌 여행지</h2>
+            <p>최근 한 달 동안 고객님들이 가장 많이 좋아하신 여름 시즌 여행지입니다.</p>
+
+            <!-- 탭 -->
+            <div id="tabs">
+                <ul>
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">2~30대</a></li>
+                    <li><a href="#">4~50대</a></li>
+                    <li><a href="#">6~70대</a></li>
+                </ul>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#" class="rank1"><img src="/assets/hana/hokkaido.jpg" alt="1위. 홋카이도"></a>
+                            <h3 class="rank1"><a href="#">1위. 홋카이도</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/assets/hana/turkiye.jpg" alt="2위. 튀르키예 이스탄불"></a>
+                            <h3><a href="#">2위. 튀르키예 이스탄불</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/assets/hana/hawaii.jpg" alt="3위. 하와이"></a>
+                            <h3><a href="#">3위. 하와이</a></h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- //.ibx -->
+    </section>
+
+</body>
+
+</html>
