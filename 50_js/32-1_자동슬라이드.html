@@ -119,7 +119,7 @@
                 for (const x of slideListItem) {
                     x.style.width = 100 + "%";
                 }
-            }
+            } // 함수의 끝
 
             // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
             /* 
@@ -142,13 +142,15 @@
             // slideList.appendChild(slideListItem[0].cloneNode(true));
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
-
             // 2초 마다 자동 슬라이드 함수 호출
             setInterval(autoSlide, speed);
 
             // 자동 슬라이드 함수 선언
             function autoSlide() {
+                // idx를 1씩 증가
                 idx++;
+                console.log("idx",idx);
+                
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = speed/2000 + "s";
 
@@ -156,6 +158,7 @@
                     idx = 0;
                     slideList.style.left = "0%";
                     slideList.style.transition = "0s";
+                    
                     setTimeout(() => {
                         idx = 1;
                         slideList.style.left = -100 * idx + "%";
