@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daewoo</title>
     <!-- 
-        모듈화
-            export: 내보내기
-            import: 가져오기
+            모듈(module)
+                코드를 여러 개의 파일로 나눈다.
+                코드의 유지 관리가 쉬워진다.
+                export: 파일에서 함수나 변수를 내보낸다.
+                import: 파일에서 함수나 변수를 가져온다.
+
+                코드 끝에 export
+                    export default 변수;
+                    export default {변수1, 변수2, ...};
+                코드 상단에 import
+                    import 변수 from "./경로/파일명.확장자";
+                    import {변수1, 변수2, ...} from "./경로/파일명.확장자";
+
+                <script src="./31-3_다국어페이지code.js" type="module"></script>
     -->
-    <script src="./31-3-1_다국어페이지code.js"></script>
+
+    <script src="./31-3_다국어페이지code.js" type="module"></script>
 
 </head>
 

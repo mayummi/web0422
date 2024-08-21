@@ -1,19 +1,23 @@
 // import는 최상단에 기록
 // import 변수명 from "./경로/파일명"
-import main_data from "./31-3-1_다국어페이지data.js";
+import main_data from "./mdata.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-    const sel = document.querySelector("select");
-    const logo = document.querySelector(".logo img");
+    // 요소 찾기
+    const sel = document.querySelector("header select");
+    const logoB = document.querySelector(".logo b");
+    const logoSpan = document.querySelector(".logo span");
     const gnb = document.querySelectorAll(".gnb a");
-    const tit = document.querySelectorAll(".tit span");
+    const titB = document.querySelector("#sec1 b");
+    const titSpan = document.querySelector("#sec1 span");
+    
     const flogo = document.querySelector(".flogo img");
     const fmenu = document.querySelectorAll(".fmenu a");
     const addr = document.querySelector(".addr");
 
     // select의 값이 바뀔 때
-    sel.onchange = () => {
-        let opt = event.currentTarget.value;
+    sel.onchange = (e) => {
+        let opt = e.currentTarget.value;
         console.log("opt?",opt);
         let data = main_data[opt];
 
