@@ -94,26 +94,37 @@
 
             객체.length -> 객체의 길이(개수)
         */
+        // document.docmej
         const docEle = document.documentElement;
         const sec = document.querySelectorAll('.sec');
+        // window.innerHeight는 window
         const wh = window.innerHeight;
+        // (000)
+        console.log("창높이")
 
-        for (let i = 0; i < sec.length; i++) {
-            sec[i].onwheel = (e) => {
+        // sec.length -> 4
+        // for ~ of
+        // forEach() -> 색인번호 사용!
+        for (let x of sec) {
+            x.onwheel = (e) => {
+                console.log(docEle.scrollTop);
                 // 기본 이벤트 방지
                 e.preventDefault();
                 if (e.deltaY > 0) {
                     // 마우스휠 내림
                     // e.currentTarget는 이벤트가 발생한 요소
+                    // 마지막 섹션에서 wheel
+                    // HTML의 스크롤량 > 창높이 * (4 - 2) + 1
                     if (docEle.scrollTop > wh * (sec.length - 2)+100) return;
                     let next = e.currentTarget.nextElementSibling.offsetTop;
-                    console.log('앗!', wh * (sec.length - 1)-100, next);
+                    // console.log('앗!', wh * (sec.length - 1)-100, next);
+                    
                     docEle.scrollTop = next;
                 } else if (e.deltaY < 0) {
                     // 마우스휠 올림
                     if (docEle.scrollTop < wh) return;
                     let prev = e.currentTarget.previousElementSibling.offsetTop;
-                    console.log(prev);
+                    // console.log(prev);
                     docEle.scrollTop = prev;
                 }
             };
