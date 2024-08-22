@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage - 세로up</title>
+    <style>
+        /* reset.css */
+        body,
+        h2 {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* fullPage Layout */
+        body {
+            overflow: hidden;
+        }
+
+        .sec {
+            height: 100vh;
+            transition: .3s ease-out;
+        }
+
+        #sec1 {
+            background: lightblue;
+        }
+
+        #sec2 {
+            background: lightcoral;
+        }
+
+        #sec3 {
+            position: relative;
+            background: lightseagreen;
+        }
+
+        .txt {
+            position: absolute;
+            left: calc(50% - 400px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+        }
+
+        #sec3 h2 {
+            position: relative;
+            left: -950px;
+            font-size: 40px;
+            transition: .5s;
+        }
+
+        #sec3 p {
+            position: relative;
+            left: -950px;
+            font-size: 24px;
+        }
+
+        #sec3 h2.on {
+            left: 0;
+        }
+
+        #sec3 p.on {
+            left: 0;
+            transition: .5s 1s;
+        }
+
+        #sec4 {
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="sec1" class="sec">
+            <h2>섹션1</h2>
+        </section>
+        <section id="sec2" class="sec">
+            <h2>섹션2</h2>
+        </section>
+        <section id="sec3" class="sec">
+            <div class="txt">
+                <h2>섹션3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos molestias distinctio
+                    quibusdam beatae soluta laboriosam</p>
+            </div>
+        </section>
+        <section id="sec4" class="sec">
+            <h2>섹션4</h2>
+        </section>
+    </div>
+
+    <script>
+
+        const docEle = document.documentElement;
+        const sec = document.querySelectorAll('.sec');
+        const wh = window.innerHeight;
+        const sec3h2 = document.querySelector("#sec3 h2");
+        const sec3p = document.querySelector("#sec3 p");
+
+        // 창에 스크롤이 생기면
+        window.onscroll = () => {
+            console.log("HTML의 높이",docEle.offsetTop);
+            if (docEle.scrollTop > wh * 2 - wh/2) {
+                sec3h2.classList.add("on");
+                sec3p.classList.add("on");
+            } else {
+                sec3h2.classList.remove("on");
+                sec3p.classList.remove("on");
+            }
+        };
+
+        for (let x of sec) {
+            x.onwheel = (e) => {
+                // e.preventDefault();
+                if (e.deltaY > 0) {
+                    if (docEle.scrollTop > wh * (sec.length - 2) + 100) return;
+                    let next = e.currentTarget.nextElementSibling.offsetTop;
+
+                    docEle.scrollTop = next;
+                } else if (e.deltaY < 0) {
+                    // 마우스휠 올림
+                    if (docEle.scrollTop < wh) return;
+                    let prev = e.currentTarget.previousElementSibling.offsetTop;
+                    docEle.scrollTop = prev;
+                }
+            };
+        }
+
+    </script>
+</body>
+
+</html>

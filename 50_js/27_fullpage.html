@@ -117,6 +117,8 @@
                     // HTML의 스크롤량 > 창높이 * (4 - 2) + 1
                     if (docEle.scrollTop > wh * (sec.length - 2)+100) return;
                     let next = e.currentTarget.nextElementSibling.offsetTop;
+                    console.log("수직스크롤링", docEle.scrollTop);
+                    console.log("e.currentTarget", e.currentTarget);
                     // console.log('앗!', wh * (sec.length - 1)-100, next);
                     
                     docEle.scrollTop = next;
@@ -124,6 +126,7 @@
                     // 마우스휠 올림
                     if (docEle.scrollTop < wh) return;
                     let prev = e.currentTarget.previousElementSibling.offsetTop;
+                    console.log("e.currentTarget", e.currentTarget);
                     // console.log(prev);
                     docEle.scrollTop = prev;
                 }
