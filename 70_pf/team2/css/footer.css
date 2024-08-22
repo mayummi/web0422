@@ -190,13 +190,13 @@
         align-items: center;
         margin-left: 224px;
     } */
-    
-    #footer .ff .flink {
+    #footer .fflogo {display: flex;}
+    /* #footer .ff .flink { */
         /* display:calc(flex); */
-        display: flex;
+        /* display: flex; */
 
         /* justify-content: space-between; */
-    }
+    /* } */
     /* #footer .ff div >.flink {
         display: flex;
         justify-content: space-between;

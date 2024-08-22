@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            margin-left: 30px;
+            margin-top: 30px;
+            /* offsetLeft 또는 offsetTop이 적용되지 않는다. */
+            transform: translateX(100px) translateY(100px);
+            transition: .3s;
+        }
+        div.move {
+            left: 200px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            /* 
+                객체.offsetTop -> 부모로 부터 객체의 위치 픽셀 값을 가져온다.
+                (읽기 전용 즉, 값을 못 바꾼다.)
+            */
+
+            // 요소 찾기
+            const div = document.querySelector("div");
+            const buttonEle = document.querySelector("button");
+
+            // 버튼을 클리하면 div의 위치 이동
+            buttonEle.onclick = ()=>{
+                div.classList.add("move");
+            };
+
+            console.log("top:", div.offsetTop);
+            console.log("left: " + div.offsetLeft);
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>버튼</button>
+    <div>박스</div>
+</body>
+
+</html>

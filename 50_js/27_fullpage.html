@@ -78,6 +78,21 @@
             } catch(err) {
                 에러시 처리할 내용
             }
+
+
+            event.preventDefault() -> 기본 이벤트 방지
+
+            onwheel -> 마우스휠 이벤트
+            event.deltaY -> 아래로 스크롤하면 양수, 위로 스크롤하면 음수
+            event.currentTarget -> 이벤트가 발생한 요소 자신
+
+            DOMElement.scrollTop -> 수직 스크롤 픽셀 수
+            DOMElement.scrollLeft -> 수평 스크롤 픽셀 수
+            DOMElement.prevElementSibling -> DOM 요소의 이전 요소
+            DOMElement.nextElementSibling -> DOM 요소의 다음 요소
+            DOMElement.offsetTop -> 부모 기준 상위 위치 반환
+
+            객체.length -> 객체의 길이(개수)
         */
         const docEle = document.documentElement;
         const sec = document.querySelectorAll('.sec');

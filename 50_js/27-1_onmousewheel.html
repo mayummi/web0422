@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {border: 1px solid tomato;}
+    </style>
+    <script>
+        /* 
+            DOMContentLoaded -> window
+            click, mouseenter, mouseleave, wheel -> HTML DOM
+            change -> select
+        */
+        window.addEventListener("DOMContentLoaded", () => {
+            /* 
+                wheel 이벤트 형식
+                    객체.onwheel = () => {
+                        if (event.deltaY > 0) {
+                            // 마우스휠을 아래로 내림
+                        } else if (event.deltaY < 0) {
+                            // 마우스휠을 위로 올림
+                        }
+                    };
+
+                1. onwheel -> 마우스휠 이벤트
+                2. event.deltaY -> 아래로 스크롤하면 양수, 위로 스크롤하면 음수
+            */
+            const sectionElement = document.querySelector("section");
+
+            sectionElement.onwheel = function () {
+                if (event.deltaY > 0) {
+                    // 마우스휠을 아래로 내림
+                    console.log("마우스휠을 아래로 내렸습니다.");
+                } else if (event.deltaY < 0) {
+                    // 마우스휠을 위로 올림
+                    console.log("마우스휠을 위로 올렸습니다.");
+                }
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <section>섹션</section>
+</body>
+
+</html>
