@@ -170,6 +170,7 @@
         padding: 30px 0px 0 224px;
 
     }
+    
     /* #footer .ff .flink a { */
         /* padding: 0 0px 34px 134px; */
         /* padding: auto; */
@@ -190,7 +191,7 @@
         align-items: center;
         margin-left: 224px;
     } */
-    #footer .fflogo {display: flex;}
+    /* #footer .fflogo {display: flex;} */
     /* #footer .ff .flink { */
         /* display:calc(flex); */
         /* display: flex; */
