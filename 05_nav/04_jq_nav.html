@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 메뉴</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        /* 초기값 */
+        * {
+            box-sizing: border-box;
+        }
+        body, ul {
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background: #fff;
+            font-size: 15px;
+            font-family: "굴림", sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 1depth */
+        .main li a {
+            font-size: 16px;
+            color: #999;
+        }
+        .main li a:hover {
+            color: #fff;
+        }
+        /* 2depth */
+        .sub li a {
+            font-size: 14px;
+            color: #333;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="gnb">
+            <ul>
+                <!-- 1depth -->
+                <ul class="main">
+                    <li><a href="#">분양단지</a>
+                        <!-- 2depth -->
+                        <ul class="sub">
+                            <li><a href="#">분양단지</a></li>
+                            <li><a href="#">분양중인 단지</a></li>
+                            <li><a href="#">분양예정 단지</a></li>
+                            <li><a href="#">분양완료 단지</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 스토리</a></li>
+                            <li><a href="#">브랜드 아이덴티티</a></li>
+                            <li><a href="#">특화아이템</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아너스빌 멤버스</a>
+                        <ul class="sub">
+                            <li><a href="#">아너스빌 소식</a></li>
+                            <li><a href="#">청약가이드</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">마이 아너스빌</a>
+                        <ul class="sub">
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">A/S 문의</a></li>
+                            <li><a href="#">관심단지 관리</a></li>
+                            <li><a href="#">개인정보 변경</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
