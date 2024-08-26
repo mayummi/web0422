@@ -13,28 +13,51 @@ a,ul,li {
     font-weight: 500;
     color: #292929;
 }
-header h1 img {
+#header h1 img {
     vertical-align: middle;
 }
 
 
 /* 헤더 */
 /* 공통 */
-header .main>li a:hover {
+#header .main>li a:hover {
     color: #009132;
 }
-header .gnb {
+#header .gnb {
     background: #fff;
 }
 
+/* 폰 */
+#header .mobile-menu {
+    display: block;
+    background: #000;
+    /* width: 12px; */
+    /* height: 2px; */
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+#header .mobile-menu .menu-burger .burger__bar {
+    width: 12px;
+    height: 3px;
+    background: #000;
+    margin: 10px;
+}
 
+
+/* 테블릿 */
+@media (min-width: 768px) {
+    
+}
+
+/* 데스크탑 */
 @media (min-width: 992px) {
     
-header .gnb {
+#header .gnb {
     display: flex;
     justify-content: center;
 }
-header {
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,17 +70,17 @@ header {
 }
 
 /* 1depth */
-header .main {
+#header .main {
     display: flex;
 }
-header .main>li {
+#header .main>li {
     height: 50px;
     text-align: center;
     /* line-height: 100px; */
     /* padding: 0 30px; */
     /* line-height: 30px; */
 }
-header .main>li>a {
+#header .main>li>a {
     display: flex;
     justify-content: space-between;
 
@@ -69,7 +92,7 @@ header .main>li>a {
 
 
 /* 2depth */
-header .sub {
+#header .sub {
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
@@ -78,20 +101,20 @@ header .sub {
     line-height: 2.5;
     transition: .5s;
 }
-header .main:hover .sub {
+#header .main:hover .sub {
     height: 200px;
     visibility: visible;
     opacity: 1;
 }
-header .sub li a {
+#header .sub li a {
     padding: 4px 0px 16px 0vw;
     /* text-wrap: nowrap; */
     text-align: left;
 }
-header .gnb {
+#header .gnb {
     position: relative;
 }
-header .gnb .main::before {
+#header .gnb .main::before {
     content: "";
     width: 1920vw;
     top: 75px;
@@ -104,18 +127,18 @@ header .gnb .main::before {
     transition: .5s;
     background: #6b6565b0;
 }
-header .gnb .main:hover::before {
+#header .gnb .main:hover::before {
     height: 300px;
     opacity: 1;
 }
 
 /* util menu */
-header .util_menu ul {
+#header .util_menu ul {
     /* padding: 0 30px 0 100px; */
     display: flex;
     padding-right: 1.5vw;
 }
-header .util_menu ul li a {
+#header .util_menu ul li a {
     padding: 0 5px;
     border: 1px solid lightslategray;
     text-wrap: nowrap;
