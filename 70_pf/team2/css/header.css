@@ -26,6 +26,11 @@ a,ul,li {
 #header .gnb {
     background: #fff;
 }
+/* #header .gnbWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
 
 /* 폰 */
 
