@@ -122,13 +122,6 @@
 
 }
 
-@media (max-width: 800px) {
-    #footer .fflogo .flink .fff {
-        white-space: nowrap;
-        margin-right: 100px;
-        /* text-wrap: wrap; */
-    }
-}
 
 @media (min-width: 992px) {
 
@@ -179,13 +172,17 @@
     #footer .fflogo {
         vertical-align: top;
         display: flex;
+
         /* display: flex; */
         /* margin-left: 224px; */
         /* bottom: 60px; */
     }
+    #footer .fflogo .flink {
+        margin-left: -50px;
+    }
     #footer .fflogo .flink .fff {
         white-space: nowrap;
-        margin-right: 130px;
+        margin-right: 6vw;
         /* text-wrap: wrap; */
     }
     /* #footer .ff .flink a { */
