@@ -132,7 +132,7 @@
     }
 
     #footer .fw {
-        padding: 100px 224px 34px;
+        padding: 100px 12vw 34px;
     }
 
     #footer .fs {
@@ -166,7 +166,7 @@
         margin-bottom: 50px;
     }
     #footer .ff  {
-        padding: 30px 0px 0 224px;
+        padding: 30px 0px 0 12vw;
 
     }
     #footer .fflogo {
@@ -178,11 +178,11 @@
         /* bottom: 60px; */
     }
     #footer .fflogo .flink {
-        margin-left: -50px;
+        margin-left: -100px;
     }
     #footer .fflogo .flink .fff {
         white-space: nowrap;
-        margin-right: 6vw;
+        margin-right: 8vw;
         /* text-wrap: wrap; */
     }
     /* #footer .ff .flink a { */
