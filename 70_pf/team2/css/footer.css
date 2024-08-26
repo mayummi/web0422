@@ -183,39 +183,6 @@
     #footer .fflogo .flink .fff {
         white-space: nowrap;
         margin-right: 8vw;
-        /* text-wrap: wrap; */
     }
-    /* #footer .ff .flink a { */
-        /* padding: 0 0px 34px 134px; */
-        /* padding: auto; */
-        /* width: 100vw; */
-        /* height: 10px; */
-        /* text-align: center; */
-    /* } */
-    
-    /* #footer .ff div {
-        display: flex;
-    } */
-
-    /* #footer .ff {
-        display: flex;
-    } */
-    /* #footer .ff .fflogo {
-        display: flex;
-        align-items: center;
-        margin-left: 224px;
-    } */
-    /* #footer .fflogo {display: flex;} */
-    /* #footer .ff .flink { */
-        /* display:calc(flex); */
-        /* display: flex; */
-
-        /* justify-content: space-between; */
-    /* } */
-    /* #footer .ff div >.flink {
-        display: flex;
-        justify-content: space-between;
-    } */
-
 }
 
