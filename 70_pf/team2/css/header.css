@@ -28,21 +28,39 @@ a,ul,li {
 }
 
 /* 폰 */
+
+/* 모바일 버튼 */
 #header .mobile-menu {
-    display: block;
-    background: #000;
+    display: inline-block;
+    /* background: #000; */
     /* width: 12px; */
     /* height: 2px; */
     position: absolute;
     top: 10px;
     right: 0;
 }
-#header .mobile-menu .menu-burger .burger__bar {
-    width: 12px;
-    height: 3px;
-    background: #000;
-    margin: 10px;
+#header .mobile-menu .menu-burger .burger__bar1, #header .mobile-menu .menu-burger .burger__bar2, #header .mobile-menu .menu-burger .burger__bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 8px 10px;
+    background-color: #000;
+    cursor: pointer;
 }
+
+/* #header .gnb {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -65%;
+    width: 65%;
+    height: 100vh;
+    background: red;
+    transition: .3s ease-in-out;
+} */
+/* #header .gnb {
+    display: none;
+} */
+
 
 
 /* 테블릿 */
