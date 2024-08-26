@@ -30,7 +30,10 @@ header .gnb {
 
 @media (min-width: 992px) {
     
-
+header .gnb {
+    display: flex;
+    justify-content: center;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -49,12 +52,15 @@ header .main {
 }
 header .main>li {
     height: 50px;
-    text-align: left;
+    text-align: center;
     /* line-height: 100px; */
-    padding: 0 30px;
+    /* padding: 0 30px; */
     /* line-height: 30px; */
 }
 header .main>li>a {
+    display: flex;
+    justify-content: space-between;
+
     display: block;
     padding: 20px 2vw;
     text-wrap: nowrap;
@@ -68,8 +74,8 @@ header .sub {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    padding: 10px 0 20px 0;
-    line-height: 2;
+    padding: 20px 0 0px 0;
+    line-height: 2.5;
     transition: .5s;
 }
 header .main:hover .sub {
@@ -78,7 +84,7 @@ header .main:hover .sub {
     opacity: 1;
 }
 header .sub li a {
-    padding: 4px 0px 16px 2vw;
+    padding: 4px 0px 16px 0vw;
     /* text-wrap: nowrap; */
     text-align: left;
 }
@@ -87,13 +93,13 @@ header .gnb {
 }
 header .gnb .main::before {
     content: "";
-    width: 1920px;
+    width: 1920vw;
     top: 75px;
     right: 0;
     position: absolute;
     display: block;
     z-index: -1;
-    right: -389px;
+    right: -871vw;
     /* width: 100%; */
     transition: .5s;
     background: #6b6565b0;
@@ -105,12 +111,16 @@ header .gnb .main:hover::before {
 
 /* util menu */
 header .util_menu ul {
-    z-index: 1;
+    /* padding: 0 30px 0 100px; */
     display: flex;
+    padding-right: 1.5vw;
 }
 header .util_menu ul li a {
     padding: 0 5px;
     border: 1px solid lightslategray;
     text-wrap: nowrap;
+}
+#header .mobile-menu {
+    display: none;
 }
 }
