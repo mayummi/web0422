@@ -19,25 +19,37 @@ header h1 img {
 
 
 /* 헤더 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 80px;
-    height: 100px;
-    width: 100%;
-    margin: 0 auto;
+/* 공통 */
+header .main>li a:hover {
+    color: #009132;
 }
 header .gnb {
     background: #fff;
 }
+
+
+@media (min-width: 992px) {
+    
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 80px; */
+    padding: 0 4vw;
+
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* 1depth */
 header .main {
     display: flex;
 }
 header .main>li {
     height: 50px;
-    text-align:center;
+    text-align: left;
     /* line-height: 100px; */
     padding: 0 30px;
     /* line-height: 30px; */
@@ -48,9 +60,7 @@ header .main>li>a {
     text-wrap: nowrap;
 }
 
-header .main>li a:hover {
-    color: #009132;
-}
+
 
 /* 2depth */
 header .sub {
@@ -68,8 +78,9 @@ header .main:hover .sub {
     opacity: 1;
 }
 header .sub li a {
-    padding: 4px 16px;
-    /* text-align: center; */
+    padding: 4px 0px 16px 2vw;
+    /* text-wrap: nowrap; */
+    text-align: left;
 }
 header .gnb {
     position: relative;
@@ -77,14 +88,15 @@ header .gnb {
 header .gnb .main::before {
     content: "";
     width: 1920px;
-    top: 30px;
+    top: 75px;
     right: 0;
     position: absolute;
     display: block;
     z-index: -1;
+    right: -389px;
     /* width: 100%; */
     transition: .5s;
-    /* background: #6b6565b0; */
+    background: #6b6565b0;
 }
 header .gnb .main:hover::before {
     height: 300px;
@@ -93,10 +105,12 @@ header .gnb .main:hover::before {
 
 /* util menu */
 header .util_menu ul {
+    z-index: 1;
     display: flex;
 }
 header .util_menu ul li a {
     padding: 0 5px;
     border: 1px solid lightslategray;
     text-wrap: nowrap;
+}
 }
