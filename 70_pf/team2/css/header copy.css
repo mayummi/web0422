@@ -7,7 +7,7 @@
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 a,
@@ -57,7 +57,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--main-Orange);
+    color: #000;
     font-size: 18px;
     font-weight: 500;
 }
@@ -117,7 +117,7 @@ li {
 
 .link__found.active {
     background: white;
-    color: var(--main-Orange);
+    color: #000;
     border: 1px solid var(--main-Orange);
 }
 
@@ -130,12 +130,9 @@ li {
 .header-hidden {
     position: fixed;
     top: -480px;
-    /* 221027 �섏젙 */
     left: 0;
-    /* //221027 �섏젙 */
     width: 100%;
     height: 480px;
-    /* background: rgba(0, 0, 0, 0.7); */
     background: #fff;
     z-index: 9;
     overflow: hidden;
@@ -159,7 +156,7 @@ li {
 .menu-hidden {
     display: flex;
     justify-content: space-between;
-    color: var(--main-Orange);
+    color: #000;
     font-size: 18px;
     font-weight: normal;
     position: absolute;
@@ -186,8 +183,7 @@ li {
     text-align: left;
     line-height: 50px;
     flex-shrink: 0;
-    /* 6/21 異붽�*/
-    color: var(--main-Orange);
+    color: #000;
 }
 
 #mobile__menu {
@@ -242,7 +238,7 @@ li {
 }
 
 .mobile-menu-closeBtn {
-    background-image: url(../images/icon/X@2x.png);
+    background-image: url(../images/xbtn.svg);
     background-size: cover;
     width: 22px;
     height: 22px;
@@ -287,9 +283,9 @@ li {
 }
 
 .menus-arrow {
-    background-image: url(../images/icon/arrow-down.png);
+    background-image: url(../images/arrow-down.svg);
     background-size: cover;
-    width: 18px;
+    width: 30px;
     height: 18px;
 }
 
@@ -315,7 +311,7 @@ li {
     font-size: 12px;
     padding: 5px;
     margin-bottom: 7px;
-    color: var(--main-Orange);
+    color: #000;
 }
 
 .mobile-menu__open-contents .menus>div>div:last-child.active {
@@ -323,7 +319,7 @@ li {
 }
 
 .hidden-menuList.active>.menus-arrow {
-    background-image: url(../images/icon/arrow-up.png);
+    background-image: url(../images/arrow-up.svg);
 }
 
 @media (max-width: 1650px) {
@@ -339,18 +335,6 @@ li {
         margin-left: 10px;
     }
 
-    /* .menu {
-      position: unset;
-      transform: translate(0);
-    }
-  
-    .menu-hidden {
-      position: unset;
-      transform: translate(0);
-      padding-top: 100px;
-    } */
-
-    /* 硫붾돱 留덉쭊 */
     .menu li,
     .menu-hidden-list {
         margin: 0 25px;
@@ -441,7 +425,7 @@ li {
     .burger__bar {
         width: 30px;
         height: 3px;
-        background: var(--main-Orange);
+        background: #000;
     }
 }
 
