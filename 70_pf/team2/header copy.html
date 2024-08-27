@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBWAY</title>
     <link rel="stylesheet" href="css/header copy.css">
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="./script/header copy.js"></script>
 </head>
 
@@ -87,26 +88,84 @@
             </ul>
         </div>
 
-        
-        <div class="navbar">
-            <ul class="navbar-menu">
-                <li><a href="#">메뉴소개</a></li>
-                <li><a href="#">이용방법</a></li>
-                <li><a href="#">새소식</a></li>
-            </ul>
-            <ul class="navbar-link">
+        <!-- 모바일메뉴 -->
 
-                <li class="before_sign"><a href="#">로그인</a></li>
-                <li class="before_sign"><a href="#">회원가입</a></li>
+        <div class="mobile-menu__open">
+            <div class="mobile-menu__open-contents">
+                <div class="mobile-menu-closeBtn"></div>
+                <div>
+                    <div class="menus">
+                        <div class="category-for-active">
+                            <div class="hidden-menuList">
+                                <div class="menus-menu">셀렉토커피</div>
+                                <div class="menus-arrow"></div>
+                            </div>
+                            <div class="category-list">
+                                <a class="menus-menu-category" href="/brand/story.asp">브랜드 스토리</a>
+                                <a class="menus-menu-category" href="/brand/history.asp">HISTORY</a>
+                                <a class="menus-menu-category" href="/brand/competitivity.asp">경쟁력</a>
+                                <!--<a class="menus-menu-category" href="/brand/oneforone.asp">ONE FOR ONE</a>-->
+                            </div>
+                        </div>
+                        <div class="category-for-active">
+                            <div class="hidden-menuList">
+                                <div class="menus-menu">메뉴</div>
+                                <div class="menus-arrow"></div>
+                            </div>
+                            <div class="category-list">
+                                <!--<a class="menus-menu-category">MENU SUMMARY</a>-->
+                                <a class="menus-menu-category"
+                                    href="/brand/menu_main.asp?page=1&kind=Signature">Signature</a>
+                                <a class="menus-menu-category"
+                                    href="/brand/menu_main.asp?page=1&kind=Cookies">Season</a>
+                                <a class="menus-menu-category" href="/brand/menu_main.asp?page=1&kind=Coffee">Coffee</a>
+                                <a class="menus-menu-category"
+                                    href="/brand/menu_main.asp?page=1&kind=Beverage">Beverage</a>
+                                <a class="menus-menu-category"
+                                    href="/brand/menu_main.asp?page=1&kind=Deli">Deli&Dessert</a>
+                                <a class="menus-menu-category" href="/brand/menu_main.asp?page=1&kind=MD">MD</a>
+                            </div>
+                        </div>
+                        <div class="category-for-active">
+                            <div class="hidden-menuList">
+                                <div class="menus-menu">매장안내</div>
+                                <div class="menus-arrow"></div>
+                            </div>
+                            <div class="category-list">
+                                <a class="menus-menu-category" href="/brand/store_search.asp">매장찾기</a>
+                                <!--<a class="menus-menu-category" href="store_scheduled.asp">오픈 예정 매장</a>-->
+                            </div>
+                        </div>
+                        <div class="category-for-active">
+                            <div class="hidden-menuList">
+                                <div class="menus-menu">WHAT'S NEW</div>
+                                <div class="menus-arrow"></div>
+                            </div>
+                            <div class="category-list">
+                                <a class="menus-menu-category" href="/brand/whatsnew_main.asp">새로운 소식</a>
+                                <a class="menus-menu-category" href="/brand/whatsnew_report.asp">보도자료</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sns">
+                        <a href="https://blog.naver.com/maxone01" target="_blank"><img
+                                src="../assets/images/icon/h-link-naver.svg" alt="" /></a>
+                        <a href="https://www.youtube.com/channel/UCM8GQsYfu6I4MgYwjnCJXrg/featured" target="_blank"><img
+                                src="../assets/images/icon/h-link-youtube.svg" alt="" /></a>
+                        <a href="https://www.instagram.com/selecto_coffee/" target="_blank"><img
+                                src="../assets/images/icon/h-link-instagram.svg" alt="" /></a>
+                    </div>
+                    <button class="menuLink" onclick="document.location.href='/founded/main.asp'">창업안내</button>
+                </div>
+            </div>
+        </div>
+        </div>
 
-                <li class="icon_menu global_subway">
-                    <a href="#" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
-                </li>
-            </ul>
-            <div class="collapsedMenuIcon">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+        <div class="mobile-menu">
+            <div class="menu-burger">
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
+                <div class="burger__bar"></div>
             </div>
         </div>
 
