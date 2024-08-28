@@ -332,18 +332,18 @@ li {
         width: 200px;
     }
 
-    .header__inner {
+    #header .header__inner {
         padding: 0 30px;
     }
 
-    .link button {
+    #header .link button {
         background: #009132;
         padding: 7px 16px;
         margin-right: 8px;
         font-size: 15px;
     }
 
-    .link a {
+    #header .link a {
         text-align: center;
 
     }
@@ -360,7 +360,7 @@ li {
     .menu-hidden-list {
         width: 120px;
     }
-    .menu-hidden-list {
+    #header .menu-hidden-list {
         line-height: 1.5;
         margin-bottom: 25px;
     }
@@ -460,19 +460,16 @@ li {
         margin: 0 10px;
     }
 
-
-
-    /* -------------------------------- */
-    .menu {
+    #header .menu {
         display: none;
     }
 
-    .link {
+    #header .link {
         display: none;
     }
 
 
-    .header-hidden {
+    #header .header-hidden {
         display: none;
     }
 
