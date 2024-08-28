@@ -7,7 +7,6 @@
 body {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1.2rem;
-    /* border: 1px solid red; */
 }
 
 a,
@@ -45,7 +44,6 @@ li {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    /* padding: 0 80px; */
     background: #fff;
     z-index: 99999;
 }
@@ -72,10 +70,6 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* #header .link .link__found {
-    position: absolute;
-    text-wrap: nowrap;
-} */
 
 .menulist {
     /* padding: 0 0 0 20px; */
@@ -98,13 +92,14 @@ li {
 }
 
 
-.link button {
+.link .link__found  {
     border-radius: 20px;
     font-family: "Noto Sans KR", sans-serif;
-    color: #fff;
     transition: 0.2s ease;
 }
-
+.link .link__found a {
+    color: #fff;
+}
 .link__found.active {
     background: #fff;
     color: #000;
@@ -373,10 +368,13 @@ li {
     }
     .link .link__found {
         background: #009132;
-        color: #fff;
         padding: 6px 18px;
         margin-right: 2px;
+    }
+    .link .link__found a {
         font-size: 12px;
+        color: #fff;
+
     }
 }
 
