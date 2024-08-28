@@ -121,10 +121,10 @@ li {
 .link__found.active {
     background: #fff;
     color: #000;
-    border: 1px solid var(--main-Orange);
+    border: 1px solid #009132;
 }
 
-/* 硫붾돱 �≫떚釉� �좊땲硫붿씠�� */
+
 .header-hidden__inner>.link,
 .header-hidden__inner>.logo {
     opacity: 0;
@@ -333,8 +333,11 @@ li {
 
 
 @media (min-width: 976px) {
+    #header .header__inner .logo a img {
+        width: 200px;
+    }
     .header__inner {
-        padding: 0 40px;
+        padding: 0 30px;
     }
 
     .link button {
