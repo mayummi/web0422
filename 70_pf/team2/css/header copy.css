@@ -379,11 +379,11 @@ li {
 
     }
 
-    .menulist {
+    #header .menulist {
         width: 6vw;
     }
 
-    .menu-hidden-list {
+    #header .menu-hidden-list {
         width: 6vw;
     }
 
@@ -423,11 +423,11 @@ li {
         width: 150px;
     }
 
-    .menu {
+    #header .menu {
         left: 48.5%;
     }
 
-    .menu-hidden {
+    #header .menu-hidden {
         left: 48.5%;
     }
 
@@ -437,15 +437,15 @@ li {
         font-size: 15px;
     }
 
-    .menu-hidden {
+    #header .menu-hidden {
         font-size: 15px;
     }
 
-    .menulist {
+    #header .menulist {
         width: 100px;
     }
 
-    .menu-hidden-list {
+    #header .menu-hidden-list {
         width: 100px;
     }
 
@@ -481,7 +481,7 @@ li {
         z-index: 99999;
     }
 
-    .menu-burger {
+    #header .menu-burger {
         height: 22px;
         display: flex;
         flex-direction: column;
@@ -490,7 +490,7 @@ li {
         z-index: 9999999999;
     }
 
-    .burger__bar {
+    #header .burger__bar {
         width: 30px;
         height: 3px;
         background: #000;
@@ -572,7 +572,7 @@ li {
 
 @media (min-width: 360px) {
 
-    .header__inner {
+    #header .header__inner {
         height: 55px;
     }
 
@@ -580,19 +580,19 @@ li {
         width: 81px;
     }
 
-    .header__inner {
+    #header .header__inner {
         padding: 0 16px;
     }
 
-    .logo>img {
+    #header .logo>img {
         height: 32px;
     }
 
-    .menu-burger {
+    #header .menu-burger {
         height: 20px;
     }
 
-    .burger__bar {
+    #header .burger__bar {
         width: 22px;
         height: 3px;
     }
