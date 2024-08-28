@@ -166,17 +166,20 @@ li {
     border-radius: 25px;
 }
 
-/* ////////////////////////////////////////////////////////////////////////////// */
 .menu-hidden-list a {
     text-align: left;
     height: 10px;
     width: 20px;
     /* line-height: 50px; */
-    line-height: 1.5;
-    margin-bottom: 25px;
+    /* line-height: 1.5; */
+    /* margin-bottom: 25px; */
     flex-shrink: 0;
     color: #000;
 }
+.list-link:hover, .menulist:hover {
+    color: #009132;
+}
+
 
 
 /* 모바일 */
@@ -356,6 +359,10 @@ li {
 
     .menu-hidden-list {
         width: 120px;
+    }
+    .menu-hidden-list {
+        line-height: 1.5;
+        margin-bottom: 25px;
     }
 }
 

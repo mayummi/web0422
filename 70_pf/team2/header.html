@@ -5,96 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBWAY</title>
-    <link rel="stylesheet" href="css/header.css">
-    <script src="./script/header.js"></script>
+    <link rel="icon" href="./images/subwayfavicon.svg">
+    <link rel="stylesheet" href="css/header copy.css">
+    <script src="./script/header copy.js"></script>
 </head>
 
 <body>
-    <header id="header">
-        <!-- logo -->
-        <h1 class="logo"><a href="#"><img src="./images/logo_w.png" alt="logo"></a></h1>
-        <!-- nav -->
-        <!-- nav>ul.main>li*4>a[href="#"]+ul.sub>li*4>a[href="#"] -->
-        <nav class="gnb">
-            <ul class="main">
-                <li>
-                    <a href="#">메뉴소개</a>
-                    <ul class="sub">
-                        <li><a href="#">샌드위치</a></li>
-                        <li><a href="#">랩</a></li>
-                        <li><a href="#">샐러드</a></li>
-                        <li><a href="#">아침메뉴</a></li>
-                        <li><a href="#">스마일 썹</a></li>
-                        <li><a href="#">단체메뉴</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">이용방법</a>
-                    <ul class="sub">
-                        <li><a href="#">써브웨이 이용방법</a></li>
-                        <li><a href="#">단체메뉴 이용방법</a></li>
-                        <li><a href="#">신선한 재료 소개</a></li>
-                        <li><a href="#">App 이용방법</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">새소식</a>
-                    <ul class="sub">
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">뉴스</a></li>
-                        <li><a href="#">광고영상</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">써브웨이</a>
-                    <ul class="sub">
-                        <li><a href="#">써브웨이역사</a></li>
-                        <li><a href="#">써브웨이약속</a></li>
-                        <li><a href="#">샌드위치 아티스트 지원</a></li>
-                        <li><a href="#">매장찾기</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">가맹점</a>
-                    <ul class="sub">
-                        <li><a href="#">프랜차이즈</a></li>
-                        <li><a href="#">가맹관련FAQ</a></li>
-                        <li><a href="#">가맹신청</a></li>
-                        <li><a href="#">지사안내</a></li>
-                        <li><a href="#">사업설명회</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">온라인주문</a>
-                    <ul class="sub">
-                        <li><a href="#">FAST-SUB</a></li>
-                        <li><a href="#">HOME-SUB</a></li>
-                        <li><a href="#">단체주문</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- util menu -->
-        <div class="util_menu">
-            <ul>
-
-                <li class="before_sign"><a href="#">로그인</a></li>
-                <li class="before_sign"><a href="#">회원가입</a></li>
-
-                <li class="icon_menu global_subway">
-                    <a href="#" target="_blank" title="Global Subway"><span class="blind">Global Subway</span></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="mobile-menu">
-            <div class="menu-burger">
-                <div class="burger__bar1"></div>
-                <div class="burger__bar2"></div>
-                <div class="burger__bar3"></div>
+    <div class="mobile-menu__open">
+        <div class="mobile-menu__open-contents">
+            <div class="mobile-menu-closeBtn"></div>
+            <div>
+                <div class="menus">
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">메뉴소개</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">샌드위치</a>
+                            <a class="menus-menu-category" href="#">랩</a>
+                            <a class="menus-menu-category" href="#">샐러드</a>
+                            <a class="menus-menu-category" href="#">아침메뉴</a>
+                            <a class="menus-menu-category" href="#">스마일 썹</a>
+                            <a class="menus-menu-category" href="#">단체메뉴</a>
+                        </div>
+                    </div>
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">이용방법</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">써브웨이 이용방법</a>
+                            <a class="menus-menu-category" href="#">단체메뉴 이용방법</a>
+                            <a class="menus-menu-category" href="#">신선한 재료 소개</a>
+                            <a class="menus-menu-category" href="#">App 이용방법</a>
+                            
+                        </div>
+                    </div>
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">새소식</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">이벤트</a>
+                            <a class="menus-menu-category" href="#">뉴스</a>
+                            <a class="menus-menu-category" href="#">광고영상</a>
+                        </div>
+                    </div>
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">써브웨이</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">써브웨이역사</a>
+                            <a class="menus-menu-category" href="#">써브웨이약속</a>
+                            <a class="menus-menu-category" href="#">샌드위치 아티스트 지원</a>
+                            <a class="menus-menu-category" href="#">매장찾기</a>
+                        </div>
+                    </div>
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">가맹점</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">프랜타이즈</a>
+                            <a class="menus-menu-category" href="#">가맹관련FAQ</a>
+                            <a class="menus-menu-category" href="#">가맹신청</a>
+                            <a class="menus-menu-category" href="#">지사안내</a>
+                            <a class="menus-menu-category" href="#">사업설명회</a>
+                        </div>
+                    </div>
+                    <div class="category-for-active">
+                        <div class="hidden-menuList">
+                            <div class="menus-menu">온라인주문</div>
+                            <div class="menus-arrow"></div>
+                        </div>
+                        <div class="category-list">
+                            <a class="menus-menu-category" href="#">FAST-SUB</a>
+                            <a class="menus-menu-category" href="#">HOME-SUB</a>
+                            <a class="menus-menu-category" href="#">단체주문</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sns">
+                    <a href="#" target="_blank"><img
+                            src="./images/icon_utill_global 1.svg" alt="글로벌" /></a>
+                    
+                </div>
+                <div class="menulink-btn">
+                    <button class="menuLink"><a href="#">로그인</a></button>
+                    <button class="menuLink"><a href="#">회원가입</a></button>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
+    </div>
+    <!-- wrap-->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <header class="header">
+                <div class="header__inner">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img src="./images/logo_w.png" alt="logo" />
+                        </a>
+                    </h1>
+
+                    <ul class="menu">
+                        <li class="menulist">메뉴소개</li>
+                        <li class="menulist">이용방법</li>
+                        <li class="menulist">새소식</li>
+                        <li class="menulist">써브웨이</li>
+                        <li class="menulist">가맹점
+                        <li class="menulist">온라인주문</li>
+                    </ul>
+
+                    <div class="link">
+                        <button class="link__found"><a href="#">로그인</a></button>
+                        <button class="link__found"><a href="#">회원가입</a></button>
+                        <a href="#" target="_blank"><img
+                                src="./images/icon_utill_global 1.svg" alt="global_subway" /></a>
+                    </div>
+
+                    <div class="mobile-menu">
+                        <div class="menu-burger">
+                            <div class="burger__bar"></div>
+                            <div class="burger__bar"></div>
+                            <div class="burger__bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-hidden for-mouseOut">
+                    <div class="header-hidden__inner">
+                        <ul class="menu-hidden">
+                            <ul>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">샌드위치</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">랩</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">샐러드</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">아침메뉴</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">스마일 썹</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">단체메뉴</a>
+                                </li>
+                                
+                            </ul>
+                            <ul>
+                                
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">써브웨이 이용방법</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">단체메뉴 이용방법</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">신선한 재료 소개</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">App 이용방법</a>
+                                </li>
+                                
+                            </ul>
+                            <ul>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">이벤트</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">뉴스</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">광고영상</a>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">써브웨이역사</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">써브웨이약속</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">샌드위치 아티스트 지원</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">매장찾기</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">프랜차이즈</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">가맹관련FAQ</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">가맹신청</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">지사안내</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">사업설명회</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">FAST-SUB</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">HOME-SUB</a>
+                                </li>
+                                <li class="menu-hidden-list">
+                                    <a class="list-link" href="#">단체주문</a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </header>
 </body>
 
 </html>
