@@ -4,6 +4,7 @@
 #footer {
     width: 100vw;
     background: #000;
+    margin-bottom: 0;
 }
 
 #footer p,
