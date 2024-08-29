@@ -6,83 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아코디언 메뉴</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
         /* 초기값 */
         * {
             box-sizing: border-box;
         }
-        body, ul {
+
+        body,
+        ul {
             margin: 0;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         a {
             text-decoration: none;
         }
+
         body {
-            background: #fff;
             font-size: 15px;
-            font-family: "굴림", sans-serif;
             line-height: 1.6;
+            font-family: "굴림", sans-serif;
+            background: #fff;
+        }
+
+        header {
+            width: 200px;
+            height: 650px;
+            border: 1px solid;
+            padding: 16px;
         }
 
         /* 1depth */
-        .main li a {
+        .main>li {
+            background: rgb(210, 86, 86);
+            text-align: center;
+            border-bottom: 1px solid rgb(174, 40, 40);
+        }
+
+        .main>li>a {
             font-size: 16px;
-            color: #999;
+            color: #333;
+            display: block;
+            padding: 8px 0;
         }
-        .main li a:hover {
-            color: #fff;
-        }
+
         /* 2depth */
+        .sub {
+            background: rgb(209, 123, 123);
+            padding: 8px 0;
+        }
+
         .sub li a {
+            position: relative;
             font-size: 14px;
             color: #333;
         }
-        
+
+        .sub li a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(174, 40, 40, 0.493);
+            transform: scaleX(0);
+            transform-origin: 0% 0%;
+            transition: .5s;
+        }
+
+        .sub li a:hover::before {
+            transform: scaleX(1);
+        }
     </style>
+
+    <!-- 제이쿼리 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){});
+        // $(function(){});
+        $(() => {
+            // 메인메뉴 하나에 마우스를 올리면 서브메뉴 전체가 열린다.
+            // 메인메뉴 하나: .main>li>a
+            // 마우스를 올리면: mouseenter
+            // 서브메뉴 전체: .sub
+            // 열린다.
+
+            // 페이지가 열리자 마자 서브페이지 전체 닫기
+            $(".sub").hide();
+
+            $(".main>li").mouseenter(function(){
+                // 서브 메뉴 전체가 열린다.
+                // $(this)란 window이다.
+                // $(this)란 이벤트가 발생한 객체 즉, li
+                // $(event.currentTarget)
+                console.log(event.currentTarget);
+                $(event.currentTarget).find(".sub").stop().slideDown();
+            });
+            $(".main>li").mouseleave(function(){
+                // 서브 메뉴 전체가 열린다.
+                $(event.currentTarget).find(".sub").stop().slideUp();
+            });
+
+
+            // 열린다.
+            // show() -> 즉시 열림
+            // fadeIn() -> 서서히 열림
+            // slideDown() -> 서서히 위에서 아래로 열림
+
+            // 닫힌다
+            // hide() -> 즉시 닫힘
+            // fadeOut() -> 서서히 닫힘
+            // slideUp() -> 서서히 아래에서 위로 닫힘
+
+            // animate()
+
+        });
+
+    </script>
+
 </head>
 
 <body>
     <header>
         <nav id="gnb">
-            <ul>
-                <!-- 1depth -->
-                <ul class="main">
-                    <li><a href="#">분양단지</a>
-                        <!-- 2depth -->
-                        <ul class="sub">
-                            <li><a href="#">분양단지</a></li>
-                            <li><a href="#">분양중인 단지</a></li>
-                            <li><a href="#">분양예정 단지</a></li>
-                            <li><a href="#">분양완료 단지</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">브랜드</a>
-                        <ul class="sub">
-                            <li><a href="#">브랜드 스토리</a></li>
-                            <li><a href="#">브랜드 아이덴티티</a></li>
-                            <li><a href="#">특화아이템</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">아너스빌 멤버스</a>
-                        <ul class="sub">
-                            <li><a href="#">아너스빌 소식</a></li>
-                            <li><a href="#">청약가이드</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">마이 아너스빌</a>
-                        <ul class="sub">
-                            <li><a href="#">자주 묻는 질문</a></li>
-                            <li><a href="#">1:1 문의</a></li>
-                            <li><a href="#">A/S 문의</a></li>
-                            <li><a href="#">관심단지 관리</a></li>
-                            <li><a href="#">개인정보 변경</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <!-- 1depth -->
+            <ul class="main">
+                <li><a href="#">축제소개</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">초대의글</a></li>
+                        <li><a href="#">축제개요</a></li>
+                        <li><a href="#">축제연혁</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">행사안내</a>
+                    <ul class="sub">
+                        <li><a href="#">셔틀버스안내</a></li>
+                        <li><a href="#">행사안내</a></li>
+                        <li><a href="#">행사일정</a></li>
+                        <li><a href="#">소공연장</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보마당</a>
+                    <ul class="sub">
+                        <li><a href="#">축제소식</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">음식레시피</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">참여마당</a>
+                    <ul class="sub">
+                        <li><a href="#">참가후기</a></li>
+                        <li><a href="#">연꽃갤러리</a></li>
+                        <li><a href="#">포토갤러리</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
