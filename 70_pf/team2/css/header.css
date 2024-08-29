@@ -328,7 +328,7 @@ li {
 
 @media (min-width: 960px) {
     #header .header {
-        padding: 0 5vw;
+        padding: 0 40px;
     }
 
     #header .header__inner .logo a img {
