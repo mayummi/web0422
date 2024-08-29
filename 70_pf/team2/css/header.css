@@ -33,7 +33,7 @@ li {
 
 .header {
     position: relative;
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
 }
 
 
@@ -327,6 +327,9 @@ li {
 
 
 @media (min-width: 960px) {
+    #header .header {
+        padding: 0 5vw;
+    }
 
     #header .header__inner .logo a img {
         width: 200px;
@@ -347,6 +350,9 @@ li {
         text-align: center;
 
     }
+    #header .menulist {
+        font-size: 18px;
+    }
 
     .menu li,
     .menu-hidden-list {
@@ -365,17 +371,24 @@ li {
         margin-bottom: 25px;
     }
 }
-
+@media (max-width: 1550px) {
+    #header .menulist {
+        font-size: 15px;
+    }
+}
 @media (max-width: 1450px) {
 
+    #header .menulist {
+        font-size: 13px;
+    }
     .menu li,
     .menu-hidden-list {
         margin: 0 0;
     }
 
-    .menu li,
+    
     .menu-hidden-list a {
-        font-size: 13px;
+        font-size: 12px;
 
     }
 
@@ -497,78 +510,6 @@ li {
     }
 }
 
-/* @media (max-width: 1024px) {
-    .menu li,
-    .menu-hidden-list {
-        margin: 0 0;
-    }
-    .menulist {
-        width: 80px;
-    }
-
-    .menu-hidden-list {
-        width: 80px;
-    }
-    #header .header__inner .logo a img {
-        width: 150px;
-    }
-    .link .link--found {
-        background: #009132;
-        padding: 6px 18px;
-        margin-right: 8px;
-        font-size: 13px;
-    }
-    
-} */
-
-/* @media (max-width: 1024px) {
-    #header .header__inner .logo a img {
-        width: 150px;
-    }
-    .header__inner {
-        height: 80px;
-    }
-
-    #header .logo>a {
-        width: 100px;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .link {
-        display: none;
-    }
-
-    
-    .header-hidden {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        z-index: 99999;
-    }
-
-    .menu-burger {
-        height: 22px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 9999999999;
-    }
-
-    .burger__bar {
-        width: 30px;
-        height: 3px;
-        background: #000;
-    }
-} */
 
 @media (min-width: 360px) {
 
