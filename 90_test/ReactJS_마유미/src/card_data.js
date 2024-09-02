@@ -64,6 +64,14 @@ const cards = [
         cdate: "2024.07.31",
         cheart: 990
     },
+    {
+        cimg: "https://img.megabox.co.kr/SharedImg/2024/08/01/BUsWispT4T7lkUapLBCGyK17FuX5kKk6_420.jpg",
+        ctit: "파일럿",
+        cage: "12",
+        crate: 4.2,
+        cdate: "2024.07.31",
+        cheart: 990
+    },
 ];
 
 // export default cards;

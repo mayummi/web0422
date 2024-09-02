@@ -51,8 +51,8 @@ button {
     display: flex;
 }
 .card_list {
-    width:235px;
-    height: 330px;
+    width:255px;
+    height: 255px;
     margin: 60px;
 }
 .card_img {
