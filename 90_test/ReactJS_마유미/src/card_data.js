@@ -80,6 +80,8 @@ const cards = [
         cage: "12",
         crate: 4.2,
         cdate: "2024.07.31",
+        rate_img: "./../public/images/star.svg" ,
+        co_img: "./../public/images/co.svg",
         // cheart: 990
     },
 ];

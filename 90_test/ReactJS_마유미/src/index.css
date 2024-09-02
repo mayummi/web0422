@@ -123,36 +123,49 @@ button {
     margin: 0px;
     margin: 16px 0;
 } */
+/* .dr {
+    display: flex;
+    
+} */
 .card_rate::after {
     content: "|";
     color: #D8D9DB;
     padding: 0 8px;
     vertical-align: top;
 }
-
-.card_btn{
-    margin-top:12px;
+.rate_img {
+    vertical-align: middle;
+    width: 17px;
+    
 }
-.card_btn button {
+.co_img {
+    vertical-align: middle;
+    width: 17px;
+}
+
+/* .card_btn{
+    margin-top:12px;
+} */
+/* .card_btn button {
     width: 70px;
     height: 35px;
     margin-right: 3px;
     border-radius: 3px;
     border: 1px solid #F3F3F3;
-}
-.card_btn button::before {
+} */
+/* .card_btn button::before {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
     margin-right: 8px;
-}
-.card_btn button.on::before {
+} */
+/* .card_btn button.on::before {
     color: red;
-}
-.card_btn a {
+} */
+/* .card_btn a {
     display: inline-block;
     width: 155px;
     height: 35px;
     background: #503396;
     color: #fff;
     border-radius: 3px;
-}
+} */
