@@ -124,6 +124,9 @@ body {
 }
 @media (min-width: 992px) {
 
+    #header {
+        padding: 0 40px;
+    }
     /* 이전/다음 버튼 */
     #s1.bx-wrapper .bx-controls-direction a {
         /* 크기 */
