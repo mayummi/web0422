@@ -54,6 +54,7 @@ a {
     height: 225px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .icon {
     display: flex;
@@ -83,18 +84,6 @@ a {
 .card_icon2:hover {
     cursor: pointer;
 }
-.card_img::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    transition: background 0.7s;
-    padding: 20px;
-    cursor: pointer;
-}
-
 .card_btn b {
     color: red;
     margin-right: 5px;

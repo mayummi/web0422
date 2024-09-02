@@ -1,9 +1,8 @@
 
-
 const cards = [
     {
-        cimg: "./images/1.jpg",
-        idimg: "./images/heart.svg",
+        cimg: "./../public/images/1.jpg",
+        idimg: "./../public/images/heart.svg",
         cart: "./../public/images/cart.svg",
         ctit: "롤리팝-설탕봉지 에코백",
         percent: "10",
@@ -12,7 +11,6 @@ const cards = [
         cdate: "30",
         rate_img: "./../public/images/star.svg" ,
         co_img: "./../public/images/co.svg",
-        // cheart: 487
     },
     {
         cimg: "./../public/images/5.jpg",
@@ -25,7 +23,6 @@ const cards = [
         cdate: "36",
         rate_img: "./../public/images/star.svg" ,
         co_img: "./../public/images/co.svg",
-        // cheart: 960
     },
     {
         cimg: "./../public/images/3.jpg",
@@ -38,7 +35,6 @@ const cards = [
         cdate: "385",
         rate_img: "./../public/images/star.svg" ,
         co_img: "./../public/images/co.svg",
-        // cheart: 900
     },
     {
         cimg: "./../public/images/2.jpg",
@@ -51,8 +47,6 @@ const cards = [
         cdate: "9",
         rate_img: "./../public/images/star.svg" ,
         co_img: "./../public/images/co.svg",
-        
-        // cheart: 990
     },
     {
         cimg: "./../public/images/4.jpg",
@@ -65,8 +59,5 @@ const cards = [
         cdate: "21",
         rate_img: "./../public/images/star.svg" ,
         co_img: "./../public/images/co.svg",
-        // cheart: 990
     },
 ];
-
-// export default cards;
