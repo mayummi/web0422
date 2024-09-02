@@ -11,6 +11,8 @@ function App(){
                     mtit={item.ctit}
                     mrate={item.crate}
                     mdate={item.cdate}
+                    percent={item.percent}
+                    won={item.won}
                     rate_img={item.rate_img}
                     co_img={item.co_img}
                 

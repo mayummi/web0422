@@ -13,7 +13,7 @@ function Card(props){
                 <span className="card_tit">{props.mtit}</span>
             </div>
             <div className="card_btn">
-                <p><b>40%</b> <span>5,900 원</span></p>
+                <p><b>{props.percent}%</b> <span>{props.won} 원</span></p>
             </div>
             <div className="dr">
                 <span className="card_rate"><img className="rate_img" src={props.rate_img} alt={props.rate_img} /> {props.mrate} </span>
