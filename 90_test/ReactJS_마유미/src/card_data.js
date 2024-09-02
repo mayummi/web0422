@@ -61,3 +61,6 @@ const cards = [
         co_img: "./../public/images/co.svg",
     },
 ];
+
+
+// export default cards;

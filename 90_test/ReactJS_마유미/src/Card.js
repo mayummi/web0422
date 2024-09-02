@@ -22,3 +22,5 @@ function Card(props){
         </li>
     );
 }
+
+// export default Card;
