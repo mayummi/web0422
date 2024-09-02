@@ -85,7 +85,7 @@ body {
 }
 
 /* slider 폰 */
-#s1#slideWrap img:last-of-type {
+#s1 #slideWrap img:last-of-type {
     display: none;
 }
 
@@ -98,6 +98,9 @@ body {
 #s2 div {
     margin-top: 40px;
 }
+
+
+
 
 
 
