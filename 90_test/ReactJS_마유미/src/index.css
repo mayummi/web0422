@@ -118,11 +118,11 @@ button {
     margin-right: 8px;
 } */
 
-.card_tit {
+/* .card_tit {
     display: inline-block;
     margin: 0px;
     margin: 16px 0;
-}
+} */
 .card_rate::after {
     content: "|";
     color: #D8D9DB;

@@ -38,9 +38,9 @@ const cards = [
         cart: "./../public/images/cart.svg",
         ctit: "롤리팝-설탕봉지 에코백",
         cage: "All",
-        crate: 1,
+        crate: 4.8,
         cdate: "2024.08.07",
-        cheart: 487
+        // cheart: 487
     },
     {
         cimg: "./../public/images/5.jpg",
@@ -48,9 +48,9 @@ const cards = [
         cart: "./../public/images/cart.svg",
         ctit: "미백 기능서 아이크림",
         cage: "All",
-        crate: 0.2,
+        crate: 4.0,
         cdate: "2024.06.12",
-        cheart: 960
+        // cheart: 960
     },
     {
         cimg: "./../public/images/3.jpg",
@@ -58,9 +58,9 @@ const cards = [
         cart: "./../public/images/cart.svg",
         ctit: "가죽시계",
         cage: "All",
-        crate: 0.1,
+        crate: 3.8,
         cdate: "2024.07.24",
-        cheart: 900
+        // cheart: 900
     },
     {
         cimg: "./../public/images/2.jpg",
@@ -70,7 +70,7 @@ const cards = [
         cage: "12",
         crate: 4.2,
         cdate: "2024.07.31",
-        cheart: 990
+        // cheart: 990
     },
     {
         cimg: "./../public/images/4.jpg",
@@ -80,7 +80,7 @@ const cards = [
         cage: "12",
         crate: 4.2,
         cdate: "2024.07.31",
-        cheart: 990
+        // cheart: 990
     },
 ];
 
