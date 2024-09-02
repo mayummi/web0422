@@ -93,7 +93,10 @@ body {
 #s2 {
     /* margin: 0 auto; */
     text-align: center;
-    height: 600px;
+    height: 500px;
+}
+#s2 div {
+    margin-top: 40px;
 }
 
 
@@ -106,8 +109,16 @@ body {
     #slideWrap img:last-of-type {
         display: block;
     }
-}
 
+    #s2 div {
+        display: block;
+    }
+}
+@media (max-width: 1950px) {
+    #s2 div {
+        display: block;
+    }
+}
 @media (min-width: 992px) {
 
     /* 이전/다음 버튼 */
@@ -128,6 +139,12 @@ body {
         /* width: 100vw; */
         margin-top: 40px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        /* margin-right: 5px; */
+        /* width: 100vw; */
     }
+    #s2 div img {
+        margin-right: 2vw;
+    }
+
 }
