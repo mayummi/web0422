@@ -6,6 +6,10 @@ function Card(props){
                 <img src={props.mimg} alt={props.mtit} />
             </div>
             <div>
+                <div className="icon">
+                    <img className="card_icon" src={props.idimg} alt={props.idimg} />
+                    <img className="card_icon2" src={props.cart} alt={props.cart} />
+                </div>
                 <span className="card_age">{props.mage}</span>
                 <h3 className="card_tit">{props.mtit}</h3>
             </div>
@@ -15,7 +19,7 @@ function Card(props){
             </div>
             <div className="card_btn">
                 <button>{props.mheart}</button>
-                <a href="#">예매</a>
+                <a href="#">구매</a>
             </div>
         </li>
     );

@@ -6,6 +6,8 @@ function App(){
                 <Card 
                     key={idx}
                     mimg={item.cimg}
+                    idimg={item.idimg}
+                    cart={item.cart}
                     mtit={item.ctit}
                     mage={item.cage}
                     mrate={item.crate}

@@ -51,14 +51,44 @@ button {
     display: flex;
 }
 .card_list {
-    width:255px;
-    height: 255px;
+    width:235px;
+    height: 330px;
     margin: 60px;
 }
 .card_img {
+    width: 255px;
+    height: 225px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+}
+.icon {
+    display: flex;
+    margin-top: 8px;
+    margin-left: 190px; 
+
+}
+.card_icon2 {
+    background: no-repeat 50% 50%;
+    object-fit: contain;
+    width: 24px;
+    height: 26px;
+    display: block;
+}
+.card_icon {
+    background: no-repeat 50% 50%;
+    object-fit: contain;
+    width: 24px;
+    height: 26px;
+    display: block;
+    margin-right: 8px;
+    
+}
+.card_icon:hover {
+    cursor: pointer;
+}
+.card_icon2:hover {
+    cursor: pointer;
 }
 .card_img::after {
     content: "";
@@ -73,20 +103,20 @@ button {
     padding: 20px;
     cursor: pointer;
 }
-.card_img:hover::after {
+/* .card_img:hover::after {
     content: "처음 본 순간, 한눈에 반해버렸어! 설레는 운명이 시작된 우리의 첫 만남! 인생의 소울메이트를 꼭 만나길 바라는 ‘로미’ 우연한 기회에 ‘하츄핑’을 처음 본 뒤, 운명의 인연임을 알아본다. '로미'는 ‘하츄핑’을 찾기 위해 반대를 무릅쓰고 새로운 길을 떠나지만, 마침내 만나게 된 ‘하츄핑’은 인간과의 소통을 거부하는데…";
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     cursor: pointer;
-}
+} */
 
-.card_age {
+/* .card_age {
     padding: 0 4px;
     border-radius: 3px;
     background: #229C56;
     color: #fff;
     margin-right: 8px;
-}
+} */
 
 .card_tit {
     display: inline-block;
