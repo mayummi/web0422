@@ -1,0 +1,128 @@
+@charset "utf-8";@charset "utf-8";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css");
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("https//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+body, ul {
+    margin: 0;
+
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+body {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: top;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+.container {
+    display: flex;
+}
+.card_list {
+    width:235px;
+    height: 330px;
+    margin: 60px;
+}
+.card_img {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card_img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* width: 100%;
+    height: 100%; */
+    transition: background 0.7s;
+    padding: 20px;
+    cursor: pointer;
+}
+.card_img:hover::after {
+    content: "처음 본 순간, 한눈에 반해버렸어! 설레는 운명이 시작된 우리의 첫 만남! 인생의 소울메이트를 꼭 만나길 바라는 ‘로미’ 우연한 기회에 ‘하츄핑’을 처음 본 뒤, 운명의 인연임을 알아본다. '로미'는 ‘하츄핑’을 찾기 위해 반대를 무릅쓰고 새로운 길을 떠나지만, 마침내 만나게 된 ‘하츄핑’은 인간과의 소통을 거부하는데…";
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    cursor: pointer;
+}
+
+.card_age {
+    padding: 0 4px;
+    border-radius: 3px;
+    background: #229C56;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.card_tit {
+    display: inline-block;
+    margin: 0px;
+    margin: 16px 0;
+}
+.card_rate::after {
+    content: "|";
+    color: #D8D9DB;
+    padding: 0 8px;
+    vertical-align: top;
+}
+
+.card_btn{
+    margin-top:12px;
+}
+.card_btn button {
+    width: 70px;
+    height: 35px;
+    margin-right: 3px;
+    border-radius: 3px;
+    border: 1px solid #F3F3F3;
+}
+.card_btn button::before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 8px;
+}
+.card_btn button.on::before {
+    color: red;
+}
+.card_btn a {
+    display: inline-block;
+    width: 155px;
+    height: 35px;
+    background: #503396;
+    color: #fff;
+    border-radius: 3px;
+}
