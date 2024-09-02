@@ -9,10 +9,8 @@ function App(){
                     idimg={item.idimg}
                     cart={item.cart}
                     mtit={item.ctit}
-                    mage={item.cage}
                     mrate={item.crate}
                     mdate={item.cdate}
-                    mheart={item.cheart}
                     rate_img={item.rate_img}
                     co_img={item.co_img}
                 
