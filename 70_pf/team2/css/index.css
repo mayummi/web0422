@@ -103,10 +103,10 @@ body {
 
 @media (min-width: 768px) {
 
-    #slideWrap img:first-of-type {
+    #slideWrap img:first-child {
         display: none;
     }
-    #slideWrap img:last-of-type {
+    #slideWrap img:last-child {
         display: block;
     }
 
