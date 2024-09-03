@@ -89,7 +89,7 @@ nav li:first-child::after {
 
 /* header */
 header {
-    background: url(../assets/bg-light.png) no-repeat 50% 50% / cover fixed;
+    background: url(./../assets/bg-light.png) no-repeat 50% 50% / cover fixed;
     line-height: 150px;
 }
 
