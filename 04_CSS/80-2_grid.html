@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            부모 -> 그리드 컨테이너
+                display:grid
+                grid-template-columns
+
+                정렬
+                    justify-content: 좌우
+                    aligin-content: 수직
+                    값: start
+        */
+
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: auto; */
+            /* 콘텐츠 크기로 지정 */
+            /* justify-content: space-between; */
+            /* 부모 높이가 자식 요소 높이 합보다 커야 바뀐다. */
+            height: 400px;
+            align-content: space-between;
+            background-color: #2196F3;
+            padding: 24px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        @media (min-width:992px) {
+            .grid-container {
+                grid-template-columns: auto auto auto auto;
+                /* grid-template-columns: 80px 200px auto 40px; */
+                /* grid-template-rows: 80px 200px; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item item9">9</div>
+    </div>
+</body>
+
+</html>

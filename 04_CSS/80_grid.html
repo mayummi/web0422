@@ -12,41 +12,57 @@
                 2. table -> 비표준
                 3. display: flex
                 4. position
-                5. display: grid
+                5. display: grid 
 
             용어
-                격자
                 그리드(grid) -> 격자
                 그리드 열(column) -> 세로
                 그리드 행(row) -> 가로
                 그리드 갭(gap) -> 간격 -> 행과 열 사이 공간
                 그리드 라인(line) -> 줄
+                템플릿(template) 
+                    -> 일부 정보가 포함된 견본
+                    -> 매번 반복되는 이미지나 구조
+                    -> 어떤 제품을 만들 때의 '본' 또는 '틀' 
+
 
             부모 -> 그리드 컨테이너
                 display:grid
+
                 grid-template-columns
-                grid-template-rows
-                grid-template-area
+                grid-templete-rows
+                grid-template-areas
+
+                column-gap
+                row-gap
+                gap
 
                 grid-column-start
                 grid-column-end
                 grid-column
                 grid-row-start
                 grid-row-end
-                column-gap
-                row-gap
-                gap
+                grid-row
 
+
+
+                
             자식 -> 그리드 아이템
                 grid-area
-
         */
+
         .grid-container {
             display: grid;
-            grid-template-columns: auto ;
-            /* border: 1px solid lime; */
+            grid-template-columns: auto;
+            /* column-gap: 24px;
+            row-gap: 24px; */
+            /* 하나만 쓰면 row, column 같은 크기로 지정 */
+            /* gap: 24px; */
+            /* gap: row column */
+            gap: 16px 24px;
+
             background-color: #2196F3;
-            padding: 10px;
+            padding: 24px;
         }
 
         .grid-item {
@@ -58,11 +74,10 @@
         }
 
         @media (min-width:992px) {
-        .grid-container {
-
-            grid-template-columns: auto auto auto auto;
+            .grid-container {
+                grid-template-columns: auto auto auto auto;
+            }
         }
-    }
     </style>
 </head>
 
