@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*  */
+        /* 
+            Layout
+                1. float -> 과거
+                2. table -> 비표준
+                3. display: flex
+                4. position
+                5. display: grid
+
+            용어
+                격자
+                그리드(grid) -> 격자
+                그리드 열(column) -> 세로
+                그리드 행(row) -> 가로
+                그리드 갭(gap) -> 간격 -> 행과 열 사이 공간
+                그리드 라인(line) -> 줄
+
+            부모 -> 그리드 컨테이너
+                display:grid
+                grid-template-columns
+                grid-template-rows
+                grid-template-area
+
+                grid-column-start
+                grid-column-end
+                grid-column
+                grid-row-start
+                grid-row-end
+                column-gap
+                row-gap
+                gap
+
+            자식 -> 그리드 아이템
+                grid-area
+
+        */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto ;
+            /* border: 1px solid lime; */
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        @media (min-width:992px) {
+        .grid-container {
+
+            grid-template-columns: auto auto auto auto;
+        }
+    }
     </style>
 </head>
+
 <body>
-    
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
 </body>
+
 </html>
