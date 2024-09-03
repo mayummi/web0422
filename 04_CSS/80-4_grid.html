@@ -8,9 +8,10 @@
     <style>
         /* 
             부모 -> 그리드 컨테이너
-                display: grid
-            자식 -> 그리드 아이템
+                grid-template-areas: 값 값 값 ...;
 
+            자식 -> 그리드 아이템
+                grid-area: 값;
         */
 
         .grid-container {
@@ -29,15 +30,19 @@
 
         @media (min-width:992px) {
             .grid-container {
-                grid-template-columns: auto auto auto auto;
+                /* ''로 행 구분 -> 3행 */
+                /* 띄어쓰기로 열 구분 -> 6열 */
+                grid-template-areas:
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
             }
 
-            .item1 {
-                grid-column: 1 / span 4;
-            }
-            .item6 {
-                grid-column: 1 / 5;
-            }
+            .item1 {grid-area: header;}
+            .item2 {grid-area: menu;}
+            .item3 {grid-area: main;}
+            .item4 {grid-area: right;}
+            .item5 {grid-area: footer;}
         }
     </style>
 </head>
@@ -45,11 +50,10 @@
 <body>
     <div class="grid-container">
         <div class="grid-item item1">헤더</div>
-        <div class="grid-item item2">2</div>
-        <div class="grid-item item3">3</div>
-        <div class="grid-item item4">4</div>
-        <div class="grid-item item5">5</div>
-        <div class="grid-item item6">푸터</div>
+        <div class="grid-item item2">메뉴</div>
+        <div class="grid-item item3">메인</div>
+        <div class="grid-item item4">오른쪽</div>
+        <div class="grid-item item5">푸터</div>
     </div>
 </body>
 

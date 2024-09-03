@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애반 개인 사이트 콘텐츠 레이아웃</title>
+    <style>
+        body,
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        .inner {
+            padding: 24px;
+        }
+
+        .home-card {
+            display: grid;
+            grid-template-columns: 100px auto;
+            column-gap: 24px;
+        }
+
+        .home-icon {
+            grid-row: 1/span 3;
+        }
+
+        @media (min-width:992px) {
+            .home-card {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inner">
+        <div class="home-card">
+            <div class="home-icon">
+                <a href="../assets/svg/thumb.svg" target="_blank"><img src="../assets/svg/thumb.svg"
+                        alt="하나투어 ver2"></a>
+            </div>
+            <div class="home-title">
+                <h3>하나투어<span>(Hanatour)</span></h3>
+            </div>
+            <div class="home-description">
+                <p>One Page Site, Fullpage, 2depth Topdown Navigation(2뎁스 탑다운 내비게이션), Carousel, Parallax Scrolling,
+                    Tab(탭), Family Site(패밀리 사이트)를 반영한 AWD(적응형 웹 디자인) 페이지 입니다.</p>
+            </div>
+            <div class="home-btn"><a href="#">Read more...</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -71,6 +71,27 @@ h2 {
     margin: 56px 0;
 }
 
+.inner {
+    padding: 24px;
+}
+
+.home-card {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 24px;
+}
+
+.home-icon {
+    grid-row: 1/span 3;
+}
+
+@media (min-width:992px) {
+    .home-card {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
 .home-card {
     display: flex;
     justify-content: space-between;
