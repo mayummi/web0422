@@ -1,23 +1,26 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
-/* reset */
-
-
-/* typo */
+/* common */
 html {
+    scroll-behavior: smooth;
     font-size:10px;
 }
 body {
     font:300 1.5rem/1.6 "Noto Sans KR", sans-serif;
 }
-h2, h3 {
+h2 {
     text-align: center;
     font-weight: 300;
+    margin: 90px 0 30px;
 }
-h4 {
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
     font-weight: 300;
     letter-spacing: 10px;
+    margin: 16px 0;
 }
 img, video {
     width: 100%;
@@ -25,18 +28,54 @@ img, video {
     object-fit: cover;
     height: auto;
 }
+p {
+    margin-bottom: 48px;
+}
+
+.container {
+    margin-bottom: 60px;
+}
+
+.container>p {
+    text-align: center;
+    margin-bottom: 16px;
+}
+.btn {
+    font-size: 1.5rem;
+    padding: 8px 24px;
+    margin-top: 60px;
+}
+
+.container-fluid {
+    background: no-repeat 50% 50%/cover fixed;
+}
+
+#s1 .container-fluid {
+    height: 100vh;
+    background-image: url(../assets/parallax1.jpg);
+}
+#s3 .container-fluid {
+    height: 400px;
+    background-image: url(../assets/parallax2.jpg);
+}
+#s4 .container-fluid {
+    height: 400px;
+    background-image: url(../assets/parallax3.jpg);
+}
 
 
-/* common */
+/* progress */
 .progress {
     height: 30px;
     font-size: 1.5rem;
+    padding: 0;
 }
 .progress:nth-of-type(1) .progress-bar {width: 90%;}
 .progress:nth-of-type(2) .progress-bar {width: 95%;}
 .progress:nth-of-type(3) .progress-bar {width: 97%;}
 .progress:nth-of-type(4) .progress-bar {width: 75%;}
 
+/* counter */
 .counter {
     background: #616161;
     color: #fff;
@@ -48,6 +87,25 @@ img, video {
     font-size: 2.4rem;
 }
 
+/* section3 */
+#s3 {
+    text-align: center;
+}
+#s3 .col {
+    padding:8px;
+}
+
+/* footer */
 footer {
-    height: 300px;
+    padding: 60px 0;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+footer a {
+    color: #fff;
+}
+footer .sns {
+    margin: 16px 0;
+    font-size: 2.4rem;
 }
