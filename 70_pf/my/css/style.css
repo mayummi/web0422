@@ -11,10 +11,12 @@ html {
 body {
     font:300 1.5rem/1.6 "Noto Sans KR", sans-serif;
 }
-h2, h3, h4 {
+h2, h3 {
+    text-align: center;
     font-weight: 300;
 }
 h4 {
+    font-weight: 300;
     letter-spacing: 10px;
 }
 img, video {
@@ -30,10 +32,21 @@ img, video {
     height: 30px;
     font-size: 1.5rem;
 }
-.progress:nth-of-type(1) .progress-bar {width: 80%;}
-.progress:nth-of-type(2) .progress-bar {width: 90%;}
-.progress:nth-of-type(3) .progress-bar {width: 70%;}
-.progress:nth-of-type(4) .progress-bar {width: 30%;}
+.progress:nth-of-type(1) .progress-bar {width: 90%;}
+.progress:nth-of-type(2) .progress-bar {width: 95%;}
+.progress:nth-of-type(3) .progress-bar {width: 97%;}
+.progress:nth-of-type(4) .progress-bar {width: 75%;}
+
+.counter {
+    background: #616161;
+    color: #fff;
+    text-align: center;
+    padding: 32px;
+}
+.counter span {
+    display: block;
+    font-size: 2.4rem;
+}
 
 footer {
     height: 300px;
