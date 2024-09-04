@@ -10,6 +10,11 @@ html {
 body {
     font:300 1.5rem/1.6 "Noto Sans KR", sans-serif;
 }
+ul {
+
+    padding: 0;
+    list-style: none;
+}
 h2 {
     text-align: center;
     font-weight: 300;
@@ -22,14 +27,17 @@ h3 {
     letter-spacing: 10px;
     margin: 16px 0;
 }
+p {
+    margin-bottom: 48px;
+}
 img, video {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
     height: auto;
 }
-p {
-    margin-bottom: 48px;
+input {
+    border: none;
 }
 
 .container {
@@ -46,7 +54,11 @@ p {
     margin-top: 60px;
 }
 
+/* 배경이미지: 페럴럭스 background-img */
 .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: no-repeat 50% 50%/cover fixed;
 }
 
@@ -63,6 +75,13 @@ p {
     background-image: url(../assets/parallax3.jpg);
 }
 
+/* background-imge Title */
+.container-fluid>span {
+    font-size: 3.6rem;
+    line-height: 400px;
+    letter-spacing: 10px;
+    color: #fff;
+}
 
 /* progress */
 .progress {
@@ -77,6 +96,7 @@ p {
 
 /* counter */
 .counter {
+    display: block;
     background: #616161;
     color: #fff;
     text-align: center;
@@ -95,6 +115,27 @@ p {
     padding:8px;
 }
 
+/* contact: sectioncd */
+/* 작업중 표시.. */
+#s4 * {
+    outline: 1px solid lime;
+}
+iframe {border: 1px solid red;}
+input {
+    border: 1px solid #ccc;
+}
+[name*="user_name"] {
+    /* width: 49%; */
+    margin-right: 1%;
+}
+[name*="user"] {
+    /* width: 49.1%; */
+    width: calc(50% - 6px);
+    
+}
+[name="message"] {
+    width: 100%;
+}
 /* footer */
 footer {
     padding: 60px 0;
