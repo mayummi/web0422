@@ -125,13 +125,11 @@ input {
     border: 1px solid #ccc;
 }
 [name*="user_name"] {
-    /* width: 49%; */
     margin-right: 1%;
 }
 [name*="user"] {
     /* width: 49.1%; */
     width: calc(50% - 6px);
-    
 }
 [name="message"] {
     width: 100%;
