@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+@import url("clock.css");
 
 /* common */
 html {
@@ -38,6 +39,10 @@ img, video {
 }
 input {
     border: none;
+}
+iframe {
+    border: 0;
+    border-radius: 5px;
 }
 
 .container {
@@ -116,22 +121,26 @@ input {
 }
 
 /* contact: sectioncd */
-/* 작업중 표시.. */
-#s4 * {
-    outline: 1px solid lime;
+#s4 .li {line-height: 2;}
+#s4 .row p {
+    margin: 28px 0 8px;
 }
-iframe {border: 1px solid red;}
-input {
+#s4 input {
     border: 1px solid #ccc;
+    padding: 10px;
+    margin: 4px 0;
 }
-[name*="user_name"] {
+#s4 button.btn {
+    margin-top: 16px;
+}
+#s4 [name*="user_name"] {
     margin-right: 1%;
 }
-[name*="user"] {
+#s4 [name*="user"] {
     /* width: 49.1%; */
     width: calc(50% - 6px);
 }
-[name="message"] {
+#s4 [name="message"] {
     width: 100%;
 }
 /* footer */
