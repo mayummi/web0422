@@ -24,34 +24,13 @@ $(() => {
         let min = d.getMinutes();
         let sec = d.getSeconds();
 
-        switch (wee) {
-            case 0:
-                wee = "일";
-                break;
-            case 1:
-                wee = "월";
-                break;
-            case 2:
-                wee = "화";
-                break;
-            case 3:
-                wee = "수";
-                break;
-            case 4:
-                wee = "목";
-                break;
-            case 5:
-                wee = "금";
-                break;
-            default:
-                wee = "토";
-        }
+        const weeks = ["일", "월", "화", "수", "목", "금", "토"];
 
         // 출력
         ye.text(yea + "년");
         mo.text(zeroAdd(mon) + "월");
         da.text(zeroAdd(dat) + "일");
-        we.text(wee + "요일");
+        we.text("(" + weeks[wee] + ")");
         ho.text(zeroAdd(hou));
         mi.text(zeroAdd(min));
         se.text(zeroAdd(sec));
@@ -64,4 +43,4 @@ $(() => {
             return num < 10 ? (num = "0" + num) : (num = num);
         }
     } // clock_fn
-}); // DOMContentLoaded
+}); // ready

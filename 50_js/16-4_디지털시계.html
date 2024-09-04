@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+           
+        </style>
+        <script>
+            // DOM 요소를 모두 로딩한 후 - load 이벤트
+            window.addEventListener("DOMContentLoaded", () => {
+                const clock = document.querySelector("#clock");
+
+
+                // 1초마다 clock 호출
+                setInterval(clockFn, 1000);
+
+                function clockFn() {
+                    // d라는 날짜 인스턴스 생성
+                    const d = new Date();
+
+                    // 출력
+                    // .toLocaleTimeString() -> 시간 표시
+                    // 예) 오후 12:35:20
+                    // .toLocaleDateString() -> 날짜/ 표시
+                    // 예) 2024.9.4.
+                    // .toLocaleString() -> 날짜/시간 표시
+                    // 예) 2024.9.4. 오후 12:34:20
+                    clock.innerText = d.toLocaleString();
+
+                } // clock_fn
+            }); // DOMContentLoaded
+        </script>
+    </head>
+    <body>
+            <div id="clock"></div>
+                
+    </body>
+</html>

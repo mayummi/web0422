@@ -1,17 +1,7 @@
-
+@charset "utf-8";
 
 /* 섹션1 */
-#s1 {
-    position: relative;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* 주축 가운데 */
-    /* justify-content: center; */
-    /* 교차축 가운데 */
-    /* align-items: center; */
-    height: 100vh;
-    overflow: hidden;
-}
+/* clock */
 #s1 #clock {
     /* 화면 정가운데 배치 */
     position: absolute;
@@ -21,8 +11,9 @@
 }
 /* 날짜 디자인 */
 .ddate {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 8px;
+    color: #9b9b9b;
 }
 /* 시간 */
 .dtime {
@@ -30,7 +21,6 @@
     font-weight: 300;
     color: #fff;
     text-shadow: 0 0 5px #999;
-    font-family: "HSGaeulSenggak20", sans-serif;
 }
 /* span의 크기를 지정하여 움직임 방지 */
 #s1 #clock .dtime span {
