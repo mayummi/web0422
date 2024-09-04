@@ -93,7 +93,7 @@
             </div> <!-- .row end -->
 
             <!-- skill -->
-            <p>Im really good at:</p>
+            <p class="skill">Im really good at:</p>
             <div class="row m-0">
                 <h3>Photoshop</h3>
                 <div class="col-12 progress">
@@ -212,8 +212,10 @@
                         <div class="col">
                             <p>들러서 커피 한잔 하시거나 메모를 남겨주세요.</p>
                             <form action="message.jsp" class="text-right">
-                                <input type="text" name="user_name" placeholder="이름">
-                                <input type="email" name="user_email" placeholder="이메일">
+                                <div>
+                                    <input type="text" name="user_name" placeholder="이름">
+                                    <input type="email" name="user_email" placeholder="이메일">
+                                </div>
                                 <input type="text" name="message" placeholder="메시지">
                                 <button class="btn btn-dark">메시지 전송하기</button>
                             </form>

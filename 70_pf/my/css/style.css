@@ -190,12 +190,20 @@ footer .sns {
         text-align: right;
     }
 
+    /* skill */
+    .skill {
+        margin-top: 48px;
+    }
     /* section4: contact */
+    #s4 form div {
+        display: flex;
+        justify-content: space-between;
+    }
     #s4 [name="user_name"] {
         margin-right: 1%;
     }
     #s4 [name*="user"] {
-        width: 49.2222222%;
+        width: 49.5%;
     }
     #s4 [name="message"] {
         width: 100%;
