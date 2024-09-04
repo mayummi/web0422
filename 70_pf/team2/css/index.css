@@ -93,11 +93,15 @@ body {
 #s2 {
     /* margin: 0 auto; */
     text-align: center;
-    height: 500px;
+    /* height: 500px; */
+    padding: 0 5%;
 }
 
 #s2 div {
     margin-top: 40px;
+}
+#s2 img {
+    width: 100%;
 }
 
 /* sction5 */
@@ -173,10 +177,11 @@ body {
 
     /* section2 */
     #s2 {
+        padding: 0;
         /* margin-top: 10px; */
         margin: 0 auto;
-        width: 1350px;
-        height: 200px;
+        /* width: 1350px; */
+        /* height: 200px; */
 
     }
 
@@ -185,14 +190,13 @@ body {
         margin-top: 40px;
         display: flex;
         /* overflow-wrap:unset; */
-
         justify-content: center;
         /* margin-right: 5px; */
         /* width: 100vw; */
     }
 
-    #s2 div img {
-        margin-right: 2vw;
+    #s2 div a {
+        margin-right: 1.5%;
     }
 
     

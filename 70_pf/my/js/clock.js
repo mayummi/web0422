@@ -1,12 +1,12 @@
 // ready 이벤트
 $(() => {
-    const ye = $("span").eq(0);
-    const mo = $("span").eq(1);
-    const da = $("span").eq(2);
-    const we = $("span").eq(3);
-    const ho = $("span").eq(4);
-    const mi = $("span").eq(5);
-    const se = $("span").eq(6);
+    const ye = $("#clock span").eq(0);
+    const mo = $("#clock span").eq(1);
+    const da = $("#clock span").eq(2);
+    const we = $("#clock span").eq(3);
+    const ho = $("#clock span").eq(4);
+    const mi = $("#clock span").eq(5);
+    const se = $("#clock span").eq(6);
 
     // 1초마다 clock 호출
     setInterval(clock, 1000);

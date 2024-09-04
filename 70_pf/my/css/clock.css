@@ -1,33 +1,33 @@
 @charset "utf-8";
 
-/* 섹션1 */
 /* clock */
-#s1 #clock {
-    /* 화면 정가운데 배치 */
+#clock {
     position: absolute;
     right: 2%;
     bottom: 2%;
-    /* transform: translate(-50%, -50%); */
 }
-/* 날짜 디자인 */
-.ddate {
+
+/* 날짜 */
+#clock .ddate {
     font-size: 1.8rem;
     margin-bottom: 8px;
     color: #9b9b9b;
 }
 /* 시간 */
-.dtime {
-    font-size: 2rem;
+#clock .dtime {
+    font-size: 3rem;
     font-weight: 300;
     color: #fff;
-    text-shadow: 0 0 5px #999;
+    text-shadow: 0 0 2px #290101;
 }
+
 /* span의 크기를 지정하여 움직임 방지 */
 #s1 #clock .dtime span {
-    display: inline-block;
+    /* display: inline-block; */
     width: 50px;
 }
-/* 시간 */
-.dtime span:not(:last-child)::after {
+
+/* 시간의 : 표시 */
+#clock .dtime span:not(:last-child)::after {
     content: " :";
 }
