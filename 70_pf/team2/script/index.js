@@ -18,6 +18,39 @@ $(() => {
         // constrols: false
     });
 
+    // section3
+    $('.best-slick').slick({
+        // 데스크탑
+        // 자동 슬라이드
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToScroll: 1,
+        // 현재 보이는 슬라이드 수
+        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: '25px',
+        responsive: [
+            {
+                // 992 이하 테블릿
+                breakpoint: 992,
+                settings: {
+                    centerMode: true,
+                    centerPadding: '70px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                // 768 이하 폰
+                breakpoint: 768,
+                settings: {
+                    centerMode: true,
+                    centerPadding: '25px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
 
     $('.s5-slider').slick({
         // 데스크탑
