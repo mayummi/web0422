@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
 
@@ -28,30 +29,29 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        // 문제 4개 숫자가 동작되게 만들기
         $(() => {
-            // 요소 찾기
             const btn = $("button");
             const bEle = $("b");
             let count = 0;
 
-            btn.click(() => counterFn());
-            
-            // 재귀 호출 함수: 함수 안에서 자신을 호출
-            // setTimeout(함수, 시간);
-            
-            function counterFn() {
-                // console.log(count);
-                // 1씩 증가
+
+            btn.click(() => {
+                counterFn();
+
+            });
+
+            function counterFn1() {
                 count++;
-                // 첫 번째 b태그에 내용으로 count 지정
-                // <b>숫자</b>
                 bEle.eq(0).text(count);
-                // count가 100이상이면 함수 탈출
+                bEle.eq(1).text(count);
+                bEle.eq(2).text(count);
+                bEle.eq(3).text(count);
                 if (count >=5) return;
-                // 100이란? 0.1초 이후 1번 counterFn 호출
-                // 그러나 재귀 호출(함수가 자기자신을 호출)
                 setTimeout(counterFn, 300);
             }
+
+
 
 
         }); // ready end
@@ -59,8 +59,7 @@
 </head>
 
 <body>
-    <button>클릭하면 숫자가 올라가요!</button>
-    <!-- counter -->
+    <button>클릭하면 숫자가 올라가요</button>
     <div class="container-fluid counter">
         <div class="row">
             <div class="col-sm">

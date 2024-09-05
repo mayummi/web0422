@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
         @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
 
@@ -28,39 +29,63 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        // 문제 4개 숫자가 동작되게 만들기
         $(() => {
-            // 요소 찾기
             const btn = $("button");
             const bEle = $("b");
-            let count = 0;
+            let count1 = 0;
+            let count2 = 0;
+            let count3 = 0;
+            let count4 = 0;
 
-            btn.click(() => counterFn());
+            btn.click(() => {
+                counterFn1();
+                counterFn2();
+                counterFn3();
+                counterFn4();
             
-            // 재귀 호출 함수: 함수 안에서 자신을 호출
-            // setTimeout(함수, 시간);
+            });
             
-            function counterFn() {
-                // console.log(count);
-                // 1씩 증가
-                count++;
-                // 첫 번째 b태그에 내용으로 count 지정
-                // <b>숫자</b>
-                bEle.eq(0).text(count);
-                // count가 100이상이면 함수 탈출
-                if (count >=5) return;
-                // 100이란? 0.1초 이후 1번 counterFn 호출
-                // 그러나 재귀 호출(함수가 자기자신을 호출)
-                setTimeout(counterFn, 300);
-            }
-
+            function counterFn1() {
+                {
+                    count1++;
+                    bEle.eq(0).text(count1);
+                    if (count1 >=5) return;
+                    setTimeout(counterFn1, 300);
+                }
+            };
+            function counterFn2() {
+                {
+                    count2++;
+                    bEle.eq(1).text(count2);
+                    if (count2 >=5) return;
+                    setTimeout(counterFn2, 300);
+                }
+            };
+            function counterFn3() {
+                {
+                    count3++;
+                    bEle.eq(2).text(count3);
+                    if (count3 >=5) return;
+                    setTimeout(counterFn3, 300);
+                }
+            };
+            function counterFn4() {
+                {
+                    count4++;
+                    bEle.eq(3).text(count4);
+                    if (count4 >=5) return;
+                    setTimeout(counterFn4, 300);
+                }
+            };
+            
 
         }); // ready end
     </script>
 </head>
 
 <body>
-    <button>클릭하면 숫자가 올라가요!</button>
-    <!-- counter -->
+    <button>클릭하면 숫자가 올라가요</button>
     <div class="container-fluid counter">
         <div class="row">
             <div class="col-sm">
