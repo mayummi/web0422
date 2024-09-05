@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
+
+        .row {
+            margin: 50px;
+        }
+
+        /* progress */
+        .progress {
+            height: 30px;
+            font-size: 1.5rem;
+            padding: 0;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+
+            // progress bar
+            const btn = $("button");
+            const bEle = $("b");
+            const barEle = $(".progress-bar");
+            let cnt = 0;
+            const num = 90;
+
+            btn.click(() => {
+                progbar();
+            });
+
+            function progbar() {
+                cnt++;
+                if (cnt <= num) {
+                    setTimeout(() => progbar(), 10);
+                } else {
+                    return;
+                }
+                bEle.eq(0).text(cnt);
+                barEle.eq(0).css({width:cnt + "%"});
+            }
+
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <!-- skill -->
+    <div class="row">
+        <h3>Photoshop</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>Figma</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>HTML5/CSS3</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>JavaScript/jQuery</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div><!-- .progress -->
+    </div><!-- .row -->
+
+    <button>클릭하면 바가 움직여요!</button>
+</body>
+
+</html>

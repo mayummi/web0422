@@ -35,28 +35,45 @@
         $(() => {
 
             // counter
+            // 요소 찾기
             const bEle = $("b");
-            const cnts = [0,0,0,0];
-            const nums = [2,5,7,5];
+            // 카운터 시작 값
+            const cnts = [0, 0, 0, 0];
+            // 카운터 최종 값
+            const nums = [2, 5, 7, 5];
 
-            // scroll은 window 이벤트
-            // $(window), $(document), $(this)
-            // HTML DOM 요소는 $("선택자")
+            // 카운터 시작 값을 0으로 초기화
+            // for (let i = 0; i < bEle.length; i++) {
+            //     cnts[i] = 0;
+            // }
+
+            // 스크롤 이벤트가 발생하면
             $(window).scroll(() => {
-                console.log($(this).scrollTop());
-                if ($(this).scrollTop() >= 1500 ){
-                    nums.forEach((ele, idx)=>{
-                        counterFn(idx, ele);
-                    });
+                // 함수 호출
+                // idx: 0,1,2,3
+                let st = $(this).scrollTop();
+                // console.log(st);
+
+                if (st >= 1500) {
+                    bEle.each((idx, ele) => countFn(idx) );
+                } else {
+                    for (let i = 0; i < bEle.length; i++) {
+                        cnts[i] = 0;
+                        bEle.eq(i).text(cnts[i]);
+                    }
                 }
             });
 
-            function counterFn(i, maxNum) {
+            function countFn(i) {
                 cnts[i]++;
+                if (cnts[i] <= nums[i]) {
+                    setTimeout(() => countFn(i), 300);
+                } else {
+                    return;
+                }
                 bEle.eq(i).text(cnts[i]);
-                if (cnts[i] >= maxNum) return;
-                setTimeout(()=>counterFn(i, maxNum), 300);
             }
+
 
         }); // ready end
     </script>
