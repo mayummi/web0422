@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
+
+        .section {
+            height: 100vh;
+        }
+
+        .row {
+            margin: 50px;
+        }
+
+        /* progress */
+        .progress {
+            height: 30px;
+            font-size: 1.5rem;
+            padding: 0;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+
+            // progress bar
+            // 요소 찾기
+            const bEle = $("b");
+            const barEle = $(".progress-bar");
+            const cnts = [0, 0, 0, 0];
+            // const nums = [2, 5, 7, 5];
+            const nums = [90, 95, 90, 80];
+
+            $(window).scroll(() => {
+                let st = $(this).scrollTop();
+                console.log(st);
+
+                if (st >= 1200) {
+                    bEle.each((idx, ele) => countFn(idx) );
+                } else {
+                    for (let i = 0; i < bEle.length; i++) {
+                        cnts[i] = 0;
+                        barEle.eq(i).css({width:cnts[i] + "%"});
+                    }
+                }
+            });
+
+            function countFn(i) {
+                cnts[i]++;
+                if (cnts[i] <= nums[i]) {
+                    setTimeout(() => countFn(i), 100);
+                } else {
+                    return;
+                }
+                bEle.eq(i).text(cnts[i]);
+                barEle.eq(i).css({width:cnts[i] + "%"});
+            }
+            
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <div class="section">섹션</div>
+    <div class="section">섹션</div>
+
+    <!-- skill -->
+    <div class="row">
+        <h3>Photoshop</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>Figma</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>HTML5/CSS3</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div>
+        <h3>JavaScript/jQuery</h3>
+        <div class="col-12 progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark">
+                <span><b>0</b>%</span>
+            </div>
+        </div><!-- .progress -->
+    </div><!-- .row -->
+</body>
+
+</html>

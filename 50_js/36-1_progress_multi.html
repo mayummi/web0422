@@ -25,28 +25,28 @@
     <script>
         $(() => {
 
-            // progress bar
+            // counter
             const btn = $("button");
             const bEle = $("b");
             const barEle = $(".progress-bar");
-            let cnt = 0;
-            const num = 90;
+            const cnts = [0, 0, 0, 0];
+            const nums = [90, 95, 90, 75];
 
             btn.click(() => {
-                progbar();
+                bEle.each((idx, ele) => countFn(idx) );
             });
 
-            function progbar() {
-                cnt++;
-                if (cnt <= num) {
-                    setTimeout(() => progbar(), 10);
+            function countFn(i) {
+                cnts[i]++;
+                if (cnts[i] <= nums[i]) {
+                    setTimeout(() => countFn(i), 10);
                 } else {
                     return;
                 }
-                bEle.eq(0).text(cnt);
-                barEle.eq(0).css({width:cnt + "%"});
+                bEle.eq(i).text(cnts[i]);
+                barEle.eq(i).css({width:cnts[i] + "%"});
             }
-
+            
         }); // ready end
     </script>
 </head>

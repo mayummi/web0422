@@ -99,23 +99,29 @@ iframe {
     color: #fff;
 }
 
+/* seciton2: profile */
+#s2 .row {
+    overflow: hidden;
+}
+
+.profile1 {
+    transform: translateY(300px);
+    transition:transform .5s .2s;
+}
+.profile2 {
+    transform: translateY(300px);
+    transition:transform .5s .6s;
+}
+.photo {
+    transform: translateY(300px);
+    transition:transform .5s .8s;
+}
+
 /* progress */
 .progress {
     height: 30px;
     font-size: 1.5rem;
     padding: 0;
-}
-.progress:nth-of-type(1) .progress-bar {
-    width: 90%;
-}
-.progress:nth-of-type(2) .progress-bar {
-    width: 95%;
-}
-.progress:nth-of-type(3) .progress-bar {
-    width: 97%;
-}
-.progress:nth-of-type(4) .progress-bar {
-    width: 75%;
 }
 
 /* counter */
@@ -194,13 +200,11 @@ footer .sns {
     .skill {
         margin-top: 48px;
     }
+
     /* section4: contact */
     #s4 form div {
         display: flex;
         justify-content: space-between;
-    }
-    #s4 [name="user_name"] {
-        margin-right: 1%;
     }
     #s4 [name*="user"] {
         width: 49.5%;
