@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css");
+
+        .section {
+            height: 100vh;
+        }
+
+        /* counter */
+        .counter {
+            display: block;
+            background: #616161;
+            color: #fff;
+            text-align: center;
+            padding: 32px;
+        }
+
+        .counter .col-sm {
+            padding: 20px 0;
+        }
+
+        .counter span {
+            display: block;
+            font-size: 2.4rem;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+
+            // counter
+            const bEle = $("b");
+            const cnts = [0,0,0,0];
+            const nums = [2,5,7,5];
+
+            // scroll은 window 이벤트
+            // $(window), $(document), $(this)
+            // HTML DOM 요소는 $("선택자")
+            $(window).scroll(() => {
+                console.log($(this).scrollTop());
+                if ($(this).scrollTop() >= 1500 ){
+                    nums.forEach((ele, idx)=>{
+                        counterFn(idx, ele);
+                    });
+                }
+            });
+                      
+            function counterFn(i, maxNum) {
+                cnts[i]++;
+                bEle.eq(i).text(cnts[i]);
+                if (cnts[i] >= maxNum) return;
+                setTimeout(()=>counterFn(i, maxNum), 300);
+            }
+
+        }); // ready end
+    </script>
+</head>
+
+<body>
+    <div class="section">
+        섹션1
+    </div>
+    <div class="section">
+        섹션1
+    </div>
+    <div class="section">
+        섹션2
+        <!-- counter -->
+        <div class="container-fluid counter">
+            <div class="row">
+                <div class="col-sm">
+                    <span><b>0</b>+</span>Team Projects
+                </div>
+                <div class="col-sm">
+                    <span><b>0</b>+</span>Personal Projects
+                </div>
+                <div class="col-sm">
+                    <span><b>0</b>+</span>Total Projects
+                </div>
+                <div class="col-sm">
+                    <span><b>0</b>+</span>National technical certification
+                </div>
+            </div>
+        </div><!-- .counter -->
+    </div>
+</body>
+
+</html>
