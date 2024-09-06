@@ -168,8 +168,8 @@ $(() => {
                 outerWidth(), outerHeight() -> 패딩과 테두리 포함
                 innerWidth()
         */
-        let x = event.pageX - mp.eq(i).outerWidth / 2;
-        let y = event.pageY - mp.eq(i).outerWidth / 2;
+        let x = event.pageX - mp.eq(i).outerWidth() / 2;
+        let y = event.pageY - mp.eq(i).outerHeight() / 2;
 
         mp.eq(i).css({left: x + 'px', top: y + 'px'});
         // mp.eq(i).css.({top = y + 'px'});
