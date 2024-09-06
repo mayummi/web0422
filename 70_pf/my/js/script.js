@@ -10,10 +10,30 @@ $(() => {
     const vid = $("#s2 .vid video").get(0);
     const vidBtn = $("#s2 .vid i");
 
+    // toggle 동작 만들기
+    // 하나의 버튼으로 두 개의 상태를 만든다.
+    let flag = 0;
+
     vidBtn.click((e)=>{
-        vid.play();
-        $(e.currentTarget).attr({class: "fa-regular fa-circle-pause"});
+        if (flag === 0) {
+            vid.play();
+            $(e.currentTarget).attr({class: "fa-regular fa-circle-pause"});
+            flag = 1;
+        } else {
+            vid.pause();
+            $(e.currentTarget).attr({class: "fa-regular fa-circle-play"});
+            flag = 0;
+        }
     });
+
+    // audio button effect
+    const btn = $(".btn");
+    const snd = $(".snd").get(0);
+
+    btn.mouseenter(()=>{
+        snd.play();
+    });
+
 
     // progress bar & counter
     // 요소 찾기
@@ -114,8 +134,10 @@ $(() => {
     const moreBtn = $("#s3 .more");
     const pf2row = $("#s3 .pf2row");
 
-    moreBtn.click(()=>{
-        event.preventDefault();
+    moreBtn.click((e)=>{
+        // <a href="#"></a> -> a태그를 클릭하면 현재 페이지의 상단으로 올라간다.
+        // 기본 이벤트 방지
+        e.preventDefault();
         pf2row.css({display: "flex"});
     });
 
