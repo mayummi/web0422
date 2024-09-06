@@ -8,19 +8,23 @@ html {
     scroll-behavior: smooth;
     font-size: 10px;
 }
+
 body {
     font: 300 1.5rem/1.6 "Noto Sans KR", sans-serif;
 }
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 h2 {
     text-align: center;
     font-weight: 300;
     margin-bottom: 30px;
 }
+
 h3 {
     font-size: 1.5rem;
     text-align: center;
@@ -28,9 +32,11 @@ h3 {
     letter-spacing: 10px;
     margin: 16px 0;
 }
+
 p {
     margin-bottom: 48px;
 }
+
 img,
 video {
     width: 100%;
@@ -39,9 +45,11 @@ video {
     height: auto;
     vertical-align: top;
 }
+
 input {
     border: none;
 }
+
 iframe {
     width: 100%;
     border: none;
@@ -53,10 +61,11 @@ iframe {
     padding: 60px 24px;
 }
 
-.container > p {
+.container>p {
     text-align: center;
     margin-bottom: 16px;
 }
+
 .btn {
     font-size: 1.5rem;
     padding: 8px 24px;
@@ -84,17 +93,19 @@ iframe {
     height: 100vh;
     background-image: url(../assets/parallax1.jpg);
 }
+
 #s3 .container-fluid {
     height: 400px;
     background-image: url(../assets/parallax2.jpg);
 }
+
 #s4 .container-fluid {
     height: 400px;
     background-image: url(../assets/parallax3.jpg);
 }
 
 /* background-image Title */
-.container-fluid > span {
+.container-fluid>span {
     font-size: 3.6rem;
     letter-spacing: 10px;
     color: #fff;
@@ -107,32 +118,36 @@ iframe {
 
 .profile1 {
     transform: translateY(300px);
-    transition:transform .5s .2s;
+    transition: transform .5s .2s;
 }
+
 .profile2 {
     transform: translateY(300px);
-    transition:transform .5s .6s;
+    transition: transform .5s .6s;
 }
+
 .photo {
     transform: translateY(300px);
-    transition:transform .5s .8s;
+    transition: transform .5s .8s;
 }
 
 /* video */
 #s2 .vid {
     position: relative;
 }
+
 /* i태그가 비디오 버튼 */
 #s2 .vid i {
     position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 6rem;
-    opacity:0;
+    opacity: 0;
     transition: .3s;
     cursor: pointer;
 }
+
 #s2 .vid:hover i {
     opacity: 1;
 }
@@ -152,9 +167,11 @@ iframe {
     text-align: center;
     padding: 32px;
 }
+
 .counter .col-sm {
     padding: 20px 0;
 }
+
 .counter span {
     display: block;
     font-size: 2.4rem;
@@ -165,12 +182,14 @@ iframe {
 #s3 {
     text-align: center;
 }
+
 /* #s3 .col {
     padding: 8px;
 } */
 #s3 .col-sm {
     margin-bottom: 12px;
 }
+
 #s3 .pf2row {
     display: none;
 }
@@ -183,15 +202,19 @@ iframe {
     padding: 10px;
     margin: 4px 0;
 }
+
 #s4 ul {
     margin-top: 16px;
 }
+
 #s4 li {
     line-height: 2;
 }
+
 #s4 .row p {
     margin: 24px 0 8px;
 }
+
 #s4 button.btn {
     margin-top: 16px;
 }
@@ -203,15 +226,43 @@ footer {
     text-align: center;
     color: #fff;
 }
+
 footer a {
     color: #fff;
 }
+
 footer .sns {
     margin: 16px 0;
     font-size: 2.4rem;
 }
 
+/* mouse pointer motion */
+.mp {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 큰원 */
+.mp1 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    /* background: url(mouse-cursor.png) no-repeat; */
+    /* ease-out을 사용! */
+    transition: .7s ease-out;
+}
+
+/* 작은 원 */
+.mp2 {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    /* ease-out을 사용! */
+    transition: .1s ease-out;
+}
+
 @media (min-width: 992px) {
+
     /* clock */
     #clock {
         left: auto;
@@ -230,9 +281,11 @@ footer .sns {
         display: flex;
         justify-content: space-between;
     }
+
     #s4 [name*="user"] {
         width: 49.5%;
     }
+
     #s4 [name="message"] {
         width: 100%;
     }

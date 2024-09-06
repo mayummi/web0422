@@ -14,14 +14,14 @@ $(() => {
     // 하나의 버튼으로 두 개의 상태를 만든다.
     let flag = 0;
 
-    vidBtn.click((e)=>{
+    vidBtn.click((e) => {
         if (flag === 0) {
             vid.play();
-            $(e.currentTarget).attr({class: "fa-regular fa-circle-pause"});
+            $(e.currentTarget).attr({ class: "fa-regular fa-circle-pause" });
             flag = 1;
         } else {
             vid.pause();
-            $(e.currentTarget).attr({class: "fa-regular fa-circle-play"});
+            $(e.currentTarget).attr({ class: "fa-regular fa-circle-play" });
             flag = 0;
         }
     });
@@ -30,7 +30,7 @@ $(() => {
     const btn = $(".btn");
     const snd = $(".snd").get(0);
 
-    btn.mouseenter(()=>{
+    btn.mouseenter(() => {
         snd.play();
     });
 
@@ -124,21 +124,56 @@ $(() => {
 
     // lightbox2 link
     const lb_caption = $(".lb-caption");
-    lb_caption.css({cursor: "pointer"});
+    lb_caption.css({ cursor: "pointer" });
     lb_caption.click(() => {
         const lb_link = $(event.currentTarget).text();
-        $(location).attr({href: lb_link, target: "_blank"});
+        $(location).attr({ href: lb_link, target: "_blank" });
     });
 
     // portfolio more
     const moreBtn = $("#s3 .more");
     const pf2row = $("#s3 .pf2row");
 
-    moreBtn.click((e)=>{
+    moreBtn.click((e) => {
         // <a href="#"></a> -> a태그를 클릭하면 현재 페이지의 상단으로 올라간다.
         // 기본 이벤트 방지
         e.preventDefault();
-        pf2row.css({display: "flex"});
+        pf2row.css({ display: "flex" });
     });
+
+    // 마우스 포인터 모션 만들기
+    /* 
+    event.pageX ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 X 좌표(읽기 전용)
+    event.pageY ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 Y 좌표(읽기 전용)
+*/
+    const mp =$('.mp');
+
+    $("body").mousemove (() => {
+        // 큰원
+        mm(0);
+        // 작은 원
+        mm(1);
+    });
+
+    function mm(i) {
+
+        /* 
+            event.pageX -> 마우스 x좌표
+            event.pageY -> 마우스 Y좌표
+
+            vanilla JS의 속성
+            offsetWidth, offsetHeight -> 패딩과 태두리 포함
+            clientWidth, clientHeight -> 패딩만 포함
+            jQuery 메서드
+                outerWidth(), outerHeight() -> 패딩과 테두리 포함
+                innerWidth()
+        */
+        let x = event.pageX - mp.eq(i).outerWidth / 2;
+        let y = event.pageY - mp.eq(i).outerWidth / 2;
+
+        mp.eq(i).css({left: x + 'px', top: y + 'px'});
+        // mp.eq(i).css.({top = y + 'px'});
+    }
+
 
 }); // ready end
