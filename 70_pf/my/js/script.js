@@ -34,7 +34,6 @@ $(() => {
         snd.play();
     });
 
-
     // progress bar & counter
     // 요소 찾기
     const cntNumEle = $(".counter b");
@@ -135,45 +134,79 @@ $(() => {
     const pf2row = $("#s3 .pf2row");
 
     moreBtn.click((e) => {
-        // <a href="#"></a> -> a태그를 클릭하면 현재 페이지의 상단으로 올라간다.
+        // <a href="#"> -> a태그를 클릭하면 현재 페이지의 상단으로 올라간다.
         // 기본 이벤트 방지
         e.preventDefault();
         pf2row.css({ display: "flex" });
     });
 
     // 마우스 포인터 모션 만들기
-    /* 
-    event.pageX ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 X 좌표(읽기 전용)
-    event.pageY ~ 마우스 이벤트가 발생할 때 마우스 포인터의 문서 상대 Y 좌표(읽기 전용)
-*/
-    const mp =$('.mp');
+    const mp = $(".mp");
 
-    $("body").mousemove (() => {
+    /* $("body").mousemove(() => {
         // 큰원
         mm(0);
-        // 작은 원
+        // 작은원
         mm(1);
-    });
+    }); */
+
+    setInterval(firefly, 3000);
+
+    function firefly(){
+        mm(0);
+        mm(1);
+    }
 
     function mm(i) {
 
         /* 
             event.pageX -> 마우스 x좌표
-            event.pageY -> 마우스 Y좌표
+            event.pageY -> 마우스 y좌표
 
-            vanilla JS의 속성
-            offsetWidth, offsetHeight -> 패딩과 태두리 포함
-            clientWidth, clientHeight -> 패딩만 포함
+            Vanilla JS의 속성
+                offsetWidth, offsetHeight -> 패딩과 테두리 포함
+                clientWidth, clientHeight -> 패딩만 포함
             jQuery 메서드
                 outerWidth(), outerHeight() -> 패딩과 테두리 포함
-                innerWidth()
+                innerWidth(), innerHeight() -> 패딩만 포함
         */
-        let x = event.pageX - mp.eq(i).outerWidth() / 2;
-        let y = event.pageY - mp.eq(i).outerHeight() / 2;
 
-        mp.eq(i).css({left: x + 'px', top: y + 'px'});
-        // mp.eq(i).css.({top = y + 'px'});
+        // Math.floor() -> 내림
+        // Math.ceil() -> 올림
+        // Math.round() -> 반올림
+        // x: 50 ~ 1870 -> 랜덤(불규칙) -> Math.random()
+        // y: 100 ~ 800
+        // 0 <= Math.random() < 1
+        // 0 * 10 <= Math.random() * 10 < 1 * 10
+
+        // 1 ~ 6 사이 정수 출력
+        // 0 + 1 <= Math.floor(Math.random() * 6) + 1 < 6 + 1
+        // 0 ~ 2 사이 정수 출력
+        // 0 <= Math.floor(Math.random() * 3) < 3
+
+        // 1 <= Math.floor(Math.random() * 10) + 1 < 11
+        // 50 <= Math.floor(Math.random() * 1800) + 50 < 1920
+        
+        let x = Math.floor(Math.random() * 1800) + 50 - mp.eq(i).outerWidth() / 2;
+        let y = Math.floor(Math.random() * 800) + 50 - mp.eq(i).outerWidth() / 2;
+        // let x = event.pageX - mp.eq(i).outerWidth() / 2;
+        // let y = event.pageY - mp.eq(i).outerWidth() / 2;
+
+        mp.eq(i).css({left: x + "px", top: y + "px"});
     }
 
+    // 푸터 배경색 랜덤하게 바꾸기
+    const footerEle = $("footer");
+    const colors = ["#111111", "#111110", "#011111"];
+
+    setInterval(bgcolor, 1000);
+    
+    function bgcolor(){
+        let color = colors[Math.floor(Math.random() * 3)];
+        footerEle.css({
+            backgroundColor: color, 
+            transition: "2s"
+        });
+    }
 
 }); // ready end
