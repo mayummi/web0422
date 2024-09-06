@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* https://www.w3schools.com/css/css3_gradients.asp */
+    /* 
+        색: 글자색, 배경색, 테두리색
+        색: 단일, 그라디언트, 패턴(무늬)
+        background-color: 단일색
+        background-image: 그라디언트, 패턴(무늬)
+
+        그라디언트
+            linear-gradient: background-image: linear-gradient(direction(방향), color-stop1(색), color-stop2(색), 위치 ...);
+            방향 to left(왼쪽으로), 새
+            방향 to left bottom -> 대각선
+            linear-gradient: background-image: linear-gradient[각도deg](direction(방향), color-stop1(색), color-stop2(색), ...);
+            
+            linear-gradient
+            radial-gradient
+            conic-gradient
+
+            패턴
+            repeating-linear-gradient
+            repeating-radial-gradient
+            repeating-conic-gradient
+    */
+    div {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+    }
+    .grad1 {
+        background: linear-gradient(red, blue);
+    }
+    .grad1-1{background: linear-gradient(to top, red, blue);}
+    .grad1-2{background: linear-gradient(to left top, red, blue);}
+    .grad1-3{background: linear-gradient(30deg, red, blue);}
+    .grad1-4{background: linear-gradient(red 50%, blue 50%);}
+    .grad1-5{background: repeating-linear-gradient(red 5%, blue 10%);}
+</style>
+<body>
+    <div class="grad1">선형</div>
+    <div class="grad1-1">선형</div>
+    <div class="grad1-2">선형</div>
+    <div class="grad1-3">선형</div>
+    <div class="grad1-4">선형</div>
+    <div class="grad1-5">선형</div>
+    <div class="grad2">원형</div>
+    <div class="grad3">원뿔형</div>
+</body>
+</html>

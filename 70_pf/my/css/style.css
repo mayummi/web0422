@@ -225,6 +225,7 @@ footer {
     background: #000;
     text-align: center;
     color: #fff;
+    background: url(./../assets/pattern3.png) #111;
 }
 
 footer a {
