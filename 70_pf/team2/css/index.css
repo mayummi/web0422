@@ -191,6 +191,18 @@ body {
     /* border: 1px solid green; */
     background: url(../images/main/best-menu/메인/버튼-1.svg)no-repeat 50% 50%/cover;
 }
+#s3 a {
+    position: absolute;
+    display: flex;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: .5% 1%;
+    background: forestgreen;
+    color: #fff;
+
+}
 
 /* section4 */
 #s4 {
