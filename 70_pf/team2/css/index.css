@@ -271,8 +271,6 @@ body {
     margin-bottom: 40px;
 }
 
-
-
 @media (min-width: 768px) {
     #s3 .best-slick {
         max-width: 620px;
@@ -322,9 +320,6 @@ body {
         left: 92%;
     }
 }
-
-
-
 
 @media (min-width: 768px) {
 
@@ -402,8 +397,6 @@ body {
     }
 
     
-
-
     #s5 {
         height: 400px;
     }
