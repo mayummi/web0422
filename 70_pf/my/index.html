@@ -78,7 +78,23 @@
             <div class="row">
                 <div class="col-md">
                     <div class="text-center mb-5">Hong Gil-Dong</div>
-                    <div class="photo"><img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="내 사진"></div>
+                    <!-- https://www.w3schools.com/html/html5_video.asp?WT.mc_id=14117-DEV-tuts-article8 -->
+                    <div class="photo vid">
+                        <!-- <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="내 사진"> -->
+                         <!-- 
+                            비디오: mp4, webm, ogg/ogv
+                            autoplay + muted(무음): 자동 실행
+                            loop: 무한 반복
+                         -->
+                         <video>
+                            <source  src="assets/mov_bbb.mp4" type="video/mp4">
+                            <source  src="assets/mov_bbb.webm" type="video/webm">
+                            <!-- <p>지금 사용하고 있는 브라우저는 비디오 태그를 지원하지 않습니다.</p> -->
+                         </video>
+                         <!-- 비디오 플레이/일시정지 버튼 -->
+                         <i class="fa-regular fa-circle-play"></i>
+                         <!-- <i class="fa-regular fa-circle-pause"></i> -->
+                    </div>
                 </div>
                 <div class="col-md mt-5">
                     <p class="profile2">창의적이고 세심한 접근 방식을 중요하게 생각합니다. 웹 페이지를 디자인할 때, 단순히 보기 좋은 것뿐만 아니라 사용자의 편의성과 접근성을 고려한 디자인을 지향하고 있습니다.
@@ -167,7 +183,7 @@
                     <img src="assets/p4.jpg" alt="작품1">
                 </div>
             </div>
-            <!-- <div class="row">
+            <div class="row pf2row">
                 <div class="col-sm">
                     <img src="assets/p5.jpg" alt="작품1">
                 </div>
@@ -180,9 +196,9 @@
                 <div class="col-sm">
                     <img src="assets/p8.jpg" alt="작품1">
                 </div>
-            </div> --><!-- .row -->
+            </div><!-- .row -->
 
-            <a href="#" class="btn btn-dark">더보기</a>
+            <a href="#" class="btn btn-dark more">더보기</a>
         </div><!-- .container -->
     </div><!-- #s3 -->
 
@@ -211,15 +227,15 @@
                                     href="mailto:이메일"
                                     href="https:웹주소"
                                 -->
-                                <li>Phone: <a href="tel:010-5135-8730">+82 1515 1515</a></li>
+                                <li>Phone: <a href="tel:010-3009-4023">+82 1515 1515</a></li>
                                 <!-- 
-                                    1.a 태그에 <a href="mailto:yum8838@gmail.com"> 기록
+                                    1. <a>태그에 href="mailto:whyeil@gmail.com" 기록
                                     2. gmail에 로그인
-                                    3. 구글 환경설정열기 ->chrome://settings/handlers
-                                    -> 사이트에서 프로토콜 처리를 요청할 수 있음
-                                    4. 현재 페이지를 실행 -> 메일 주소 클릭
+                                    3. 구글 환경설정 열기 -> chrome://settings/handlers
+                                        -> "사이트에서 프로토콜 처리를 요청할 수 있음" 선택
+                                    4. 현재 페이지를 실행 -> 메일 주로 클릭
                                 -->
-                                <li>Email: <a href="mailto:yum8838@gmail.com">mail@gmail.com</a></li>
+                                <li>Email: <a href="mailto:whyeil@gmail.com">mail@gmail.com</a></li>
                                 <li>Email: mail@naver.com</li>
                             </ul>
                         </div>

@@ -1,4 +1,20 @@
 $(() => {
+    // video player
+    /* 
+        비디오 가져오기: 객체.get(0)
+        비디오 플레이: 객체.play()
+        비디오 일시정지: 객체.pause()
+        비디오 정지: 객체.load()
+    */
+
+    const vid = $("#s2 .vid video").get(0);
+    const vidBtn = $("#s2 .vid i");
+
+    vidBtn.click((e)=>{
+        vid.play();
+        $(e.currentTarget).attr({class: "fa-regular fa-circle-pause"});
+    });
+
     // progress bar & counter
     // 요소 찾기
     const cntNumEle = $(".counter b");
@@ -92,6 +108,15 @@ $(() => {
     lb_caption.click(() => {
         const lb_link = $(event.currentTarget).text();
         $(location).attr({href: lb_link, target: "_blank"});
+    });
+
+    // portfolio more
+    const moreBtn = $("#s3 .more");
+    const pf2row = $("#s3 .pf2row");
+
+    moreBtn.click(()=>{
+        event.preventDefault();
+        pf2row.css({display: "flex"});
     });
 
 }); // ready end
