@@ -4,52 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
-    /* https://www.w3schools.com/css/css3_gradients.asp */
-    /* 
-        색: 글자색, 배경색, 테두리색
-        색: 단일, 그라디언트, 패턴(무늬)
-        background-color: 단일색
-        background-image: 그라디언트, 패턴(무늬)
+    <style>
+        /* 
+            Gradient(그라디언트)
+                (1) Linear
+                (2) Radial
+                (3) Conic
 
-        그라디언트
-            linear-gradient: background-image: linear-gradient(direction(방향), color-stop1(색), color-stop2(색), 위치 ...);
-            방향 to left(왼쪽으로), 새
-            방향 to left bottom -> 대각선
-            linear-gradient: background-image: linear-gradient[각도deg](direction(방향), color-stop1(색), color-stop2(색), ...);
             
-            linear-gradient
-            radial-gradient
-            conic-gradient
+        */
 
-            패턴
-            repeating-linear-gradient
-            repeating-radial-gradient
-            repeating-conic-gradient
-    */
-    div {
-        width: 200px;
-        height: 200px;
-        margin: 20px;
-    }
-    .grad1 {
-        background: linear-gradient(red, blue);
-    }
-    .grad1-1{background: linear-gradient(to top, red, blue);}
-    .grad1-2{background: linear-gradient(to left top, red, blue);}
-    .grad1-3{background: linear-gradient(30deg, red, blue);}
-    .grad1-4{background: linear-gradient(red 50%, blue 50%);}
-    .grad1-5{background: repeating-linear-gradient(red 5%, blue 10%);}
-</style>
+        /* common */
+        body>div {display: flex;}
+        body>div>div {width: 200px; height: 100px; margin: 10px;}
+        .radial-circle>div {height: 200px;}
+        .conic>div {height: 200px;}
+
+        /* linear */
+        /* 위에서 아래(기본값) */
+        /* background-image: linear-gradient(to 방향, 색, 색, ...); */
+        .linear1 {background-image: linear-gradient(red, yellow);}
+        /* background-image: linear-gradient(각도, 색, 색, ...); */
+        .linear5 {background-image: linear-gradient(180deg, red, yellow);}
+        /* 왼쪽에서 오른쪽 to right */
+        .linear2 {background-image: linear-gradient(to right, red , yellow);}
+        /* 왼쪽 상단에서 오른쪽 하단 to bottom right */
+        .linear3 {background-image: linear-gradient(to bottom right, red, yellow);}
+        .linear4 {background-image: linear-gradient(to right bottom, red, yellow);}
+        /* 투명도 */
+        .linear6 {background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));}
+        /* 반복 */
+        .linear7 {background-image: repeating-linear-gradient(red, yellow 10%, green 20%);}
+        
+        /* radial */
+        /* background-image: radial-gradient(모양 크기 at 위치, 색, 색, ...); */
+        .radial1 {background-image: radial-gradient(red, yellow, green);}
+        .radial2 {background-image: radial-gradient(red 5%, yellow 15%, green 60%);}
+        /* 모양 지정: circle */
+        .radial3 {background-image: radial-gradient(circle, red, yellow, green);}
+        /* 크기 at 위치 */
+        /* closest-side at 위치 */
+        /* farthest-side at 위치 */
+        /* closest-corner at 위치 */
+        /* farthest-corner at 위치 */
+        .radial4 {background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);}
+        .radial5 {background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);}
+        .radial6 {background-image: radial-gradient(closest-corner at 60% 55%, red, yellow, black);}
+        .radial7 {background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);}
+        /* repeating */
+        .radial8 {background-image: repeating-radial-gradient(red, yellow 10%, green 15%);}
+        
+        /* conic */
+        /* background-image: conic-gradient([from 각도] [at 위치,] 색 [정도], 색 [정도], ...); */
+        /* color */
+        .conic1 {background-image: conic-gradient(red, yellow, green);}
+        /* degree */
+        .conic2 {background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);}
+        /* pie */
+        .conic3 {background-image: conic-gradient(red, yellow, green, blue, black); border-radius: 50%; }
+        /* pie + degree */
+        .conic4 {background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); border-radius: 50%; }
+        /* from 각도 */
+        .conic5 {background-image: conic-gradient(from 90deg, red, yellow, green);}
+        /* at 위치 */
+        .conic6 {background-image: conic-gradient(at 60% 45%, red, yellow, green);}
+        /* repeating */
+        .conic7 {background-image: repeating-conic-gradient(red 10%, yellow 20%); border-radius: 50%;}
+        .conic8 {background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+            border-radius: 50%;}
+
+    </style>
+</head>
 <body>
-    <div class="grad1">선형</div>
-    <div class="grad1-1">선형</div>
-    <div class="grad1-2">선형</div>
-    <div class="grad1-3">선형</div>
-    <div class="grad1-4">선형</div>
-    <div class="grad1-5">선형</div>
-    <div class="grad2">원형</div>
-    <div class="grad3">원뿔형</div>
+    <!-- 선형 그라디언트 -->
+    <div class="linear">
+        <div class="linear1">top to bottom(default)</div>
+        <div class="linear5">180deg</div>
+        <div class="linear2">left to right</div>
+        <div class="linear3">top left to bottom right</div>
+        <div class="linear4">top left to bottom right</div>
+        <div class="linear6">Transparency</div>
+        <div class="linear7">Repeating</div>
+    </div>
+
+    <!-- 원형 그라이디언트 -->
+    <div class="radial">
+        <div class="radial1">top to bottom(default)</div>
+        <div class="radial2">left to right</div>
+        <div class="radial3">circle</div>
+        <div class="radial4">closest-side at 위치</div>
+        <div class="radial5">farthest-side at 위치</div>
+        <div class="radial6">closest-corner at 위치</div>
+        <div class="radial7">farthest-corner at 위치</div>
+        <div class="radial8">repeating</div>
+    </div>
+
+    <!-- 원형 그라디언트 -->
+    <div class="radial-circle">
+        <div class="radial1">top to bottom(default)</div>
+        <div class="radial2">left to right</div>
+        <div class="radial3">circle</div>
+        <div class="radial4">closest-side at 위치</div>
+        <div class="radial5">farthest-side at 위치</div>
+        <div class="radial6">closest-corner at 위치</div>
+        <div class="radial7">farthest-corner at 위치</div>
+        <div class="radial8">repeating</div>
+    </div>
+
+    <!-- 원뿔형 그라디언트 -->
+    <div class="conic">
+        <div class="conic1">color</div>
+        <div class="conic2">degree</div>
+        <div class="conic3">Pie</div>
+        <div class="conic4">Pie + degree</div>
+        <div class="conic5">from 각도</div>
+        <div class="conic6">at 위치</div>
+        <div class="conic7">repeating</div>
+        <div class="conic8">repeating</div>
+    </div>
 </body>
 </html>
