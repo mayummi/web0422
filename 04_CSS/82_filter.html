@@ -12,35 +12,40 @@
             https://www.w3schools.com/cssref/pineapple.jpg
         */
 
-        .filter1 {filter: none;}
-        .filter2 {filter: grayscale(100%);}
-        .filter3 {filter: blur(5px);}
-        .filter4 {filter: brightness(200%);}
-        .filter5 {filter: contrast(200%);}
-        .filter6 {filter: drop-shadow(8px 8px 10px gray);}
-        .filter7 {filter: grayscale(50%);}
-        .filter8 {filter: hue-rotate(90deg);}
-        .filter9 {filter: invert(100%);}
-        .filter10 {filter: opacity(30%);}
-        .filter11 {filter: saturate(800%);}
-        .filter12 {filter: sepia(100%);}
-        .filter13 {filter: contrast(200%) brightness(150%);}
+        .wrap {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .wrap div {
+            flex: 0 0 auto;
+        }
+        .filter1 {filter: grayscale(100%);}
+        .filter2 {filter: blur(5px);}
+        .filter3 {filter: brightness(200%);}
+        .filter4 {filter: contrast(200%);}
+        .filter5 {filter: drop-shadow(8px 8px 10px gray);}
+        .filter6 {filter: hue-rotate(90deg);}
+        .filter7 {filter: invert(100%);}
+        .filter8 {filter: opacity(30%);}
+        .filter9 {filter: saturate(800%);}
+        .filter10 {filter: sepia(100%);}
+        .filter11 {filter: contrast(200%) brightness(150%);}
     </style>
 </head>
 <body>
-    <div class="filter1">none<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter2">brightness<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter3">contrast<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter4">drop-shadow<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter5">grayscale<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter6">hue-rotate<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter7">invert<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter8">opacity<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter9">saturate<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter10">sepia<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter11">sepia<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter12">sepia<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-    <div class="filter13">sepia<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
-
+    <div class="wrap">
+        <div>grayscale<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter1">grayscale<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter2">blur<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter3">brightness<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter4">contrast<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter5">drop-shadow<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter6">hue-rotate<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter7">invert<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter8">opacity<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter9">saturate<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter10">sepia<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+        <div class="filter11">contrast brightness<img src="https://www.w3schools.com/cssref/pineapple.jpg" alt="Pineapple"></div>
+    </div>
 </body>
 </html>
