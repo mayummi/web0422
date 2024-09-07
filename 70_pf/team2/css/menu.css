@@ -16,10 +16,10 @@ body{
 .tab-container{
 	/* margin: 5% 10%; */
 	background-color: #c1e3d9;
-	padding: 3%;
+	padding: 3% 10%;
 	border-radius: 4px;
 }
-.tab-container h2, .tab-container p {
+.tab-container h2 {
     text-align: center;
 }
 /* .tab-menu{} */
@@ -48,10 +48,18 @@ body{
 .tab h2{
 	color: rgba(0,0,0,.7);
 }
-.tab p{
-	color: rgba(0,0,0,0.6);
-	text-align: justify;
-}
+
 .tab-active{
 	display: block;
+}
+
+/* pc */
+@media (min-width: 960px) {
+    .tab-container{
+        /* margin: 5% 10%; */
+        padding: 3% 10%;
+    }
+    .tab-container .menuimg {
+        display: flex;
+    }
 }
