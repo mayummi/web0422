@@ -10,11 +10,17 @@ body{
 	height: 100%;
 	background-color: #fff;
 }
+.tab-menu div {
+    display: flex;
+}
 .tab-container{
 	/* margin: 5% 10%; */
 	background-color: #c1e3d9;
 	padding: 3%;
 	border-radius: 4px;
+}
+.tab-container h2, .tab-container p {
+    text-align: center;
 }
 /* .tab-menu{} */
 .tab-menu ul{
