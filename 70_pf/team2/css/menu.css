@@ -22,6 +22,10 @@ body{
 .tab-container h2 {
     text-align: center;
 }
+.menuimg {
+    display: flex;
+    flex-wrap: wrap;
+}
 /* .tab-menu{} */
 .tab-menu ul{
 	margin: 0;
@@ -60,6 +64,7 @@ body{
         padding: 3% 10%;
     }
     .tab-container .menuimg {
-        display: flex;
+        /* justify-content: space-between; */
+        text-align: center;
     }
 }
