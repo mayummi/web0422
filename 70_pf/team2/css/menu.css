@@ -56,7 +56,7 @@ body{
 	color: #ffffff;
 }
 .tab{
-    width: 100vww;
+    /* width: 100vww; */
 	display: none;
 }
 .tab h2{
@@ -79,6 +79,7 @@ body{
         text-align: center;
     }
     .menuimg img {
-        width: 286px;
+        width: 14vw;
+        height: 100%;
     }
 }
