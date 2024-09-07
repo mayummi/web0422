@@ -11,6 +11,7 @@
 }
 .tab-container h1 {
     text-align: center;
+    font-size: 24px;
 }
 .tab-menu h1 {
     /* margin-bottom: 2%; */
@@ -20,7 +21,16 @@
 .tab-menu li {
     line-height: 3;
 }
-
+.tab-container .tab-menu ul li::after {
+    content: "|";
+    color: #ccc;
+}
+.menuimg img {
+    display: none;
+}
+.menuimg mo-img {
+    display: block;
+}
 /* .tab-menu{} */
 .tab-menu ul{
 	margin: 0;
@@ -56,10 +66,14 @@
 
 @media (min-width: 768px) {
     
+    
 }
 
 /* pc */
 @media (min-width: 960px) {
+    .tab-menu h1 {
+        font-size: 32px;
+    }
     .tab-container{
         margin: 5% 18%;
     }
@@ -73,12 +87,20 @@
     .menuimg img {
         width: 14vw;
         height: 100%;
+        display: block;
     }
+    .mo-img {
+        display: none;
+    }
+    
     .menuimg {
         display: flex;
         flex-wrap: wrap;
     }
     .menuimg a:not(:nth-of-type(4n)) {
         margin-right: 2%;
+    }
+    .tab-container .tab-menu ul li::after {
+        content: "";
     }
 }
