@@ -25,12 +25,33 @@
     content: "|";
     color: #ccc;
 }
-.menuimg img {
+.menuimg {
     display: none;
 }
-.menuimg mo-img {
+.mo-img {
     display: block;
+
 }
+.mo-img a {
+    border: 1px solid #eee;
+    /* height: 90px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0 4% 0 0;
+    /* line-height: 5; */
+}
+.mo-img a div {
+    display: flex;
+    align-items: center;
+}
+.mo-img a span {
+    margin-left: 4%;
+    text-wrap: nowrap;
+    font-weight: 600;
+}
+
 /* .tab-menu{} */
 .tab-menu ul{
 	margin: 0;
