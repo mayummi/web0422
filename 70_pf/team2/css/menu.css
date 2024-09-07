@@ -11,13 +11,11 @@
 }
 .tab-container h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
-.tab-menu h1 {
-    /* margin-bottom: 2%; */
-    margin-right: 6%;
-    
-}
+
+
 .tab-menu li {
     line-height: 3;
 }
@@ -86,7 +84,9 @@
 }
 
 @media (min-width: 768px) {
-    
+    .tab-container h1 {
+        font-size: 24px;
+    }
     
 }
 
@@ -101,6 +101,11 @@
     .tab-container .menuimg {
         /* justify-content: space-between; */
         text-align: center;
+    }
+    .tab-menu h1 {
+        /* margin-bottom: 2%; */
+        margin-right: 6%;
+        
     }
     .tab-menu div {
         display: flex;
