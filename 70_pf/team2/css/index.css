@@ -9,6 +9,9 @@ body {
 
 
 /* slider */
+#s1 {
+    margin-top: 4vh;
+}
 #s1 #slideWrap .slider img {
     width: 100vw;
     /* width: 100%; */
@@ -110,6 +113,11 @@ body {
 #s3 {
     position: relative;
     height: 700px;
+}
+#s3 h2 {
+    position: absolute;
+    top: 18vh;
+    left: 2%;
 }
 
 #s3 img {
@@ -311,6 +319,7 @@ body {
         height: 44px;
         padding: 6px;
     }
+    
 }
 
 @media (min-width: 992px) {
@@ -355,6 +364,11 @@ body {
     #s2 div {
         display: block;
     }
+    #s3 h2 {
+        position: absolute;
+        top: 6vh;
+        left: 4%;
+    }
 
     /* s5 */
     #s5 {
@@ -389,9 +403,7 @@ body {
         /* 크기 */
         display: block;
     }
-    #s1 {
-        margin-top: 4vh;
-    }
+    
 
     /* section2 */
     #s2 {
