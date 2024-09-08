@@ -111,8 +111,14 @@ body {
 
 /* section3 */
 #s3 {
+    margin-top: 10%;
     position: relative;
-    height: 70vh;
+    height: 80vh;
+}
+#s3 .mlogo {
+    position: absolute;
+    width: 200px;
+    left: 4%;
 }
 #s3 h2 {
     position: absolute;
@@ -295,6 +301,9 @@ body {
 
 #s6 div img {
     width: 100%;
+}
+#s6 div img:hover {
+    transform: scale(1.01, 1.01);
 }
 #s6 div:first-child {
     margin-bottom: 40px;
