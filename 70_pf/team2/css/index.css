@@ -12,13 +12,13 @@ body {
 #s1 #slideWrap .slider img {
     width: 100vw;
     /* width: 100%; */
-    height: 450px;
+    
     object-fit: cover;
 }
 
 #slideWrap {
     position: relative;
-    height: 450px;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -388,6 +388,9 @@ body {
     .bx-wrapper .bx-controls-direction a {
         /* 크기 */
         display: block;
+    }
+    #s1 {
+        margin-top: 3.5%;
     }
 
     /* section2 */
