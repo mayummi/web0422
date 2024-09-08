@@ -112,11 +112,11 @@ body {
 /* section3 */
 #s3 {
     position: relative;
-    height: 700px;
+    height: 70vh;
 }
 #s3 h2 {
     position: absolute;
-    top: 18vh;
+    top: 10vh;
     left: 2%;
 }
 
