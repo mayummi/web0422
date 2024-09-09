@@ -49,7 +49,7 @@ $(() => {
 
     // 진행율바의 시작 값과 목표 값
     const progressBarStartNums = [0, 0, 0, 0];
-    const progressBarNums = [90, 95, 90, 80];
+    const progressBarNums = [80, 90, 80, 30];
 
     $(window).scroll(() => {
         let st = $(this).scrollTop();
