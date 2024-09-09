@@ -410,6 +410,9 @@ body {
         /* 크기 */
         display: block;
     }
+    #s1 {
+        margin-top: 0;
+    }
     
 
     /* section2 */
