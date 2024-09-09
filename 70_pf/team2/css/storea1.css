@@ -1,38 +1,37 @@
 /* 스탭2 */
-.step2{
+.tabwrap .step2{
     display: flex;
     width: 1920px;
     height: 627px;
     background-color: #FFC20D;
     margin-top: 10px;
 }
-.want{
+.tabwrap .want{
     width: 279px;
     height: 60px;
     background:#58006C;
     transform: translate(50px,50px);
     color:#fff
 }
-.a p{
+.tabwrap .a p{
     text-align: center;
 }
 
-.step2 b,span{
-   
+.tabwrap .step2 b, .tabwrap span{
     font-size: 28px;
     line-height: 64px;
     margin-top:101px;
 
 }
-.s{
+.tabwrap .s{
     font-size: 28px;
 }
-.a{
+.tabwrap .a{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.a img{
+.tabwrap .a img{
     width: 606px;
     height: 501px;
     margin-left: 350px;
