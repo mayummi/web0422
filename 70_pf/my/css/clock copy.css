@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* clock */
+#clock {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+/* 날짜 */
+#clock .ddate {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #9b9b9b;
+}
+/* 시간 */
+#clock .dtime {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0 0 2px #290101;
+}
+
+/* span의 크기를 지정하여 움직임 방지 */
+#s1 #clock .dtime span {
+    /* display: inline-block; */
+    width: 50px;
+}
+
+/* 시간의 : 표시 */
+#clock .dtime span:not(:last-child)::after {
+    content: " :";
+}
