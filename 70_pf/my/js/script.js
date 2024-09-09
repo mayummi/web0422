@@ -45,7 +45,7 @@ $(() => {
 
     // 카운터의 시작 값과 목표 값
     const counterStartNums = [0, 0, 0, 0];
-    const counterNums = [2, 5, 7, 5];
+    const counterNums = [2, 5, 7, 1];
 
     // 진행율바의 시작 값과 목표 값
     const progressBarStartNums = [0, 0, 0, 0];
@@ -195,18 +195,6 @@ $(() => {
         mp.eq(i).css({left: x + "px", top: y + "px"});
     }
 
-    // 푸터 배경색 랜덤하게 바꾸기
-    const footerEle = $("footer");
-    const colors = ["#111111", "#111110", "#011111"];
-
-    setInterval(bgcolor, 1000);
     
-    function bgcolor(){
-        let color = colors[Math.floor(Math.random() * 3)];
-        footerEle.css({
-            backgroundColor: color, 
-            transition: "2s"
-        });
-    }
 
 }); // ready end
