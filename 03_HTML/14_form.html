@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        [type="password"] {
+            width: 300px;
+        }
+
+        #rule2 {
+            width: 400px;
+            height: 158px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,47 +40,48 @@
     -->
 
     <!--  autocomplete="off" 자동 완성 사용 안함 -->
-    <form action="login.jsp" method="post" autocomplete="off">
+    <form action="" method="post" autocomplete="off">
         <!-- label의 웹 접근성과 관련된다. -->
         <!-- label의 for 속성과 input의 id의 값이 같아야 한다. -->
         <label for="user_id">아이디</label>
         <!-- maxlength: 최대 입력 문자 수 -->
-        <input type="text" name="user_id" id="user_id" maxlength="10">
+        <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력하세요." size="50" required>
         <label for="user_pw">비밀번호</label>
-        <input type="password" name="user_pw" id="user_pw">
+        <input type="password" name="user_pw" id="user_pw" required maxlength="8"
+            title="비밀번호는 특수문자, 영문자, 대소 구별 최대 8자 이하로 입력해 주세요."><small>비밀번호는 특수문자, 영문자, 대소 구별 최대 8자 이하로 입력해 주세요.</small>
         <input type="submit" value="로그인">
     </form>
 
     <!-- 
-        <input>
-        <label>
-        <textarea>
+        1<input>
+        2<label>
+        3<textarea>
                 
-        <input type="submit" value="버튼"> -> 전송
+        4<input type="submit" value="버튼"> -> 전송
         <input type="reset"> -> 초기화
         <input type="button"> -> 나머지 -> <button type="button"> 사용!
 
-        <button type="submit">버튼</button> (기본값)
+        5<button type="submit">버튼</button> (기본값)
         <button type="reset">
         <button type="button">
             
-        <fieldset>: 양식 데이터 그룹화
-            <legend>: 캡션 정의
+        6<fieldset>: 양식 데이터 그룹화
+            7<legend>: 캡션 정의
 
-        <select> -> 선택만
-            <optgroup> 
-            <option>
+        8<select> -> 선택만
+            9<optgroup> 
+            10<option>
             <option>
             <option>
 
         <input> -> 입력
-        <datalist> -> 드롭다운 목록 선택
+        11<datalist> -> 드롭다운 목록 선택
             <optgroup>  
             <option>
             <option>
             <option>
         
-        <output>: 계산 결과 표시
+        12<output>: 계산 결과 표시
     -->
 
     <form action="member.jsp" method="post">
@@ -81,37 +92,45 @@
             <input type="text" size="20"><br>
             <input type="text" disabled value="size속성은 text, search, tel, url, email, password 입력 유형에 적용된다."
                 size="60"><br>
+
             <label for="phone">Enter your phone number:</label>
-            <!-- JS -->
             <input type="tel" id="phone" name="phone" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}"
                 title="010-1234-1234 형식으로 입력하세요." autofocus>
+
+            <input type="file" multiple>
+
+            <button type="submit">메지시 전송하기</button>
+
         </fieldset>
-        <!-- 여러 줄 텍스트 -->
-        <h3>회칙</h3>
-        <!-- cols: 표시 너비 -->
-        <!-- rows: 표시 줄 개수 -->
-        <textarea name="rule" id="rule" readonly cols="100"
-            rows="10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic repellendus qui vero voluptatem. Quo, ducimus. Officiis voluptatum necessitatibus corporis error esse dolorum neque, incidunt ipsam molestias similique delectus, quia placeat!</textarea>
-        <div><input type="submit" value="가입하기"></div>
+
+        <!-- 
+                [............ 목록 ............] 
+                    <select>: 선택 만
+                    <datalist>: 선택 + 입력
+
+                        *(1) value -> DB 전송값
+
+                        (2) selected -> 미리 선택된 옵션 정의
+                        (3) size -> 보이는 값
+                        (4) multiple -> size를 사용했을 경우 사용 가능
+                
+        -->
 
         <label for="cars">Choose a car:</label>
-        <!-- size: 보이는 값 -->
-        <!-- multiple: 다중 선택 -->
         <select id="cars" name="cars" size="3" multiple>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <!-- selected: 미리 선택된 옵션 정의 -->
-            <option value="fiat" selected>Fiat</option>
             <option value="audi">Audi</option>
+            <option value="fiat">Fiat</option>
+            <option value="saab" selected>Saab</option>
+            <option value="volvo">Volvo</option>
         </select>
 
-        <input list="browsers">
-        <datalist id="browsers">
-            <option value="Edge">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
+        <!-- list 속성 값과 id 값이 같아야 한다. -->
+        <input list="cars2">
+        <datalist id="cars2">
+            <option value="audi">
+            <option value="fiat">
+            <option value="saab">
+            <option value="volvo">
         </datalist>
 
     </form>
@@ -131,7 +150,7 @@
             <input type="submit" value="버튼이름">
             <input type="reset" value="버튼이름">
             <input type="button" value="버튼이름">
-            <input type="file">
+            <input type="file"> -> 첨부 파일
             <input type="image" src="버튼이미지지정" width="" height="">
 
             체크박스
@@ -150,54 +169,52 @@
             <input type="time">
             <input type="week">  
 
-        [..........입력 제한 속성..........]
+
+        [........입력 제한 속성........]
         참고로 아래 속성은 모든 유형에 모두 적용되는 것이 아니다.
 
             *(1) autofocus 
                 -> 입력 필드에 포커스 지정
                 -> 사용자(웹 사이트 방문 고객)가 가장 먼저 기록 또는 선택해야하는 요소에 지정한다.
-            (2) autocomplete -> 자동 완성
-                -> text, search, url, tel, email, password, range, color 
-            (3) checked -> 사전 체크
-                w
+            (2) autocomplete="on" -> 자동 완성 (on이 기본값)
+                -> text, search, url, tel, email, password, range, color
+            *(3) checked -> 사전 체크
                 -> checkbox, radio
-            (4) value
-                -> type="text"의 경우 초기값
-                -> type="radio"
-                -> type= 
+            *(4) value
+                -> type="text"의 경우 초기값 -> placeholder로 대신 한다.
+                -> type="radio"의 DB 전송값 -> 반드시 입력한다.
+                -> type="submit"의 버튼 이름
             (5) placeholder -> 짧은 힌트
-                -> text, search, url, number, tel, email, password 유형에 적용
+                -> text, search, url, number, tel, email, password
             (6) disabled -> 비활성화, 양식 제출 시 전송되지 않는다.
+
             (7) size -> 표시 너비
-            (8) maxlength -> 최대 문자 수
-            (9) required -> 필수 속성
-                -> text, search, url, tel, email, password, number, checkbox, radio, file 유형에 적용
-            (10) readonly
-            (11) pattern 
-                -> text, date, search, url, tel, email, password 유형에 적용
-            (12) max -> 최댓값
-                -> number, range, date, datetime-local, month, time, week 유형에 적용
-            (13) min -> 최솟값
-                -> number, range, date, datetime-local, month, time, week 유형에 적용
-            (14) step -> 숫자 간격
-                -> number, range, date, datetime-local, month, time, week 유형에 적용
-            (15) multiple 
-                -> email, file 유형에 적용!
+            *(8) maxlength -> 최대 문자 수
+
+            *(9) required -> 필수 속성
+                -> text, search, url, tel, email, password, number, checkbox, radio, file
+            *(10) readonly
+            (11) pattern -> RegExp(JS, 정규식)
+                -> text, date, search, url, tel, email, password
+
+            (12) max(최댓값), min(최솟값), step(숫자 간격)
+                -> number, range, date, datetime-local, month, time, week 
+
+            (13) multiple 
+                -> email, file
     -->
 
     <p>Choose your favorite Web language:</p>
 
     <form>
-        <!-- radio 유형의 경우 name의 값이 같아야 그룹핑 된다. -->
-        <input type="radio" id="html" name="fav_language" value="HTML" checked>
-        <label for="html">가입</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">가입안함</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">JavaScript</label>
+        <!-- radio 유형의 경우 name의 값이 반드시 같아야 그룹핑 된다. -->
+        <input type="radio" id="html" name="fav_language" value="y" checked>
+        <label for="html">동의</label><br>
+        <input type="radio" id="css" name="fav_language" value="n">
+        <label for="css">동의안함</label><br>
     </form>
     <form>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
         <label for="vehicle1"> I have a bike</label><br>
         <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
         <label for="vehicle2"> I have a car</label><br>
@@ -211,10 +228,27 @@
             min: 최솟값
             max: 최댓값
             step: 숫자 간격
-            value: 기본값
+            value: 기본값 -> DB 전송값
         -->
-        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" placeholder="10">
+        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="10">
     </form>
+
+
+    <!-- 
+            [.......... textarea: 텍스트 영역 ..........]
+            input은 한 줄 텍스트라면 textarea는 여러 줄 텍스트를 입력하는 용도로 사용한다.
+
+                (1) cols: 열 수
+                (2) rows: 행 수
+               *(3) readonly: 읽기 전용
+                (4) required: 필수 입력
+    -->
+
+    <h2>회칙</h2>
+    <textarea name="rule1" id="rule1" cols="50" rows="10"
+        readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit voluptates voluptatibus perferendis, magni ducimus earum quia, nobis dolore fugiat voluptate incidunt, quam natus modi perspiciatis quisquam tempore illo facere.</textarea>
+    <h2>방명록</h2>
+    <textarea name="rule2" id="rule2" placeholder="글을 남겨주세요." required></textarea>
 
 </body>
 
