@@ -72,6 +72,33 @@ iframe {
     margin-top: 60px;
 }
 
+/* nav */
+.gnb1 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 5px;
+    background-color: transparent;
+}
+.gnb1 a {
+    color: #2fc2cc;
+}
+.gnb2 {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: -50px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.gnb2.down {
+    top: 0px;
+    transition: .5s;
+}
+.gnb2 a {
+    color: #111;
+}
 /* clock */
 #clock {
     left: 50%;
