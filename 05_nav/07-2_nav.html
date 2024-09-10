@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        div {
+            padding-bottom: 2000px;
+        }
+
+        /* nav */
+        .gnb1 {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+        }
+        .gnb2 {
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            top: -50px;
+            padding: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        .gnb2.down {
+            top: 0px;
+            transition: .5s;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            const nav1 = $(".gnb1");
+            const nav2 = $(".gnb2");
+
+            $(window).scroll(()=>{
+                let st = $(this).scrollTop();
+                if (st > 100) {
+                    nav1.css({opacity:0});
+                    nav2.addClass("down");
+                } else {
+                    nav1.css({opacity:1});
+                    nav2.removeClass("down");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe a, error dicta beatae earum mollitia optio
+        nostrum dignissimos, accusantium sed obcaecati quod dolorem soluta sapiente modi ea voluptatem odit eius!</p>
+    <nav class="gnb1">내비게이션</nav>
+    <nav class="gnb2">내비게이션</nav>
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi tenetur molestias explicabo et? Quam eius
+            nostrum aliquid ex, exercitationem minima atque sequi, earum aut, voluptate esse consequuntur non totam
+            accusamus ipsum a eaque delectus saepe fugit vero. Consectetur ea amet eaque, facere corporis saepe fugit,
+            laboriosam tempore a molestias ipsa, quae voluptatum inventore optio hic tenetur similique provident itaque
+            non nesciunt. Hic quasi, asperiores tempora optio fuga laboriosam odio? Ut et labore consequatur commodi qui
+            quam tenetur quisquam eaque quidem nam quo velit veniam reprehenderit laboriosam, dicta ea modi at,
+            dignissimos nesciunt corrupti. Voluptatum nisi, qui inventore aspernatur velit ad eveniet illum delectus
+            distinctio rerum. Veritatis ex rerum, minus perferendis molestias odit corrupti iure? Doloribus quia
+            quisquam repellendus nemo, eos aperiam enim sed necessitatibus cumque similique quaerat excepturi ut
+            adipisci provident exercitationem earum? Minus esse voluptatem odio molestias dolore quis qui quia, totam
+            eligendi nisi temporibus eaque similique cumque unde ut vitae ullam adipisci earum quae, excepturi nostrum
+            mollitia! Nam necessitatibus vero quibusdam enim asperiores minus dolores quae voluptatem perspiciatis eius.
+            Iusto praesentium quae laudantium tempora aspernatur? Voluptate voluptatum sequi doloribus labore laborum
+            quos optio rerum quae sapiente molestiae vitae, rem alias sunt similique esse officiis veritatis. Id,
+            nostrum officiis?</p>
+    </div>
+</body>
+
+</html>

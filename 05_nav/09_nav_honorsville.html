@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남아너스빌</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css");
+
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body,
+        ul,
+        h1 {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff
+        }
+
+        body {
+            font-family: NanumSquare, sans-serif;
+            font-size: 1.6rem;
+            background: rgb(27, 120, 182);
+            height: 2000px;
+        }
+
+        /* header */
+        header {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            padding: 0 60px;
+            background: transparent;
+            transition: .5s;
+        }
+
+        header.on {
+            background: #0F2244;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 90px;
+            width: 100%;
+            height: 0px;
+            transition: .3s;
+            background: #fff;
+        }
+
+        header:hover::before {
+            height: 200px;
+        }
+
+        .gnb .main {
+            position: absolute;
+            left: 50%;
+            top: 42%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .gnb .main li {
+            width: 150px;
+        }
+        .gnb .main>li>a {
+            position: relative;
+        }
+        .gnb .main>li>a::after {
+            content: "";
+            position: absolute;
+            background: #bab3ac;
+            width: 100%;
+            transform: scale(0);
+            transition: transform .3s;
+            height: 2px;
+            bottom:-7px;
+            left:0;
+        }
+        .gnb .main>li>a:hover::after {
+            transform: scale(1);
+        }
+
+        .gnb .sub {
+            height: 0px;
+            overflow: hidden;
+            font-size: 1.6rem;
+            font-weight: normal;
+            margin-top: 45px;
+            transition: .3s;
+        }
+
+        .gnb .sub.on {
+            height: 180px;
+        }
+
+        .gnb .sub a {
+            color: #111;
+            line-height: 2;
+        }
+        .gnb .sub a:hover {
+            color: #b0b3b1;
+        }
+
+
+        .rlink ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .rlink a {
+            font-size: 1.3rem;
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .rlink li+li {
+            margin-left: 20px;
+        }
+
+        .rlink .sns {
+            display: inline-block;
+            width: 31px;
+            height: 31px;
+            background: transparent;
+            transition: background .3s;
+        }
+        .rlink .sns a {
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+
+        .rlink .sns+li::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin-right: 16px;
+            background: #fff;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .sns:hover {
+            text-indent: -9999em;
+            background: url("../assets/honorsville/btn_youtube.png") no-repeat 50% 50%/31px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            const header = $("header");
+            const mainList = $(".main>li");
+            const rlink = header.find(".rlink");
+
+            header.mouseenter((e) => {
+                header.find(".sub").addClass("on");
+                header.addClass("on");
+                rlink.find("a").css({ color: "#bab3ac" });
+            });
+            header.mouseleave((e) => {
+                header.find(".sub").removeClass("on");
+                header.removeClass("on");
+                rlink.find("a").css({ color: "#fff" });
+            });
+
+            $(window).scroll(() => {
+                let st = $(this).scrollTop();
+                if (st >= 200) {
+                    header.addClass("on");
+                    rlink.find("a").css({ color: "#bab3ac" });
+                } else {
+                    header.removeClass("on");
+                    rlink.find("a").css({ color: "#fff" });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href=""><img src="../assets/honorsville/header_logo.png" alt="경남아너스빌 로고"></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">분양단지</a>
+                    <ul class="sub">
+                        <li><a href="#">분양중인 단지</a></li>
+                        <li><a href="#">분양예정 단지</a></li>
+                        <li><a href="#">분양완료 단지</a></li>
+                        <li><a href="#">연간분양계획</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">브랜드</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">브랜드 아이덴티티</a></li>
+                        <li><a href="#">특화아이템</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아너스빌 멤버스</a>
+                    <ul class="sub">
+                        <li><a href="#">아너스빌 소식</a></li>
+                        <li><a href="#">청약가이드</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">마이 아너스빌</a>
+                    <ul class="sub">
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">A/S 문의</a></li>
+                        <li><a href="#">관심단지 관리</a></li>
+                        <li><a href="#">개인정보 변경</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="rlink">
+            <ul>
+                <li class="sns"><a href="#">SNS</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

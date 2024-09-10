@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <style>
+        @import url(https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+        /* https://blog.naver.com/ndtid0106/221667951411 */
+        /* reset */
+        * {box-sizing: border-box;}
+        html {font-size: 10px;}
+        body,ul,h1 {
+            margin: 0;
+        }
+        body {
+            font-family: "Nanum Barun Gothic", sans-serif;
+            font-size: 1.5rem;
+            background: #000;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        img {
+            vertical-align: middle;
+        }
+
+        /* header */
+        header {
+            position: relative;
+            height: 90px;
+            background: #06070E;
+            border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+        }
+        header .subbar {
+            display: none;
+            position: absolute;
+            bottom: -47px;
+            width: 100vw;
+            height: 45px;
+            text-indent: -9999em;
+            background: #06070E;
+        }
+        .container {
+            /* position: relative; */
+            width: 1100px;
+            margin: 0 auto;
+            height: 90px;
+            padding: 16px 0;
+        }
+
+        /* top link */
+        .tlink {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tlink a {
+            font-size: 1.3rem;
+            color: #888;
+            margin-left: 20px;
+        }
+        .tlink a:hover {
+            text-decoration: underline;
+        }
+        .ulink {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .ulink a {
+            margin-left: 20px;
+        }
+
+        /* logo */
+        .logo {
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* gnb */
+        .gnb {
+            width: 788px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+        }
+        .gnb .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: -28px;
+        }
+        .gnb .main>li {
+            position: relative;
+        }
+        .gnb .main>li:hover::after {
+            content: "";
+            position: absolute;
+            left:0;
+            bottom:-18px;
+            width: 100%;
+            border: 2px solid #fff;
+        }
+
+        .gnb .main>li:nth-of-type(3) {
+            margin-right: 120px;
+        }
+        .gnb .main>li:nth-of-type(4) {
+            margin-left: 120px;
+        }
+        .gnb .sub {
+            display: none;
+            position: absolute;
+            top:20px;
+            left:50%;
+            transform: translateX(-30%);
+            padding-top: 32px;
+            width: 350px;
+            font-size: 1.5rem;
+        }
+        .gnb .sub li {
+            display: inline-block;
+            /* width: auto; */
+            margin: 0 12px;
+        }
+        .gnb .sub li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            const subbar = $("header .subbar");
+            const gnb = $(".gnb");
+            const mainMenu = gnb.find(".main");
+            const mainMenuList = gnb.find(".main>li");
+            const subMenu = gnb.find(".sub");
+
+            mainMenuList.mouseenter((e)=>{
+                $(e.currentTarget).find(".sub").show();
+                subbar.show();
+            });
+            subMenu.mouseenter((e)=>{
+                $(e.currentTarget).show();
+            });
+            mainMenuList.mouseleave((e)=>{
+                $(e.currentTarget).find(".sub").hide();
+                subbar.hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- https://www.megabox.co.kr/ -->
+    <header>
+        <div class="subbar">subbar</div>
+        <div class="container">
+            <!-- top link -->
+            <div class="tlink">
+                <div class="llink">
+                    <a href="#">VIP LOUNGE</a>
+                    <a href="#">맴버십</a>
+                    <a href="#">고객센터</a>
+                </div>
+                <div class="rlink">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">빠른예매</a>
+                </div>
+            </div>
+
+            <!-- util link -->
+            <div class="ulink">
+                <div class="llink">
+                    <a href="#"><img src="../assets/megabox/ico-sitemap-white.png" alt="전체 메뉴"></a>
+                    <a href="#"><img src="../assets/megabox/ico-search-white.png" alt="검색"></a>
+                </div>
+                <div class="rlink">
+                    <a href="#"><img src="../assets/megabox/ico-schedule-white.png" alt="상영시간표"></a>
+                    <a href="#"><img src="../assets/megabox/ico-mymega-white.png" alt="나의 메가"></a>
+                </div>
+            </div>
+
+            <!-- logo -->
+            <h1 class="logo"><a href="index.html"><img src="../assets/megabox/logo-white_new2.png" alt="메가박스 로고"></a></h1>
+           
+            <!-- nav -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">영화</a>
+                        <ul class="sub">
+                            <li><a href="#">전체영화</a></li>
+                            <li><a href="#">무비포스트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">예매</a>
+                        <ul class="sub">
+                            <li><a href="#">빠른예매</a></li>
+                            <li><a href="#">상영시간표</a></li>
+                            <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">극장</a>
+                        <ul class="sub">
+                            <li><a href="#">전체극장</a></li>
+                            <li><a href="#">특별관</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="sub">
+                            <li><a href="#">진행중 이벤트</a></li>
+                            <li><a href="#">지난 이벤트</a></li>
+                            <li><a href="#">당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">혜택</a>
+                        <ul class="sub">
+                            <li><a href="#">메가박스 멤버십</a></li>
+                            <li><a href="#">제휴/할인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- .container -->
+    </header>
+</body>
+</html>
