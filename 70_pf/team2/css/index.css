@@ -433,6 +433,11 @@ body {
     #s2 div a {
         margin-right: 1.5%;
     }
+    #s3 .s3-tit{
+        margin-left: 14%;
+        position: absolute;
+    }
+   
     #s4 {
         height: 280px;
         

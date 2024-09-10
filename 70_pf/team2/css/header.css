@@ -322,7 +322,7 @@ li {
 }
 
 .hidden-menuList.active>.menus-arrow {
-    background-image: url(../assets/images/arrow-down.svg);
+    background-image: url(../assets/images/arrow-up.svg);
 }
 
 
