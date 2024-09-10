@@ -141,14 +141,6 @@ body {
     max-width: 360px;
 }
 
-/* 슬라이드 아이템 */
-/* #s3 .slick-slide {
-    margin: 8px 10px;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
-} */
 
 /* 설명글 */
 
@@ -193,7 +185,7 @@ body {
     height: 100%;
     font-size: 0px;
     /* border: 1px solid green; */
-    background: url(../images/main/best-menu/메인/버튼.svg)no-repeat 50% 50%/cover;
+    background: url(../assets/images/main/perv.svg)no-repeat 50% 50%/cover;
 }
 
 #s3 .slick-next::before {
@@ -202,7 +194,7 @@ body {
     height: 100%;
     font-size: 0px;
     /* border: 1px solid green; */
-    background: url(../images/main/best-menu/메인/버튼-1.svg)no-repeat 50% 50%/cover;
+    background: url(../assets/images/main/next.svg)no-repeat 50% 50%/cover;
 }
 #s3 a {
     position: absolute;
