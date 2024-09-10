@@ -235,7 +235,7 @@ li {
 }
 
 .mobile-menu-closeBtn {
-    background-image: url(../images/xbtn.svg);
+    background-image: url(../assets/images/xbtn.svg);
     background-size: cover;
     width: 22px;
     height: 22px;
@@ -280,7 +280,7 @@ li {
 }
 
 .menus-arrow {
-    background-image: url(../images/arrow-down.svg);
+    background-image: url(../assets/images/arrow-down.svg);
     background-size: cover;
     width: 30px;
     height: 18px;
@@ -322,7 +322,7 @@ li {
 }
 
 .hidden-menuList.active>.menus-arrow {
-    background-image: url(../images/arrow-up.svg);
+    background-image: url(../assets/images/arrow-down.svg);
 }
 
 
