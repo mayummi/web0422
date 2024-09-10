@@ -254,6 +254,9 @@ body {
     height: 600px;
     width: 100%;
 }
+.s5-wrap {
+    margin-top: 14%;
+}
 
 #s5 img {
     width: 100%;
