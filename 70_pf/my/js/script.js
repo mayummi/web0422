@@ -60,7 +60,7 @@ $(() => {
 
     // 카운터의 시작 값과 목표 값
     const counterStartNums = [0, 0, 0, 0];
-    const counterNums = [2, 5, 7, 1];
+    const counterNums = [2, 3, 5, 1];
 
     // 진행율바의 시작 값과 목표 값
     const progressBarStartNums = [0, 0, 0, 0];
