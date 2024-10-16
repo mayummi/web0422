@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- fullpage.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <!-- bxSlider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+
+    <script src="js/fullpage.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/tabs.js"></script>
+    <!-- <script src="js/tabs.js"></script> -->
+</head>
+
+<body>
+    <!-- https://alvarotrigo.com/fullPage/ko/ -->
+    <!-- header -->
+    <header>
+        헤더
+    </header>
+
+    <!-- nav -->
+    <!-- <ul id="hana_nav">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Firssection</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+        <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+    </ul> -->
+
+    <!-- section -->
+    <div id="wrap">
+        <div id="s1" class="section">
+            <div class="slideWrap">
+                <ul class="slider">
+                    <li>
+                        <img src="assets/s1.jpg" alt="슬라이드 이미지1">
+                        <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                    </li>
+                    <li>
+                        <img src="assets/s2.jpg" alt="슬라이드 이미지2">
+                        <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                    </li>
+                    <li>
+                        <img src="assets/s3.jpg" alt="슬라이드 이미지3">
+                        <p>언제 어디서나, 모든 순간<br>고객의 곁에서 함께 합니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section id="s2" class="section">
+            <div class="ibx">
+                <h2>여름 시즌 여행지</h2>
+                <p>최근 한 달 동안 고객님들이 가장 많이 좋아하신 여름 시즌 여행지입니다.</p>
+    
+                <!-- 탭 -->
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tab1">전체</a></li>
+                        <li><a href="#tab2">2~30대</a></li>
+                        <li><a href="#tab3">4~50대</a></li>
+                        <li><a href="#tab4">6~70대</a></li>
+                    </ul>
+                    <div id="tab1" class="on">
+                        <ul>
+                            <li>
+                                <a href="#" class="rank1"><img src="assets/r1.png" alt="1위. 수박주스"></a>
+                                <h3 class="rank1"><a href="#">1위. 수박주스</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r2.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
+                                <h3><a href="#">2위. 몽글젤리 복숭아 스무디</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r3.png" alt="3위. 대파 송송 치즈 감자빵"></a>
+                                <h3><a href="#">3위. 대파 송송 치즈 감자빵</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab2">
+                        <ul>
+                            <li>
+                                <a href="#" class="rank1"><img src="assets/r2.png" alt="1위. 수박주스"></a>
+                                <h3 class="rank1"><a href="#">1위. 몽글젤리 복숭아 스무디</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r1.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
+                                <h3><a href="#">2위. 수박주스</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r3.png" alt="3위. 대파 송송 치즈 감자빵"></a>
+                                <h3><a href="#">3위. 대파 송송 치즈 감자빵</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab3">
+                        <ul>
+                            <li>
+                                <a href="#" class="rank1"><img src="assets/r3.png" alt="1위. 수박주스"></a>
+                                <h3 class="rank1"><a href="#">1위. 대파 송송 치즈 감자빵</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r2.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
+                                <h3><a href="#">2위. 몽글젤리 복숭아 스무디</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r1.png" alt="3위. 대파 송송 치즈 감자빵"></a>
+                                <h3><a href="#">3위. 수박주스</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab4">
+                        <ul>
+                            <li>
+                                <a href="#" class="rank1"><img src="assets/r2.png" alt="1위. 수박주스"></a>
+                                <h3 class="rank1"><a href="#">1위. 몽글젤리 복숭아 스무디</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r3.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
+                                <h3><a href="#">2위. 대파 송송 치즈 감자빵</a></h3>
+                            </li>
+                            <li>
+                                <a href="#"><img src="assets/r1.png" alt="3위. 대파 송송 치즈 감자빵"></a>
+                                <h3><a href="#">3위. 수박주스</a></h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div><!-- //.ibx -->
+        </section>
+        <section id="s3" class="section">
+            <h2>준비중...</h2>
+        </section>
+
+        <section id="s4" class="section">
+            <div class="ibx">
+                <div class="cont">
+                    <h2>하나투어 이야기</h2>
+                    <h3>hana tour<br> &amp; culture</h3>
+                    <p>여행을 넘어, 즐기고 먹고 머무는 곳까지<br> 여행을 더 잘 만들기 위해,<br> 더 큰 행복을 위해 우리는 문화를 만듭니다.</p>
+                    <p>익숙하지만 색다른 이야기를 낯설지만 공감가는 이야기를<br> 모든 이들의 여행의 꿈을 실현해드립니다.</p>
+                    <div class="link">
+                        <a href="#">브랜드 소개</a>
+                        <a href="#">여행문의</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="section fp-auto-height">
+            <div>
+                <p>Copyright All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

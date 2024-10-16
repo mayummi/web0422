@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+* {box-sizing: border-box;}
+body,h1,h2,h3,ul,p {margin: 0;}
+body {background: #fff;}
+ul {padding:0; list-style:none;}
+a {text-decoration: none;}
+img {width:100%; height:100%; object-fit: cover; vertical-align: top;}
+button {border: none;}
+iframe {border: none; width:100%; height:100%;}
+/* 
+    가상 요소 선택자
+        ::before ~ 요소의 내용 이전 내용을 가상으로 삽입
+        ::after ~ 요소의 내용 이후에 내용을 가상으로 삽입
+        ::selection ~ 브라우저에서 텍스트를 블록 설정시 색상 지정
+*/
+::selection {background: rgb(95, 43, 184); color: #fff;}
