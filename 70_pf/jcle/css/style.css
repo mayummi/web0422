@@ -16,7 +16,7 @@
 
 /* 푸터에 있는 p의 높이 */
 .fp-auto-height div {
-    height: 200px;
+    height: 100px;
     color: white;
     background: #000;
 }
