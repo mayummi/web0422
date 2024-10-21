@@ -6,7 +6,7 @@ $(function(){
         // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke'],
         // navll
         navigation: true,
-        navigationTooltips: ['Home', 'Best Tour', 'Favorit', 'Culture'],
+        navigationTooltips: ['Home', 'Best', 'New', 'Company'],
         showActiveTooltip: true,
         //slidesNavigation: true,
         //loopHorizontal: false,
