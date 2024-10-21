@@ -134,6 +134,38 @@ header {
     text-align: center;
     margin: 0 0 25%;
 }
+#s3 h2 {
+    border-bottom: 1px solid #111;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+#s3>p {
+    margin-bottom: 48px;
+}
+
+#s3 ul {
+    display: flex;
+}
+
+#s3 div {
+    height: 240px;
+}
+
+/* #sec3 h3 {
+    font-size: 2.4rem;
+    margin: 24px 0;
+} */
+
+#s3 li p {
+    margin: 24px 0;
+}
+
+#s3 a {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+}
 
 /* 섹션4 */
 #s4 {
