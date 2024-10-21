@@ -41,6 +41,14 @@ header {
     background: rgba(0, 0, 0, 0.525);
 }
 
+header nav {
+    text-align: right;
+}
+header nav a{
+    color: #fff;
+    margin-top: 50%;
+}
+
 
 /* 섹션1 */
 
