@@ -129,6 +129,11 @@ header {
 #s2 #tabs>div {display: none;}
 #s2 #tabs>div.on {display: block;}
 
+/* 섹션3 */
+#s3 h2 {
+    text-align: center;
+    margin: 0 0 25%;
+}
 
 /* 섹션4 */
 #s4 {
