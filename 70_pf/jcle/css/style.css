@@ -169,3 +169,7 @@ header {
 #s4 .link a:first-child {
     margin-right: 20px;
 }
+footer .ff{
+    text-align: center;
+    margin-top: 2%;
+}
