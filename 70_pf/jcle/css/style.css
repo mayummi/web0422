@@ -143,6 +143,9 @@ header {
     width: 300px;
     height: 400px;
 }
+#s3 p {
+    padding: 5px;
+}
 #s3 div img:hover {
     opacity: .5;
 }
@@ -164,7 +167,7 @@ header {
     content: "";
     position: absolute; left:-4px; top:160px;
     width: 360px; height: 40px;
-    background: #5E2BB8;
+    background: #aaa;
 }
 #s4 h3 {
     z-index: 1;
@@ -177,12 +180,12 @@ header {
 #s4 .link a {
     display: inline-block;
     padding: 16px 24px;
-    background: #5E2BB8;
+    background: #aaa;
     transition: .1s;
 }
 #s4 .link a:hover {
     transform: translateY(-4px);
-    background: #4c0cb9;
+    background: #666;
 }
 #s4 .link a:first-child {
     margin-right: 20px;
